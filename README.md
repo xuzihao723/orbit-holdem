@@ -1,66 +1,68 @@
-# ♠ 轨道牌桌 · Orbit Hold’em
+# ♠ Orbit Hold’em
 
-**用虚拟筹码练习德州扑克，或邀请朋友一起开一手。**
+**English** · [简体中文](README.zh-CN.md)
 
-支持 2–4 人同桌。你可以独自挑战电脑，也可以开一张真人和电脑混坐的牌桌。每手结束后，可以从自己的历史记录回看下注和结算过程。
+**Practice Texas Hold’em with virtual chips or invite friends to a table.**
 
-[在线试玩](https://orbit-holdem-game.onrender.com/) · [快速开始](#快速开始) · [怎么玩](#怎么玩) · [部署到-render](#部署到-render) · [项目结构](#项目结构) · [开发与验证](#开发与验证)
+Play with 2–4 seats. Practice against bots, or share a table with friends and bots. After each hand, open your history to replay the betting and see how the pot was settled.
 
-![轨道牌桌的三人对局。公共牌、本人底牌、对手席位和行动区都在同一桌面。](docs/showcase/orbit-table-desktop.png)
+[Play online](https://orbit-holdem-game.onrender.com/) · [Quick start](#quick-start) · [How to play](#how-to-play) · [Deploy to Render](#deploy-to-render) · [Project structure](#project-structure) · [Development and verification](#development-and-verification)
 
-[查看新版首页](docs/showcase/orbit-home.png) · [查看手机四人局](docs/showcase/orbit-table-mobile.png)
+![A three-player Orbit Hold’em game showing the community cards, your hole cards, opponent seats, and action controls.](docs/showcase/orbit-table-desktop.png)
 
-## 游戏特色
+[View the home page](docs/showcase/orbit-home.png) · [View a four-player game on mobile](docs/showcase/orbit-table-mobile.png)
 
-- **三种入场方式。** 单人练习、创建房间、凭房间码或邀请链接加入。电脑有入门和标准两档。
-- **完整的德州流程。** 支持盲注、加注、全押、边池、平分底池和未匹配筹码返还。下注区分别显示本轮总额和本次需要再投入的筹码。
-- **联机恢复与个人回放。** 断线后可凭原身份恢复保留的席位。牌局回放只显示当时公开的信息和本人的底牌。
-- **适配桌面和手机。** 可切换标准双色或四花色牌面、牌背、音效和减少动画。音效默认关闭。
+## Features
 
-## 快速开始
+- **Three ways to play.** Practice solo, create a room, or join with a room code or invite link. Bots have Beginner and Standard difficulty levels.
+- **Full Texas Hold’em rules.** Supports blinds, raises, all-ins, side pots, split pots, and refunds for unmatched bets. The betting controls distinguish your total bet for the round from the chips you need to add.
+- **Reconnect and replay.** Reconnect with the same identity to reclaim your reserved seat. Replays show information that was public during the hand and your own hole cards.
+- **Desktop and mobile layouts.** Choose two-color or four-color cards, change card backs, toggle sound, and reduce motion. Sound is off by default.
 
-需要 Node.js **24.14.1**、npm **11**。Python 3 用于素材与夹具验证。版本以 [`.node-version`](.node-version) 和 [`package.json`](package.json) 为准。
+## Quick start
+
+Use Node.js **24.14.1** and npm **11**. Asset and fixture checks use Python 3. See [`.node-version`](.node-version) and [`package.json`](package.json) for version requirements.
 
 ```sh
 npm ci
 npm run dev
 ```
 
-打开 [本地首页](http://127.0.0.1:5173/)。开发命令同时启动前端和联机服务。[服务就绪检查](http://127.0.0.1:3001/health/ready) 返回 `{"status":"ready"}` 后即可进房。
+Open the [local home page](http://127.0.0.1:5173/). The development command starts both the web app and the game server. You can join a room once the [readiness check](http://127.0.0.1:3001/health/ready) returns `{"status":"ready"}`.
 
-访客可直接开始。启用 Google 登录或邮箱账号的步骤见[账号配置](docs/account-auth.md)，可用变量见 [`.env.example`](.env.example)。
+You can play as a guest right away. See the [account setup guide](docs/account-auth.md) to enable Google sign-in or email accounts, and [`.env.example`](.env.example) for available variables.
 
-## 怎么玩
+## How to play
 
-1. 从首页选择 **单人练习**，配置电脑人数和难度。和朋友玩时，选择 **创建房间**，把房间码或邀请链接发给朋友。
-2. 真人入座后点击 **准备**，由房主点击 **开始本手**。本机测试多人联机时，用无痕窗口或独立浏览器会话加入，分别保留不同的访客身份。
-3. 结算后可准备下一手，或在 **历史记录** 中打开自己的牌局回放。
+1. Choose **Solo practice** on the home page and pick the number and difficulty of the bots. To play with friends, choose **Create room** and share the room code or invite link.
+2. Each player clicks **Ready**, then the host clicks **Start hand**. When testing multiplayer on one device, use separate browser sessions to keep guest identities distinct.
+3. After settlement, get ready for the next hand or open **History** to replay a previous hand.
 
-## 部署到 Render
+## Deploy to Render
 
-[`render.yaml`](render.yaml) 提供免费试玩配置。它在新加坡创建一个 Docker Web Service，通过同一个地址提供网页、HTTP 接口和 Socket.IO。将仓库连到 Render，在 **New → Blueprint** 选择该仓库，部署完成后访问 Render 提供的 `onrender.com` 地址。
+[`render.yaml`](render.yaml) configures a free demo. It creates a Docker web service in Singapore that serves the web app, HTTP API, and Socket.IO from a single address. In Render, choose **New → Blueprint**, select this repository, and open the assigned `onrender.com` address after deployment.
 
-免费实例空闲约 15 分钟会休眠，首次唤醒可能需要约 1 分钟。免费实例的 SQLite 数据会在休眠、重启或重新部署时丢失。[Render 免费版限制](https://render.com/docs/free)
+Free instances spin down after about 15 minutes of inactivity. A cold start can take about a minute. SQLite data on a free instance is lost on spin-down, restart, or redeployment. [Render free tier limits](https://render.com/docs/free)
 
-长期运行可用带持久卷的单实例 Docker Compose 部署。已结算历史保存在持久卷中，重启时进行中的牌局会标记为中止。[常驻部署](docs/deployment.md) · [备份与恢复](docs/backup-restore.md)
+For a long-running deployment, use a single Docker Compose instance with a persistent volume. Completed hand history stays on the volume. Hands in progress are marked as interrupted after a restart. [Deployment guide](docs/deployment.md) · [Backup and restore](docs/backup-restore.md)
 
-如果另外在 Vercel 托管网页，用 [`vercel.json`](vercel.json) 构建前端。在 Vercel 设置 `VITE_ORBIT_SOCKET_ORIGIN` 为 Render 的 HTTPS 地址，并在 Render 设置 `ORBIT_GUEST_WEB_ORIGIN` 为 Vercel 网页的准确 HTTPS 地址。Vercel 入口以访客模式连接同一套房间服务。
+To host the frontend separately on Vercel, use [`vercel.json`](vercel.json). Set `VITE_ORBIT_SOCKET_ORIGIN` in Vercel to the Render HTTPS origin, and set `ORBIT_GUEST_WEB_ORIGIN` in Render to the exact Vercel HTTPS origin. Players on Vercel join the same rooms as guests.
 
-## 项目结构
+## Project structure
 
-项目使用 npm workspaces。前端用 React、TypeScript 和 Vite，联机用 Node.js、Socket.IO 和 SQLite。
+The project uses npm workspaces. The frontend uses React, TypeScript, and Vite. The game server uses Node.js, Socket.IO, and SQLite.
 
-| 目录                                         | 职责                                   |
-| -------------------------------------------- | -------------------------------------- |
-| [`apps/web`](apps/web)                       | 大厅、牌桌、账号、设置和历史回放       |
-| [`apps/server`](apps/server)                 | 房间、身份、联机同步、电脑调度和持久化 |
-| [`packages/poker-core`](packages/poker-core) | 洗牌、牌型比较、下注状态和分池结算     |
-| [`packages/protocol`](packages/protocol)     | 客户端与服务端共用的消息和视图类型     |
-| [`assets`](assets)                           | 卡面、筹码、头像和音效                 |
+| Directory                                    | Responsibility                                                |
+| -------------------------------------------- | ------------------------------------------------------------- |
+| [`apps/web`](apps/web)                       | Lobby, table, accounts, settings, and replays                 |
+| [`apps/server`](apps/server)                 | Rooms, identity, synchronization, bot scheduling, and storage |
+| [`packages/poker-core`](packages/poker-core) | Shuffling, hand rankings, betting, and pot settlement         |
+| [`packages/protocol`](packages/protocol)     | Messages and view types shared by the client and server       |
+| [`assets`](assets)                           | Cards, chips, avatars, and sounds                             |
 
-[技术报告](docs/technical-report.md) · [产品规则](docs/product-rules.md) · [协议说明](docs/protocol.md)
+[Technical report](docs/technical-report.md) · [Game rules](docs/product-rules.md) · [Protocol](docs/protocol.md)
 
-## 开发与验证
+## Development and verification
 
 ```sh
 npm run test:core
@@ -71,8 +73,4 @@ npm run test:e2e
 npm run verify:release-artifacts
 ```
 
-浏览器测试使用独立访客和临时数据库。运行测试前，释放相应的本地端口。可用 `npm run simulate:bots -- --hands 200` 跑电脑对局模拟。[开发指南](docs/development.md) · [验收记录](docs/verification/w31-w40.md)
-
-## 素材与致谢
-
-项目内原创几何 SVG 与合成音频的许可见[素材账本](assets/LICENSES.md)。README 的结构和展示方式参考 [Awesome README](https://github.com/matiassingers/awesome-readme) 和 [Best-README-Template](https://github.com/othneildrew/Best-README-Template)。
+Browser tests use isolated guest identities and temporary databases. Free the required local ports before running them. To simulate hands between bots, run `npm run simulate:bots -- --hands 200`. [Development guide](docs/development.md) · [Verification records](docs/verification/w31-w40.md)
