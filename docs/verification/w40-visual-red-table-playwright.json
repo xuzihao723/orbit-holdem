@@ -1,0 +1,196 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\User\\codex_respository\\dezhou_app\\poker-four\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      "playwright.table.config.ts",
+      "--grep",
+      "actual LIFE04"
+    ],
+    "configFile": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\playwright.table.config.ts",
+    "rootDir": "D:/User/codex_respository/dezhou_app/poker-four/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/User/codex_respository/dezhou_app/poker-four/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium-table",
+        "name": "chromium-table",
+        "testDir": "D:/User/codex_respository/dezhou_app/poker-four/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "table-actions.spec.ts"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "chromium-table",
+        "testDir": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\tests\\e2e",
+        "snapshotDir": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "table-actions.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "trace": "off",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium-table"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/verification/w40-visual-red-table-playwright.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview --workspace @orbit/web -- --host 127.0.0.1 --port 4173 --strictPort",
+      "url": "http://127.0.0.1:4173",
+      "reuseExistingServer": false,
+      "timeout": 30000
+    }
+  },
+  "suites": [
+    {
+      "title": "table-actions.spec.ts",
+      "file": "table-actions.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "renders actual LIFE04 main pot, side pot and separate refund after UI all-ins",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-table",
+              "projectName": "chromium-table",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8033,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeInViewport\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog', { name: '本手结算', exact: true }).getByRole('heading', { name: '本手结算', exact: true })\nExpected: in viewport\nReceived: viewport ratio 0\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeInViewport\" getByRole('dialog', { name: '本手结算', exact: true }).getByRole('heading', { name: '本手结算', exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: '本手结算', exact: true }).getByRole('heading', { name: '本手结算', exact: true })\u001b[22m\n\u001b[2m    13 × locator resolved to <h2 id=\"_r_1_\">本手结算</h2>\u001b[22m\n\u001b[2m       - unexpected value \"viewport ratio 0\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeInViewport\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog', { name: '本手结算', exact: true }).getByRole('heading', { name: '本手结算', exact: true })\nExpected: in viewport\nReceived: viewport ratio 0\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeInViewport\" getByRole('dialog', { name: '本手结算', exact: true }).getByRole('heading', { name: '本手结算', exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: '本手结算', exact: true }).getByRole('heading', { name: '本手结算', exact: true })\u001b[22m\n\u001b[2m    13 × locator resolved to <h2 id=\"_r_1_\">本手结算</h2>\u001b[22m\n\u001b[2m       - unexpected value \"viewport ratio 0\"\u001b[22m\n\n    at D:\\User\\codex_respository\\dezhou_app\\poker-four\\tests\\e2e\\table-actions.spec.ts:55:78",
+                    "location": {
+                      "file": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\tests\\e2e\\table-actions.spec.ts",
+                      "column": 78,
+                      "line": 55
+                    },
+                    "snippet": "  53 |     }\n  54 |     const result = page.getByRole('dialog', { name: '本手结算', exact: true });\n> 55 |     await expect(result.getByRole('heading', { name: '本手结算', exact: true })).toBeInViewport();\n     |                                                                              ^\n  56 |     await expect(result.getByRole('heading', { name: '主池 · 300', exact: true })).toBeVisible();\n  57 |     await expect(result.getByRole('heading', { name: '边池 1 · 300', exact: true })).toBeVisible();\n  58 |     await expect(result.getByText('朋友2 退回 150', { exact: true })).toBeVisible();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\tests\\e2e\\table-actions.spec.ts",
+                        "column": 78,
+                        "line": 55
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeInViewport\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog', { name: '本手结算', exact: true }).getByRole('heading', { name: '本手结算', exact: true })\nExpected: in viewport\nReceived: viewport ratio 0\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeInViewport\" getByRole('dialog', { name: '本手结算', exact: true }).getByRole('heading', { name: '本手结算', exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: '本手结算', exact: true }).getByRole('heading', { name: '本手结算', exact: true })\u001b[22m\n\u001b[2m    13 × locator resolved to <h2 id=\"_r_1_\">本手结算</h2>\u001b[22m\n\u001b[2m       - unexpected value \"viewport ratio 0\"\u001b[22m\n\n\n  53 |     }\n  54 |     const result = page.getByRole('dialog', { name: '本手结算', exact: true });\n> 55 |     await expect(result.getByRole('heading', { name: '本手结算', exact: true })).toBeInViewport();\n     |                                                                              ^\n  56 |     await expect(result.getByRole('heading', { name: '主池 · 300', exact: true })).toBeVisible();\n  57 |     await expect(result.getByRole('heading', { name: '边池 1 · 300', exact: true })).toBeVisible();\n  58 |     await expect(result.getByText('朋友2 退回 150', { exact: true })).toBeVisible();\n    at D:\\User\\codex_respository\\dezhou_app\\poker-four\\tests\\e2e\\table-actions.spec.ts:55:78"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T13:50:56.771Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\test-results\\table-actions-renders-actu-2fd2d-ate-refund-after-UI-all-ins-chromium-table\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\tests\\e2e\\table-actions.spec.ts",
+                    "column": 78,
+                    "line": 55
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "236ec5c22cce158b97ac-221472df2ba88b678468",
+          "file": "table-actions.spec.ts",
+          "line": 27,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-06T13:50:50.641Z",
+    "duration": 15561.45,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

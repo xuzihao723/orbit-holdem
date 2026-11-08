@@ -1,0 +1,26 @@
+[
+  {
+    "command": [
+      "npx.cmd",
+      "prettier",
+      "--check",
+      "tests/helpers/browser-resume-probe.ts",
+      "tests/e2e/reconnect.spec.ts",
+      "tests/e2e/lifecycle.spec.ts"
+    ],
+    "exitCode": 0,
+    "seconds": 2.8,
+    "output": "Checking formatting...\nAll matched files use Prettier code style!\n"
+  },
+  {
+    "command": [
+      "npx.cmd",
+      "tsc",
+      "-p",
+      "tsconfig.tests.json"
+    ],
+    "exitCode": 0,
+    "seconds": 8.06,
+    "output": ""
+  }
+]

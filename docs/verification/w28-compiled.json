@@ -1,0 +1,37 @@
+{
+  "compiledJavaScriptDriver": true,
+  "productionDistImports": true,
+  "hands": 3,
+  "standardAcceptedJobs": 28,
+  "actualSamples": 22555,
+  "resets": 1,
+  "resourcesClosed": true,
+  "full200": {
+    "completed": 200,
+    "standardAcceptedJobs": 16,
+    "actualSamples": 14426,
+    "profiles": {
+      "basic": {
+        "completedHands": 50,
+        "jobs": 0,
+        "accepted": 0,
+        "samples": 0,
+        "fallbacks": 0
+      },
+      "standard": {
+        "completedHands": 50,
+        "jobs": 6,
+        "accepted": 5,
+        "samples": 5000,
+        "fallbacks": 1
+      },
+      "mixed": {
+        "completedHands": 100,
+        "jobs": 11,
+        "accepted": 11,
+        "samples": 9426,
+        "fallbacks": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-31",
+  "devSession": 18665,
+  "checks": [
+    {
+      "url": "http://127.0.0.1:5173/",
+      "status": 200,
+      "purpose": "frontend shell"
+    },
+    {
+      "url": "http://127.0.0.1:3001/health/live",
+      "status": 200,
+      "purpose": "health"
+    },
+    {
+      "url": "http://127.0.0.1:5173/health/live",
+      "status": 200,
+      "purpose": "health"
+    }
+  ],
+  "running": true,
+  "browserTestsRerun": false,
+  "realRoomGameplay": false,
+  "credentialsIncluded": false
+}

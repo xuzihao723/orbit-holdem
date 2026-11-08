@@ -1,0 +1,11 @@
+# 行动计时与顺序
+
+W21：真人命令在入口同步登记session和room两类key，共享同一runKeys调度器；等待先前身份任务时也保留房间顺序，不嵌套取得另一类锁。内部系统任务只登记room。原业务收据仍优先于新意图校验。
+
+每个有效turn的RoomState.turnClock含hand/turn/version/actor/startedAt/deadline，期限30000ms。用户receivedAt必须严格小于deadline；恰好到期及迟到TURN_EXPIRED，即使timer回调还没执行。原turn的旁观加入、错误、重复确认和恢复不重置期限。新候选提交成功、替换内存后才arm，settled/paused/close取消；旧任务再次核对完整token。
+
+到时只从核心legalActions选择check，否则fold，不自动call。超时不假造session/socket，内部收据使用system作用域、固定timeout ID和独立internalApplied结果，正式公网仍UUID/CommandAck严格解析。命中内部收据会核对token摘要；改变同ID意图暂停且不改已提交手。事件/结果/余额/收据仍同一SQLite事务。
+
+ApplicationOptions.serverClock统一会话/规则/计时的时源并保留实例this；仅提供now时用系统setTimeout。时钟读取错误进入故障暂停，不从回调抛出。关闭先停timer再排空队列，最后关DB。纯规则无Date/定时器依赖。
+
+浏览器ServerTimeClock只校准显示，固定deadline不会因重复元数据延长；尚未校准或无deadline返回null，过期0。正式倒计时与下注组件在W31接入。

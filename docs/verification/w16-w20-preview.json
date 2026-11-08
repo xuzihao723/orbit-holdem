@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-31",
+  "command": "npm.cmd run dev",
+  "sessionId": 16777,
+  "restored": true,
+  "checks": [
+    {
+      "url": "http://127.0.0.1:5173/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3001/health/live",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/health/live",
+      "status": 200
+    }
+  ],
+  "leftRunning": true,
+  "productUi": "graybox; formal controls remain disabled",
+  "credentialsIncluded": false
+}

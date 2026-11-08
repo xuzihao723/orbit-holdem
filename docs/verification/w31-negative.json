@@ -1,0 +1,20 @@
+{
+  "restored": true,
+  "probes": [
+    {
+      "mutation": "identity binding bypass",
+      "exitCode": 1,
+      "caught": true
+    },
+    {
+      "mutation": "deadline bypass",
+      "exitCode": 1,
+      "caught": true
+    },
+    {
+      "mutation": "raise total treated as added",
+      "exitCode": 1,
+      "caught": true
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "entry": "compiled ESM",
+  "results": [
+    {
+      "id": "P01",
+      "result": {
+        "reason": "showdown",
+        "refunds": [],
+        "pots": [
+          {
+            "potId": "pot:0:100",
+            "lowerExclusive": 0,
+            "upperInclusive": 100,
+            "amount": 400,
+            "contributorSeatIds": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "eligibleSeatIds": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "winnerSeatIds": [
+              0
+            ],
+            "allocations": [
+              {
+                "seatId": 0,
+                "amount": 400
+              }
+            ],
+            "winningCategory": 8
+          },
+          {
+            "potId": "pot:100:250",
+            "lowerExclusive": 100,
+            "upperInclusive": 250,
+            "amount": 450,
+            "contributorSeatIds": [
+              1,
+              2,
+              3
+            ],
+            "eligibleSeatIds": [
+              1,
+              2,
+              3
+            ],
+            "winnerSeatIds": [
+              1
+            ],
+            "allocations": [
+              {
+                "seatId": 1,
+                "amount": 450
+              }
+            ],
+            "winningCategory": 5
+          },
+          {
+            "potId": "pot:250:400",
+            "lowerExclusive": 250,
+            "upperInclusive": 400,
+            "amount": 300,
+            "contributorSeatIds": [
+              2,
+              3
+            ],
+            "eligibleSeatIds": [
+              2,
+              3
+            ],
+            "winnerSeatIds": [
+              2
+            ],
+            "allocations": [
+              {
+                "seatId": 2,
+                "amount": 300
+              }
+            ],
+            "winningCategory": 3
+          }
+        ],
+        "refundTotal": 0,
+        "payoutTotal": 1150,
+        "originalContributionTotal": 1150
+      }
+    },
+    {
+      "id": "P03",
+      "result": {
+        "reason": "showdown",
+        "refunds": [
+          {
+            "seatId": 2,
+            "amount": 150
+          }
+        ],
+        "pots": [
+          {
+            "potId": "pot:0:100",
+            "lowerExclusive": 0,
+            "upperInclusive": 100,
+            "amount": 300,
+            "contributorSeatIds": [
+              0,
+              1,
+              2
+            ],
+            "eligibleSeatIds": [
+              0,
+              1,
+              2
+            ],
+            "winnerSeatIds": [
+              0
+            ],
+            "allocations": [
+              {
+                "seatId": 0,
+                "amount": 300
+              }
+            ],
+            "winningCategory": 8
+          },
+          {
+            "potId": "pot:100:250",
+            "lowerExclusive": 100,
+            "upperInclusive": 250,
+            "amount": 300,
+            "contributorSeatIds": [
+              1,
+              2
+            ],
+            "eligibleSeatIds": [
+              1,
+              2
+            ],
+            "winnerSeatIds": [
+              1
+            ],
+            "allocations": [
+              {
+                "seatId": 1,
+                "amount": 300
+              }
+            ],
+            "winningCategory": 5
+          }
+        ],
+        "refundTotal": 150,
+        "payoutTotal": 600,
+        "originalContributionTotal": 750
+      }
+    },
+    {
+      "id": "P05",
+      "result": {
+        "reason": "showdown",
+        "refunds": [],
+        "pots": [
+          {
+            "potId": "pot:0:1",
+            "lowerExclusive": 0,
+            "upperInclusive": 1,
+            "amount": 3,
+            "contributorSeatIds": [
+              0,
+              1,
+              2
+            ],
+            "eligibleSeatIds": [
+              0,
+              1
+            ],
+            "winnerSeatIds": [
+              0,
+              1
+            ],
+            "allocations": [
+              {
+                "seatId": 0,
+                "amount": 2
+              },
+              {
+                "seatId": 1,
+                "amount": 1
+              }
+            ],
+            "winningCategory": 4
+          }
+        ],
+        "refundTotal": 0,
+        "payoutTotal": 3,
+        "originalContributionTotal": 3
+      }
+    },
+    {
+      "id": "P06",
+      "result": {
+        "reason": "allOthersFolded",
+        "refunds": [
+          {
+            "seatId": 1,
+            "amount": 200
+          }
+        ],
+        "pots": [
+          {
+            "potId": "pot:0:100",
+            "lowerExclusive": 0,
+            "upperInclusive": 100,
+            "amount": 200,
+            "contributorSeatIds": [
+              0,
+              1
+            ],
+            "eligibleSeatIds": [
+              0
+            ],
+            "winnerSeatIds": [
+              0
+            ],
+            "allocations": [
+              {
+                "seatId": 0,
+                "amount": 200
+              }
+            ],
+            "winningCategory": null
+          }
+        ],
+        "refundTotal": 200,
+        "payoutTotal": 200,
+        "originalContributionTotal": 400
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "check": "format",
+    "command": "npm.cmd run format:check",
+    "exitCode": 0,
+    "seconds": 12.62
+  },
+  {
+    "check": "build",
+    "command": "npm.cmd run build",
+    "exitCode": 0,
+    "seconds": 37.78
+  },
+  {
+    "check": "release-artifacts",
+    "command": "npm.cmd run verify:release-artifacts",
+    "exitCode": 0,
+    "seconds": 1.33
+  },
+  {
+    "check": "browser-table",
+    "command": "npx.cmd playwright test --config playwright.table.config.ts",
+    "exitCode": 0,
+    "seconds": 48.56
+  },
+  {
+    "check": "browser-ui",
+    "command": "npx.cmd playwright test --config playwright.ui.config.ts",
+    "exitCode": 0,
+    "seconds": 15.67
+  },
+  {
+    "check": "integration",
+    "command": "npm.cmd run test:integration -- --reporter=default --reporter=json --outputFile=docs/verification/w40-integration.json",
+    "exitCode": 0,
+    "seconds": 63.09
+  }
+]

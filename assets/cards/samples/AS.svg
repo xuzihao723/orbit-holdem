@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 336" width="240" height="336" data-card-id="AS" data-rank="A" data-suit="S" role="img">
+  <title>AS</title>
+  <rect x="1" y="1" width="238" height="334" rx="16" fill="#F7F2E8" stroke="#D6B878" stroke-width="2"/>
+  <rect x="10" y="10" width="220" height="316" rx="11" fill="none" stroke="#D6B878" stroke-opacity="0.5"/>
+  <g data-corner="safe" fill="var(--card-suit,#17212B)" font-family="Segoe UI, sans-serif" font-weight="600" text-anchor="middle"><text x="34" y="54" font-size="46">A</text><text x="34" y="86" font-size="32">♠</text></g><g transform="rotate(180 120 168)"><g data-corner="safe" fill="var(--card-suit,#17212B)" font-family="Segoe UI, sans-serif" font-weight="600" text-anchor="middle"><text x="34" y="54" font-size="46">A</text><text x="34" y="86" font-size="32">♠</text></g></g>
+  <g stroke="#D6B878" fill="none" stroke-width="2"><circle cx="120" cy="168" r="65"/><circle cx="120" cy="168" r="54"/><path d="M120 89V109M120 227V247M41 168H61M179 168H199"/></g><path d="M120 110 L134.5 153.5 L178 168 L134.5 182.5 L120 226 L105.5 182.5 L62 168 L105.5 153.5Z" fill="#D6B878"/><text x="120" y="198" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="97" fill="var(--card-suit,#17212B)">♠</text>
+</svg>

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "build",
+    "command": "npm.cmd run build",
+    "exitCode": 0,
+    "output": "\n> orbit-workspace@0.1.0 build\n> npm run typecheck && tsc -b tsconfig.build.json && npm run build --workspace @orbit/web\n\n\n> orbit-workspace@0.1.0 typecheck\n> npm run contracts:generate && npm run build:shared && tsc -p apps/server/tsconfig.json --noEmit && tsc -p apps/web/tsconfig.json && tsc -p tsconfig.tests.json && tsc -p tsconfig.tools.json\n\n\n> orbit-workspace@0.1.0 contracts:generate\n> node scripts/generate-contract-examples.mjs\n\nGenerated typed contracts for 14 examples.\n\n> orbit-workspace@0.1.0 build:shared\n> tsc -b packages/protocol packages/poker-core\n\n\n> @orbit/web@0.1.0 build\n> vite build\n\nvite v8.3.5 building client environment for production...\ntransforming...\n✓ 16 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                   0.46 kB │ gzip:  0.32 kB\ndist/assets/index-J1yaBwNt.css    1.88 kB │ gzip:  0.86 kB\ndist/assets/index-C2Z8fy1X.js   221.21 kB │ gzip: 69.49 kB\n\n✓ built in 129ms\n"
+  },
+  {
+    "name": "browser",
+    "command": "npm.cmd run test:e2e",
+    "exitCode": 0,
+    "output": "\n> orbit-workspace@0.1.0 test:e2e\n> playwright test\n\n[WebServer] (node:18140) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)\n[WebServer] (node:12616) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)\n[WebServer] (node:4920) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)\n\nRunning 3 tests using 1 worker\n\n(node:10580) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n  ok 1 [chromium] › tests\\e2e\\startup.spec.ts:3:1 › browser reaches the actual server through the frontend proxy (489ms)\n  ok 2 [chromium] › tests\\e2e\\startup.spec.ts:13:1 › shows a recoverable message when its health request is refused (504ms)\n  ok 3 [chromium] › tests\\e2e\\startup.spec.ts:22:1 › shows failure rather than success for an HTTP error response (403ms)\n\n  3 passed (7.4s)\n"
+  },
+  {
+    "name": "fixtures",
+    "command": "npm.cmd run test:fixtures",
+    "exitCode": 0,
+    "output": "\n> orbit-workspace@0.1.0 test:fixtures\n> python scripts/validate-w01.py && python scripts/validate-w02.py\n\n{\r\n  \"status\": \"passed\",\r\n  \"baselineDate\": \"2026-10-30\",\r\n  \"scope\": \"W01 document and fixture audit only\",\r\n  \"scenarioCount\": 74,\r\n  \"groups\": {\r\n    \"core\": 41,\r\n    \"supplementalRanks\": 4,\r\n    \"room\": 13,\r\n    \"lifecycle\": 12,\r\n    \"privacy\": 4\r\n  },\r\n  \"userStories\": 12,\r\n  \"boundaryDecisions\": 10,\r\n  \"checks\": [\r\n    \"strict JSON and unique keys\",\r\n    \"74 unique IDs and 41 core IDs\",\r\n    \"required fields\",\r\n    \"provenance paths\",\r\n    \"fixed deals for 2/3/4 seats\",\r\n    \"shuffle stub fact\",\r\n    \"nine hand category facts and kickers\",\r\n    \"compatible settlement cards\",\r\n    \"seven pot/refund/payout arithmetic facts\",\r\n    \"call and raise arithmetic\",\r\n    \"B04/B09 responsive opponent premises\",\r\n    \"passive hand fixture amounts\",\r\n    \"room capacities\",\r\n    \"reset and cashout ledger arithmetic\",\r\n    \"document links and references\"\r\n  ],\r\n  \"applicationRuleTestsRun\": false,\r\n  \"propertySimulationsRun\": false,\r\n  \"networkTestsRun\": false\r\n}\r\n{\r\n  \"status\": \"passed\",\r\n  \"baselineDate\": \"2026-10-30\",\r\n  \"scope\": \"W02 documentation, pure declarations and example audit\",\r\n  \"clientRequests\": 15,\r\n  \"mutatingCommands\": 11,\r\n  \"serverEvents\": 5,\r\n  \"errorCodes\": 23,\r\n  \"examples\": 14,\r\n  \"successExamples\": 8,\r\n  \"failureExamples\": 6,\r\n  \"replayFrames\": 16,\r\n  \"checks\": [\r\n    \"closed example payload shapes\",\r\n    \"request/response IDs\",\r\n    \"event and error names match declarations/docs\",\r\n    \"owner/public views\",\r\n    \"legal amount fields\",\r\n    \"fixed replay card/winner/settlement facts\",\r\n    \"replay chip conservation\",\r\n    \"credential and hidden-card boundaries\",\r\n    \"W01 input fingerprints\",\r\n    \"local documentation links\",\r\n    \"type-only import boundaries\"\r\n  ],\r\n  \"typescriptCompiled\": false,\r\n  \"runtimeInputValidationImplemented\": false,\r\n  \"serverStarted\": false,\r\n  \"networkTestsRun\": false\r\n}\r\n"
+  },
+  {
+    "name": "format",
+    "command": "npm.cmd run format:check",
+    "exitCode": 0,
+    "output": "\n> orbit-workspace@0.1.0 format:check\n> prettier --check .\n\nChecking formatting...\nAll matched files use Prettier code style!\n"
+  },
+  {
+    "name": "core_not_implemented",
+    "command": "npm.cmd run test:core",
+    "exitCode": 1,
+    "output": "\n> orbit-workspace@0.1.0 test:core\n> vitest run --project core\n\n\n RUN  v5.0.5 D:/User/codex_respository/dezhou_app/poker-four\n\nNo test files found, exiting with code 1\n\nprojects: core\n\n|core| \n\ninclude: tests/core/**/*.test.ts\nexclude:  **/node_modules/**, **/.git/**\n\n"
+  }
+]

@@ -1,0 +1,70 @@
+[
+  {
+    "command": [
+      "npm.cmd",
+      "run",
+      "test:fixtures"
+    ],
+    "exitCode": 0,
+    "stdout": "\n> orbit-workspace@0.1.0 test:fixtures\n> python scripts/validate-w01.py && python scripts/validate-w02.py\n\n{\n  \"status\": \"passed\",\n  \"baselineDate\": \"2026-10-30\",\n  \"scope\": \"W01 document and fixture audit only\",\n  \"scenarioCount\": 74,\n  \"groups\": {\n    \"core\": 41,\n    \"supplementalRanks\": 4,\n    \"room\": 13,\n    \"lifecycle\": 12,\n    \"privacy\": 4\n  },\n  \"userStories\": 12,\n  \"boundaryDecisions\": 10,\n  \"checks\": [\n    \"strict JSON and unique keys\",\n    \"74 unique IDs and 41 core IDs\",\n    \"required fields\",\n    \"provenance paths\",\n    \"fixed deals for 2/3/4 seats\",\n    \"shuffle stub fact\",\n    \"nine hand category facts and kickers\",\n    \"compatible settlement cards\",\n    \"seven pot/refund/payout arithmetic facts\",\n    \"call and raise arithmetic\",\n    \"B04/B09 responsive opponent premises\",\n    \"passive hand fixture amounts\",\n    \"room capacities\",\n    \"reset and cashout ledger arithmetic\",\n    \"document links and references\"\n  ],\n  \"applicationRuleTestsRun\": false,\n  \"propertySimulationsRun\": false,\n  \"networkTestsRun\": false\n}\n{\n  \"status\": \"passed\",\n  \"baselineDate\": \"2026-10-30\",\n  \"scope\": \"W02 documentation, pure declarations and example audit\",\n  \"clientRequests\": 15,\n  \"mutatingCommands\": 11,\n  \"serverEvents\": 5,\n  \"errorCodes\": 23,\n  \"examples\": 14,\n  \"successExamples\": 8,\n  \"failureExamples\": 6,\n  \"replayFrames\": 16,\n  \"checks\": [\n    \"closed example payload shapes\",\n    \"request/response IDs\",\n    \"event and error names match declarations/docs\",\n    \"owner/public views\",\n    \"legal amount fields\",\n    \"fixed replay card/winner/settlement facts\",\n    \"replay chip conservation\",\n    \"credential and hidden-card boundaries\",\n    \"W01 input fingerprints\",\n    \"local documentation links\",\n    \"type-only import boundaries\"\n  ],\n  \"typescriptCompiled\": false,\n  \"runtimeInputValidationImplemented\": false,\n  \"serverStarted\": false,\n  \"networkTestsRun\": false\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "npm.cmd",
+      "run",
+      "test:core",
+      "--",
+      "--reporter=default",
+      "--reporter=json",
+      "--outputFile=docs/verification/w09-core.json"
+    ],
+    "exitCode": 0,
+    "stdout": "\n> orbit-workspace@0.1.0 test:core\n> vitest run --project core --reporter=default --reporter=json --outputFile=docs/verification/w09-core.json\n\n\n RUN  v5.0.5 D:/User/codex_respository/dezhou_app/poker-four\n\n ✓ |core| tests/core/betting.test.ts (19 tests) 27ms\n ✓ |core| tests/core/positions.test.ts (25 tests) 25ms\n ✓ |core| tests/core/deck.test.ts (48 tests) 46ms\n ✓ |core| tests/core/cards.test.ts (20 tests) 25ms\n ✓ |core| tests/core/reopen-betting.test.ts (19 tests) 95ms\n ✓ |core| tests/core/evaluate.test.ts (18 tests) 29ms\n ✓ |core| tests/core/evaluate-oracle.test.ts (2 tests) 1957ms\n   ✓ cross-validates ten thousand seeded seven-card sets and relative strengths 1943ms\n\n Test Files  7 passed (7)\n      Tests  151 passed (151)\n   Start at  22:25:27\n   Duration  2.64s (tests 66%, import 20%, transform 12%, worker 2%)\n\nJSON report written to D:/User/codex_respository/dezhou_app/poker-four/docs/verification/w09-core.json\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "npm.cmd",
+      "run",
+      "test:integration",
+      "--",
+      "--reporter=default",
+      "--reporter=json",
+      "--outputFile=docs/verification/w09-integration.json"
+    ],
+    "exitCode": 0,
+    "stdout": "\n> orbit-workspace@0.1.0 test:integration\n> vitest run --project integration --reporter=default --reporter=json --outputFile=docs/verification/w09-integration.json\n\n\n RUN  v5.0.5 D:/User/codex_respository/dezhou_app/poker-four\n\n ✓ |integration| tests/integration/seat-layout.test.ts (5 tests) 11ms\n ✓ |integration| tests/integration/graybox-fixtures.test.ts (6 tests) 51ms\n ✓ |integration| tests/integration/protocol-contract.test.ts (2 tests) 10ms\n ✓ |integration| tests/integration/random.test.ts (11 tests) 28ms\n ✓ |integration| tests/integration/contract-generator.test.ts (2 tests) 431ms\n ✓ |integration| tests/integration/health.test.ts (7 tests) 215ms\n ✓ |integration| tests/integration/preview-bundle.test.ts (3 tests) 788ms\n   ✓ rejects actual fixture labels even if shipped in an unreferenced chunk 386ms\n ✓ |integration| tests/integration/dev-startup.test.ts (2 tests) 11164ms\n   ✓ the actual unified dev command exits when its backend port is occupied 3236ms\n   ✓ the actual unified dev command starts both services and releases them when stopped 7924ms\n\n Test Files  8 passed (8)\n      Tests  38 passed (38)\n   Start at  22:25:33\n   Duration  11.69s (tests 93%, import 4%, transform 2%, worker 1%)\n\nJSON report written to D:/User/codex_respository/dezhou_app/poker-four/docs/verification/w09-integration.json\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "npm.cmd",
+      "run",
+      "format:check"
+    ],
+    "exitCode": 0,
+    "stdout": "\n> orbit-workspace@0.1.0 format:check\n> prettier --check .\n\nChecking formatting...\nAll matched files use Prettier code style!\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "npm.cmd",
+      "run",
+      "build"
+    ],
+    "exitCode": 0,
+    "stdout": "\n> orbit-workspace@0.1.0 build\n> npm run typecheck && tsc -b tsconfig.build.json && npm run build --workspace @orbit/web\n\n\n> orbit-workspace@0.1.0 typecheck\n> npm run contracts:generate && npm run build:shared && tsc -p apps/server/tsconfig.json --noEmit && tsc -p apps/web/tsconfig.json && tsc -p tsconfig.tests.json && tsc -p tsconfig.tools.json\n\n\n> orbit-workspace@0.1.0 contracts:generate\n> node scripts/generate-contract-examples.mjs\n\nGenerated typed contracts for 14 examples.\n\n> orbit-workspace@0.1.0 build:shared\n> tsc -b packages/protocol packages/poker-core\n\n\n> @orbit/web@0.1.0 build\n> vite build\n\nvite v8.3.5 building client environment for production...\ntransforming...\n✓ 19 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                   0.46 kB │ gzip:  0.32 kB\ndist/assets/index-DmU6NLdv.css   10.59 kB │ gzip:  2.94 kB\ndist/assets/index-Bo4xvcc0.js   221.90 kB │ gzip: 69.78 kB\n\n✓ built in 412ms\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "npm.cmd",
+      "run",
+      "verify:preview-bundle"
+    ],
+    "exitCode": 0,
+    "stdout": "\n> orbit-workspace@0.1.0 verify:preview-bundle\n> node scripts/verify-preview-bundle.mjs\n\nProduction preview boundary passed: 3 files, no development fixture markers.\n",
+    "stderr": ""
+  }
+]

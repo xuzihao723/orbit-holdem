@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-31",
+  "source": "original S01-S03 fixtures",
+  "entry": "compiled ESM after final W15 build",
+  "results": [
+    {
+      "id": "S01",
+      "playerCount": 2,
+      "actions": 8,
+      "consumed": 12,
+      "handVersion": 9,
+      "turnSerial": 8,
+      "finalStacks": {
+        "0": 2000,
+        "1": 2000
+      }
+    },
+    {
+      "id": "S01",
+      "playerCount": 3,
+      "actions": 12,
+      "consumed": 14,
+      "handVersion": 13,
+      "turnSerial": 12,
+      "finalStacks": {
+        "0": 2040,
+        "1": 1980,
+        "2": 1980
+      }
+    },
+    {
+      "id": "S01",
+      "playerCount": 4,
+      "actions": 16,
+      "consumed": 16,
+      "handVersion": 17,
+      "turnSerial": 16,
+      "finalStacks": {
+        "0": 2060,
+        "1": 1980,
+        "2": 1980,
+        "3": 1980
+      }
+    },
+    {
+      "id": "S02",
+      "playerCount": 2,
+      "actions": 1,
+      "consumed": 4,
+      "handVersion": 2,
+      "turnSerial": 1,
+      "finalStacks": {
+        "0": 1990,
+        "1": 2010
+      }
+    },
+    {
+      "id": "S03",
+      "playerCount": 2,
+      "actions": 2,
+      "consumed": 12,
+      "handVersion": 3,
+      "turnSerial": 2,
+      "finalStacks": {
+        "0": 100,
+        "1": 100
+      }
+    }
+  ]
+}

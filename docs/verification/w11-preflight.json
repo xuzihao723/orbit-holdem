@@ -1,0 +1,44 @@
+{
+  "sourceFingerprintsValid": true,
+  "historicalFiles": 97,
+  "logs": [
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "test:core",
+        "--",
+        "tests/core/pot-layers.test.ts"
+      ],
+      "exitCode": 0,
+      "stdout": "\n> orbit-workspace@0.1.0 test:core\n> vitest run --project core tests/core/pot-layers.test.ts\n\n\n RUN  v5.0.5 D:/User/codex_respository/dezhou_app/poker-four\n\n\n Test Files  1 passed (1)\n      Tests  23 passed (23)\n   Start at  23:08:38\n   Duration  401ms (import 38%, transform 37%, tests 20%, worker 6%)\n\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "test:core",
+        "--",
+        "--reporter=json",
+        "--outputFile=docs/verification/w11-preflight-core.json"
+      ],
+      "exitCode": 0,
+      "stdout": "\n> orbit-workspace@0.1.0 test:core\n> vitest run --project core --reporter=json --outputFile=docs/verification/w11-preflight-core.json\n\nJSON report written to D:/User/codex_respository/dezhou_app/poker-four/docs/verification/w11-preflight-core.json\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "test:integration",
+        "--",
+        "--reporter=json",
+        "--outputFile=docs/verification/w11-preflight-integration.json"
+      ],
+      "exitCode": 0,
+      "stdout": "\n> orbit-workspace@0.1.0 test:integration\n> vitest run --project integration --reporter=json --outputFile=docs/verification/w11-preflight-integration.json\n\nJSON report written to D:/User/codex_respository/dezhou_app/poker-four/docs/verification/w11-preflight-integration.json\n",
+      "stderr": ""
+    }
+  ]
+}

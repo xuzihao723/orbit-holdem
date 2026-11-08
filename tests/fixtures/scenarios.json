@@ -1,0 +1,5067 @@
+[
+  {
+    "id": "C01",
+    "category": "cards",
+    "description": "完整牌组52张且各花色13张",
+    "given": {
+      "suitOrder": [
+        "S",
+        "H",
+        "C",
+        "D"
+      ],
+      "rankOrder": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "J",
+        "Q",
+        "K",
+        "A"
+      ]
+    },
+    "when": {
+      "operation": "createDeck"
+    },
+    "expected": {
+      "cardCount": 52,
+      "uniqueCardCount": 52,
+      "suitCounts": {
+        "S": 13,
+        "H": 13,
+        "C": 13,
+        "D": 13
+      },
+      "deckOrder": [
+        "2S",
+        "3S",
+        "4S",
+        "5S",
+        "6S",
+        "7S",
+        "8S",
+        "9S",
+        "10S",
+        "JS",
+        "QS",
+        "KS",
+        "AS",
+        "2H",
+        "3H",
+        "4H",
+        "5H",
+        "6H",
+        "7H",
+        "8H",
+        "9H",
+        "10H",
+        "JH",
+        "QH",
+        "KH",
+        "AH",
+        "2C",
+        "3C",
+        "4C",
+        "5C",
+        "6C",
+        "7C",
+        "8C",
+        "9C",
+        "10C",
+        "JC",
+        "QC",
+        "KC",
+        "AC",
+        "2D",
+        "3D",
+        "4D",
+        "5D",
+        "6D",
+        "7D",
+        "8D",
+        "9D",
+        "10D",
+        "JD",
+        "QD",
+        "KD",
+        "AD"
+      ]
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "C01"
+    }
+  },
+  {
+    "id": "C02",
+    "category": "cards",
+    "description": "固定牌序逐圈发牌并完成三次烧牌，覆盖2/3/4人",
+    "given": {
+      "deck": [
+        "2S",
+        "3S",
+        "4S",
+        "5S",
+        "6S",
+        "7S",
+        "8S",
+        "9S",
+        "10S",
+        "JS",
+        "QS",
+        "KS",
+        "AS",
+        "2H",
+        "3H",
+        "4H",
+        "5H",
+        "6H",
+        "7H",
+        "8H",
+        "9H",
+        "10H",
+        "JH",
+        "QH",
+        "KH",
+        "AH",
+        "2C",
+        "3C",
+        "4C",
+        "5C",
+        "6C",
+        "7C",
+        "8C",
+        "9C",
+        "10C",
+        "JC",
+        "QC",
+        "KC",
+        "AC",
+        "2D",
+        "3D",
+        "4D",
+        "5D",
+        "6D",
+        "7D",
+        "8D",
+        "9D",
+        "10D",
+        "JD",
+        "QD",
+        "KD",
+        "AD"
+      ],
+      "dealerSeatId": 0,
+      "seatSets": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ]
+    },
+    "when": {
+      "operation": "dealThroughRiverVariants"
+    },
+    "expected": {
+      "variants": [
+        {
+          "seatIds": [
+            0,
+            1
+          ],
+          "dealOrder": [
+            1,
+            0
+          ],
+          "holeCards": {
+            "0": [
+              "3S",
+              "5S"
+            ],
+            "1": [
+              "2S",
+              "4S"
+            ]
+          },
+          "burnCards": [
+            "6S",
+            "10S",
+            "QS"
+          ],
+          "board": [
+            "7S",
+            "8S",
+            "9S",
+            "JS",
+            "KS"
+          ],
+          "consumed": 12
+        },
+        {
+          "seatIds": [
+            0,
+            1,
+            2
+          ],
+          "dealOrder": [
+            1,
+            2,
+            0
+          ],
+          "holeCards": {
+            "0": [
+              "4S",
+              "7S"
+            ],
+            "1": [
+              "2S",
+              "5S"
+            ],
+            "2": [
+              "3S",
+              "6S"
+            ]
+          },
+          "burnCards": [
+            "8S",
+            "QS",
+            "AS"
+          ],
+          "board": [
+            "9S",
+            "10S",
+            "JS",
+            "KS",
+            "2H"
+          ],
+          "consumed": 14
+        },
+        {
+          "seatIds": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "dealOrder": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "holeCards": {
+            "0": [
+              "5S",
+              "9S"
+            ],
+            "1": [
+              "2S",
+              "6S"
+            ],
+            "2": [
+              "3S",
+              "7S"
+            ],
+            "3": [
+              "4S",
+              "8S"
+            ]
+          },
+          "burnCards": [
+            "10S",
+            "AS",
+            "3H"
+          ],
+          "board": [
+            "JS",
+            "QS",
+            "KS",
+            "2H",
+            "4H"
+          ],
+          "consumed": 16
+        }
+      ]
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "C02"
+    }
+  },
+  {
+    "id": "C03",
+    "category": "cards",
+    "description": "同一固定随机流重复洗牌且不修改源牌组",
+    "given": {
+      "deck": [
+        "2S",
+        "3S",
+        "4S",
+        "5S",
+        "6S",
+        "7S",
+        "8S",
+        "9S",
+        "10S",
+        "JS",
+        "QS",
+        "KS",
+        "AS",
+        "2H",
+        "3H",
+        "4H",
+        "5H",
+        "6H",
+        "7H",
+        "8H",
+        "9H",
+        "10H",
+        "JH",
+        "QH",
+        "KH",
+        "AH",
+        "2C",
+        "3C",
+        "4C",
+        "5C",
+        "6C",
+        "7C",
+        "8C",
+        "9C",
+        "10C",
+        "JC",
+        "QC",
+        "KC",
+        "AC",
+        "2D",
+        "3D",
+        "4D",
+        "5D",
+        "6D",
+        "7D",
+        "8D",
+        "9D",
+        "10D",
+        "JD",
+        "QD",
+        "KD",
+        "AD"
+      ],
+      "randomIntStub": "alwaysReturnLowerBound",
+      "runs": 2
+    },
+    "when": {
+      "operation": "shuffleTwiceWithFreshIdenticalStub"
+    },
+    "expected": {
+      "bothDecksEqual": true,
+      "inputUnchanged": true,
+      "uniqueCardCount": 52,
+      "shuffledDeck": [
+        "3S",
+        "4S",
+        "5S",
+        "6S",
+        "7S",
+        "8S",
+        "9S",
+        "10S",
+        "JS",
+        "QS",
+        "KS",
+        "AS",
+        "2H",
+        "3H",
+        "4H",
+        "5H",
+        "6H",
+        "7H",
+        "8H",
+        "9H",
+        "10H",
+        "JH",
+        "QH",
+        "KH",
+        "AH",
+        "2C",
+        "3C",
+        "4C",
+        "5C",
+        "6C",
+        "7C",
+        "8C",
+        "9C",
+        "10C",
+        "JC",
+        "QC",
+        "KC",
+        "AC",
+        "2D",
+        "3D",
+        "4D",
+        "5D",
+        "6D",
+        "7D",
+        "8D",
+        "9D",
+        "10D",
+        "JD",
+        "QD",
+        "KD",
+        "AD",
+        "2S"
+      ]
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "C03"
+    }
+  },
+  {
+    "id": "E01",
+    "category": "evaluation",
+    "description": "A2345是五高顺子",
+    "given": {
+      "cards": [
+        "AS",
+        "2H",
+        "3D",
+        "4C",
+        "5S",
+        "9H",
+        "KD"
+      ]
+    },
+    "when": {
+      "operation": "evaluateBest"
+    },
+    "expected": {
+      "category": 4,
+      "tieBreak": [
+        5
+      ],
+      "bestFiveSet": [
+        "AS",
+        "2H",
+        "3D",
+        "4C",
+        "5S"
+      ]
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "E01"
+    }
+  },
+  {
+    "id": "E02",
+    "category": "evaluation",
+    "description": "皇家同花顺属于A高同花顺",
+    "given": {
+      "cards": [
+        "AS",
+        "KS",
+        "QS",
+        "JS",
+        "10S",
+        "2H",
+        "3D"
+      ]
+    },
+    "when": {
+      "operation": "evaluateBest"
+    },
+    "expected": {
+      "category": 8,
+      "tieBreak": [
+        14
+      ],
+      "bestFiveSet": [
+        "AS",
+        "KS",
+        "QS",
+        "JS",
+        "10S"
+      ]
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "E02"
+    }
+  },
+  {
+    "id": "E03",
+    "category": "evaluation",
+    "description": "双三条选择A葫芦K",
+    "given": {
+      "cards": [
+        "AS",
+        "AH",
+        "AD",
+        "KS",
+        "KH",
+        "KD",
+        "2C"
+      ]
+    },
+    "when": {
+      "operation": "evaluateBest"
+    },
+    "expected": {
+      "category": 6,
+      "tieBreak": [
+        14,
+        13
+      ]
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "E03"
+    }
+  },
+  {
+    "id": "E04",
+    "category": "evaluation",
+    "description": "A/K两对以Q踢脚",
+    "given": {
+      "cards": [
+        "AS",
+        "AH",
+        "KD",
+        "KC",
+        "QS",
+        "2H",
+        "3C"
+      ]
+    },
+    "when": {
+      "operation": "evaluateBest"
+    },
+    "expected": {
+      "category": 2,
+      "tieBreak": [
+        14,
+        13,
+        12
+      ]
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "E04"
+    }
+  },
+  {
+    "id": "E05",
+    "category": "evaluation",
+    "description": "公共皇家同花顺使两名玩家平局",
+    "given": {
+      "board": [
+        "AS",
+        "KS",
+        "QS",
+        "JS",
+        "10S"
+      ],
+      "holeCards": {
+        "0": [
+          "2H",
+          "3D"
+        ],
+        "1": [
+          "4C",
+          "5H"
+        ]
+      }
+    },
+    "when": {
+      "operation": "comparePlayers"
+    },
+    "expected": {
+      "comparison": 0,
+      "category": 8,
+      "tieBreak": [
+        14
+      ],
+      "bestFiveSet": [
+        "AS",
+        "KS",
+        "QS",
+        "JS",
+        "10S"
+      ]
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "E05"
+    }
+  },
+  {
+    "id": "E06",
+    "category": "evaluation",
+    "description": "同K对子和A踢脚时，Q次踢脚击败J，花色无关",
+    "given": {
+      "hands": {
+        "0": [
+          "KS",
+          "KH",
+          "AS",
+          "QD",
+          "9C",
+          "5H",
+          "2D"
+        ],
+        "1": [
+          "KC",
+          "KD",
+          "AH",
+          "JS",
+          "9D",
+          "5C",
+          "2S"
+        ]
+      }
+    },
+    "when": {
+      "operation": "compareHands"
+    },
+    "expected": {
+      "winnerSeatIds": [
+        0
+      ],
+      "ranks": {
+        "0": [
+          1,
+          13,
+          14,
+          12,
+          9
+        ],
+        "1": [
+          1,
+          13,
+          14,
+          11,
+          9
+        ]
+      }
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "E06"
+    }
+  },
+  {
+    "id": "E07",
+    "category": "evaluation",
+    "description": "拒绝重复牌和非5至7张输入",
+    "given": {
+      "invalidInputs": [
+        [
+          "AS",
+          "AS",
+          "KD",
+          "QC",
+          "9H"
+        ],
+        [
+          "AS",
+          "KH",
+          "QD",
+          "JC"
+        ],
+        [
+          "AS",
+          "KH",
+          "QD",
+          "JC",
+          "10S",
+          "9H",
+          "8D",
+          "7C"
+        ]
+      ]
+    },
+    "when": {
+      "operation": "evaluateInvalidInputs"
+    },
+    "expected": {
+      "rejectedCount": 3,
+      "reasons": [
+        "DUPLICATE_CARD",
+        "INVALID_CARD_COUNT",
+        "INVALID_CARD_COUNT"
+      ]
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "E07"
+    }
+  },
+  {
+    "id": "O01",
+    "category": "positions",
+    "description": "四人和有空座的三人行动位置",
+    "given": {
+      "variants": [
+        {
+          "seatIds": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "dealerSeatId": 0
+        },
+        {
+          "seatIds": [
+            0,
+            2,
+            3
+          ],
+          "dealerSeatId": 0
+        }
+      ]
+    },
+    "when": {
+      "operation": "resolvePositions"
+    },
+    "expected": {
+      "variants": [
+        {
+          "smallBlindSeatId": 1,
+          "bigBlindSeatId": 2,
+          "preflopOrder": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "postflopOrder": [
+            1,
+            2,
+            3,
+            0
+          ]
+        },
+        {
+          "smallBlindSeatId": 2,
+          "bigBlindSeatId": 3,
+          "preflopOrder": [
+            0,
+            2,
+            3
+          ],
+          "postflopOrder": [
+            2,
+            3,
+            0
+          ]
+        }
+      ]
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "O01"
+    }
+  },
+  {
+    "id": "O02",
+    "category": "positions",
+    "description": "双人庄家兼小盲，翻前先翻后后",
+    "given": {
+      "seatIds": [
+        0,
+        2
+      ],
+      "dealerSeatId": 0
+    },
+    "when": {
+      "operation": "resolvePositions"
+    },
+    "expected": {
+      "smallBlindSeatId": 0,
+      "bigBlindSeatId": 2,
+      "preflopOrder": [
+        0,
+        2
+      ],
+      "postflopOrder": [
+        2,
+        0
+      ],
+      "dealOrder": [
+        2,
+        0
+      ]
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "O02"
+    }
+  },
+  {
+    "id": "O03",
+    "category": "positions",
+    "description": "多人转双人避免存活者连续大盲",
+    "given": {
+      "previousSeatIds": [
+        0,
+        1,
+        2
+      ],
+      "previousDealerSeatId": 0,
+      "previousBigBlindSeatId": 2,
+      "nextSeatIds": [
+        0,
+        2
+      ]
+    },
+    "when": {
+      "operation": "resolveNextHandPositions"
+    },
+    "expected": {
+      "dealerSeatId": 2,
+      "smallBlindSeatId": 2,
+      "bigBlindSeatId": 0,
+      "preflopOrder": [
+        2,
+        0
+      ],
+      "postflopOrder": [
+        0,
+        2
+      ]
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "O03"
+    }
+  },
+  {
+    "id": "O04",
+    "category": "positions",
+    "description": "短盲只实扣余额，翻前标线仍20",
+    "given": {
+      "seatIds": [
+        0,
+        1,
+        2
+      ],
+      "dealerSeatId": 0,
+      "initialStacks": {
+        "0": 2000,
+        "1": 5,
+        "2": 7
+      },
+      "smallBlind": 10,
+      "bigBlind": 20
+    },
+    "when": {
+      "operation": "postBlinds"
+    },
+    "expected": {
+      "players": [
+        {
+          "seatId": 0,
+          "stack": 2000,
+          "streetCommitted": 0,
+          "handCommitted": 0,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": null
+        },
+        {
+          "seatId": 1,
+          "stack": 0,
+          "streetCommitted": 5,
+          "handCommitted": 5,
+          "folded": false,
+          "allIn": true,
+          "lastActedAtBet": null
+        },
+        {
+          "seatId": 2,
+          "stack": 0,
+          "streetCommitted": 7,
+          "handCommitted": 7,
+          "folded": false,
+          "allIn": true,
+          "lastActedAtBet": null
+        }
+      ],
+      "currentBet": 20,
+      "lastFullRaiseSize": 20,
+      "initialChipTotal": 2012,
+      "potTotal": 12
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "O04"
+    }
+  },
+  {
+    "id": "O05",
+    "category": "positions",
+    "description": "全桌补盲后大盲仍有行动选择",
+    "given": {
+      "street": "preflop",
+      "bigBlind": 20,
+      "currentBet": 20,
+      "lastFullRaiseSize": 20,
+      "actorSeatId": 2,
+      "players": [
+        {
+          "seatId": 0,
+          "stack": 1980,
+          "streetCommitted": 20,
+          "handCommitted": 20,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": 20
+        },
+        {
+          "seatId": 1,
+          "stack": 1980,
+          "streetCommitted": 20,
+          "handCommitted": 20,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": 20
+        },
+        {
+          "seatId": 2,
+          "stack": 1980,
+          "streetCommitted": 20,
+          "handCommitted": 20,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": null
+        }
+      ]
+    },
+    "when": {
+      "operation": "getLegalActions"
+    },
+    "expected": {
+      "actorSeatId": 2,
+      "callAmount": 0,
+      "legalActions": [
+        "fold",
+        "check",
+        "raise",
+        "allIn"
+      ],
+      "minRaiseTo": 40,
+      "streetFinished": false
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "O05"
+    }
+  },
+  {
+    "id": "B01",
+    "category": "betting",
+    "description": "大盲20未加注时最低加注至40",
+    "given": {
+      "street": "preflop",
+      "bigBlind": 20,
+      "currentBet": 20,
+      "lastFullRaiseSize": 20,
+      "actorSeatId": 0,
+      "players": [
+        {
+          "seatId": 0,
+          "stack": 1990,
+          "streetCommitted": 10,
+          "handCommitted": 10,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": null
+        },
+        {
+          "seatId": 1,
+          "stack": 1980,
+          "streetCommitted": 20,
+          "handCommitted": 20,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": null
+        }
+      ]
+    },
+    "when": {
+      "operation": "getLegalActions"
+    },
+    "expected": {
+      "callAmount": 10,
+      "legalActions": [
+        "fold",
+        "call",
+        "raise",
+        "allIn"
+      ],
+      "minRaiseTo": 40,
+      "maxRaiseTo": 2000,
+      "additionalAmountAtMinRaise": 30
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "B01"
+    }
+  },
+  {
+    "id": "B02",
+    "category": "betting",
+    "description": "20加至60后完整增量40，下位最低加至100",
+    "given": {
+      "street": "preflop",
+      "bigBlind": 20,
+      "currentBet": 60,
+      "lastFullRaiseSize": 40,
+      "actorSeatId": 1,
+      "players": [
+        {
+          "seatId": 0,
+          "stack": 1940,
+          "streetCommitted": 60,
+          "handCommitted": 60,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": 60
+        },
+        {
+          "seatId": 1,
+          "stack": 1980,
+          "streetCommitted": 20,
+          "handCommitted": 20,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": null
+        }
+      ]
+    },
+    "when": {
+      "operation": "getLegalActions"
+    },
+    "expected": {
+      "callAmount": 40,
+      "minRaiseTo": 100,
+      "maxRaiseTo": 2000,
+      "additionalAmountAtMinRaise": 80
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "B02"
+    }
+  },
+  {
+    "id": "B03",
+    "category": "betting",
+    "description": "单次短全押不重开已下注者",
+    "given": {
+      "street": "flop",
+      "bigBlind": 20,
+      "currentBet": 150,
+      "lastFullRaiseSize": 100,
+      "actorSeatId": 0,
+      "players": [
+        {
+          "seatId": 0,
+          "stack": 900,
+          "streetCommitted": 100,
+          "handCommitted": 100,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": 100
+        },
+        {
+          "seatId": 1,
+          "stack": 0,
+          "streetCommitted": 150,
+          "handCommitted": 150,
+          "folded": false,
+          "allIn": true,
+          "lastActedAtBet": 150
+        },
+        {
+          "seatId": 2,
+          "stack": 850,
+          "streetCommitted": 150,
+          "handCommitted": 150,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": 150
+        },
+        {
+          "seatId": 3,
+          "stack": 1000,
+          "streetCommitted": 0,
+          "handCommitted": 0,
+          "folded": true,
+          "allIn": false,
+          "lastActedAtBet": 150
+        }
+      ],
+      "history": [
+        {
+          "seatId": 0,
+          "type": "bet",
+          "raiseTo": 100
+        },
+        {
+          "seatId": 1,
+          "type": "allIn",
+          "resolvedRaiseTo": 150
+        },
+        {
+          "seatId": 2,
+          "type": "call"
+        },
+        {
+          "seatId": 3,
+          "type": "fold"
+        }
+      ]
+    },
+    "when": {
+      "operation": "getLegalActions"
+    },
+    "expected": {
+      "callAmount": 50,
+      "raiseRightReopened": false,
+      "canRaise": false,
+      "minRaiseTo": null,
+      "legalActions": [
+        "fold",
+        "call"
+      ]
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "B03"
+    }
+  },
+  {
+    "id": "B04",
+    "category": "betting",
+    "description": "连续短全押累计100，第四人保留筹码可响应",
+    "given": {
+      "street": "flop",
+      "bigBlind": 20,
+      "currentBet": 200,
+      "lastFullRaiseSize": 100,
+      "actorSeatId": 0,
+      "players": [
+        {
+          "seatId": 0,
+          "stack": 900,
+          "streetCommitted": 100,
+          "handCommitted": 100,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": 100
+        },
+        {
+          "seatId": 1,
+          "stack": 0,
+          "streetCommitted": 150,
+          "handCommitted": 150,
+          "folded": false,
+          "allIn": true,
+          "lastActedAtBet": 150
+        },
+        {
+          "seatId": 2,
+          "stack": 0,
+          "streetCommitted": 200,
+          "handCommitted": 200,
+          "folded": false,
+          "allIn": true,
+          "lastActedAtBet": 200
+        },
+        {
+          "seatId": 3,
+          "stack": 800,
+          "streetCommitted": 200,
+          "handCommitted": 200,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": 200
+        }
+      ]
+    },
+    "when": {
+      "operation": "getLegalActions"
+    },
+    "expected": {
+      "callAmount": 100,
+      "raiseRightReopened": true,
+      "canRaise": true,
+      "minRaiseTo": 300,
+      "additionalAmountAtMinRaise": 200,
+      "legalActions": [
+        "fold",
+        "call",
+        "raise",
+        "allIn"
+      ],
+      "responsiveOpponentSeatIds": [
+        3
+      ]
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "B04"
+    }
+  },
+  {
+    "id": "B05",
+    "category": "betting",
+    "description": "已跟150的C后来面对200，只新增50不重开",
+    "given": {
+      "street": "flop",
+      "bigBlind": 20,
+      "currentBet": 200,
+      "lastFullRaiseSize": 100,
+      "actorSeatId": 2,
+      "players": [
+        {
+          "seatId": 0,
+          "stack": 800,
+          "streetCommitted": 200,
+          "handCommitted": 200,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": 200
+        },
+        {
+          "seatId": 1,
+          "stack": 0,
+          "streetCommitted": 150,
+          "handCommitted": 150,
+          "folded": false,
+          "allIn": true,
+          "lastActedAtBet": 150
+        },
+        {
+          "seatId": 2,
+          "stack": 850,
+          "streetCommitted": 150,
+          "handCommitted": 150,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": 150
+        },
+        {
+          "seatId": 3,
+          "stack": 0,
+          "streetCommitted": 200,
+          "handCommitted": 200,
+          "folded": false,
+          "allIn": true,
+          "lastActedAtBet": 200
+        }
+      ]
+    },
+    "when": {
+      "operation": "getLegalActions"
+    },
+    "expected": {
+      "callAmount": 50,
+      "raiseRightReopened": false,
+      "canRaise": false,
+      "minRaiseTo": null,
+      "legalActions": [
+        "fold",
+        "call"
+      ]
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "B05"
+    }
+  },
+  {
+    "id": "B06",
+    "category": "betting",
+    "description": "面对短开注10，未行动者最低加至30且仍有响应对手",
+    "given": {
+      "street": "flop",
+      "bigBlind": 20,
+      "currentBet": 10,
+      "lastFullRaiseSize": 20,
+      "actorSeatId": 2,
+      "players": [
+        {
+          "seatId": 0,
+          "stack": 1000,
+          "streetCommitted": 0,
+          "handCommitted": 0,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": 0
+        },
+        {
+          "seatId": 1,
+          "stack": 0,
+          "streetCommitted": 10,
+          "handCommitted": 10,
+          "folded": false,
+          "allIn": true,
+          "lastActedAtBet": 10
+        },
+        {
+          "seatId": 2,
+          "stack": 1000,
+          "streetCommitted": 0,
+          "handCommitted": 0,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": null
+        },
+        {
+          "seatId": 3,
+          "stack": 1000,
+          "streetCommitted": 0,
+          "handCommitted": 0,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": null
+        }
+      ]
+    },
+    "when": {
+      "operation": "getLegalActions"
+    },
+    "expected": {
+      "callAmount": 10,
+      "canRaise": true,
+      "minRaiseTo": 30,
+      "additionalAmountAtMinRaise": 30,
+      "legalActions": [
+        "fold",
+        "call",
+        "raise",
+        "allIn"
+      ],
+      "raiseTo20Allowed": false
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "B06"
+    }
+  },
+  {
+    "id": "B07",
+    "category": "betting",
+    "description": "已过牌者面对短额10不能重新加注",
+    "given": {
+      "street": "flop",
+      "bigBlind": 20,
+      "currentBet": 10,
+      "lastFullRaiseSize": 20,
+      "actorSeatId": 0,
+      "players": [
+        {
+          "seatId": 0,
+          "stack": 1000,
+          "streetCommitted": 0,
+          "handCommitted": 0,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": 0
+        },
+        {
+          "seatId": 1,
+          "stack": 0,
+          "streetCommitted": 10,
+          "handCommitted": 10,
+          "folded": false,
+          "allIn": true,
+          "lastActedAtBet": 10
+        },
+        {
+          "seatId": 2,
+          "stack": 990,
+          "streetCommitted": 10,
+          "handCommitted": 10,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": 10
+        },
+        {
+          "seatId": 3,
+          "stack": 1000,
+          "streetCommitted": 0,
+          "handCommitted": 0,
+          "folded": true,
+          "allIn": false,
+          "lastActedAtBet": null
+        }
+      ]
+    },
+    "when": {
+      "operation": "getLegalActions"
+    },
+    "expected": {
+      "callAmount": 10,
+      "raiseRightReopened": false,
+      "canRaise": false,
+      "minRaiseTo": null,
+      "legalActions": [
+        "fold",
+        "call"
+      ]
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "B07"
+    }
+  },
+  {
+    "id": "B08",
+    "category": "betting",
+    "description": "需跟100只剩60，只能弃牌或全押跟注",
+    "given": {
+      "street": "flop",
+      "bigBlind": 20,
+      "currentBet": 100,
+      "lastFullRaiseSize": 100,
+      "actorSeatId": 0,
+      "players": [
+        {
+          "seatId": 0,
+          "stack": 60,
+          "streetCommitted": 0,
+          "handCommitted": 0,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": null
+        },
+        {
+          "seatId": 1,
+          "stack": 900,
+          "streetCommitted": 100,
+          "handCommitted": 100,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": 100
+        }
+      ]
+    },
+    "when": {
+      "operation": "getLegalActionsAndApply",
+      "action": {
+        "type": "allIn"
+      }
+    },
+    "expected": {
+      "legalActions": [
+        "fold",
+        "allIn"
+      ],
+      "allInAmount": 60,
+      "newStack": 0,
+      "newStreetCommitted": 60,
+      "currentBet": 100,
+      "isRaise": false,
+      "normalCallAllowed": false
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "B08"
+    }
+  },
+  {
+    "id": "B09",
+    "category": "betting",
+    "description": "唯一有筹码者只能解决差额，禁止无人可响应加注",
+    "given": {
+      "street": "flop",
+      "bigBlind": 20,
+      "currentBet": 100,
+      "lastFullRaiseSize": 20,
+      "actorSeatId": 0,
+      "players": [
+        {
+          "seatId": 0,
+          "stack": 1000,
+          "streetCommitted": 20,
+          "handCommitted": 20,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": 20
+        },
+        {
+          "seatId": 1,
+          "stack": 0,
+          "streetCommitted": 100,
+          "handCommitted": 100,
+          "folded": false,
+          "allIn": true,
+          "lastActedAtBet": 100
+        }
+      ]
+    },
+    "when": {
+      "operation": "getLegalActions"
+    },
+    "expected": {
+      "callAmount": 80,
+      "legalActions": [
+        "fold",
+        "call"
+      ],
+      "canRaise": false,
+      "minRaiseTo": null,
+      "autoRunoutBeforeResponse": false
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "B09"
+    }
+  },
+  {
+    "id": "B10",
+    "category": "betting",
+    "description": "非actor提交任意动作都拒绝",
+    "given": {
+      "street": "preflop",
+      "bigBlind": 20,
+      "currentBet": 20,
+      "lastFullRaiseSize": 20,
+      "actorSeatId": 0,
+      "players": [
+        {
+          "seatId": 0,
+          "stack": 1990,
+          "streetCommitted": 10,
+          "handCommitted": 10,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": null
+        },
+        {
+          "seatId": 1,
+          "stack": 1980,
+          "streetCommitted": 20,
+          "handCommitted": 20,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": null
+        }
+      ]
+    },
+    "when": {
+      "operation": "applyActionVariants",
+      "submittedSeatId": 1,
+      "actions": [
+        {
+          "type": "fold"
+        },
+        {
+          "type": "check"
+        },
+        {
+          "type": "call"
+        },
+        {
+          "type": "bet",
+          "raiseTo": 40
+        },
+        {
+          "type": "raise",
+          "raiseTo": 40
+        },
+        {
+          "type": "allIn"
+        }
+      ]
+    },
+    "expected": {
+      "rejectedCount": 6,
+      "reason": "NOT_YOUR_TURN",
+      "stateUnchanged": true
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "B10"
+    }
+  },
+  {
+    "id": "B11",
+    "category": "betting",
+    "description": "非法金额不会被修正后执行",
+    "given": {
+      "street": "preflop",
+      "bigBlind": 20,
+      "currentBet": 20,
+      "lastFullRaiseSize": 20,
+      "actorSeatId": 0,
+      "players": [
+        {
+          "seatId": 0,
+          "stack": 1990,
+          "streetCommitted": 10,
+          "handCommitted": 10,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": null
+        },
+        {
+          "seatId": 1,
+          "stack": 1980,
+          "streetCommitted": 20,
+          "handCommitted": 20,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": null
+        }
+      ]
+    },
+    "when": {
+      "operation": "applyInvalidRaises",
+      "raiseToValues": [
+        -1,
+        1.5,
+        {
+          "$jsNumber": "NaN"
+        },
+        {
+          "$jsNumber": "Infinity"
+        },
+        {
+          "$jsNumber": "-Infinity"
+        },
+        "40",
+        2001,
+        9007199254740992,
+        {
+          "$jsValue": "undefined"
+        }
+      ]
+    },
+    "expected": {
+      "rejectedCount": 9,
+      "reason": "ILLEGAL_AMOUNT",
+      "stateUnchanged": true
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "B11"
+    }
+  },
+  {
+    "id": "B12",
+    "category": "betting",
+    "description": "没有重开权时不能以allIn绕过",
+    "given": {
+      "street": "flop",
+      "bigBlind": 20,
+      "currentBet": 150,
+      "lastFullRaiseSize": 100,
+      "actorSeatId": 0,
+      "players": [
+        {
+          "seatId": 0,
+          "stack": 900,
+          "streetCommitted": 100,
+          "handCommitted": 100,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": 100
+        },
+        {
+          "seatId": 1,
+          "stack": 0,
+          "streetCommitted": 150,
+          "handCommitted": 150,
+          "folded": false,
+          "allIn": true,
+          "lastActedAtBet": 150
+        },
+        {
+          "seatId": 2,
+          "stack": 850,
+          "streetCommitted": 150,
+          "handCommitted": 150,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": 150
+        },
+        {
+          "seatId": 3,
+          "stack": 1000,
+          "streetCommitted": 0,
+          "handCommitted": 0,
+          "folded": true,
+          "allIn": false,
+          "lastActedAtBet": 150
+        }
+      ],
+      "history": [
+        {
+          "seatId": 0,
+          "type": "bet",
+          "raiseTo": 100
+        },
+        {
+          "seatId": 1,
+          "type": "allIn",
+          "resolvedRaiseTo": 150
+        },
+        {
+          "seatId": 2,
+          "type": "call"
+        },
+        {
+          "seatId": 3,
+          "type": "fold"
+        }
+      ]
+    },
+    "when": {
+      "operation": "applyAction",
+      "seatId": 0,
+      "action": {
+        "type": "allIn"
+      }
+    },
+    "expected": {
+      "accepted": false,
+      "reason": "ILLEGAL_ACTION",
+      "stateUnchanged": true
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "B12"
+    }
+  },
+  {
+    "id": "S01",
+    "category": "state",
+    "description": "翻前先补盲、BB过牌，翻后全员过牌，2/3/4人正常推进",
+    "given": {
+      "deck": [
+        "2S",
+        "3S",
+        "4S",
+        "5S",
+        "6S",
+        "7S",
+        "8S",
+        "9S",
+        "10S",
+        "JS",
+        "QS",
+        "KS",
+        "AS",
+        "2H",
+        "3H",
+        "4H",
+        "5H",
+        "6H",
+        "7H",
+        "8H",
+        "9H",
+        "10H",
+        "JH",
+        "QH",
+        "KH",
+        "AH",
+        "2C",
+        "3C",
+        "4C",
+        "5C",
+        "6C",
+        "7C",
+        "8C",
+        "9C",
+        "10C",
+        "JC",
+        "QC",
+        "KC",
+        "AC",
+        "2D",
+        "3D",
+        "4D",
+        "5D",
+        "6D",
+        "7D",
+        "8D",
+        "9D",
+        "10D",
+        "JD",
+        "QD",
+        "KD",
+        "AD"
+      ],
+      "dealerSeatId": 0,
+      "seatSets": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "initialStackPerSeat": 2000,
+      "smallBlind": 10,
+      "bigBlind": 20
+    },
+    "when": {
+      "operation": "playPassiveHandVariants",
+      "preflopPolicy": "callTo20ThenBigBlindChecks",
+      "postflopPolicy": "checkEveryActor"
+    },
+    "expected": {
+      "variants": [
+        {
+          "playerCount": 2,
+          "phase": "settled",
+          "board": [
+            "7S",
+            "8S",
+            "9S",
+            "JS",
+            "KS"
+          ],
+          "burnCount": 3,
+          "consumed": 12,
+          "matchedPotBeforePayout": 40,
+          "winnerSeatIds": [
+            0,
+            1
+          ],
+          "finalStacks": {
+            "0": 2000,
+            "1": 2000
+          }
+        },
+        {
+          "playerCount": 3,
+          "phase": "settled",
+          "board": [
+            "9S",
+            "10S",
+            "JS",
+            "KS",
+            "2H"
+          ],
+          "burnCount": 3,
+          "consumed": 14,
+          "matchedPotBeforePayout": 60,
+          "winnerSeatIds": [
+            0
+          ],
+          "finalStacks": {
+            "0": 2040,
+            "1": 1980,
+            "2": 1980
+          }
+        },
+        {
+          "playerCount": 4,
+          "phase": "settled",
+          "board": [
+            "JS",
+            "QS",
+            "KS",
+            "2H",
+            "4H"
+          ],
+          "burnCount": 3,
+          "consumed": 16,
+          "matchedPotBeforePayout": 80,
+          "winnerSeatIds": [
+            0
+          ],
+          "finalStacks": {
+            "0": 2060,
+            "1": 1980,
+            "2": 1980,
+            "3": 1980
+          }
+        }
+      ],
+      "noEmptyTurnLoop": true
+    },
+    "scope": "hand",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "S01"
+    }
+  },
+  {
+    "id": "S02",
+    "category": "state",
+    "description": "双人小盲弃牌，不发公共牌，退还大盲未匹配10",
+    "given": {
+      "deck": [
+        "2S",
+        "3S",
+        "4S",
+        "5S",
+        "6S",
+        "7S",
+        "8S",
+        "9S",
+        "10S",
+        "JS",
+        "QS",
+        "KS",
+        "AS",
+        "2H",
+        "3H",
+        "4H",
+        "5H",
+        "6H",
+        "7H",
+        "8H",
+        "9H",
+        "10H",
+        "JH",
+        "QH",
+        "KH",
+        "AH",
+        "2C",
+        "3C",
+        "4C",
+        "5C",
+        "6C",
+        "7C",
+        "8C",
+        "9C",
+        "10C",
+        "JC",
+        "QC",
+        "KC",
+        "AC",
+        "2D",
+        "3D",
+        "4D",
+        "5D",
+        "6D",
+        "7D",
+        "8D",
+        "9D",
+        "10D",
+        "JD",
+        "QD",
+        "KD",
+        "AD"
+      ],
+      "seatIds": [
+        0,
+        1
+      ],
+      "dealerSeatId": 0,
+      "initialStacks": {
+        "0": 2000,
+        "1": 2000
+      },
+      "smallBlind": 10,
+      "bigBlind": 20
+    },
+    "when": {
+      "operation": "playHand",
+      "actions": [
+        {
+          "seatId": 0,
+          "type": "fold"
+        }
+      ]
+    },
+    "expected": {
+      "phase": "settled",
+      "board": [],
+      "burnCards": [],
+      "refunds": [
+        {
+          "seatId": 1,
+          "amount": 10
+        }
+      ],
+      "payouts": [
+        {
+          "seatId": 1,
+          "amount": 20
+        }
+      ],
+      "finalStacks": {
+        "0": 1990,
+        "1": 2010
+      },
+      "publicHoleCards": {},
+      "settlementCount": 1
+    },
+    "scope": "hand",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "S02"
+    }
+  },
+  {
+    "id": "S03",
+    "category": "state",
+    "description": "双人全押后自动跑牌，公共同花使双方平分",
+    "given": {
+      "deck": [
+        "2S",
+        "3S",
+        "4S",
+        "5S",
+        "6S",
+        "7S",
+        "8S",
+        "9S",
+        "10S",
+        "JS",
+        "QS",
+        "KS",
+        "AS",
+        "2H",
+        "3H",
+        "4H",
+        "5H",
+        "6H",
+        "7H",
+        "8H",
+        "9H",
+        "10H",
+        "JH",
+        "QH",
+        "KH",
+        "AH",
+        "2C",
+        "3C",
+        "4C",
+        "5C",
+        "6C",
+        "7C",
+        "8C",
+        "9C",
+        "10C",
+        "JC",
+        "QC",
+        "KC",
+        "AC",
+        "2D",
+        "3D",
+        "4D",
+        "5D",
+        "6D",
+        "7D",
+        "8D",
+        "9D",
+        "10D",
+        "JD",
+        "QD",
+        "KD",
+        "AD"
+      ],
+      "seatIds": [
+        0,
+        1
+      ],
+      "dealerSeatId": 0,
+      "initialStacks": {
+        "0": 100,
+        "1": 100
+      },
+      "smallBlind": 10,
+      "bigBlind": 20
+    },
+    "when": {
+      "operation": "playHand",
+      "actions": [
+        {
+          "seatId": 0,
+          "type": "allIn"
+        },
+        {
+          "seatId": 1,
+          "type": "allIn"
+        }
+      ]
+    },
+    "expected": {
+      "phase": "settled",
+      "board": [
+        "7S",
+        "8S",
+        "9S",
+        "JS",
+        "KS"
+      ],
+      "burnCards": [
+        "6S",
+        "10S",
+        "QS"
+      ],
+      "consumed": 12,
+      "potBeforePayout": 200,
+      "payouts": [
+        {
+          "seatId": 0,
+          "amount": 100
+        },
+        {
+          "seatId": 1,
+          "amount": 100
+        }
+      ],
+      "finalStacks": {
+        "0": 100,
+        "1": 100
+      },
+      "publicHoleCards": {
+        "0": [
+          "3S",
+          "5S"
+        ],
+        "1": [
+          "2S",
+          "4S"
+        ]
+      },
+      "settlementCount": 1,
+      "emptyTurnsCreated": 0
+    },
+    "scope": "hand",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "S03"
+    }
+  },
+  {
+    "id": "S04",
+    "category": "state",
+    "description": "唯一可行动者尚欠80时不得自动补牌",
+    "given": {
+      "street": "flop",
+      "bigBlind": 20,
+      "currentBet": 100,
+      "lastFullRaiseSize": 20,
+      "actorSeatId": 0,
+      "players": [
+        {
+          "seatId": 0,
+          "stack": 1000,
+          "streetCommitted": 20,
+          "handCommitted": 20,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": 20
+        },
+        {
+          "seatId": 1,
+          "stack": 0,
+          "streetCommitted": 100,
+          "handCommitted": 100,
+          "folded": false,
+          "allIn": true,
+          "lastActedAtBet": 100
+        }
+      ]
+    },
+    "when": {
+      "operation": "advanceUntilPlayerDecision"
+    },
+    "expected": {
+      "actorSeatId": 0,
+      "phase": "flop",
+      "callAmount": 80,
+      "automaticRunout": false,
+      "legalActions": [
+        "fold",
+        "call"
+      ],
+      "newBoardCards": []
+    },
+    "scope": "hand",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "S04"
+    }
+  },
+  {
+    "id": "S05",
+    "category": "state",
+    "description": "已settled再推进不重复派奖或生成新手",
+    "given": {
+      "handId": "h_settled",
+      "phase": "settled",
+      "handVersion": 20,
+      "finalStacks": {
+        "0": 1990,
+        "1": 2010
+      },
+      "unallocatedPot": 0,
+      "settlementCount": 1
+    },
+    "when": {
+      "operation": "advanceRepeatedly",
+      "count": 2
+    },
+    "expected": {
+      "stateUnchanged": true,
+      "settlementCount": 1,
+      "newHandsCreated": 0,
+      "events": []
+    },
+    "scope": "hand",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "S05"
+    }
+  },
+  {
+    "id": "P01",
+    "category": "pots",
+    "description": "100/250/400/400形成400/450/300三层池",
+    "given": {
+      "seatIds": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 3
+      },
+      "dealerSeatId": 3,
+      "contributions": {
+        "A": 100,
+        "B": 250,
+        "C": 400,
+        "D": 400
+      },
+      "foldedPlayerIds": [],
+      "handRanks": {
+        "A": [
+          8,
+          5
+        ],
+        "B": [
+          5,
+          13,
+          12,
+          4,
+          3,
+          2
+        ],
+        "C": [
+          3,
+          13,
+          9,
+          4
+        ],
+        "D": [
+          1,
+          14,
+          13,
+          9,
+          4
+        ]
+      },
+      "settlementBoard": [
+        "2H",
+        "3H",
+        "4H",
+        "9C",
+        "KD"
+      ],
+      "settlementHoleCards": {
+        "A": [
+          "AH",
+          "5H"
+        ],
+        "B": [
+          "KH",
+          "QH"
+        ],
+        "C": [
+          "KS",
+          "KC"
+        ],
+        "D": [
+          "AS",
+          "AD"
+        ]
+      }
+    },
+    "when": {
+      "operation": "buildAndAwardPots"
+    },
+    "expected": {
+      "refunds": {},
+      "pots": [
+        {
+          "amount": 400,
+          "eligiblePlayerIds": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "winnerPlayerIds": [
+            "A"
+          ]
+        },
+        {
+          "amount": 450,
+          "eligiblePlayerIds": [
+            "B",
+            "C",
+            "D"
+          ],
+          "winnerPlayerIds": [
+            "B"
+          ]
+        },
+        {
+          "amount": 300,
+          "eligiblePlayerIds": [
+            "C",
+            "D"
+          ],
+          "winnerPlayerIds": [
+            "C"
+          ]
+        }
+      ],
+      "payouts": {
+        "A": 400,
+        "B": 450,
+        "C": 300,
+        "D": 0
+      },
+      "originalContributionTotal": 1150,
+      "potTotal": 1150,
+      "refundTotal": 0,
+      "payoutTotal": 1150
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "P01"
+    }
+  },
+  {
+    "id": "P02",
+    "category": "pots",
+    "description": "D弃牌仍保留其贡献，最后边池仅C有资格",
+    "given": {
+      "seatIds": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 3
+      },
+      "dealerSeatId": 3,
+      "contributions": {
+        "A": 100,
+        "B": 250,
+        "C": 400,
+        "D": 400
+      },
+      "foldedPlayerIds": [
+        "D"
+      ],
+      "handRanks": {
+        "A": [
+          8,
+          5
+        ],
+        "B": [
+          5,
+          13,
+          12,
+          4,
+          3,
+          2
+        ],
+        "C": [
+          3,
+          13,
+          9,
+          4
+        ],
+        "D": [
+          1,
+          14,
+          13,
+          9,
+          4
+        ]
+      },
+      "settlementBoard": [
+        "2H",
+        "3H",
+        "4H",
+        "9C",
+        "KD"
+      ],
+      "settlementHoleCards": {
+        "A": [
+          "AH",
+          "5H"
+        ],
+        "B": [
+          "KH",
+          "QH"
+        ],
+        "C": [
+          "KS",
+          "KC"
+        ],
+        "D": [
+          "AS",
+          "AD"
+        ]
+      }
+    },
+    "when": {
+      "operation": "buildAndAwardPots"
+    },
+    "expected": {
+      "refunds": {},
+      "pots": [
+        {
+          "amount": 400,
+          "eligiblePlayerIds": [
+            "A",
+            "B",
+            "C"
+          ],
+          "winnerPlayerIds": [
+            "A"
+          ]
+        },
+        {
+          "amount": 450,
+          "eligiblePlayerIds": [
+            "B",
+            "C"
+          ],
+          "winnerPlayerIds": [
+            "B"
+          ]
+        },
+        {
+          "amount": 300,
+          "eligiblePlayerIds": [
+            "C"
+          ],
+          "winnerPlayerIds": [
+            "C"
+          ]
+        }
+      ],
+      "payouts": {
+        "A": 400,
+        "B": 450,
+        "C": 300,
+        "D": 0
+      },
+      "originalContributionTotal": 1150,
+      "potTotal": 1150,
+      "refundTotal": 0,
+      "payoutTotal": 1150
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "P02"
+    }
+  },
+  {
+    "id": "P03",
+    "category": "pots",
+    "description": "100/250/400返还C150，主池和边池各300",
+    "given": {
+      "seatIds": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 3
+      },
+      "dealerSeatId": 3,
+      "contributions": {
+        "A": 100,
+        "B": 250,
+        "C": 400
+      },
+      "foldedPlayerIds": [],
+      "handRanks": {
+        "A": [
+          8,
+          5
+        ],
+        "B": [
+          5,
+          13,
+          12,
+          4,
+          3,
+          2
+        ],
+        "C": [
+          3,
+          13,
+          9,
+          4
+        ]
+      },
+      "settlementBoard": [
+        "2H",
+        "3H",
+        "4H",
+        "9C",
+        "KD"
+      ],
+      "settlementHoleCards": {
+        "A": [
+          "AH",
+          "5H"
+        ],
+        "B": [
+          "KH",
+          "QH"
+        ],
+        "C": [
+          "KS",
+          "KC"
+        ]
+      }
+    },
+    "when": {
+      "operation": "buildAndAwardPots"
+    },
+    "expected": {
+      "refunds": {
+        "C": 150
+      },
+      "pots": [
+        {
+          "amount": 300,
+          "eligiblePlayerIds": [
+            "A",
+            "B",
+            "C"
+          ],
+          "winnerPlayerIds": [
+            "A"
+          ]
+        },
+        {
+          "amount": 300,
+          "eligiblePlayerIds": [
+            "B",
+            "C"
+          ],
+          "winnerPlayerIds": [
+            "B"
+          ]
+        }
+      ],
+      "payouts": {
+        "A": 300,
+        "B": 300,
+        "C": 0
+      },
+      "originalContributionTotal": 750,
+      "potTotal": 600,
+      "refundTotal": 150,
+      "payoutTotal": 600
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "P03"
+    }
+  },
+  {
+    "id": "P04",
+    "category": "pots",
+    "description": "弃牌B贡献保留，主池A/C竞争而边池仅C",
+    "given": {
+      "seatIds": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 3
+      },
+      "dealerSeatId": 3,
+      "contributions": {
+        "A": 50,
+        "B": 100,
+        "C": 100
+      },
+      "foldedPlayerIds": [
+        "B"
+      ],
+      "handRanks": {
+        "A": [
+          8,
+          5
+        ],
+        "B": [
+          5,
+          13,
+          12,
+          4,
+          3,
+          2
+        ],
+        "C": [
+          3,
+          13,
+          9,
+          4
+        ]
+      },
+      "settlementBoard": [
+        "2H",
+        "3H",
+        "4H",
+        "9C",
+        "KD"
+      ],
+      "settlementHoleCards": {
+        "A": [
+          "AH",
+          "5H"
+        ],
+        "B": [
+          "KH",
+          "QH"
+        ],
+        "C": [
+          "KS",
+          "KC"
+        ]
+      }
+    },
+    "when": {
+      "operation": "buildAndAwardPots"
+    },
+    "expected": {
+      "refunds": {},
+      "pots": [
+        {
+          "amount": 150,
+          "eligiblePlayerIds": [
+            "A",
+            "C"
+          ],
+          "winnerPlayerIds": [
+            "A"
+          ]
+        },
+        {
+          "amount": 100,
+          "eligiblePlayerIds": [
+            "C"
+          ],
+          "winnerPlayerIds": [
+            "C"
+          ]
+        }
+      ],
+      "payouts": {
+        "A": 150,
+        "B": 0,
+        "C": 100
+      },
+      "originalContributionTotal": 250,
+      "potTotal": 250,
+      "refundTotal": 0,
+      "payoutTotal": 250
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "P04"
+    }
+  },
+  {
+    "id": "P05",
+    "category": "pots",
+    "description": "3筹码平分余数给庄家左侧首位赢家A",
+    "given": {
+      "seatIds": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 3
+      },
+      "dealerSeatId": 2,
+      "contributions": {
+        "A": 1,
+        "B": 1,
+        "C": 1
+      },
+      "foldedPlayerIds": [
+        "C"
+      ],
+      "handRanks": {
+        "A": [
+          4,
+          9
+        ],
+        "B": [
+          4,
+          9
+        ],
+        "C": [
+          0,
+          14,
+          12,
+          9,
+          7,
+          5
+        ]
+      }
+    },
+    "when": {
+      "operation": "buildAndAwardPots"
+    },
+    "expected": {
+      "refunds": {},
+      "pots": [
+        {
+          "amount": 3,
+          "eligiblePlayerIds": [
+            "A",
+            "B"
+          ],
+          "winnerPlayerIds": [
+            "A",
+            "B"
+          ]
+        }
+      ],
+      "payouts": {
+        "A": 2,
+        "B": 1,
+        "C": 0
+      },
+      "originalContributionTotal": 3,
+      "potTotal": 3,
+      "refundTotal": 0,
+      "payoutTotal": 3,
+      "oddChipRecipientPlayerIds": [
+        "A"
+      ]
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "P05"
+    }
+  },
+  {
+    "id": "P06",
+    "category": "pots",
+    "description": "保护性输入：弃牌B的未匹配200也返还，A赢200",
+    "given": {
+      "seatIds": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 3
+      },
+      "dealerSeatId": 3,
+      "contributions": {
+        "A": 100,
+        "B": 300
+      },
+      "foldedPlayerIds": [
+        "B"
+      ],
+      "handRanks": {
+        "A": [
+          8,
+          5
+        ],
+        "B": [
+          5,
+          13,
+          12,
+          4,
+          3,
+          2
+        ]
+      },
+      "inputReachability": "componentGuardCaseNotClaimedAsReachableFullHand",
+      "settlementBoard": [
+        "2H",
+        "3H",
+        "4H",
+        "9C",
+        "KD"
+      ],
+      "settlementHoleCards": {
+        "A": [
+          "AH",
+          "5H"
+        ],
+        "B": [
+          "KH",
+          "QH"
+        ]
+      }
+    },
+    "when": {
+      "operation": "buildAndAwardPots"
+    },
+    "expected": {
+      "refunds": {
+        "B": 200
+      },
+      "pots": [
+        {
+          "amount": 200,
+          "eligiblePlayerIds": [
+            "A"
+          ],
+          "winnerPlayerIds": [
+            "A"
+          ]
+        }
+      ],
+      "payouts": {
+        "A": 200,
+        "B": 0
+      },
+      "originalContributionTotal": 400,
+      "potTotal": 200,
+      "refundTotal": 200,
+      "payoutTotal": 200
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "P06"
+    }
+  },
+  {
+    "id": "P07",
+    "category": "pots",
+    "description": "零贡献不生成空池",
+    "given": {
+      "seatIds": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 3
+      },
+      "dealerSeatId": 3,
+      "contributions": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "foldedPlayerIds": [],
+      "handRanks": {
+        "A": [
+          8,
+          9
+        ],
+        "B": [
+          7,
+          8,
+          14
+        ],
+        "C": [
+          6,
+          12,
+          11
+        ]
+      }
+    },
+    "when": {
+      "operation": "buildAndAwardPots"
+    },
+    "expected": {
+      "refunds": {},
+      "pots": [],
+      "payouts": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "originalContributionTotal": 0,
+      "potTotal": 0,
+      "refundTotal": 0,
+      "payoutTotal": 0
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "P07"
+    }
+  },
+  {
+    "id": "I01",
+    "category": "invariants",
+    "description": "1000手可复现合法随机序列每步守恒、非负、唯一牌和有效actor",
+    "given": {
+      "seed": 20261030,
+      "hands": 1000,
+      "playerCounts": [
+        2,
+        3,
+        4
+      ],
+      "initialStackPerSeat": 2000,
+      "maxActionsPerHand": 500,
+      "randomSource": "testOnlySeededGenerator"
+    },
+    "when": {
+      "operation": "simulateLegalHandsAndCheckEveryStep"
+    },
+    "expected": {
+      "completedHands": 1000,
+      "failOnActionLimit": true,
+      "failureCount": 0,
+      "invariants": [
+        "safeIntegerChips",
+        "nonNegativeStacks",
+        "stackPlusUnallocatedCommitmentsEqualsInitialTotal",
+        "dealtCardsUnique",
+        "actorNotFoldedOrAllIn",
+        "terminalSettlementAppliedOnce"
+      ],
+      "onFailure": "exportSeedInitialDeckAndShortestActionTrace"
+    },
+    "scope": "property",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "I01"
+    }
+  },
+  {
+    "id": "I02",
+    "category": "invariants",
+    "description": "1000次非法动作全部拒绝且不改变完整状态",
+    "given": {
+      "seed": 20261031,
+      "samples": 1000,
+      "invalidClasses": [
+        "wrongActor",
+        "negativeRaise",
+        "fractionalRaise",
+        "belowMinimumNonAllInRaise",
+        "overStackRaise",
+        "checkWhileFacingBet",
+        "raiseWithoutReopening",
+        "unsafeInteger",
+        "nonFiniteNumber"
+      ],
+      "numericTags": [
+        {
+          "$jsNumber": "NaN"
+        },
+        {
+          "$jsNumber": "Infinity"
+        }
+      ]
+    },
+    "when": {
+      "operation": "generateAndRejectInvalidActions"
+    },
+    "expected": {
+      "rejectedCount": 1000,
+      "stateUnchangedAfterEveryRejection": true,
+      "newPayouts": 0,
+      "chipDelta": 0
+    },
+    "scope": "property",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "6 固定金额案例；7 固定测试用例目录",
+      "scenarioId": "I02"
+    }
+  },
+  {
+    "id": "RANK01",
+    "category": "evaluation",
+    "description": "补充九牌型覆盖：高牌",
+    "given": {
+      "cards": [
+        "AS",
+        "KD",
+        "9C",
+        "7H",
+        "5S",
+        "3D",
+        "2C"
+      ]
+    },
+    "when": {
+      "operation": "evaluateBest"
+    },
+    "expected": {
+      "category": 0,
+      "tieBreak": [
+        14,
+        13,
+        9,
+        7,
+        5
+      ]
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "4.2 牌型比较向量",
+      "scenarioId": "RANK01"
+    }
+  },
+  {
+    "id": "RANK02",
+    "category": "evaluation",
+    "description": "补充九牌型覆盖：三条",
+    "given": {
+      "cards": [
+        "AS",
+        "AH",
+        "AD",
+        "KC",
+        "QD",
+        "7H",
+        "2S"
+      ]
+    },
+    "when": {
+      "operation": "evaluateBest"
+    },
+    "expected": {
+      "category": 3,
+      "tieBreak": [
+        14,
+        13,
+        12
+      ]
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "4.2 牌型比较向量",
+      "scenarioId": "RANK02"
+    }
+  },
+  {
+    "id": "RANK03",
+    "category": "evaluation",
+    "description": "补充九牌型覆盖：同花",
+    "given": {
+      "cards": [
+        "AS",
+        "JS",
+        "8S",
+        "5S",
+        "2S",
+        "KD",
+        "QH"
+      ]
+    },
+    "when": {
+      "operation": "evaluateBest"
+    },
+    "expected": {
+      "category": 5,
+      "tieBreak": [
+        14,
+        11,
+        8,
+        5,
+        2
+      ]
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "4.2 牌型比较向量",
+      "scenarioId": "RANK03"
+    }
+  },
+  {
+    "id": "RANK04",
+    "category": "evaluation",
+    "description": "补充九牌型覆盖：四条",
+    "given": {
+      "cards": [
+        "AS",
+        "AH",
+        "AD",
+        "AC",
+        "KS",
+        "2H",
+        "3D"
+      ]
+    },
+    "when": {
+      "operation": "evaluateBest"
+    },
+    "expected": {
+      "category": 7,
+      "tieBreak": [
+        14,
+        13
+      ]
+    },
+    "scope": "component",
+    "source": {
+      "document": "../../../plan/01-规则引擎与测试用例.md",
+      "section": "4.2 牌型比较向量",
+      "scenarioId": "RANK04"
+    }
+  },
+  {
+    "id": "ROOM01",
+    "category": "room-start",
+    "description": "1真人+1电脑，容量2满足准备可开局",
+    "given": {
+      "roomStatus": "waiting",
+      "capacity": 2,
+      "members": [
+        {
+          "participantId": "h0",
+          "kind": "human",
+          "seatId": 0,
+          "stack": 2000,
+          "online": true,
+          "ready": true,
+          "admission": "active"
+        },
+        {
+          "participantId": "b0",
+          "kind": "bot",
+          "seatId": 1,
+          "stack": 2000,
+          "admission": "active",
+          "difficulty": "basic"
+        }
+      ],
+      "hostParticipantId": "h0",
+      "requesterParticipantId": "h0",
+      "difficultyVariants": [
+        "basic",
+        "standard"
+      ]
+    },
+    "when": {
+      "operation": "evaluateStartAndFreezeParticipants"
+    },
+    "expected": {
+      "canStart": true,
+      "participantCount": 2,
+      "emptySeatCount": 0,
+      "autoAddedBots": 0,
+      "blockReasons": [],
+      "frozenParticipantIds": [
+        "h0",
+        "b0"
+      ]
+    },
+    "scope": "room",
+    "source": {
+      "document": "../../../plan/00-执行总规划与里程碑.md",
+      "section": "3.2 冻结的产品参数；模式验收",
+      "scenarioId": "ROOM01"
+    }
+  },
+  {
+    "id": "ROOM02",
+    "category": "room-start",
+    "description": "1真人+2电脑，容量3满足准备可开局",
+    "given": {
+      "roomStatus": "waiting",
+      "capacity": 3,
+      "members": [
+        {
+          "participantId": "h0",
+          "kind": "human",
+          "seatId": 0,
+          "stack": 2000,
+          "online": true,
+          "ready": true,
+          "admission": "active"
+        },
+        {
+          "participantId": "b0",
+          "kind": "bot",
+          "seatId": 1,
+          "stack": 2000,
+          "admission": "active",
+          "difficulty": "basic"
+        },
+        {
+          "participantId": "b1",
+          "kind": "bot",
+          "seatId": 2,
+          "stack": 2000,
+          "admission": "active",
+          "difficulty": "basic"
+        }
+      ],
+      "hostParticipantId": "h0",
+      "requesterParticipantId": "h0",
+      "difficultyVariants": [
+        "basic",
+        "standard"
+      ]
+    },
+    "when": {
+      "operation": "evaluateStartAndFreezeParticipants"
+    },
+    "expected": {
+      "canStart": true,
+      "participantCount": 3,
+      "emptySeatCount": 0,
+      "autoAddedBots": 0,
+      "blockReasons": [],
+      "frozenParticipantIds": [
+        "h0",
+        "b0",
+        "b1"
+      ]
+    },
+    "scope": "room",
+    "source": {
+      "document": "../../../plan/00-执行总规划与里程碑.md",
+      "section": "3.2 冻结的产品参数；模式验收",
+      "scenarioId": "ROOM02"
+    }
+  },
+  {
+    "id": "ROOM03",
+    "category": "room-start",
+    "description": "1真人+3电脑，容量4满足准备可开局",
+    "given": {
+      "roomStatus": "waiting",
+      "capacity": 4,
+      "members": [
+        {
+          "participantId": "h0",
+          "kind": "human",
+          "seatId": 0,
+          "stack": 2000,
+          "online": true,
+          "ready": true,
+          "admission": "active"
+        },
+        {
+          "participantId": "b0",
+          "kind": "bot",
+          "seatId": 1,
+          "stack": 2000,
+          "admission": "active",
+          "difficulty": "basic"
+        },
+        {
+          "participantId": "b1",
+          "kind": "bot",
+          "seatId": 2,
+          "stack": 2000,
+          "admission": "active",
+          "difficulty": "basic"
+        },
+        {
+          "participantId": "b2",
+          "kind": "bot",
+          "seatId": 3,
+          "stack": 2000,
+          "admission": "active",
+          "difficulty": "basic"
+        }
+      ],
+      "hostParticipantId": "h0",
+      "requesterParticipantId": "h0",
+      "difficultyVariants": [
+        "basic",
+        "standard"
+      ]
+    },
+    "when": {
+      "operation": "evaluateStartAndFreezeParticipants"
+    },
+    "expected": {
+      "canStart": true,
+      "participantCount": 4,
+      "emptySeatCount": 0,
+      "autoAddedBots": 0,
+      "blockReasons": [],
+      "frozenParticipantIds": [
+        "h0",
+        "b0",
+        "b1",
+        "b2"
+      ]
+    },
+    "scope": "room",
+    "source": {
+      "document": "../../../plan/00-执行总规划与里程碑.md",
+      "section": "3.2 冻结的产品参数；模式验收",
+      "scenarioId": "ROOM03"
+    }
+  },
+  {
+    "id": "ROOM04",
+    "category": "room-start",
+    "description": "2真人+0电脑，容量4满足准备可开局",
+    "given": {
+      "roomStatus": "waiting",
+      "capacity": 4,
+      "members": [
+        {
+          "participantId": "h0",
+          "kind": "human",
+          "seatId": 0,
+          "stack": 2000,
+          "online": true,
+          "ready": true,
+          "admission": "active"
+        },
+        {
+          "participantId": "h1",
+          "kind": "human",
+          "seatId": 1,
+          "stack": 2000,
+          "online": true,
+          "ready": true,
+          "admission": "active"
+        }
+      ],
+      "hostParticipantId": "h0",
+      "requesterParticipantId": "h0"
+    },
+    "when": {
+      "operation": "evaluateStartAndFreezeParticipants"
+    },
+    "expected": {
+      "canStart": true,
+      "participantCount": 2,
+      "emptySeatCount": 2,
+      "autoAddedBots": 0,
+      "blockReasons": [],
+      "frozenParticipantIds": [
+        "h0",
+        "h1"
+      ]
+    },
+    "scope": "room",
+    "source": {
+      "document": "../../../plan/00-执行总规划与里程碑.md",
+      "section": "3.2 冻结的产品参数；模式验收",
+      "scenarioId": "ROOM04"
+    }
+  },
+  {
+    "id": "ROOM05",
+    "category": "room-start",
+    "description": "3真人+0电脑，容量4满足准备可开局",
+    "given": {
+      "roomStatus": "waiting",
+      "capacity": 4,
+      "members": [
+        {
+          "participantId": "h0",
+          "kind": "human",
+          "seatId": 0,
+          "stack": 2000,
+          "online": true,
+          "ready": true,
+          "admission": "active"
+        },
+        {
+          "participantId": "h1",
+          "kind": "human",
+          "seatId": 1,
+          "stack": 2000,
+          "online": true,
+          "ready": true,
+          "admission": "active"
+        },
+        {
+          "participantId": "h2",
+          "kind": "human",
+          "seatId": 2,
+          "stack": 2000,
+          "online": true,
+          "ready": true,
+          "admission": "active"
+        }
+      ],
+      "hostParticipantId": "h0",
+      "requesterParticipantId": "h0"
+    },
+    "when": {
+      "operation": "evaluateStartAndFreezeParticipants"
+    },
+    "expected": {
+      "canStart": true,
+      "participantCount": 3,
+      "emptySeatCount": 1,
+      "autoAddedBots": 0,
+      "blockReasons": [],
+      "frozenParticipantIds": [
+        "h0",
+        "h1",
+        "h2"
+      ]
+    },
+    "scope": "room",
+    "source": {
+      "document": "../../../plan/00-执行总规划与里程碑.md",
+      "section": "3.2 冻结的产品参数；模式验收",
+      "scenarioId": "ROOM05"
+    }
+  },
+  {
+    "id": "ROOM06",
+    "category": "room-start",
+    "description": "4真人+0电脑，容量4满足准备可开局",
+    "given": {
+      "roomStatus": "waiting",
+      "capacity": 4,
+      "members": [
+        {
+          "participantId": "h0",
+          "kind": "human",
+          "seatId": 0,
+          "stack": 2000,
+          "online": true,
+          "ready": true,
+          "admission": "active"
+        },
+        {
+          "participantId": "h1",
+          "kind": "human",
+          "seatId": 1,
+          "stack": 2000,
+          "online": true,
+          "ready": true,
+          "admission": "active"
+        },
+        {
+          "participantId": "h2",
+          "kind": "human",
+          "seatId": 2,
+          "stack": 2000,
+          "online": true,
+          "ready": true,
+          "admission": "active"
+        },
+        {
+          "participantId": "h3",
+          "kind": "human",
+          "seatId": 3,
+          "stack": 2000,
+          "online": true,
+          "ready": true,
+          "admission": "active"
+        }
+      ],
+      "hostParticipantId": "h0",
+      "requesterParticipantId": "h0"
+    },
+    "when": {
+      "operation": "evaluateStartAndFreezeParticipants"
+    },
+    "expected": {
+      "canStart": true,
+      "participantCount": 4,
+      "emptySeatCount": 0,
+      "autoAddedBots": 0,
+      "blockReasons": [],
+      "frozenParticipantIds": [
+        "h0",
+        "h1",
+        "h2",
+        "h3"
+      ]
+    },
+    "scope": "room",
+    "source": {
+      "document": "../../../plan/00-执行总规划与里程碑.md",
+      "section": "3.2 冻结的产品参数；模式验收",
+      "scenarioId": "ROOM06"
+    }
+  },
+  {
+    "id": "ROOM07",
+    "category": "room-start",
+    "description": "2真人+1电脑，容量4满足准备可开局",
+    "given": {
+      "roomStatus": "waiting",
+      "capacity": 4,
+      "members": [
+        {
+          "participantId": "h0",
+          "kind": "human",
+          "seatId": 0,
+          "stack": 2000,
+          "online": true,
+          "ready": true,
+          "admission": "active"
+        },
+        {
+          "participantId": "h1",
+          "kind": "human",
+          "seatId": 1,
+          "stack": 2000,
+          "online": true,
+          "ready": true,
+          "admission": "active"
+        },
+        {
+          "participantId": "b0",
+          "kind": "bot",
+          "seatId": 2,
+          "stack": 2000,
+          "admission": "active",
+          "difficulty": "basic"
+        }
+      ],
+      "hostParticipantId": "h0",
+      "requesterParticipantId": "h0"
+    },
+    "when": {
+      "operation": "evaluateStartAndFreezeParticipants"
+    },
+    "expected": {
+      "canStart": true,
+      "participantCount": 3,
+      "emptySeatCount": 1,
+      "autoAddedBots": 0,
+      "blockReasons": [],
+      "frozenParticipantIds": [
+        "h0",
+        "h1",
+        "b0"
+      ]
+    },
+    "scope": "room",
+    "source": {
+      "document": "../../../plan/00-执行总规划与里程碑.md",
+      "section": "3.2 冻结的产品参数；模式验收",
+      "scenarioId": "ROOM07"
+    }
+  },
+  {
+    "id": "ROOM08",
+    "category": "room-start",
+    "description": "2真人+2电脑，容量4满足准备可开局",
+    "given": {
+      "roomStatus": "waiting",
+      "capacity": 4,
+      "members": [
+        {
+          "participantId": "h0",
+          "kind": "human",
+          "seatId": 0,
+          "stack": 2000,
+          "online": true,
+          "ready": true,
+          "admission": "active"
+        },
+        {
+          "participantId": "h1",
+          "kind": "human",
+          "seatId": 1,
+          "stack": 2000,
+          "online": true,
+          "ready": true,
+          "admission": "active"
+        },
+        {
+          "participantId": "b0",
+          "kind": "bot",
+          "seatId": 2,
+          "stack": 2000,
+          "admission": "active",
+          "difficulty": "basic"
+        },
+        {
+          "participantId": "b1",
+          "kind": "bot",
+          "seatId": 3,
+          "stack": 2000,
+          "admission": "active",
+          "difficulty": "basic"
+        }
+      ],
+      "hostParticipantId": "h0",
+      "requesterParticipantId": "h0"
+    },
+    "when": {
+      "operation": "evaluateStartAndFreezeParticipants"
+    },
+    "expected": {
+      "canStart": true,
+      "participantCount": 4,
+      "emptySeatCount": 0,
+      "autoAddedBots": 0,
+      "blockReasons": [],
+      "frozenParticipantIds": [
+        "h0",
+        "h1",
+        "b0",
+        "b1"
+      ]
+    },
+    "scope": "room",
+    "source": {
+      "document": "../../../plan/00-执行总规划与里程碑.md",
+      "section": "3.2 冻结的产品参数；模式验收",
+      "scenarioId": "ROOM08"
+    }
+  },
+  {
+    "id": "ROOM09",
+    "category": "room-start",
+    "description": "3真人+1电脑，容量4满足准备可开局",
+    "given": {
+      "roomStatus": "waiting",
+      "capacity": 4,
+      "members": [
+        {
+          "participantId": "h0",
+          "kind": "human",
+          "seatId": 0,
+          "stack": 2000,
+          "online": true,
+          "ready": true,
+          "admission": "active"
+        },
+        {
+          "participantId": "h1",
+          "kind": "human",
+          "seatId": 1,
+          "stack": 2000,
+          "online": true,
+          "ready": true,
+          "admission": "active"
+        },
+        {
+          "participantId": "h2",
+          "kind": "human",
+          "seatId": 2,
+          "stack": 2000,
+          "online": true,
+          "ready": true,
+          "admission": "active"
+        },
+        {
+          "participantId": "b0",
+          "kind": "bot",
+          "seatId": 3,
+          "stack": 2000,
+          "admission": "active",
+          "difficulty": "basic"
+        }
+      ],
+      "hostParticipantId": "h0",
+      "requesterParticipantId": "h0"
+    },
+    "when": {
+      "operation": "evaluateStartAndFreezeParticipants"
+    },
+    "expected": {
+      "canStart": true,
+      "participantCount": 4,
+      "emptySeatCount": 0,
+      "autoAddedBots": 0,
+      "blockReasons": [],
+      "frozenParticipantIds": [
+        "h0",
+        "h1",
+        "h2",
+        "b0"
+      ]
+    },
+    "scope": "room",
+    "source": {
+      "document": "../../../plan/00-执行总规划与里程碑.md",
+      "section": "3.2 冻结的产品参数；模式验收",
+      "scenarioId": "ROOM09"
+    }
+  },
+  {
+    "id": "ROOM10",
+    "category": "room-start",
+    "description": "1真人0电脑不能开始",
+    "given": {
+      "capacity": 4,
+      "humanCount": 1,
+      "botCount": 0,
+      "allHumansOnline": true,
+      "allHumansReady": true,
+      "requesterIsHost": true,
+      "roomStatus": "waiting"
+    },
+    "when": {
+      "operation": "evaluateStart"
+    },
+    "expected": {
+      "canStart": false,
+      "error": "NOT_ENOUGH_PLAYERS",
+      "autoAddedBots": 0
+    },
+    "scope": "room",
+    "source": {
+      "document": "../../../plan/00-执行总规划与里程碑.md",
+      "section": "3.2 冻结的产品参数；模式验收",
+      "scenarioId": "ROOM10"
+    }
+  },
+  {
+    "id": "ROOM11",
+    "category": "room-join",
+    "description": "满员拒绝与并发竞争最后空座",
+    "given": {
+      "variants": [
+        {
+          "name": "full",
+          "capacity": 4,
+          "occupiedSeats": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "joinRequests": 1
+        },
+        {
+          "name": "lastSeatRace",
+          "capacity": 4,
+          "occupiedSeats": [
+            0,
+            1,
+            2
+          ],
+          "joinRequests": 2
+        }
+      ]
+    },
+    "when": {
+      "operation": "applyIndependentJoinVariants"
+    },
+    "expected": {
+      "variants": [
+        {
+          "name": "full",
+          "successes": 0,
+          "errors": [
+            "ROOM_FULL"
+          ],
+          "occupiedAfter": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "runningHandUnchanged": true
+        },
+        {
+          "name": "lastSeatRace",
+          "successes": 1,
+          "errors": [
+            "ROOM_FULL"
+          ],
+          "occupiedAfter": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "duplicateSeatAssignments": 0
+        }
+      ]
+    },
+    "scope": "room",
+    "source": {
+      "document": "../../../plan/00-执行总规划与里程碑.md",
+      "section": "3.2 冻结的产品参数；模式验收",
+      "scenarioId": "ROOM11"
+    }
+  },
+  {
+    "id": "ROOM12",
+    "category": "room-start",
+    "description": "容量2/3无需四座，未准备或离线阻止开始",
+    "given": {
+      "variants": [
+        {
+          "name": "capacity2",
+          "capacity": 2,
+          "humans": 2,
+          "online": 2,
+          "ready": 2
+        },
+        {
+          "name": "capacity3",
+          "capacity": 3,
+          "humans": 3,
+          "online": 3,
+          "ready": 3
+        },
+        {
+          "name": "notReady",
+          "capacity": 4,
+          "humans": 2,
+          "online": 2,
+          "ready": 1
+        },
+        {
+          "name": "offlineReserved",
+          "capacity": 4,
+          "humans": 2,
+          "online": 1,
+          "ready": 2
+        }
+      ],
+      "stackPerHuman": 2000,
+      "requesterIsHost": true,
+      "roomStatus": "betweenHands"
+    },
+    "when": {
+      "operation": "evaluateStartVariants"
+    },
+    "expected": {
+      "variants": [
+        {
+          "name": "capacity2",
+          "canStart": true
+        },
+        {
+          "name": "capacity3",
+          "canStart": true
+        },
+        {
+          "name": "notReady",
+          "canStart": false,
+          "error": "NOT_READY"
+        },
+        {
+          "name": "offlineReserved",
+          "canStart": false,
+          "error": "NOT_READY",
+          "blockReason": "PARTICIPANT_OFFLINE"
+        }
+      ]
+    },
+    "scope": "room",
+    "source": {
+      "document": "../../../plan/00-执行总规划与里程碑.md",
+      "section": "3.2 冻结的产品参数；模式验收",
+      "scenarioId": "ROOM12"
+    }
+  },
+  {
+    "id": "ROOM13",
+    "category": "room-start",
+    "description": "满足准备但非房主不可开始",
+    "given": {
+      "capacity": 4,
+      "humanCount": 2,
+      "botCount": 0,
+      "allHumansOnline": true,
+      "allHumansReady": true,
+      "hostSessionId": "session_A",
+      "requesterSessionId": "session_B",
+      "roomStatus": "waiting"
+    },
+    "when": {
+      "operation": "startRoom"
+    },
+    "expected": {
+      "accepted": false,
+      "error": "NOT_HOST",
+      "handCreated": false,
+      "stateUnchanged": true
+    },
+    "scope": "room",
+    "source": {
+      "document": "../../../plan/00-执行总规划与里程碑.md",
+      "section": "3.2 冻结的产品参数；模式验收",
+      "scenarioId": "ROOM13"
+    }
+  },
+  {
+    "id": "LIFE01",
+    "category": "lifecycle",
+    "description": "手中入座占容量，手间才发筹码并加入下一手",
+    "given": {
+      "capacity": 4,
+      "roomStatus": "playing",
+      "handId": "h1",
+      "handParticipantIds": [
+        "pA",
+        "pB"
+      ],
+      "occupiedSeats": [
+        0,
+        1
+      ],
+      "humanReady": {
+        "pA": true,
+        "pB": true
+      },
+      "joiner": {
+        "participantId": "pC",
+        "seatId": 2
+      }
+    },
+    "when": {
+      "operation": "joinThenFinishHandAndAdmit",
+      "actions": [
+        "joinC",
+        "readJoinedView",
+        "settleCurrentHand",
+        "applyBetweenHandsAdmission"
+      ]
+    },
+    "expected": {
+      "afterJoin": {
+        "occupiedCount": 3,
+        "handParticipantIds": [
+          "pA",
+          "pB"
+        ],
+        "joinerAdmission": "waitingNextHand",
+        "joinerStack": 0,
+        "joinerHoleCardsAbsent": true,
+        "grantLedgerEntries": 0
+      },
+      "afterBoundary": {
+        "joinerAdmission": "active",
+        "joinerStack": 2000,
+        "chipLedger": [
+          {
+            "participantId": "pC",
+            "type": "seat_grant",
+            "delta": 2000
+          }
+        ],
+        "allHumansReady": false
+      }
+    },
+    "scope": "lifecycle",
+    "source": {
+      "document": "../../../plan/02-联机服务端电脑与回放.md",
+      "section": "3 命令处理与竞争消解；4 身份、保座和手间管理",
+      "scenarioId": "LIFE01"
+    }
+  },
+  {
+    "id": "LIFE02",
+    "category": "lifecycle",
+    "description": "非actor退出先预约，轮到本人自动弃牌",
+    "given": {
+      "actorSeatId": 0,
+      "roomStatus": "playing",
+      "players": [
+        {
+          "seatId": 0,
+          "stack": 1000,
+          "streetCommitted": 0,
+          "handCommitted": 0,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": null
+        },
+        {
+          "seatId": 1,
+          "stack": 1000,
+          "streetCommitted": 0,
+          "handCommitted": 0,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": null
+        },
+        {
+          "seatId": 2,
+          "stack": 1000,
+          "streetCommitted": 0,
+          "handCommitted": 0,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": null
+        }
+      ],
+      "leaveSeatId": 1
+    },
+    "when": {
+      "operation": "requestLeaveThenAdvance",
+      "actions": [
+        {
+          "seatId": 1,
+          "operation": "requestLeave"
+        },
+        {
+          "seatId": 0,
+          "type": "check"
+        }
+      ]
+    },
+    "expected": {
+      "afterRequest": {
+        "actorSeatId": 0,
+        "leavingSeatIds": [
+          1
+        ],
+        "foldedSeatIds": [],
+        "removedSeatIds": []
+      },
+      "afterAdvance": {
+        "actorSeatId": 2,
+        "foldedSeatIds": [
+          1
+        ],
+        "removedSeatIds": []
+      },
+      "removeAt": "betweenHands"
+    },
+    "scope": "lifecycle",
+    "source": {
+      "document": "../../../plan/02-联机服务端电脑与回放.md",
+      "section": "3 命令处理与竞争消解；4 身份、保座和手间管理",
+      "scenarioId": "LIFE02"
+    }
+  },
+  {
+    "id": "LIFE03",
+    "category": "lifecycle",
+    "description": "当前actor主动退出立即弃牌，手间才移除",
+    "given": {
+      "actorSeatId": 0,
+      "roomStatus": "playing",
+      "currentBet": 20,
+      "players": [
+        {
+          "seatId": 0,
+          "stack": 1000,
+          "streetCommitted": 0,
+          "handCommitted": 0,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": null
+        },
+        {
+          "seatId": 1,
+          "stack": 980,
+          "streetCommitted": 20,
+          "handCommitted": 20,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": null
+        },
+        {
+          "seatId": 2,
+          "stack": 980,
+          "streetCommitted": 20,
+          "handCommitted": 20,
+          "folded": false,
+          "allIn": false,
+          "lastActedAtBet": null
+        }
+      ],
+      "leaveSeatId": 0
+    },
+    "when": {
+      "operation": "requestLeave"
+    },
+    "expected": {
+      "foldedSeatIds": [
+        0
+      ],
+      "leavingSeatIds": [
+        0
+      ],
+      "removedSeatIds": [],
+      "stackOfLeavingSeat": 1000,
+      "immediateCashoutEntries": 0
+    },
+    "scope": "lifecycle",
+    "source": {
+      "document": "../../../plan/02-联机服务端电脑与回放.md",
+      "section": "3 命令处理与竞争消解；4 身份、保座和手间管理",
+      "scenarioId": "LIFE03"
+    }
+  },
+  {
+    "id": "LIFE04",
+    "category": "lifecycle",
+    "description": "全押退出保留主池资格，结算后移出实际筹码",
+    "given": {
+      "roomStatus": "playing",
+      "contributions": {
+        "A": 100,
+        "B": 250,
+        "C": 400
+      },
+      "stacksAfterContribution": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "allInPlayerIds": [
+        "A",
+        "B",
+        "C"
+      ],
+      "handRanks": {
+        "A": [
+          8,
+          5
+        ],
+        "B": [
+          5,
+          13,
+          12,
+          4,
+          3,
+          2
+        ],
+        "C": [
+          3,
+          13,
+          9,
+          4
+        ]
+      },
+      "leavingPlayerId": "A",
+      "settlementBoard": [
+        "2H",
+        "3H",
+        "4H",
+        "9C",
+        "KD"
+      ],
+      "settlementHoleCards": {
+        "A": [
+          "AH",
+          "5H"
+        ],
+        "B": [
+          "KH",
+          "QH"
+        ],
+        "C": [
+          "KS",
+          "KC"
+        ]
+      }
+    },
+    "when": {
+      "operation": "requestLeaveSettleThenRemove"
+    },
+    "expected": {
+      "foldedByLeave": false,
+      "refunds": {
+        "C": 150
+      },
+      "payouts": {
+        "A": 300,
+        "B": 300,
+        "C": 0
+      },
+      "chipLedger": [
+        {
+          "participantId": "A",
+          "type": "seat_cashout",
+          "delta": -300
+        }
+      ],
+      "remainingStacks": {
+        "B": 300,
+        "C": 150
+      },
+      "removedPlayerIds": [
+        "A"
+      ]
+    },
+    "scope": "lifecycle",
+    "source": {
+      "document": "../../../plan/02-联机服务端电脑与回放.md",
+      "section": "3 命令处理与竞争消解；4 身份、保座和手间管理",
+      "scenarioId": "LIFE04"
+    }
+  },
+  {
+    "id": "LIFE05",
+    "category": "lifecycle",
+    "description": "超时免费过牌或弃牌，动作竞争仅一次应用",
+    "given": {
+      "deadline": 30000,
+      "variants": [
+        {
+          "name": "freeCheck",
+          "currentBet": 100,
+          "actorCommitted": 100,
+          "actorStack": 1000
+        },
+        {
+          "name": "facingBet",
+          "currentBet": 100,
+          "actorCommitted": 20,
+          "actorStack": 1000
+        }
+      ],
+      "raceCases": [
+        {
+          "name": "beforeDeadline",
+          "userReceivedAt": 29999,
+          "timerQueuedAt": 30000
+        },
+        {
+          "name": "afterDeadline",
+          "userReceivedAt": 30001,
+          "timerQueuedAt": 30000
+        }
+      ]
+    },
+    "when": {
+      "operation": "resolveTimeoutPolicyAndRaces"
+    },
+    "expected": {
+      "timeoutActions": {
+        "freeCheck": "check",
+        "facingBet": "fold"
+      },
+      "automaticCallCount": 0,
+      "raceWinners": {
+        "beforeDeadline": "legalUserAction",
+        "afterDeadline": "timeoutAction"
+      },
+      "appliedActionsPerTurn": 1,
+      "oldTimerMayAdvanceNextTurn": false
+    },
+    "scope": "lifecycle",
+    "source": {
+      "document": "../../../plan/02-联机服务端电脑与回放.md",
+      "section": "3 命令处理与竞争消解；4 身份、保座和手间管理",
+      "scenarioId": "LIFE05"
+    }
+  },
+  {
+    "id": "LIFE06",
+    "category": "lifecycle",
+    "description": "断线恢复不重置deadline，也不撤销已超时动作",
+    "given": {
+      "deadline": 30000,
+      "disconnectedAt": 5000,
+      "resumeVariants": [
+        {
+          "at": 20000,
+          "timeoutAlreadyApplied": false
+        },
+        {
+          "at": 35000,
+          "timeoutAlreadyApplied": true,
+          "timeoutAction": "fold"
+        }
+      ],
+      "resumeCredentialValid": true
+    },
+    "when": {
+      "operation": "resumeIndependentVariants"
+    },
+    "expected": {
+      "variants": [
+        {
+          "at": 20000,
+          "remainingMs": 10000,
+          "deadline": 30000,
+          "mayControlUnexpiredTurn": true
+        },
+        {
+          "at": 35000,
+          "remainingMs": 0,
+          "deadline": 30000,
+          "mayControlUnexpiredTurn": false,
+          "foldRetained": true
+        }
+      ],
+      "latestOwnerSnapshotReturned": true,
+      "otherHoleCardsAbsent": true
+    },
+    "scope": "lifecycle",
+    "source": {
+      "document": "../../../plan/02-联机服务端电脑与回放.md",
+      "section": "3 命令处理与竞争消解；4 身份、保座和手间管理",
+      "scenarioId": "LIFE06"
+    }
+  },
+  {
+    "id": "LIFE07",
+    "category": "lifecycle",
+    "description": "5/30/119秒保座可恢复，120秒到期后身份与座位分离",
+    "given": {
+      "roomStatus": "betweenHands",
+      "disconnectedAt": 0,
+      "reservationMs": 120000,
+      "sessionExpiresAt": 2592000000,
+      "resumeAtVariants": [
+        5000,
+        30000,
+        119000,
+        120000
+      ],
+      "stack": 1800
+    },
+    "when": {
+      "operation": "resumeReservationVariants"
+    },
+    "expected": {
+      "variants": [
+        {
+          "at": 5000,
+          "sessionAuthenticated": true,
+          "seatRestored": true
+        },
+        {
+          "at": 30000,
+          "sessionAuthenticated": true,
+          "seatRestored": true
+        },
+        {
+          "at": 119000,
+          "sessionAuthenticated": true,
+          "seatRestored": true
+        },
+        {
+          "at": 120000,
+          "sessionAuthenticated": true,
+          "seatRestored": false,
+          "roomJoinRequired": true
+        }
+      ],
+      "cashoutAtExpiry": 1800,
+      "readyToStartWhileOffline": false
+    },
+    "scope": "lifecycle",
+    "source": {
+      "document": "../../../plan/02-联机服务端电脑与回放.md",
+      "section": "3 命令处理与竞争消解；4 身份、保座和手间管理",
+      "scenarioId": "LIFE07"
+    }
+  },
+  {
+    "id": "LIFE08",
+    "category": "lifecycle",
+    "description": "房主到期转给最早加入且在线的真人，不给电脑",
+    "given": {
+      "host": "A",
+      "hostDisconnectedAt": 0,
+      "members": [
+        {
+          "id": "A",
+          "kind": "human",
+          "joinedAt": 0,
+          "online": false
+        },
+        {
+          "id": "B",
+          "kind": "human",
+          "joinedAt": 100,
+          "online": true
+        },
+        {
+          "id": "C",
+          "kind": "human",
+          "joinedAt": 200,
+          "online": true
+        },
+        {
+          "id": "D",
+          "kind": "bot",
+          "joinedAt": 50
+        }
+      ],
+      "observedAt": [
+        119000,
+        120000
+      ]
+    },
+    "when": {
+      "operation": "evaluateHostAtTimes"
+    },
+    "expected": {
+      "hostAt119000": "A",
+      "hostAt120000": "B",
+      "currentHandPaused": false
+    },
+    "scope": "lifecycle",
+    "source": {
+      "document": "../../../plan/02-联机服务端电脑与回放.md",
+      "section": "3 命令处理与竞争消解；4 身份、保座和手间管理",
+      "scenarioId": "LIFE08"
+    }
+  },
+  {
+    "id": "LIFE09",
+    "category": "lifecycle",
+    "description": "全部真人离线，手结束且最后保座到期才关闭",
+    "given": {
+      "humanDisconnectTimes": {
+        "A": 0,
+        "B": 10000
+      },
+      "reservationMs": 120000,
+      "handFinishesAt": 45000,
+      "botCount": 2,
+      "observedAt": [
+        119999,
+        120000,
+        129999,
+        130000
+      ]
+    },
+    "when": {
+      "operation": "evaluateAllOfflineLifecycle"
+    },
+    "expected": {
+      "newHandsStartedAfter45000": 0,
+      "roomClosedAt": 130000,
+      "closedAtObservations": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "recordsSaved": true,
+      "botOnlyAutoPlay": false
+    },
+    "scope": "lifecycle",
+    "source": {
+      "document": "../../../plan/02-联机服务端电脑与回放.md",
+      "section": "3 命令处理与竞争消解；4 身份、保座和手间管理",
+      "scenarioId": "LIFE09"
+    }
+  },
+  {
+    "id": "LIFE10",
+    "category": "lifecycle",
+    "description": "归零场结束，新场需全部真人同意并统一记账",
+    "given": {
+      "matchId": "m1",
+      "host": "C",
+      "stacks": {
+        "A": 0,
+        "B": 0,
+        "C": 6000
+      },
+      "allHumansOnline": true,
+      "initialConsent": {
+        "A": true,
+        "B": false,
+        "C": true
+      },
+      "allParticipants": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "when": {
+      "operation": "finishProposeResetThenAgreeAndStart",
+      "actions": [
+        "proposeReset",
+        "readyA",
+        "readyC",
+        "tryStart",
+        "readyB",
+        "startByC"
+      ]
+    },
+    "expected": {
+      "oldMatchFinished": true,
+      "startWithMissingConsent": false,
+      "newMatchIdDifferentFrom": "m1",
+      "finalStacks": {
+        "A": 2000,
+        "B": 2000,
+        "C": 2000
+      },
+      "participantIdsUnchanged": true,
+      "chipLedger": [
+        {
+          "participantId": "C",
+          "type": "match_reset_remove",
+          "delta": -6000
+        },
+        {
+          "participantId": "A",
+          "type": "match_reset_grant",
+          "delta": 2000
+        },
+        {
+          "participantId": "B",
+          "type": "match_reset_grant",
+          "delta": 2000
+        },
+        {
+          "participantId": "C",
+          "type": "match_reset_grant",
+          "delta": 2000
+        }
+      ],
+      "netLedgerDelta": 0
+    },
+    "scope": "lifecycle",
+    "source": {
+      "document": "../../../plan/02-联机服务端电脑与回放.md",
+      "section": "3 命令处理与竞争消解；4 身份、保座和手间管理",
+      "scenarioId": "LIFE10"
+    }
+  },
+  {
+    "id": "LIFE11",
+    "category": "lifecycle",
+    "description": "手间电脑管理和容量变更清空准备，逻辑座位不重排",
+    "given": {
+      "host": "A",
+      "baseMembers": [
+        {
+          "id": "A",
+          "seatId": 0,
+          "kind": "human",
+          "stack": 2000,
+          "ready": true
+        },
+        {
+          "id": "B",
+          "seatId": 3,
+          "kind": "human",
+          "stack": 2000,
+          "ready": true
+        }
+      ],
+      "capacity": 4,
+      "variants": [
+        {
+          "name": "addBot",
+          "status": "betweenHands",
+          "requester": "A",
+          "operation": "addBot",
+          "seatId": 1,
+          "newBotStack": 2000
+        },
+        {
+          "name": "removeBot",
+          "status": "betweenHands",
+          "requester": "A",
+          "operation": "removeBot",
+          "existingBot": {
+            "id": "C",
+            "seatId": 1,
+            "stack": 1750
+          }
+        },
+        {
+          "name": "capacity2",
+          "status": "betweenHands",
+          "requester": "A",
+          "operation": "setCapacity",
+          "value": 2
+        },
+        {
+          "name": "capacityTooSmall",
+          "status": "betweenHands",
+          "requester": "A",
+          "operation": "setCapacity",
+          "value": 2,
+          "extraOccupiedSeatId": 1
+        },
+        {
+          "name": "duringHand",
+          "status": "playing",
+          "requester": "A",
+          "operation": "addBot",
+          "seatId": 1
+        },
+        {
+          "name": "nonHost",
+          "status": "betweenHands",
+          "requester": "B",
+          "operation": "addBot",
+          "seatId": 1
+        }
+      ]
+    },
+    "when": {
+      "operation": "applyIndependentRoomManagementVariants"
+    },
+    "expected": {
+      "variants": [
+        {
+          "name": "addBot",
+          "accepted": true,
+          "allHumansReady": false,
+          "ledgerType": "seat_grant",
+          "ledgerDelta": 2000
+        },
+        {
+          "name": "removeBot",
+          "accepted": true,
+          "allHumansReady": false,
+          "ledgerType": "seat_cashout",
+          "ledgerDelta": -1750
+        },
+        {
+          "name": "capacity2",
+          "accepted": true,
+          "occupiedSeatIds": [
+            0,
+            3
+          ],
+          "allHumansReady": false,
+          "capacity": 2
+        },
+        {
+          "name": "capacityTooSmall",
+          "accepted": false,
+          "error": "INVALID_INPUT",
+          "stateUnchanged": true
+        },
+        {
+          "name": "duringHand",
+          "accepted": false,
+          "error": "HAND_IN_PROGRESS",
+          "stateUnchanged": true
+        },
+        {
+          "name": "nonHost",
+          "accepted": false,
+          "error": "NOT_HOST",
+          "stateUnchanged": true
+        }
+      ]
+    },
+    "scope": "lifecycle",
+    "source": {
+      "document": "../../../plan/02-联机服务端电脑与回放.md",
+      "section": "3 命令处理与竞争消解；4 身份、保座和手间管理",
+      "scenarioId": "LIFE11"
+    }
+  },
+  {
+    "id": "LIFE12",
+    "category": "lifecycle",
+    "description": "存储故障不成功确认，重启中止在手并保留完成记录",
+    "given": {
+      "variants": [
+        {
+          "name": "writeFailure",
+          "handVersion": 12,
+          "stack": 1980,
+          "candidateStack": 1960,
+          "databaseCommitFails": true
+        },
+        {
+          "name": "restart",
+          "oldEpoch": "boot1",
+          "newEpoch": "boot2",
+          "completedHands": [
+            "h_done"
+          ],
+          "runningHands": [
+            "h_running"
+          ],
+          "sessionCredentialValid": true
+        }
+      ]
+    },
+    "when": {
+      "operation": "applyFailureAndRestartVariants"
+    },
+    "expected": {
+      "writeFailure": {
+        "ackOk": false,
+        "stack": 1980,
+        "handVersion": 12,
+        "committedEvents": 0,
+        "status": "pausedFault"
+      },
+      "restart": {
+        "h_running": "interrupted",
+        "h_done": "settled",
+        "resumeRunningHand": false,
+        "sameVisitorMayReadCompletedHistory": true,
+        "oldPendingActionsCleared": true
+      }
+    },
+    "scope": "lifecycle",
+    "source": {
+      "document": "../../../plan/02-联机服务端电脑与回放.md",
+      "section": "3 命令处理与竞争消解；4 身份、保座和手间管理",
+      "scenarioId": "LIFE12"
+    }
+  },
+  {
+    "id": "PRIV01",
+    "category": "privacy",
+    "description": "实时广播与逐人视图仅含各自底牌",
+    "given": {
+      "handId": "h1",
+      "board": [
+        "2H",
+        "3D",
+        "4C"
+      ],
+      "holeCards": {
+        "A": [
+          "AS",
+          "AH"
+        ],
+        "B": [
+          "KS",
+          "KH"
+        ],
+        "C": [
+          "QS",
+          "QH"
+        ]
+      },
+      "foldedPlayerIds": [
+        "B"
+      ],
+      "burnCards": [
+        "5D"
+      ],
+      "futureCards": [
+        "6D"
+      ],
+      "phase": "flop"
+    },
+    "when": {
+      "operation": "projectPublicAndOwnerViews"
+    },
+    "expected": {
+      "publicHoleCards": {},
+      "ownerAHoleCards": [
+        "AS",
+        "AH"
+      ],
+      "ownerBHoleCards": [
+        "KS",
+        "KH"
+      ],
+      "ownerCHoleCards": [
+        "QS",
+        "QH"
+      ],
+      "hiddenOtherCardCountPerSeat": 2,
+      "publicMustOmitCardIds": [
+        "AS",
+        "AH",
+        "KS",
+        "KH",
+        "QS",
+        "QH",
+        "5D",
+        "6D"
+      ],
+      "allClientViewsMustOmitPaths": [
+        "deck",
+        "burnCards",
+        "resumeToken",
+        "tokenHash",
+        "botPrivateState"
+      ]
+    },
+    "scope": "privacy",
+    "source": {
+      "document": "../../../plan/02-联机服务端电脑与回放.md",
+      "section": "5 公开视图；7 电脑观察；8 回放权限",
+      "scenarioId": "PRIV01"
+    }
+  },
+  {
+    "id": "PRIV02",
+    "category": "privacy",
+    "description": "已结束回放只显示本人和公开摊牌，弃牌对手仍隐藏",
+    "given": {
+      "handId": "h1",
+      "status": "settled",
+      "participantSessions": {
+        "A": "sA",
+        "B": "sB",
+        "C": "sC"
+      },
+      "holeCards": {
+        "A": [
+          "AS",
+          "AH"
+        ],
+        "B": [
+          "KS",
+          "KH"
+        ],
+        "C": [
+          "QS",
+          "QH"
+        ]
+      },
+      "foldedPlayerIds": [
+        "B"
+      ],
+      "showdownPlayerIds": [
+        "A",
+        "C"
+      ],
+      "requesterSession": "sA"
+    },
+    "when": {
+      "operation": "projectReplayForOwnerAndOutsider"
+    },
+    "expected": {
+      "ownerAllowed": true,
+      "ownerVisibleHoleCards": {
+        "A": [
+          "AS",
+          "AH"
+        ],
+        "C": [
+          "QS",
+          "QH"
+        ]
+      },
+      "ownerHiddenPlayerIds": [
+        "B"
+      ],
+      "outsiderError": "REPLAY_FORBIDDEN",
+      "gameEndedDoesNotRevealFoldedCards": true
+    },
+    "scope": "privacy",
+    "source": {
+      "document": "../../../plan/02-联机服务端电脑与回放.md",
+      "section": "5 公开视图；7 电脑观察；8 回放权限",
+      "scenarioId": "PRIV02"
+    }
+  },
+  {
+    "id": "PRIV03",
+    "category": "privacy",
+    "description": "等待者只见入座后的公开信息且无本手私人回放",
+    "given": {
+      "handId": "h1",
+      "handParticipantIds": [
+        "A",
+        "B"
+      ],
+      "waitingParticipantId": "C",
+      "joinedAtEventSequence": 9,
+      "boardAtJoin": [
+        "2H",
+        "3D",
+        "4C"
+      ],
+      "publicEventSequencesBeforeJoin": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "publicEventSequencesAfterJoin": [
+        10,
+        12
+      ]
+    },
+    "when": {
+      "operation": "projectWaitingViewAndReplayAccess"
+    },
+    "expected": {
+      "board": [
+        "2H",
+        "3D",
+        "4C"
+      ],
+      "ownHoleCardsAbsent": true,
+      "legalActions": [],
+      "newPublicEventSequences": [
+        10,
+        12
+      ],
+      "replayedOldPublicEventSequences": [],
+      "replayError": "REPLAY_FORBIDDEN"
+    },
+    "scope": "privacy",
+    "source": {
+      "document": "../../../plan/02-联机服务端电脑与回放.md",
+      "section": "5 公开视图；7 电脑观察；8 回放权限",
+      "scenarioId": "PRIV03"
+    }
+  },
+  {
+    "id": "PRIV04",
+    "category": "privacy",
+    "description": "电脑隐藏牌替换观察不变，旧连接被接管后失权",
+    "given": {
+      "variants": [
+        {
+          "name": "botObservation",
+          "ownHoleCards": [
+            "AS",
+            "AH"
+          ],
+          "board": [
+            "2H",
+            "3D",
+            "4C"
+          ],
+          "alternativeHiddenStates": [
+            {
+              "opponentHoleCards": [
+                "KS",
+                "QH"
+              ],
+              "futureCards": [
+                "5D",
+                "6D"
+              ]
+            },
+            {
+              "opponentHoleCards": [
+                "2C",
+                "3C"
+              ],
+              "futureCards": [
+                "9D",
+                "10D"
+              ]
+            }
+          ],
+          "policySeed": 77
+        },
+        {
+          "name": "connectionTakeover",
+          "sessionId": "sA",
+          "oldGeneration": 1,
+          "newGeneration": 2,
+          "commandFromGeneration": 1
+        }
+      ]
+    },
+    "when": {
+      "operation": "projectBotVariantsAndValidateConnection"
+    },
+    "expected": {
+      "botObservation": {
+        "observationsEqual": true,
+        "sameSeedPolicyOutputsEqual": true,
+        "hiddenFieldsAbsent": true
+      },
+      "connectionTakeover": {
+        "accepted": false,
+        "error": "SESSION_TAKEN_OVER",
+        "stateUnchanged": true,
+        "newConnectionControlsSeat": true
+      }
+    },
+    "scope": "privacy",
+    "source": {
+      "document": "../../../plan/02-联机服务端电脑与回放.md",
+      "section": "5 公开视图；7 电脑观察；8 回放权限",
+      "scenarioId": "PRIV04"
+    }
+  }
+]

@@ -1,0 +1,11 @@
+{$ORBIT_DOMAIN} {
+  encode zstd gzip
+  reverse_proxy app:3001 {
+    header_up X-Orbit-Client-IP {http.request.remote.host}
+    header_up X-Orbit-Proxy-Key {env.AUTH_PROXY_KEY}
+  }
+  header {
+    X-Content-Type-Options nosniff
+    Referrer-Policy same-origin
+  }
+}

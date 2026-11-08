@@ -1,0 +1,96 @@
+{
+  "decoded": true,
+  "listenedByHuman": false,
+  "files": [
+    {
+      "id": "deal",
+      "format": "ogg",
+      "decodedSamples": 7552,
+      "sampleRate": 48000,
+      "channels": 1,
+      "duration": 0.15733333333333333,
+      "peakDbFS": -11.531602268934623
+    },
+    {
+      "id": "deal",
+      "format": "mp3",
+      "decodedSamples": 7680,
+      "sampleRate": 48000,
+      "channels": 1,
+      "duration": 0.16,
+      "peakDbFS": -11.494685561061107
+    },
+    {
+      "id": "flip",
+      "format": "ogg",
+      "decodedSamples": 6720,
+      "sampleRate": 48000,
+      "channels": 1,
+      "duration": 0.14,
+      "peakDbFS": -11.238637070294505
+    },
+    {
+      "id": "flip",
+      "format": "mp3",
+      "decodedSamples": 5760,
+      "sampleRate": 48000,
+      "channels": 1,
+      "duration": 0.12,
+      "peakDbFS": -11.410466499470047
+    },
+    {
+      "id": "action",
+      "format": "ogg",
+      "decodedSamples": 4672,
+      "sampleRate": 48000,
+      "channels": 1,
+      "duration": 0.09733333333333333,
+      "peakDbFS": -11.44900683187355
+    },
+    {
+      "id": "action",
+      "format": "mp3",
+      "decodedSamples": 4800,
+      "sampleRate": 48000,
+      "channels": 1,
+      "duration": 0.1,
+      "peakDbFS": -11.535602678740775
+    },
+    {
+      "id": "win",
+      "format": "ogg",
+      "decodedSamples": 20032,
+      "sampleRate": 48000,
+      "channels": 1,
+      "duration": 0.41733333333333333,
+      "peakDbFS": -11.418358279354736
+    },
+    {
+      "id": "win",
+      "format": "mp3",
+      "decodedSamples": 20160,
+      "sampleRate": 48000,
+      "channels": 1,
+      "duration": 0.42,
+      "peakDbFS": -11.513623190127358
+    },
+    {
+      "id": "join",
+      "format": "ogg",
+      "decodedSamples": 10432,
+      "sampleRate": 48000,
+      "channels": 1,
+      "duration": 0.21733333333333332,
+      "peakDbFS": -11.420332345190065
+    },
+    {
+      "id": "join",
+      "format": "mp3",
+      "decodedSamples": 10560,
+      "sampleRate": 48000,
+      "channels": 1,
+      "duration": 0.22,
+      "peakDbFS": -11.430209409750029
+    }
+  ]
+}

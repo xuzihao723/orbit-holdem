@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "baselineDate": "2026-10-30",
+  "scope": "W02 documentation, pure declarations and example audit",
+  "clientRequests": 15,
+  "mutatingCommands": 11,
+  "serverEvents": 5,
+  "errorCodes": 23,
+  "examples": 14,
+  "successExamples": 8,
+  "failureExamples": 6,
+  "replayFrames": 16,
+  "checks": [
+    "closed example payload shapes",
+    "request/response IDs",
+    "event and error names match declarations/docs",
+    "owner/public views",
+    "legal amount fields",
+    "fixed replay card/winner/settlement facts",
+    "replay chip conservation",
+    "credential and hidden-card boundaries",
+    "W01 input fingerprints",
+    "local documentation links",
+    "type-only import boundaries"
+  ],
+  "typescriptCompiled": false,
+  "runtimeInputValidationImplemented": false,
+  "serverStarted": false,
+  "networkTestsRun": false,
+  "sha256": {
+    "packages/protocol/src/commands.ts": "7868863ccc83c940f5a8f77e85966fcdfa90a6740ee6da23bba427dc558f19c8",
+    "packages/protocol/src/views.ts": "967dc076d727daff1a8f722595c4b6c499991e6eac42b04e2a22bc3f52a205c5",
+    "packages/protocol/src/errors.ts": "e517c8e490cb81d641b6f2ad0a867dacc8e5bfdfd84e069e0ae2f530cc958e0e",
+    "docs/data-model.md": "4755505a6e6b74d07a5063f9f1c1f92bbd2bc2ae44b01ea4ca1ca7a643479cc7",
+    "docs/protocol.md": "b1b39838e7d2d1894bc04d63eebd13c0e90d8a0ad69cdc2f12fc950f3a551f2e",
+    "docs/errors.md": "471281389d2f46445d17f9f6fd6c35a2605e550a8a1098e18aba26db2dabfe67",
+    "docs/examples/protocol.json": "5d94bc597add3d03317e8377010996af2cd20474d28e52c529b573f3559975e6",
+    "scripts/validate-w02.py": "367cc6385de87a5b9b1a9dda0a3aafffe4a317a7b925a96207bca43bfbdd6559"
+  }
+}

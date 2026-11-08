@@ -1,0 +1,8 @@
+{
+  "mutation": "do not record actor lastActedAtBet after actions",
+  "mutatedExit": 1,
+  "mutatedOutput": "\n> orbit-workspace@0.1.0 test:core\n> vitest run --project core tests/core/reopen-betting.test.ts -t B05 maintains\n\n\n RUN  v5.0.5 D:/User/codex_respository/dezhou_app/poker-four\n\n ❯ |core| tests/core/reopen-betting.test.ts (19 tests | 1 failed | 18 skipped) 19ms\n   × B05 maintains rights through a real action history 16ms\n\n Test Files  1 failed (1)\n      Tests  1 failed | 18 skipped (19)\n   Start at  22:25:17\n   Duration  757ms (transform 61%, import 29%, tests 6%, worker 4%)\n\n\n⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯\n\n FAIL  |core| tests/core/reopen-betting.test.ts > B05 maintains rights through a real action history\nError: INVALID_BETTING_STATE\n ❯ invalid packages/poker-core/src/betting-round.ts:12:9\n     10|\n     11| function invalid(): never {\n     12|   throw new Error('INVALID_BETTING_STATE');\n       |         ^\n     13| }\n     14|\n ❯ assertCompleteRound packages/poker-core/src/betting-round.ts:54:9\n ❯ getRoundOutcome packages/poker-core/src/betting-round.ts:117:3\n ❯ applyBettingAction packages/poker-core/src/betting-round.ts:157:46\n ❯ play tests/core/reopen-betting.test.ts:40:18\n ❯ tests/core/reopen-betting.test.ts:135:18\n\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯\n\n",
+  "restoredExit": 0,
+  "restoredOutput": "\n> orbit-workspace@0.1.0 test:core\n> vitest run --project core tests/core/reopen-betting.test.ts tests/core/betting.test.ts\n\n\n RUN  v5.0.5 D:/User/codex_respository/dezhou_app/poker-four\n\n\n Test Files  2 passed (2)\n      Tests  38 passed (38)\n   Start at  22:25:20\n   Duration  606ms (import 38%, transform 35%, tests 23%, worker 5%)\n\n",
+  "restoredOriginalBytes": true
+}

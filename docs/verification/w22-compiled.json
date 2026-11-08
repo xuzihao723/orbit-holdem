@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-01",
+  "compiledApplication": true,
+  "realHumans": 2,
+  "originalDeadlinePreserved": true,
+  "sameParticipantRestored": true,
+  "resumeAt119Seconds": true,
+  "currentSettledResultRestored": true,
+  "exact120SecondsIdentityOnly": true,
+  "connectionGeneration": 4,
+  "seatGrants": 2,
+  "finalChips": 4000,
+  "credentialsIncluded": false
+}

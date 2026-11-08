@@ -1,0 +1,157 @@
+{
+  "date": "2026-10-30",
+  "status": "passed",
+  "scope": "W03 engineering, static contracts, actual transport and browser startup only",
+  "environment": {
+    "node": "24.14.1",
+    "npm": "11.11.0",
+    "platform": "Windows"
+  },
+  "typescriptCompiled": true,
+  "typedProtocolExamples": 14,
+  "integration": {
+    "passed": 13,
+    "failed": 0,
+    "suites": 4,
+    "report": "w03-vitest.json"
+  },
+  "browser": {
+    "passed": 3,
+    "failed": 0,
+    "skipped": 0,
+    "engine": "Chromium",
+    "report": "w03-playwright.json",
+    "screenshot": "w03-startup.png"
+  },
+  "commandResults": [
+    {
+      "name": "build",
+      "command": "npm.cmd run build",
+      "exitCode": 0
+    },
+    {
+      "name": "browser",
+      "command": "npm.cmd run test:e2e",
+      "exitCode": 0
+    },
+    {
+      "name": "fixtures",
+      "command": "npm.cmd run test:fixtures",
+      "exitCode": 0
+    },
+    {
+      "name": "format",
+      "command": "npm.cmd run format:check",
+      "exitCode": 0
+    },
+    {
+      "name": "core_not_implemented",
+      "command": "npm.cmd run test:core",
+      "exitCode": 1
+    }
+  ],
+  "additionalChecks": {
+    "npm ci --no-fund": 0,
+    "npm run typecheck": 0,
+    "npm run test:integration -- --reporter=default --reporter=json --outputFile=docs/verification/w03-vitest.json": 0,
+    "productionStart": "w03-production-start.json",
+    "typeNegativeProbe": "w03-type-negative.json"
+  },
+  "baselineInputFingerprintsUnchanged": {
+    "w01-validation.json": {
+      "tests/fixtures/scenarios.json": true,
+      "docs/product-rules.md": true,
+      "docs/decisions.md": true,
+      "docs/user-flows.md": true,
+      "tests/fixtures/README.md": true,
+      "scripts/validate-w01.py": true
+    },
+    "w02-validation.json": {
+      "packages/protocol/src/commands.ts": true,
+      "packages/protocol/src/views.ts": true,
+      "packages/protocol/src/errors.ts": true,
+      "docs/data-model.md": true,
+      "docs/protocol.md": true,
+      "docs/errors.md": true,
+      "docs/examples/protocol.json": true,
+      "scripts/validate-w02.py": true
+    }
+  },
+  "review": {
+    "mode": "read-only code review",
+    "resolved": [
+      "watch mode hiding initial startup failure",
+      "WebSocket handshake origin policy"
+    ],
+    "remainingBlockers": 0
+  },
+  "ci": {
+    "configured": true,
+    "remoteExecuted": false,
+    "matrix": [
+      "windows-latest",
+      "ubuntu-latest"
+    ]
+  },
+  "limitations": {
+    "coreTestsImplemented": false,
+    "emptyCoreCommandExitCode": 1,
+    "runtimeBusinessInputValidation": false,
+    "authentication": false,
+    "rooms": false,
+    "gameRules": false,
+    "database": false,
+    "bots": false,
+    "completeGameE2E": false,
+    "productionDeployment": false
+  },
+  "sha256": {
+    ".env.example": "544be08dc6feccb7ab1156a226b28eca35f996089bc29c209d1e6b9a0d6a5005",
+    ".github/workflows/check.yml": "2d3df5bb52543cdbb6ed2d71b484b1a1f6a36d27b15e76a45ce8731a85c3b520",
+    ".gitignore": "708a08b95319198f582722f28c4442d04770e92cc2bc71974af13a669168db47",
+    ".node-version": "51849cee918b92b09b95121b54380f6124c0f578d8c2323221c0d75bbbadb08d",
+    ".npmrc": "cde76ca04e048c3eba070a2c0dfcf5b723cf6014eab177157096b924f24ec4ca",
+    ".prettierignore": "7e1ab812c9d0b59c0a1711e6ef71ed0926b40c0908fc1084a2e439a55371a4ab",
+    ".prettierrc.json": "d7fa1c1dee12b930b45e1f8c465b07da95fa519cfd9e3e503c76dc762617b1fb",
+    "apps/server/package.json": "ab1b96939a188312949ceade1fabb85b2718b6d3ed9b2b7cf05f75f1f1136904",
+    "apps/server/src/create-server.ts": "875efaff9e682df4dee027fd96921f43dd320895ac16bfd6f5e53c4bc789ddd4",
+    "apps/server/src/index.ts": "62cc769ecd673313c89ae99f121139aba3470cea0430635d5865fe09b2320069",
+    "apps/server/tsconfig.json": "bd291defcc2a2c59a251a7ec6a610dd938711a1ffa9f40e32e3aa1395f6a88ac",
+    "apps/web/index.html": "f7d09f42df1793600bc292473389be320bda1d6d28aa39155367283ed8e4485f",
+    "apps/web/package.json": "771c69d3dd152a5a52e35d67c37abf71719d7be271a000bc776ea2f47eeac395",
+    "apps/web/src/App.tsx": "74f4ce212684e43d5d906c4055e5ef59b9cd192fc56cbb289407770e33d868ec",
+    "apps/web/src/main.tsx": "a8a2539b8a2fd636eb76add39f4f253817d83a9b3e9975393117d7426def0133",
+    "apps/web/src/styles.css": "228d2bccc46bf38610aa0f1eccdc0edefb6e70f2f987dfb2c80884717ba111af",
+    "apps/web/src/vite-env.d.ts": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+    "apps/web/tsconfig.json": "23c440bf60140dc7ada087c09fe07c89b1f5c1402049f551e378e29b1b7f4738",
+    "apps/web/vite.config.ts": "72022f12aa3b237f58d146d103fe50516ab6f6ce73147cbc28d8631288458cff",
+    "package-lock.json": "c667a5a64f78a7a6374e2387f0b914d9d166b77fea4cbf4434a923e34c9c663b",
+    "package.json": "981bce3bf8a017b901d5c8d6a219b8fab3597ddf955ddc58de9cd3f28d586014",
+    "packages/poker-core/package.json": "ef018ca50e65214a3e691686dd51d0c95a68cffdc0c082fe259af003a0284186",
+    "packages/poker-core/src/index.ts": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+    "packages/poker-core/tsconfig.json": "6923a241b0ab9d90bd0f808f3bc29f31debc52d3a27bf66e2ccf69f1969c8936",
+    "packages/protocol/package.json": "255eba6f3142f1faa9421af42f653bfc9d27d5cebceda983027c937ea30c7570",
+    "packages/protocol/src/commands.ts": "7868863ccc83c940f5a8f77e85966fcdfa90a6740ee6da23bba427dc558f19c8",
+    "packages/protocol/src/errors.ts": "e517c8e490cb81d641b6f2ad0a867dacc8e5bfdfd84e069e0ae2f530cc958e0e",
+    "packages/protocol/src/index.ts": "53d37df2c1575795402c06c0eaf1551bea19a06ac9de9b59cf9ef653687e8ef8",
+    "packages/protocol/src/views.ts": "967dc076d727daff1a8f722595c4b6c499991e6eac42b04e2a22bc3f52a205c5",
+    "packages/protocol/tsconfig.json": "6923a241b0ab9d90bd0f808f3bc29f31debc52d3a27bf66e2ccf69f1969c8936",
+    "playwright.config.ts": "6a18b832daf1982e4b7fba936150793bdf274b5c47ed0259621289361f78ea26",
+    "scripts/check-dev-ports.mjs": "638f9c01dc358161a365ef66755bcc9408d9238fe897be1958f88ae04d0c07c5",
+    "scripts/dev-server.mjs": "7be65aa45ed9ebf6e6e5dba6548c92c4ff370be473766db1703be6ae7e89c86b",
+    "scripts/generate-contract-examples.mjs": "0c2b8d9c3f23308a199ea29f211e7f5f6e393732589742fe44558bfe014e4df5",
+    "scripts/validate-w01.py": "215241eedbc8da084922ce65e18cabfb50fb45af27bd1503765a1a6997edbdde",
+    "scripts/validate-w02.py": "367cc6385de87a5b9b1a9dda0a3aafffe4a317a7b925a96207bca43bfbdd6559",
+    "tests/contracts/protocol-types.ts": "beb7c89148668b9a61d05c6e3d55133cef5b7bb3a901f2da43cc7f355d0e49a7",
+    "tests/e2e/startup.spec.ts": "86f753f94aa6d2a5cf4385ec118c526b637981f0809678b1a29df6870182ab37",
+    "tests/integration/contract-generator.test.ts": "e937499e918e3a513f85cce9288146f335548c4218d3cb8e663515678458e251",
+    "tests/integration/dev-startup.test.ts": "9d1fb13489f87c8cea1b794b96c54cb47955f114087465286572671985f37663",
+    "tests/integration/health.test.ts": "891bf25a9fc9deac09004cd70fbecb331055fe18eab02cbeac7821be3745753e",
+    "tests/integration/protocol-contract.test.ts": "f4bb9c051f008338ed864338e29100bac69e68807257bbbf31b4813ececc22d6",
+    "tsconfig.base.json": "b394ebccf659dc69962bb3beb000293a09554918fddede4a729d18d0fba5d7c1",
+    "tsconfig.build.json": "1dc61d7784c709928dd17395edc7d01490b81334d7c84324595bfaa4f7edafb2",
+    "tsconfig.tests.json": "a7d054c3fba38884c8af97fd31b123435c5dd7f434757d0d3a11b3df96d5ec53",
+    "tsconfig.tools.json": "d36b6066534b513490d9b9bb5ba08b648009a9a8ee0896660d1bad7554fbc246",
+    "vitest.config.ts": "06e0757c9e6f2dee05be08ecbd2b1ca64b8691ab05f69fddeb9c9d04c9b8fc35"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-11-06T21:57:09.834101+08:00",
+  "command": "npm.cmd run dev",
+  "checks": [
+    {
+      "url": "http://127.0.0.1:5173/",
+      "status": 200,
+      "contentType": "text/html",
+      "body": null
+    },
+    {
+      "url": "http://127.0.0.1:5173/history",
+      "status": 200,
+      "contentType": "text/html",
+      "body": null
+    },
+    {
+      "url": "http://127.0.0.1:3001/health/live",
+      "status": 200,
+      "contentType": "application/json",
+      "body": {
+        "status": "ok"
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3001/health/ready",
+      "status": 200,
+      "contentType": "application/json",
+      "body": {
+        "status": "ready"
+      }
+    },
+    {
+      "url": "http://127.0.0.1:5173/health/live",
+      "status": 200,
+      "contentType": "application/json",
+      "body": {
+        "status": "ok"
+      }
+    }
+  ]
+}

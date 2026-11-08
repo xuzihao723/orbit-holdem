@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-11-06T22:47:08.621688+08:00",
+  "checks": [
+    {
+      "url": "http://127.0.0.1:5173/",
+      "status": 200,
+      "contentType": "text/html"
+    },
+    {
+      "url": "http://127.0.0.1:5173/history",
+      "status": 200,
+      "contentType": "text/html"
+    },
+    {
+      "url": "http://127.0.0.1:5173/?preview=states",
+      "status": 200,
+      "contentType": "text/html"
+    },
+    {
+      "url": "http://127.0.0.1:5173/health/live",
+      "status": 200,
+      "contentType": "application/json"
+    },
+    {
+      "url": "http://127.0.0.1:3001/health/ready",
+      "status": 200,
+      "contentType": "application/json"
+    }
+  ]
+}

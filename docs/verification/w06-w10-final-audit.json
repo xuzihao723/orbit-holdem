@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "date": "2026-10-30",
+  "latestCore": 176,
+  "latestIntegration": 38,
+  "oracleSamplesPerStage": 10000,
+  "oracleFailures": 0,
+  "unchangedHistoricalFiles": 53,
+  "allLatestSourceHashesCurrent": true,
+  "intentionalExistingSourceChanges": [
+    "package-lock.json",
+    "package.json",
+    "packages/poker-core/src/index.ts"
+  ],
+  "frontendServerProtocolUnchanged": true,
+  "newDocumentLocalLinksValid": true,
+  "W06ToW10Complete": true,
+  "M1Complete": false,
+  "nextTask": "W11",
+  "browserRerun": false,
+  "remoteCI": false,
+  "gitOrDeployment": false
+}

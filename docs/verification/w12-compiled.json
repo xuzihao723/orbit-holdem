@@ -1,0 +1,35 @@
+{
+  "entry": "compiled ESM",
+  "results": [
+    {
+      "n": 2,
+      "actions": 8,
+      "consumed": 12,
+      "finalStacks": [
+        2000,
+        2000
+      ]
+    },
+    {
+      "n": 3,
+      "actions": 12,
+      "consumed": 14,
+      "finalStacks": [
+        2040,
+        1980,
+        1980
+      ]
+    },
+    {
+      "n": 4,
+      "actions": 16,
+      "consumed": 16,
+      "finalStacks": [
+        2060,
+        1980,
+        1980,
+        1980
+      ]
+    }
+  ]
+}

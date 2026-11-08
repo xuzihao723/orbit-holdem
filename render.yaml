@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: orbit-holdem
+    runtime: docker
+    plan: free
+    region: singapore
+    dockerfilePath: ./deploy/Dockerfile
+    dockerContext: .
+    dockerCommand: >-
+      /bin/sh -c 'export WEB_ORIGIN="$RENDER_EXTERNAL_URL"; exec node apps/server/dist/index.js'
+    healthCheckPath: /health/ready

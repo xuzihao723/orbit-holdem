@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "types": ["node"],
+    "lib": ["ES2022"],
+    "rootDir": "tests/helpers/worker-fixtures",
+    "outDir": "tests/.generated-workers",
+    "declaration": false,
+    "sourceMap": false
+  },
+  "include": ["tests/helpers/worker-fixtures/**/*.ts"]
+}

@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-31",
+  "compiledApplication": true,
+  "realHumans": 2,
+  "serverClockOnlyInjection": true,
+  "deadline": 30000,
+  "timeoutAction": "fold",
+  "timeoutPaidAmount": 0,
+  "internalReceipts": 1,
+  "settled": true,
+  "finalChips": 4000,
+  "internalPrivateAckAbsent": true,
+  "closedWithoutTimers": true,
+  "credentialsIncluded": false
+}

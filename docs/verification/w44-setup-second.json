@@ -1,0 +1,65 @@
+[
+  {
+    "check": "node",
+    "command": [
+      "node",
+      "--version"
+    ],
+    "exitCode": 0,
+    "seconds": 0.12,
+    "log": "w44-node.log"
+  },
+  {
+    "check": "npm",
+    "command": [
+      "npm.cmd",
+      "--version"
+    ],
+    "exitCode": 0,
+    "seconds": 0.67,
+    "log": "w44-npm.log"
+  },
+  {
+    "check": "python",
+    "command": [
+      "python",
+      "--version"
+    ],
+    "exitCode": 0,
+    "seconds": 0.06,
+    "log": "w44-python.log"
+  },
+  {
+    "check": "install",
+    "command": [
+      "npm.cmd",
+      "ci"
+    ],
+    "exitCode": 0,
+    "seconds": 17.08,
+    "log": "w44-install.log"
+  },
+  {
+    "check": "chromium",
+    "command": [
+      "npx.cmd",
+      "playwright",
+      "install",
+      "chromium"
+    ],
+    "exitCode": 0,
+    "seconds": 7.92,
+    "log": "w44-chromium.log"
+  },
+  {
+    "check": "fixtures",
+    "command": [
+      "npm.cmd",
+      "run",
+      "test:fixtures"
+    ],
+    "exitCode": 1,
+    "seconds": 1.23,
+    "log": "w44-fixtures.log"
+  }
+]

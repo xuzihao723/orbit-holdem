@@ -1,0 +1,309 @@
+{
+  "date": "2026-11-01",
+  "passed": true,
+  "realGuests": true,
+  "source": "real Socket.IO room/ready/start/action",
+  "runs": [
+    {
+      "players": 2,
+      "handNumber": 1,
+      "handVersion": 2,
+      "eventCount": 10,
+      "chips": 4000,
+      "settlementCount": 1,
+      "duplicateTested": true,
+      "resumeTested": false
+    },
+    {
+      "players": 2,
+      "handNumber": 2,
+      "handVersion": 2,
+      "eventCount": 10,
+      "chips": 4000,
+      "settlementCount": 1,
+      "duplicateTested": false,
+      "resumeTested": false
+    },
+    {
+      "players": 2,
+      "handNumber": 3,
+      "handVersion": 2,
+      "eventCount": 10,
+      "chips": 4000,
+      "settlementCount": 1,
+      "duplicateTested": false,
+      "resumeTested": false
+    },
+    {
+      "players": 2,
+      "handNumber": 4,
+      "handVersion": 2,
+      "eventCount": 10,
+      "chips": 4000,
+      "settlementCount": 1,
+      "duplicateTested": false,
+      "resumeTested": true
+    },
+    {
+      "players": 2,
+      "handNumber": 5,
+      "handVersion": 2,
+      "eventCount": 10,
+      "chips": 4000,
+      "settlementCount": 1,
+      "duplicateTested": false,
+      "resumeTested": false
+    },
+    {
+      "players": 2,
+      "handNumber": 6,
+      "handVersion": 2,
+      "eventCount": 10,
+      "chips": 4000,
+      "settlementCount": 1,
+      "duplicateTested": false,
+      "resumeTested": false
+    },
+    {
+      "players": 2,
+      "handNumber": 7,
+      "handVersion": 2,
+      "eventCount": 10,
+      "chips": 4000,
+      "settlementCount": 1,
+      "duplicateTested": false,
+      "resumeTested": false
+    },
+    {
+      "players": 2,
+      "handNumber": 8,
+      "handVersion": 2,
+      "eventCount": 10,
+      "chips": 4000,
+      "settlementCount": 1,
+      "duplicateTested": false,
+      "resumeTested": false
+    },
+    {
+      "players": 2,
+      "handNumber": 9,
+      "handVersion": 2,
+      "eventCount": 10,
+      "chips": 4000,
+      "settlementCount": 1,
+      "duplicateTested": false,
+      "resumeTested": false
+    },
+    {
+      "players": 2,
+      "handNumber": 10,
+      "handVersion": 2,
+      "eventCount": 10,
+      "chips": 4000,
+      "settlementCount": 1,
+      "duplicateTested": false,
+      "resumeTested": false
+    },
+    {
+      "players": 3,
+      "handNumber": 1,
+      "handVersion": 3,
+      "eventCount": 12,
+      "chips": 6000,
+      "settlementCount": 1,
+      "duplicateTested": true,
+      "resumeTested": false
+    },
+    {
+      "players": 3,
+      "handNumber": 2,
+      "handVersion": 3,
+      "eventCount": 12,
+      "chips": 6000,
+      "settlementCount": 1,
+      "duplicateTested": false,
+      "resumeTested": false
+    },
+    {
+      "players": 3,
+      "handNumber": 3,
+      "handVersion": 3,
+      "eventCount": 12,
+      "chips": 6000,
+      "settlementCount": 1,
+      "duplicateTested": false,
+      "resumeTested": false
+    },
+    {
+      "players": 3,
+      "handNumber": 4,
+      "handVersion": 3,
+      "eventCount": 12,
+      "chips": 6000,
+      "settlementCount": 1,
+      "duplicateTested": false,
+      "resumeTested": true
+    },
+    {
+      "players": 3,
+      "handNumber": 5,
+      "handVersion": 3,
+      "eventCount": 12,
+      "chips": 6000,
+      "settlementCount": 1,
+      "duplicateTested": false,
+      "resumeTested": false
+    },
+    {
+      "players": 3,
+      "handNumber": 6,
+      "handVersion": 3,
+      "eventCount": 12,
+      "chips": 6000,
+      "settlementCount": 1,
+      "duplicateTested": false,
+      "resumeTested": false
+    },
+    {
+      "players": 3,
+      "handNumber": 7,
+      "handVersion": 3,
+      "eventCount": 12,
+      "chips": 6000,
+      "settlementCount": 1,
+      "duplicateTested": false,
+      "resumeTested": false
+    },
+    {
+      "players": 3,
+      "handNumber": 8,
+      "handVersion": 3,
+      "eventCount": 12,
+      "chips": 6000,
+      "settlementCount": 1,
+      "duplicateTested": false,
+      "resumeTested": false
+    },
+    {
+      "players": 3,
+      "handNumber": 9,
+      "handVersion": 3,
+      "eventCount": 12,
+      "chips": 6000,
+      "settlementCount": 1,
+      "duplicateTested": false,
+      "resumeTested": false
+    },
+    {
+      "players": 3,
+      "handNumber": 10,
+      "handVersion": 3,
+      "eventCount": 12,
+      "chips": 6000,
+      "settlementCount": 1,
+      "duplicateTested": false,
+      "resumeTested": false
+    },
+    {
+      "players": 4,
+      "handNumber": 1,
+      "handVersion": 4,
+      "eventCount": 14,
+      "chips": 8000,
+      "settlementCount": 1,
+      "duplicateTested": true,
+      "resumeTested": false
+    },
+    {
+      "players": 4,
+      "handNumber": 2,
+      "handVersion": 4,
+      "eventCount": 14,
+      "chips": 8000,
+      "settlementCount": 1,
+      "duplicateTested": false,
+      "resumeTested": false
+    },
+    {
+      "players": 4,
+      "handNumber": 3,
+      "handVersion": 4,
+      "eventCount": 14,
+      "chips": 8000,
+      "settlementCount": 1,
+      "duplicateTested": false,
+      "resumeTested": false
+    },
+    {
+      "players": 4,
+      "handNumber": 4,
+      "handVersion": 4,
+      "eventCount": 14,
+      "chips": 8000,
+      "settlementCount": 1,
+      "duplicateTested": false,
+      "resumeTested": true
+    },
+    {
+      "players": 4,
+      "handNumber": 5,
+      "handVersion": 4,
+      "eventCount": 14,
+      "chips": 8000,
+      "settlementCount": 1,
+      "duplicateTested": false,
+      "resumeTested": false
+    },
+    {
+      "players": 4,
+      "handNumber": 6,
+      "handVersion": 4,
+      "eventCount": 14,
+      "chips": 8000,
+      "settlementCount": 1,
+      "duplicateTested": false,
+      "resumeTested": false
+    },
+    {
+      "players": 4,
+      "handNumber": 7,
+      "handVersion": 4,
+      "eventCount": 14,
+      "chips": 8000,
+      "settlementCount": 1,
+      "duplicateTested": false,
+      "resumeTested": false
+    },
+    {
+      "players": 4,
+      "handNumber": 8,
+      "handVersion": 4,
+      "eventCount": 14,
+      "chips": 8000,
+      "settlementCount": 1,
+      "duplicateTested": false,
+      "resumeTested": false
+    },
+    {
+      "players": 4,
+      "handNumber": 9,
+      "handVersion": 4,
+      "eventCount": 14,
+      "chips": 8000,
+      "settlementCount": 1,
+      "duplicateTested": false,
+      "resumeTested": false
+    },
+    {
+      "players": 4,
+      "handNumber": 10,
+      "handVersion": 4,
+      "eventCount": 14,
+      "chips": 8000,
+      "settlementCount": 1,
+      "duplicateTested": false,
+      "resumeTested": false
+    }
+  ],
+  "credentialsIncluded": false
+}

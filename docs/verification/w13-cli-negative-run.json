@@ -1,0 +1,144 @@
+{
+  "date": "2026-10-30",
+  "scope": "test-only seeded full hands and illegal rejections",
+  "legal": {
+    "requested": 1000,
+    "completed": 0,
+    "failureCount": 1,
+    "actionCount": 1,
+    "maximumActionsObserved": 0,
+    "seed": 20261030,
+    "failure": {
+      "mode": "legal",
+      "invalidClass": null,
+      "faultStage": null,
+      "seed": 20261030,
+      "index": 0,
+      "input": {
+        "handId": "sim-0",
+        "dealerSeatId": 0,
+        "deck": [
+          "5C",
+          "QD",
+          "10H",
+          "9C",
+          "6C",
+          "8C",
+          "QC",
+          "9S",
+          "AD",
+          "QS",
+          "QH",
+          "AH",
+          "KS",
+          "5D",
+          "8D",
+          "3H",
+          "6H",
+          "10S",
+          "8H",
+          "3S",
+          "7S",
+          "10D",
+          "9D",
+          "10C",
+          "6S",
+          "KD",
+          "4D",
+          "AS",
+          "4C",
+          "JS",
+          "2D",
+          "4S",
+          "9H",
+          "AC",
+          "5S",
+          "7D",
+          "6D",
+          "JD",
+          "4H",
+          "KH",
+          "2S",
+          "7C",
+          "2H",
+          "KC",
+          "JH",
+          "3D",
+          "JC",
+          "2C",
+          "3C",
+          "8S",
+          "5H",
+          "7H"
+        ],
+        "players": [
+          {
+            "seatId": 0,
+            "participantId": "sim-0-0",
+            "stack": 2000
+          },
+          {
+            "seatId": 1,
+            "participantId": "sim-0-1",
+            "stack": 2000
+          }
+        ]
+      },
+      "trace": [
+        {
+          "seatId": 0,
+          "turnId": "sim-0:turn:1",
+          "action": {
+            "type": "check"
+          }
+        }
+      ],
+      "reason": "UNEXPECTED_REJECTION:ILLEGAL_ACTION",
+      "stateSummary": {
+        "phase": "preflop",
+        "version": 1,
+        "actor": 0,
+        "board": [],
+        "balances": [
+          {
+            "seatId": 0,
+            "stack": 1990,
+            "handCommitted": 10
+          },
+          {
+            "seatId": 1,
+            "stack": 1980,
+            "handCommitted": 20
+          }
+        ]
+      }
+    },
+    "traceDigest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "playerCountCoverage": {},
+    "outcomes": {
+      "showdown": 0,
+      "allOthersFolded": 0
+    }
+  },
+  "invalid": {
+    "requested": 1000,
+    "completed": 1000,
+    "failureCount": 0,
+    "actionCount": 1000,
+    "maximumActionsObserved": 1,
+    "seed": 20261031,
+    "failure": null,
+    "traceDigest": "73a2a294fdb292759de7a3a38a9de61ef47afa4253d6b49721a1b764a9e3c24d",
+    "classCoverage": {
+      "wrongActor": 112,
+      "negativeRaise": 111,
+      "fractionalRaise": 111,
+      "belowMinimumNonAllInRaise": 111,
+      "overStackRaise": 111,
+      "checkWhileFacingBet": 111,
+      "raiseWithoutReopening": 111,
+      "unsafeInteger": 111,
+      "nonFiniteNumber": 111
+    }
+  }
+}

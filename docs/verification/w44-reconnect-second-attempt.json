@@ -1,0 +1,15 @@
+{
+  "check": "browser-reconnect",
+  "command": [
+    "npx.cmd",
+    "playwright",
+    "test",
+    "--config",
+    "playwright.reconnect.config.ts",
+    "--output",
+    "w44-dev-results/reconnect"
+  ],
+  "exitCode": 1,
+  "seconds": 20.17,
+  "log": "w44-browser-reconnect.log"
+}

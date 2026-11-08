@@ -1,0 +1,49 @@
+{
+  "genericFailure": "操作未完成，请稍后重试。",
+  "actions": {
+    "fold": "弃牌",
+    "check": "过牌",
+    "call": "跟注 {amount}",
+    "raiseTo": "加注至 {amount}",
+    "additional": "本次投入 {amount}",
+    "allIn": "全押 {amount}",
+    "ready": "准备",
+    "start": "开始本手",
+    "history": "历史记录",
+    "replay": "回放",
+    "sound": "音效",
+    "reduceMotion": "减少动画"
+  },
+  "ranks": ["高牌", "一对", "两对", "三条", "顺子", "同花", "葫芦", "四条", "同花顺"],
+  "errors": {
+    "ROOM_NOT_FOUND": "房间不存在或已关闭。",
+    "ROOM_FULL": "房间已满，请联系房主或选择其他房间。",
+    "ROOM_FORBIDDEN": "当前身份不能访问此房间。",
+    "INVALID_INPUT": "输入格式不正确，请检查后重试。",
+    "NOT_HOST": "只有当前房主可以执行此操作。",
+    "NOT_READY": "请等待所有真人准备完成。",
+    "NOT_ENOUGH_PLAYERS": "至少需要两名有筹码的参与者。",
+    "HAND_IN_PROGRESS": "本手仍在进行，请等待结算。",
+    "NOT_YOUR_TURN": "尚未轮到你行动。",
+    "ILLEGAL_ACTION": "当前不能执行此动作。",
+    "ILLEGAL_AMOUNT": "金额不在当前合法范围内。",
+    "STALE_STATE": "牌局已更新，请查看当前状态后操作。",
+    "HAND_MISMATCH": "当前手牌已改变，旧操作已取消。",
+    "TURN_EXPIRED": "本回合已结束，旧操作已取消。",
+    "SESSION_EXPIRED": "身份已过期，请重新建立访客身份。",
+    "SESSION_TAKEN_OVER": "此身份已由另一个页面控制。",
+    "COMMAND_ID_CONFLICT": "原请求与当前内容不同，请恢复状态后操作。",
+    "RATE_LIMITED": "操作较快，请稍等后重试。",
+    "ROOM_PAUSED": "房间已暂停，请等待服务恢复。",
+    "PERSISTENCE_UNAVAILABLE": "服务暂时无法保存，请稍后重试。",
+    "REPLAY_FORBIDDEN": "当前身份无权查看这手回放。",
+    "REPLAY_NOT_FOUND": "这手回放不可用。",
+    "SERVER_RESTARTED": "服务已重启，未结束的一手已中止。"
+  },
+  "help": {
+    "raiseAmount": "加注至是本轮累计投入，本次投入需扣除本轮已投入金额。",
+    "virtualChips": "仅供虚拟筹码练习。",
+    "interrupted": "本手已中止，无最终结算。",
+    "historyOwnership": "历史记录只属于实际参赛的访客身份，丢失凭据后无法找回。"
+  }
+}

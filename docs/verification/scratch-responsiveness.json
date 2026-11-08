@@ -1,0 +1,201 @@
+{
+  "date": "2026-11-01",
+  "node": "v24.14.1",
+  "os": "win32 10.0.26200",
+  "cpu": "Intel(R) Core(TM) Ultra 9 285H",
+  "logicalCpus": 16,
+  "successfulCommands": 100,
+  "healthQueries": 100,
+  "baseline": {
+    "p50": 7.964799999999741,
+    "p95": 12.339899999999943,
+    "max": 21.60089999999991
+  },
+  "loaded": {
+    "p50": 8.623199999999997,
+    "p95": 13.820200000000114,
+    "max": 37.4063000000001
+  },
+  "referenceP95Ms": 100,
+  "referencePassed": true,
+  "singleRequestGuardMs": 1000,
+  "workerThreadIds": [
+    1,
+    2
+  ],
+  "poolSize": 2,
+  "budgetMs": 150,
+  "workerOutcomes": [
+    {
+      "kind": "fallback",
+      "reason": "budget",
+      "threadId": 1,
+      "elapsedMs": 150.2206000000001,
+      "queueMs": 2.6986000000001695
+    },
+    {
+      "kind": "fallback",
+      "reason": "budget",
+      "threadId": 2,
+      "elapsedMs": 156.90300000000025,
+      "queueMs": 0.79300000000012
+    },
+    {
+      "kind": "estimate",
+      "estimate": {
+        "requestedSamples": 10000,
+        "completedSamples": 491,
+        "weightedShare": 0.8533604887983711,
+        "expectedReturn": 34.13441955193482,
+        "additionalCallCost": 0,
+        "expectedNet": 34.13441955193482,
+        "stopReason": "budget"
+      },
+      "threadId": 1,
+      "elapsedMs": 147.8134,
+      "queueMs": 8.568900000000212
+    },
+    {
+      "kind": "estimate",
+      "estimate": {
+        "requestedSamples": 10000,
+        "completedSamples": 507,
+        "weightedShare": 0.8816568047337279,
+        "expectedReturn": 35.26627218934913,
+        "additionalCallCost": 0,
+        "expectedNet": 35.26627218934913,
+        "stopReason": "budget"
+      },
+      "threadId": 2,
+      "elapsedMs": 147.57909999999993,
+      "queueMs": 0.7760000000002947
+    },
+    {
+      "kind": "estimate",
+      "estimate": {
+        "requestedSamples": 10000,
+        "completedSamples": 381,
+        "weightedShare": 0.8753280839895006,
+        "expectedReturn": 35.01312335958005,
+        "additionalCallCost": 0,
+        "expectedNet": 35.01312335958005,
+        "stopReason": "budget"
+      },
+      "threadId": 1,
+      "elapsedMs": 147.3755000000001,
+      "queueMs": 0.5877000000000407
+    },
+    {
+      "kind": "estimate",
+      "estimate": {
+        "requestedSamples": 10000,
+        "completedSamples": 406,
+        "weightedShare": 0.8830049261083746,
+        "expectedReturn": 35.32019704433498,
+        "additionalCallCost": 0,
+        "expectedNet": 35.32019704433498,
+        "stopReason": "budget"
+      },
+      "threadId": 2,
+      "elapsedMs": 149.0007999999998,
+      "queueMs": 0.9295999999999367
+    },
+    {
+      "kind": "estimate",
+      "estimate": {
+        "requestedSamples": 10000,
+        "completedSamples": 602,
+        "weightedShare": 0.8637873754152833,
+        "expectedReturn": 34.55149501661134,
+        "additionalCallCost": 0,
+        "expectedNet": 34.55149501661134,
+        "stopReason": "budget"
+      },
+      "threadId": 1,
+      "elapsedMs": 147.6596999999997,
+      "queueMs": 0.471599999999853
+    },
+    {
+      "kind": "estimate",
+      "estimate": {
+        "requestedSamples": 10000,
+        "completedSamples": 635,
+        "weightedShare": 0.8661417322834646,
+        "expectedReturn": 34.645669291338585,
+        "additionalCallCost": 0,
+        "expectedNet": 34.645669291338585,
+        "stopReason": "budget"
+      },
+      "threadId": 2,
+      "elapsedMs": 146.9996000000001,
+      "queueMs": 0.6427000000003318
+    },
+    {
+      "kind": "fallback",
+      "reason": "budget",
+      "threadId": 1,
+      "elapsedMs": 151.2793999999999,
+      "queueMs": 0.5511999999998807
+    },
+    {
+      "kind": "fallback",
+      "reason": "budget",
+      "threadId": 2,
+      "elapsedMs": 149.9380000000001,
+      "queueMs": 0.4657000000001972
+    },
+    {
+      "kind": "fallback",
+      "reason": "budget",
+      "threadId": 1,
+      "elapsedMs": 149.3400999999999,
+      "queueMs": 0.8044999999997344
+    },
+    {
+      "kind": "fallback",
+      "reason": "budget",
+      "threadId": 2,
+      "elapsedMs": 149.75239999999985,
+      "queueMs": 0.5178000000000793
+    },
+    {
+      "kind": "estimate",
+      "estimate": {
+        "requestedSamples": 10000,
+        "completedSamples": 669,
+        "weightedShare": 0.87593423019432,
+        "expectedReturn": 35.03736920777275,
+        "additionalCallCost": 0,
+        "expectedNet": 35.03736920777275,
+        "stopReason": "budget"
+      },
+      "threadId": 1,
+      "elapsedMs": 146.09450000000015,
+      "queueMs": 0.5322999999998501
+    },
+    {
+      "kind": "estimate",
+      "estimate": {
+        "requestedSamples": 10000,
+        "completedSamples": 683,
+        "weightedShare": 0.882869692532943,
+        "expectedReturn": 35.314787701317655,
+        "additionalCallCost": 0,
+        "expectedNet": 35.314787701317655,
+        "stopReason": "budget"
+      },
+      "threadId": 2,
+      "elapsedMs": 145.92579999999998,
+      "queueMs": 0.6137000000003354
+    }
+  ],
+  "transportTestLimits": {
+    "connection": 1000,
+    "session": 1000,
+    "ip": 10000,
+    "windowMs": 1000
+  },
+  "businessClockAdvancePerCommand": 100,
+  "rateLimitedSamples": 0,
+  "credentialsIncluded": false
+}

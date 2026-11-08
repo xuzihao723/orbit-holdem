@@ -1,0 +1,15 @@
+[
+  {
+    "step": "temporarily remove DEV guard and build web",
+    "buildExitCode": 0,
+    "guardExitCode": 1,
+    "guardStderr": "Development fixture leaked into production: D:\\User\\codex_respository\\dezhou_app\\poker-four\\apps\\web\\dist\\assets\\DevPreviewApp-C8Q3mb9U.js\n"
+  },
+  {
+    "step": "restore original DEV guard and rebuild",
+    "buildExitCode": 0,
+    "guardExitCode": 0,
+    "guardStdout": "Production preview boundary passed: 3 files, no development fixture markers.\n",
+    "originalSourceBytesRestored": true
+  }
+]

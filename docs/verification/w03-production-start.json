@@ -1,0 +1,11 @@
+{
+  "command": "npm run start",
+  "sharedPackageImports": "passed",
+  "origin": "http://127.0.0.1:64244",
+  "httpStatus": 200,
+  "body": {
+    "status": "ok"
+  },
+  "stdout": "\n> orbit-workspace@0.1.0 start\n> node apps/server/dist/index.js\n\nOrbit server (protocol 1) listening at http://127.0.0.1:64244\n",
+  "portReleased": true
+}

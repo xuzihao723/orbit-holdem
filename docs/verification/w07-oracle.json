@@ -1,0 +1,10 @@
+{
+  "version": "2.1.4",
+  "seed": 100671526,
+  "samples": 10000,
+  "completed": 10000,
+  "categoryMismatches": 0,
+  "strengthMismatches": 0,
+  "orderMismatches": 0,
+  "failures": []
+}

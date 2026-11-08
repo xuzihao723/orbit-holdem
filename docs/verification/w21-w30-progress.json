@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-01",
+  "scope": "W21-W30",
+  "stages": {
+    "w21": "complete",
+    "w22": "complete",
+    "w23": "complete",
+    "w24": "complete",
+    "w25": "complete",
+    "w26": "complete",
+    "w27": "complete",
+    "w28": "complete",
+    "w29": "complete",
+    "w30": "complete"
+  },
+  "gitOrDeployment": false,
+  "completedThrough": "w30",
+  "next": "w31",
+  "milestones": {
+    "m0": "complete",
+    "m1": "complete",
+    "m2Service": "complete",
+    "m3": "partial: bots complete, replay pending",
+    "m4": "partial: samples and entry pages complete, actions/assets pending"
+  }
+}

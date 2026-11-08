@@ -1,0 +1,18 @@
+{
+  "origin": "http://127.0.0.1:5173",
+  "home": 200,
+  "login": 200,
+  "ready": 200,
+  "auth": {
+    "status": 200,
+    "enabled": true,
+    "signedIn": false
+  },
+  "emailMode": "local",
+  "database": ".data/orbit-auth-preview.sqlite",
+  "localDelivery": {
+    "status": 202,
+    "previewConsoleReceived": true,
+    "codeInResponse": false
+  }
+}

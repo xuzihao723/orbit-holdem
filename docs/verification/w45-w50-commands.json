@@ -1,0 +1,102 @@
+[
+  {
+    "check": "format",
+    "command": [
+      "npm.cmd",
+      "run",
+      "format:check"
+    ],
+    "exitCode": 0,
+    "seconds": 15.14
+  },
+  {
+    "check": "build",
+    "command": [
+      "npm.cmd",
+      "run",
+      "build"
+    ],
+    "exitCode": 0,
+    "seconds": 46.61
+  },
+  {
+    "check": "fixtures",
+    "command": [
+      "npm.cmd",
+      "run",
+      "test:fixtures"
+    ],
+    "exitCode": 0,
+    "seconds": 2.44
+  },
+  {
+    "check": "core",
+    "command": [
+      "npm.cmd",
+      "run",
+      "test:core",
+      "--",
+      "--reporter=default",
+      "--reporter=json",
+      "--outputFile=docs/verification/w45-w50-core.json"
+    ],
+    "exitCode": 0,
+    "seconds": 4.67
+  },
+  {
+    "check": "integration",
+    "command": [
+      "npm.cmd",
+      "run",
+      "test:integration",
+      "--",
+      "--reporter=default",
+      "--reporter=json",
+      "--outputFile=docs/verification/w45-w50-integration.json"
+    ],
+    "exitCode": 0,
+    "seconds": 65.48
+  },
+  {
+    "check": "auth-browser",
+    "command": [
+      "npm.cmd",
+      "run",
+      "test:auth:browser"
+    ],
+    "exitCode": 0,
+    "seconds": 30.42
+  },
+  {
+    "check": "artifact-scan",
+    "command": [
+      "npm.cmd",
+      "run",
+      "verify:release-artifacts"
+    ],
+    "exitCode": 0,
+    "seconds": 1.33
+  },
+  {
+    "check": "release-browser",
+    "command": [
+      "npm.cmd",
+      "run",
+      "test:e2e"
+    ],
+    "exitCode": 0,
+    "seconds": 186.25
+  },
+  {
+    "check": "app-browser",
+    "command": [
+      "npx.cmd",
+      "playwright",
+      "test",
+      "--config",
+      "playwright.app.config.ts"
+    ],
+    "exitCode": 0,
+    "seconds": 56.47
+  }
+]

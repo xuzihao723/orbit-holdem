@@ -1,0 +1,13 @@
+{
+  "clock": "wall",
+  "offlineElapsedMs": 8105.228800000012,
+  "stats": {
+    "connections": 103,
+    "clientFrames": 1451,
+    "serverFrames": 7349,
+    "droppedAcks": 1,
+    "overflowClosures": 0
+  },
+  "duplicateChipChange": false,
+  "identityPreserved": true
+}

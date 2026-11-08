@@ -1,0 +1,9 @@
+{
+  "mutation": "reverse independent winner direction",
+  "mutatedExit": 1,
+  "mutatedOutput": "\n> orbit-workspace@0.1.0 test:core\n> vitest run --project core tests/core/evaluate-oracle.test.ts -t calibrates nine\n\n\n RUN  v5.0.5 D:/User/codex_respository/dezhou_app/poker-four\n\n ❯ |core| tests/core/evaluate-oracle.test.ts (2 tests | 1 failed | 1 skipped) 23ms\n   × calibrates nine oracle categories and winner direction on independent frozen examples 20ms\n\n Test Files  1 failed (1)\n      Tests  1 failed | 1 skipped (2)\n   Start at  22:30:52\n   Duration  688ms (transform 55%, import 34%, tests 8%, worker 3%)\n\n\n⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯\n\n FAIL  |core| tests/core/evaluate-oracle.test.ts > calibrates nine oracle categories and winner direction on independent frozen examples\nAssertionError: expected -1 to be 1 // Object.is equality\n\n- Expected\n+ Received\n\n- 1\n+ -1\n\n ❯ tests/core/evaluate-oracle.test.ts:24:40\n     22|   const [first, second] = data.kickers.hands.map(oracleSolve);\n     23|   if (!first || !second) throw new Error('Missing comparisons');\n     24|   expect(oracleCompare(first, second)).toBe(1);\n       |                                        ^\n     25|   expect(oracleCompare(second, first)).toBe(-1);\n     26|   categories.add(first.rank - 1);\n\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯\n\n",
+  "restoredExit": 0,
+  "restoredOutput": "\n> orbit-workspace@0.1.0 test:core\n> vitest run --project core tests/core/evaluate-oracle.test.ts -t calibrates nine\n\n\n RUN  v5.0.5 D:/User/codex_respository/dezhou_app/poker-four\n\n\n Test Files  1 passed (1)\n      Tests  1 passed | 1 skipped (2)\n   Start at  22:30:55\n   Duration  643ms (transform 52%, import 37%, tests 6%, worker 5%)\n\n",
+  "restoredOriginalBytes": true,
+  "note": "calibration probe intentionally selects one test; complete 10000-sample suite reruns in W10"
+}

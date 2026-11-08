@@ -1,0 +1,103 @@
+{
+  "date": "2026-10-30",
+  "entry": "compiled @orbit/poker-core ESM",
+  "scope": "refunds and pot layers only",
+  "P03": {
+    "originalContributionTotal": 750,
+    "adjustedContributions": [
+      {
+        "seatId": 0,
+        "amount": 100,
+        "folded": false
+      },
+      {
+        "seatId": 1,
+        "amount": 250,
+        "folded": false
+      },
+      {
+        "seatId": 2,
+        "amount": 250,
+        "folded": false
+      }
+    ],
+    "refunds": [
+      {
+        "seatId": 2,
+        "amount": 150
+      }
+    ],
+    "refundTotal": 150,
+    "pots": [
+      {
+        "potId": "pot:0:100",
+        "lowerExclusive": 0,
+        "upperInclusive": 100,
+        "amount": 300,
+        "contributorSeatIds": [
+          0,
+          1,
+          2
+        ],
+        "eligibleSeatIds": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "potId": "pot:100:250",
+        "lowerExclusive": 100,
+        "upperInclusive": 250,
+        "amount": 300,
+        "contributorSeatIds": [
+          1,
+          2
+        ],
+        "eligibleSeatIds": [
+          1,
+          2
+        ]
+      }
+    ],
+    "potTotal": 600
+  },
+  "P06": {
+    "originalContributionTotal": 400,
+    "adjustedContributions": [
+      {
+        "seatId": 0,
+        "amount": 100,
+        "folded": false
+      },
+      {
+        "seatId": 1,
+        "amount": 100,
+        "folded": true
+      }
+    ],
+    "refunds": [
+      {
+        "seatId": 1,
+        "amount": 200
+      }
+    ],
+    "refundTotal": 200,
+    "pots": [
+      {
+        "potId": "pot:0:100",
+        "lowerExclusive": 0,
+        "upperInclusive": 100,
+        "amount": 200,
+        "contributorSeatIds": [
+          0,
+          1
+        ],
+        "eligibleSeatIds": [
+          0
+        ]
+      }
+    ],
+    "potTotal": 200
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "version": "ffmpeg version 7.1-essentials_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers\r",
+  "binarySha256": "2ce797a0f88d7f067180338fb227f7b1928ea727bd9a4d7a1d022f7c52af71a3",
+  "toolSource": "https://github.com/imageio/imageio-ffmpeg",
+  "packageVersion": "0.6.0",
+  "commands": [
+    {
+      "id": "deal",
+      "format": "ogg",
+      "args": [
+        "-y",
+        "-i",
+        "assets/sources/audio/deal.wav",
+        "-c:a",
+        "libvorbis",
+        "-q:a",
+        "4",
+        "assets/audio/deal.ogg"
+      ]
+    },
+    {
+      "id": "deal",
+      "format": "mp3",
+      "args": [
+        "-y",
+        "-i",
+        "assets/sources/audio/deal.wav",
+        "-c:a",
+        "libmp3lame",
+        "-q:a",
+        "4",
+        "assets/audio/deal.mp3"
+      ]
+    },
+    {
+      "id": "flip",
+      "format": "ogg",
+      "args": [
+        "-y",
+        "-i",
+        "assets/sources/audio/flip.wav",
+        "-c:a",
+        "libvorbis",
+        "-q:a",
+        "4",
+        "assets/audio/flip.ogg"
+      ]
+    },
+    {
+      "id": "flip",
+      "format": "mp3",
+      "args": [
+        "-y",
+        "-i",
+        "assets/sources/audio/flip.wav",
+        "-c:a",
+        "libmp3lame",
+        "-q:a",
+        "4",
+        "assets/audio/flip.mp3"
+      ]
+    },
+    {
+      "id": "action",
+      "format": "ogg",
+      "args": [
+        "-y",
+        "-i",
+        "assets/sources/audio/action.wav",
+        "-c:a",
+        "libvorbis",
+        "-q:a",
+        "4",
+        "assets/audio/action.ogg"
+      ]
+    },
+    {
+      "id": "action",
+      "format": "mp3",
+      "args": [
+        "-y",
+        "-i",
+        "assets/sources/audio/action.wav",
+        "-c:a",
+        "libmp3lame",
+        "-q:a",
+        "4",
+        "assets/audio/action.mp3"
+      ]
+    },
+    {
+      "id": "win",
+      "format": "ogg",
+      "args": [
+        "-y",
+        "-i",
+        "assets/sources/audio/win.wav",
+        "-c:a",
+        "libvorbis",
+        "-q:a",
+        "4",
+        "assets/audio/win.ogg"
+      ]
+    },
+    {
+      "id": "win",
+      "format": "mp3",
+      "args": [
+        "-y",
+        "-i",
+        "assets/sources/audio/win.wav",
+        "-c:a",
+        "libmp3lame",
+        "-q:a",
+        "4",
+        "assets/audio/win.mp3"
+      ]
+    },
+    {
+      "id": "join",
+      "format": "ogg",
+      "args": [
+        "-y",
+        "-i",
+        "assets/sources/audio/join.wav",
+        "-c:a",
+        "libvorbis",
+        "-q:a",
+        "4",
+        "assets/audio/join.ogg"
+      ]
+    },
+    {
+      "id": "join",
+      "format": "mp3",
+      "args": [
+        "-y",
+        "-i",
+        "assets/sources/audio/join.wav",
+        "-c:a",
+        "libmp3lame",
+        "-q:a",
+        "4",
+        "assets/audio/join.mp3"
+      ]
+    }
+  ]
+}

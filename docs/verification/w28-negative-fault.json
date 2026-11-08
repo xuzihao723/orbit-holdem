@@ -1,0 +1,606 @@
+{
+  "seed": 20261031,
+  "requestedHands": 5,
+  "completedHands": 2,
+  "illegalActions": 1,
+  "conservationFailures": 0,
+  "stuckHands": 0,
+  "standardJobs": 0,
+  "standardAcceptedJobs": 0,
+  "fallbackCount": 0,
+  "discardedStale": 0,
+  "cancelledJobs": 0,
+  "actualSamples": 0,
+  "unknownSampleJobs": 0,
+  "computeMs": {
+    "p50": 0,
+    "p95": 0,
+    "max": 0
+  },
+  "resets": 0,
+  "failure": {
+    "handIndex": 3,
+    "turnId": "4ebce3bf-11f0-4f90-9394-78bfdec6c925:turn:1",
+    "reason": "BOT_ACTION_stale",
+    "tracePath": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\docs\\verification\\w28-negative-fault.json"
+  },
+  "trace": [
+    {
+      "handIndex": 1,
+      "profile": "basic",
+      "handId": "eede64be-e056-4134-9f29-d5dcc865bde1",
+      "deckSeed": 2010029711,
+      "deck": [
+        "3S",
+        "4S",
+        "5S",
+        "6S",
+        "7S",
+        "8S",
+        "9S",
+        "10S",
+        "JS",
+        "QS",
+        "KS",
+        "AS",
+        "2H",
+        "3H",
+        "4H",
+        "5H",
+        "6H",
+        "7H",
+        "8H",
+        "9H",
+        "10H",
+        "JH",
+        "QH",
+        "KH",
+        "AH",
+        "2C",
+        "3C",
+        "4C",
+        "5C",
+        "6C",
+        "7C",
+        "8C",
+        "9C",
+        "10C",
+        "JC",
+        "QC",
+        "KC",
+        "AC",
+        "2D",
+        "3D",
+        "4D",
+        "5D",
+        "6D",
+        "7D",
+        "8D",
+        "9D",
+        "10D",
+        "JD",
+        "QD",
+        "KD",
+        "AD",
+        "2S"
+      ],
+      "dealerSeatId": 0,
+      "startingStacks": [
+        {
+          "participantId": "sim-participant-0",
+          "seatId": 0,
+          "stack": 2000
+        },
+        {
+          "participantId": "sim-participant-1",
+          "seatId": 1,
+          "stack": 2000
+        },
+        {
+          "participantId": "sim-participant-2",
+          "seatId": 2,
+          "stack": 2000
+        },
+        {
+          "participantId": "sim-participant-3",
+          "seatId": 3,
+          "stack": 2000
+        }
+      ],
+      "finalStacks": [
+        {
+          "participantId": "sim-participant-0",
+          "seatId": 0,
+          "stack": 2000
+        },
+        {
+          "participantId": "sim-participant-1",
+          "seatId": 1,
+          "stack": 1990
+        },
+        {
+          "participantId": "sim-participant-2",
+          "seatId": 2,
+          "stack": 2010
+        },
+        {
+          "participantId": "sim-participant-3",
+          "seatId": 3,
+          "stack": 2000
+        }
+      ],
+      "actions": [
+        {
+          "command": {
+            "roomId": "simulation-room",
+            "handId": "eede64be-e056-4134-9f29-d5dcc865bde1",
+            "turnId": "eede64be-e056-4134-9f29-d5dcc865bde1:turn:1",
+            "expectedVersion": 1,
+            "participantId": "sim-participant-3",
+            "botId": "sim-bot-3",
+            "deadline": 30000,
+            "action": {
+              "type": "fold"
+            }
+          },
+          "result": "applied"
+        },
+        {
+          "command": {
+            "roomId": "simulation-room",
+            "handId": "eede64be-e056-4134-9f29-d5dcc865bde1",
+            "turnId": "eede64be-e056-4134-9f29-d5dcc865bde1:turn:2",
+            "expectedVersion": 2,
+            "participantId": "sim-participant-0",
+            "botId": "sim-bot-0",
+            "deadline": 30525,
+            "action": {
+              "type": "fold"
+            }
+          },
+          "result": "applied"
+        },
+        {
+          "command": {
+            "roomId": "simulation-room",
+            "handId": "eede64be-e056-4134-9f29-d5dcc865bde1",
+            "turnId": "eede64be-e056-4134-9f29-d5dcc865bde1:turn:3",
+            "expectedVersion": 3,
+            "participantId": "sim-participant-1",
+            "botId": "sim-bot-1",
+            "deadline": 31481,
+            "action": {
+              "type": "fold"
+            }
+          },
+          "result": "applied"
+        }
+      ],
+      "settlementCount": 1,
+      "events": 14,
+      "handVersion": 4,
+      "reset": false,
+      "diagnostics": {
+        "jobs": 0,
+        "accepted": 0,
+        "samples": 0,
+        "fallbacks": 0
+      }
+    },
+    {
+      "handIndex": 2,
+      "profile": "basic",
+      "handId": "6dc1d370-8e12-4aa8-95ad-6c5b072f6d95",
+      "deckSeed": 2877418851,
+      "deck": [
+        "3S",
+        "4S",
+        "5S",
+        "6S",
+        "7S",
+        "8S",
+        "9S",
+        "10S",
+        "JS",
+        "QS",
+        "KS",
+        "AS",
+        "2H",
+        "3H",
+        "4H",
+        "5H",
+        "6H",
+        "7H",
+        "8H",
+        "9H",
+        "10H",
+        "JH",
+        "QH",
+        "KH",
+        "AH",
+        "2C",
+        "3C",
+        "4C",
+        "5C",
+        "6C",
+        "7C",
+        "8C",
+        "9C",
+        "10C",
+        "JC",
+        "QC",
+        "KC",
+        "AC",
+        "2D",
+        "3D",
+        "4D",
+        "5D",
+        "6D",
+        "7D",
+        "8D",
+        "9D",
+        "10D",
+        "JD",
+        "QD",
+        "KD",
+        "AD",
+        "2S"
+      ],
+      "dealerSeatId": 1,
+      "startingStacks": [
+        {
+          "participantId": "sim-participant-0",
+          "seatId": 0,
+          "stack": 2000
+        },
+        {
+          "participantId": "sim-participant-1",
+          "seatId": 1,
+          "stack": 1990
+        },
+        {
+          "participantId": "sim-participant-2",
+          "seatId": 2,
+          "stack": 2010
+        },
+        {
+          "participantId": "sim-participant-3",
+          "seatId": 3,
+          "stack": 2000
+        }
+      ],
+      "finalStacks": [
+        {
+          "participantId": "sim-participant-0",
+          "seatId": 0,
+          "stack": 2000
+        },
+        {
+          "participantId": "sim-participant-1",
+          "seatId": 1,
+          "stack": 1990
+        },
+        {
+          "participantId": "sim-participant-2",
+          "seatId": 2,
+          "stack": 2000
+        },
+        {
+          "participantId": "sim-participant-3",
+          "seatId": 3,
+          "stack": 2010
+        }
+      ],
+      "actions": [
+        {
+          "command": {
+            "roomId": "simulation-room",
+            "handId": "6dc1d370-8e12-4aa8-95ad-6c5b072f6d95",
+            "turnId": "6dc1d370-8e12-4aa8-95ad-6c5b072f6d95:turn:1",
+            "expectedVersion": 1,
+            "participantId": "sim-participant-0",
+            "botId": "sim-bot-0",
+            "deadline": 32866,
+            "action": {
+              "type": "fold"
+            }
+          },
+          "result": "applied"
+        },
+        {
+          "command": {
+            "roomId": "simulation-room",
+            "handId": "6dc1d370-8e12-4aa8-95ad-6c5b072f6d95",
+            "turnId": "6dc1d370-8e12-4aa8-95ad-6c5b072f6d95:turn:2",
+            "expectedVersion": 2,
+            "participantId": "sim-participant-1",
+            "botId": "sim-bot-1",
+            "deadline": 33367,
+            "action": {
+              "type": "fold"
+            }
+          },
+          "result": "applied"
+        },
+        {
+          "command": {
+            "roomId": "simulation-room",
+            "handId": "6dc1d370-8e12-4aa8-95ad-6c5b072f6d95",
+            "turnId": "6dc1d370-8e12-4aa8-95ad-6c5b072f6d95:turn:3",
+            "expectedVersion": 3,
+            "participantId": "sim-participant-2",
+            "botId": "sim-bot-2",
+            "deadline": 34681,
+            "action": {
+              "type": "fold"
+            }
+          },
+          "result": "applied"
+        }
+      ],
+      "settlementCount": 1,
+      "events": 14,
+      "handVersion": 4,
+      "reset": false,
+      "diagnostics": {
+        "jobs": 0,
+        "accepted": 0,
+        "samples": 0,
+        "fallbacks": 0
+      }
+    },
+    {
+      "handIndex": 3,
+      "profile": "basic",
+      "handId": "4ebce3bf-11f0-4f90-9394-78bfdec6c925",
+      "deckSeed": 1657062507,
+      "deck": [
+        "3S",
+        "4S",
+        "5S",
+        "6S",
+        "7S",
+        "8S",
+        "9S",
+        "10S",
+        "JS",
+        "QS",
+        "KS",
+        "AS",
+        "2H",
+        "3H",
+        "4H",
+        "5H",
+        "6H",
+        "7H",
+        "8H",
+        "9H",
+        "10H",
+        "JH",
+        "QH",
+        "KH",
+        "AH",
+        "2C",
+        "3C",
+        "4C",
+        "5C",
+        "6C",
+        "7C",
+        "8C",
+        "9C",
+        "10C",
+        "JC",
+        "QC",
+        "KC",
+        "AC",
+        "2D",
+        "3D",
+        "4D",
+        "5D",
+        "6D",
+        "7D",
+        "8D",
+        "9D",
+        "10D",
+        "JD",
+        "QD",
+        "KD",
+        "AD",
+        "2S"
+      ],
+      "dealerSeatId": 2,
+      "startingStacks": [
+        {
+          "participantId": "sim-participant-0",
+          "seatId": 0,
+          "stack": 2000
+        },
+        {
+          "participantId": "sim-participant-1",
+          "seatId": 1,
+          "stack": 1990
+        },
+        {
+          "participantId": "sim-participant-2",
+          "seatId": 2,
+          "stack": 2000
+        },
+        {
+          "participantId": "sim-participant-3",
+          "seatId": 3,
+          "stack": 2010
+        }
+      ],
+      "finalStacks": [],
+      "actions": [
+        {
+          "command": {
+            "roomId": "simulation-room",
+            "handId": "4ebce3bf-11f0-4f90-9394-78bfdec6c925",
+            "turnId": "4ebce3bf-11f0-4f90-9394-78bfdec6c925:turn:1",
+            "expectedVersion": 1,
+            "participantId": "sim-participant-1",
+            "botId": "sim-bot-1",
+            "deadline": 35242,
+            "action": {
+              "type": "raise",
+              "raiseTo": -1
+            }
+          },
+          "result": "stale"
+        }
+      ],
+      "settlementCount": 0,
+      "events": 0,
+      "handVersion": 1,
+      "reset": false
+    }
+  ],
+  "jobs": [],
+  "profiles": {
+    "basic": 2,
+    "standard": 0,
+    "mixed": 0
+  },
+  "profileMetrics": {
+    "basic": {
+      "completedHands": 2,
+      "jobs": 0,
+      "accepted": 0,
+      "samples": 0,
+      "fallbacks": 0
+    }
+  },
+  "resourcesClosed": true,
+  "elapsedMs": 261.7401,
+  "environment": {
+    "node": "v24.14.1",
+    "os": "win32 10.0.26200",
+    "cpu": "Intel(R) Core(TM) Ultra 9 285H",
+    "logicalCpus": 16
+  },
+  "parameters": {
+    "size": 2,
+    "budgetMs": 150,
+    "requestedSamples": 1000,
+    "maxAdvances": 200,
+    "watchdogMs": 300000,
+    "policy": "project heuristic; uniform unknown hands; no strength claim"
+  },
+  "sourceSha256": {
+    "apps/server/src/application-runtime.ts": "55f3d7d8d7f85eaa90b34de93eb8cc4e7c7b4389baed3d60f7bcae1280158bee",
+    "apps/server/src/bots/action-adapter.ts": "56a5a2f5401cc07c07925f855b70794736ce709ee0c7d7770f0fbe99e7394cfc",
+    "apps/server/src/bots/bot-random.ts": "e3d479e7dd398e2fe5018c76c11643276d4e228e6cac771e758fc6ee0daf9992",
+    "apps/server/src/bots/bot-types.ts": "c5a355d05130bdbb696e265ef21185f1a01c6696db525d075e0817781fee85c9",
+    "apps/server/src/bots/equity.ts": "b8cd98695cbc18d80e05068f769b4bd78baeeaa1df6c9e27077462d579a95eb3",
+    "apps/server/src/bots/equity.worker.ts": "e8e2d4fedfb073d3e068bcccd00de2d7bc45513f1ab4e89eb7bbb70c96effc4d",
+    "apps/server/src/bots/observation.ts": "3079770f87f17421981e17f38236ffdfe64208e22da88a37cc79d8f3d023d7e7",
+    "apps/server/src/bots/policy-basic.ts": "ee3ffa7f69f7b53d88740b44b0f7d0ac8f0f4d4469e139a25f81efdf4822af53",
+    "apps/server/src/bots/policy-monte-carlo.ts": "019548c7e7eec8714fd8c918be5e5f504d803db4f71b3fc5cf7bb7d700a0a58e",
+    "apps/server/src/bots/preflop-strength.ts": "788e1c80453eb648cb5ab09d4fbee445f4ef10082d8ad8a9adc4423b076ca83a",
+    "apps/server/src/bots/preflop-table.ts": "8096c82577d73c2d98e243135c7335500e4d1abe37699955f8c91af2db5ad9ad",
+    "apps/server/src/bots/sampling.ts": "765242bae89103c931bc020c800b5114f0bcf1b05639e13dc30bd6e835fd1d82",
+    "apps/server/src/bots/scheduler.ts": "f8cfa48b497f52e39b227d3e88e8a05be182d9242ab7cce1fbe31b8780ce43ec",
+    "apps/server/src/bots/worker-messages.ts": "da21ca34a62c394c5e9eb351ec137e82ca5d2bcfa0bc6069d90444cb5699cfa3",
+    "apps/server/src/bots/worker-pool.ts": "7e7e9971cbc5e8fd7c98bae9883a14de9e62b9131fac88faa00dd82dc1482292",
+    "apps/server/src/create-server.ts": "0592c7ee6bba8bd712472e16318f03b2bb169bef50f45a15efd6dd913c94e7a9",
+    "apps/server/src/game/action-candidate.ts": "aed16e7c5c4054430a1a1c2a0e550ea6e6602ea193f326e081b597205b957cbd",
+    "apps/server/src/game/command-digest.ts": "1dcbe10a8c23367f754624b153598c54849a14433ee10f5d4d52003fce183b30",
+    "apps/server/src/game/command-handler.ts": "307055a6ef4e5a825dcc6dcedf8f03ea79b99e89460c1bc606431e8fc4ef8eaa",
+    "apps/server/src/game/command-receipt.ts": "506d70b585b70b9f2b344741a47ea205652dd6809fb13ae3bb77454eb387e79f",
+    "apps/server/src/game/event-mapper.ts": "a30b3f26fc2a58e8702a61ff8cbd1e401e9e02282b8a65dc9f5a7c13a13e4071",
+    "apps/server/src/game/failure-map.ts": "173e5b64f414c09b17f4831002021c574b6e47a58a9b014037a70948f832b55e",
+    "apps/server/src/game/hand-result.ts": "ef65b9a350eef4f661be285bee8a40730c2de7a61671fdd4f9f61296bae59571",
+    "apps/server/src/game/internal-action-handler.ts": "3b602a9c57aa1bf04f86f3daf152c5354dfb6c824bcbcde02bf3862f641c8ffb",
+    "apps/server/src/game/internal-command.ts": "0d74ad104b26b26f55b3b1de34ed6cf689d77ee406223da6ce59896dc901c157",
+    "apps/server/src/game/internal-room-receipt.ts": "3e7d3129ca1f022a348ee8ebdfd6eafb21e81df31755e3322068af233db70756",
+    "apps/server/src/game/player-view.ts": "2bb204d9c836d146b40a3f4d730a18412aaabfdf4d7089e1b62dc3afe8e3b284",
+    "apps/server/src/game/public-hand-view.ts": "2f424db8febe797917eb2c9256f4298481183a9289dd9e253b33935c06ab88fc",
+    "apps/server/src/game/public-sequences.ts": "a6941f873b9f61b0d06a39aebd17001ebf68338882f734901f22df83bffd1bc6",
+    "apps/server/src/game/publish.ts": "7d5d32ab4bd9cb1bc3315d4b3a8759cd8b9118438c0fdadc74abe995ad318cd1",
+    "apps/server/src/game/random.ts": "acffd10c1b953e952977e667a94c8f057ef05b067d3214ebe804a59732a8ca09",
+    "apps/server/src/game/room-queue.ts": "a1be2079571067b245c30a46105474355b668e82cb370492ba2aff023f47ea2f",
+    "apps/server/src/game/timeout-policy.ts": "f9fbb21523e03cc9c692910de85232eb8ced6fc62a0a76c44387518dd786f8be",
+    "apps/server/src/game/turn-timer.ts": "0658ea5d0a764f6e560523932ef7e9750ddaed983509dfcacfc00687303c46b8",
+    "apps/server/src/index.ts": "958430ff98ab43a29c477c7c58da136939bc8c1a4b8bf286fcaca85fbca5a1ae",
+    "apps/server/src/persistence/boundary-commit.ts": "4932179ec18d36a595049d65109ab3dac9c2bd7ebf36bffb8b6cf1a1d9a91da6",
+    "apps/server/src/persistence/command-repository.ts": "515bd8ffe7fb2a1c60d90b24d6b4c2eea9d1ad0e685c0b713a7e1fe21b075b78",
+    "apps/server/src/persistence/command-writes.ts": "e21c65ca617d02af9cf782aa947436e4573cf629f016586e27fc19f7e492d956",
+    "apps/server/src/persistence/config.ts": "d5182ddba043dff9c9c1bc5f412af2db8766ee0916adf08a40f27235f0e47526",
+    "apps/server/src/persistence/db.ts": "aa267f17e3be4f540923b4c41d35a33b272b429269bf72609267ae3b84b399b1",
+    "apps/server/src/persistence/domain-rows.ts": "2a96834fe0fb0c33b07bb7080a99d4d84468eb3d6784194c088b3db1461ee4c5",
+    "apps/server/src/persistence/errors.ts": "8af935f2caaa59163bf04d4ef9e85ec959ca9488aec35b81ed6f286b6069d841",
+    "apps/server/src/persistence/hand-accounting.ts": "7665ac362237e9e4270a4acb9709174ffd8486438732dc197bc7a0934fe1a692",
+    "apps/server/src/persistence/hand-action-commit.ts": "a0c03a815e775ed2960366ec6ae6523257a46fd4d713e0378d0077cbc8851f79",
+    "apps/server/src/persistence/hand-events.ts": "8c12699e7fc87b1b85d6e4a479e8c85346e0f8ba0d37209711a433f829760f79",
+    "apps/server/src/persistence/hand-graph.ts": "36744c886f21da6d029f12a63022d99773b7a73da7ec06f7392c4d475145bb05",
+    "apps/server/src/persistence/hand-repository.ts": "07446d3711d7b5289f07f614bb8836e1b63f2d8429c0fde267240d84c332c6f5",
+    "apps/server/src/persistence/hand-rows.ts": "0ab9e8a81bed653b3bd583789aced3221d9f20af55b6f39b73d3542e244ab1f1",
+    "apps/server/src/persistence/hand-start-commit.ts": "5de8eb855b61231873046191710a7668c88e793a3363ba42f7d365f4a2466efb",
+    "apps/server/src/persistence/history-repository.ts": "2d4cff61cec48b1e99c74c72af6f1dac42fd6d54bd45ab590f8c9bac8d07a4f3",
+    "apps/server/src/persistence/internal-receipt.ts": "5dc6eaf1d14d6d2709dca278d8d1d29b845dbac5d0fbba7638b7d5bf693a6eac",
+    "apps/server/src/persistence/ledger-repository.ts": "dbc5f2da07069cae715cb23dd64e416531f968ba6a5fbe563c78b4f8daee0871",
+    "apps/server/src/persistence/migrate.ts": "a911761e3106b2bc864642954be4e94ca22b2f397b6cadfc7a70b788cd49725c",
+    "apps/server/src/persistence/payloads.ts": "7a5be799169653959c2e1eb09cf53d8244baa1985eeb52b9f9daf8535c151b67",
+    "apps/server/src/persistence/repositories.ts": "a5edacaa5f776164b6e7c3451648d747cc2eeec85071031c5fcf9f994c99854c",
+    "apps/server/src/persistence/restart-archive.ts": "98893cebb55ad92760ff196e7326dc82fb0c507376171975009400d86f7ff467",
+    "apps/server/src/persistence/result-balances.ts": "5af923d8e82dec402f332790d70c70020e26b421a1b1b37dbd0f984b99cca155",
+    "apps/server/src/persistence/room-commit.ts": "8c02c4460893db729bbaef4f484a43f8e27ff76ba2ecabb66448893cf5d7fec6",
+    "apps/server/src/persistence/room-repository.ts": "d9d445100cb62e5fcf41739d1c3f9b8fee5d313be8c2a061598ee74d59102e45",
+    "apps/server/src/persistence/rows.ts": "48b8a1e8d29f21f63b9d4c9fa1b196a99794a7647fbe65b31a671031efe8fff3",
+    "apps/server/src/persistence/session-repository.ts": "2a0e80fec1cf36b1e7b4f81e121149e05dce410841da2fc78a2064f3d68f50a7",
+    "apps/server/src/persistence/transaction.ts": "6add52a5c8576f8e7aacb9567a1f08098e083f0ed771a856589c446bf3cd4eca",
+    "apps/server/src/rooms/hand-boundary.ts": "64c418854daf0db29868211cbd5d7a817ed71038d575e7c58cbc9b6dcff1e088",
+    "apps/server/src/rooms/hand-start-candidate.ts": "0be00e127c1ab8842875b33912ac00652bc4ca7f497a7ed84649834c41bd97b1",
+    "apps/server/src/rooms/presence.ts": "54d546fee17654f88de7ef9b9593be55fa4b77d5ff8d407812b406c32abd4c3f",
+    "apps/server/src/rooms/reservation-expiry.ts": "fff55bd4d7e752c2da531d3e4274b3047b269a33fa247e16df30aceef1e11ebe",
+    "apps/server/src/rooms/room-code.ts": "91efd45d6ff09955259f935ac41b995ca94412ff8df9fd69eb681a2805e96afc",
+    "apps/server/src/rooms/room-lifecycle.ts": "e7e8c5b485e1a479236f6acf044649bbb7d272d158e12c49b4586173caf2e90c",
+    "apps/server/src/rooms/room-service.ts": "36eaae452312dc9a1e55733c3ae5c7045fe6e6d860f5077e8c307251a0a3a691",
+    "apps/server/src/rooms/room-store.ts": "904198fa3183663c8d0264a67f8e8d31c10a3b7e8f9f838035b0deda836e983d",
+    "apps/server/src/rooms/room-types.ts": "a81ccc906779f22f3fdaf8efc3099977e747761edcc0e9d5e6e1f72d48b7df91",
+    "apps/server/src/rooms/room-view.ts": "bf7f1341028788f0c2de8c8bb579f5c93faf2e355732100183dba53bb06e651f",
+    "apps/server/src/rooms/start-conditions.ts": "53848837af76f9ecdcc62d0cfc5df0577518b29bcc0729806b623b2b221c9b52",
+    "apps/server/src/rooms/start-hand.ts": "bd6d76c780280dfa0c33e1e785a4a1aaf1ad554a188d0ef551eaad7d86b8e1d9",
+    "apps/server/src/sessions/connection-registry.ts": "b8db01275c2aa1bc27fb5dd97fdc716d9f7e6f7c21dcc76835bc924331cca75b",
+    "apps/server/src/sessions/input.ts": "d82374f6d38ff10b9c0a3186f4e5209d1568903f6a60a8e2affa1235ead9a602",
+    "apps/server/src/sessions/live-resume-context.ts": "5bf66c3e1e877818db383faf9b3c809b56b0cfbe31a2d5825b35a48a97a8c2b4",
+    "apps/server/src/sessions/reservation-book.ts": "3128133b2ced17b5d08c5ca5e595f4a3113c49cc545c9a40b9ae2715e12ba23e",
+    "apps/server/src/sessions/responses.ts": "9b4a30f05692cad6fda7db3b430d5264d2741522c090f9be8776580ffb54a1a7",
+    "apps/server/src/sessions/resume-context.ts": "506efd95b79de170a342fe3b86835c1d0ae9025a764ae785dd6a2feb6e08931e",
+    "apps/server/src/sessions/runtime.ts": "084e872ca484b88056af8e8ddaaafb5ef217629b3cc386e0f90b5913f1a840b0",
+    "apps/server/src/sessions/session-service.ts": "a4134aca4db87aa96f02c246c04232337cd18aa42d7092fcdd3fb9eee16185ec",
+    "apps/server/src/sessions/session-types.ts": "843cb36447ceb7acc288a010521544659352b064187151c0a38d0ab44a251112",
+    "apps/server/src/sessions/token.ts": "273bc3ecc301bcdea6675195b1f0cc0a4ad363cd7227e432ae71d583f5941748",
+    "apps/server/src/transport/command-payloads.ts": "2e460aea07cb51d21a2211ca3ff440dac1a6bf6825dac19a9b3cbeffffb3e497",
+    "apps/server/src/transport/command-router.ts": "a08aeb2ecde9261f817138cd17e93e2e67bf09ace1189d04649842ad09fd9822",
+    "apps/server/src/transport/errors.ts": "ac4e5cb814227f917a67233c55e688797cd7b0e235e51861b3daeb810eba920b",
+    "apps/server/src/transport/input.ts": "74f052cc442298e4d06f92c12675cf96e705d85a690306400c0f0869e39638d5",
+    "apps/server/src/transport/query-payloads.ts": "fb85adafae9dc8ac100b45e87a30ef0da502692fda3cbfeb422dfd95f1f11b2a",
+    "apps/server/src/transport/rate-limit.ts": "55aec1c925ece295f6fa13772e36f103608adce038d9e2a128ed649749d84e65",
+    "apps/server/src/transport/session-handlers.ts": "6c853e393194d1704827552edf8d4b91a0ad585818a925b80bcd7a422de0f7d1",
+    "apps/server/src/transport/session-payloads.ts": "a590c521fbbd7b7424841b1b0488dc6e8c731b20ce84957750299accc539b39e",
+    "apps/server/src/transport/types.ts": "bdd4cc53beb7c3deef17f590ba7f4b781aeea8c89f12af1dbb7e65367fbbf214",
+    "packages/poker-core/src/betting-amounts.ts": "3b543aff8bd344637fb2677320d10fd86c99aa670ea47622076faafad23f88a8",
+    "packages/poker-core/src/betting-round.ts": "c653a3c02eb07270549d89ab4d7afb8c99f141ccbb5656a27df17e818dde7545",
+    "packages/poker-core/src/betting-types.ts": "518ea0a042d5645bf554e66316315d1988acb401495221028ed4aad35714f88a",
+    "packages/poker-core/src/betting.ts": "ebc08b4fec20d21c54f1ee80689102ec87046e40b7baa6cab64a3567f7562b28",
+    "packages/poker-core/src/cards.ts": "601cec74f3f2efe1e83684dce8c636dc03d3b5709623115b5380f361d46ec263",
+    "packages/poker-core/src/deck.ts": "3879c6cc82ed48e87910ba47b047036fe1c8e4aeaae0d414419c6adc6c27dd54",
+    "packages/poker-core/src/evaluate.ts": "1bf82403b79f625b7b3ce55c7734d5c66bcefb634c1ab1b9ccf779262cb47904",
+    "packages/poker-core/src/hand-betting.ts": "bab67eb6b749822a87ac42b9dcf72b41b8b9dce18dfb5a454e86db948c592263",
+    "packages/poker-core/src/hand-internal.ts": "4044486769dd1a01f27e0722615453b9183bf1f07d99d0bce52f44c49d0735b9",
+    "packages/poker-core/src/hand-progress.ts": "26e89827591d374f3ded038aa5a0d31ed02aae2250b3d1f9ac246ec1c3c85e97",
+    "packages/poker-core/src/hand-settlement.ts": "5372a34aa631b881a8aa422093b0a76e2279761965bdc1820b867fefdca4e182",
+    "packages/poker-core/src/hand-types.ts": "883baab9ed616648eac4322a7904a321ce00161e29f5966c026444608d8f740a",
+    "packages/poker-core/src/index.ts": "f816d87fc64bb8fd787d1d0a05cdf4b17113bced442a6ca5231287d8c43a2a63",
+    "packages/poker-core/src/invariants.ts": "0b86f189cd1b394534db3f9a1f20178e3b39f78e983aa01de7e78ec79c965e00",
+    "packages/poker-core/src/positions.ts": "ad9b527b92d0c68b15076a00ca59103bc94ecac561e11f187715e45567aa6126",
+    "packages/poker-core/src/pots.ts": "d1bd2cb60a2710876f51bf699187e4cc6aa75a2054187205173d3e1057e0747b",
+    "packages/poker-core/src/settlement-types.ts": "4369ccf25fef0bbee5fd516c896fcdbc6f41af607850fc5c51b153a54d2a398f",
+    "packages/poker-core/src/settlement.ts": "5b39ddd8b95e8ef90d339b302a70da2430ea8715a6b1946fff6ca627d5e93f3c",
+    "packages/poker-core/src/state.ts": "9fdb5ecb4deca8e2d03296662ce683fc27900080771ac236c01e624735a85f29",
+    "scripts/lib/bot-simulation-runtime.ts": "7a600b117a475603b25fc2d2a29390ccfeed9d59e6386cd7396404498a478c67"
+  },
+  "resetLedger": []
+}

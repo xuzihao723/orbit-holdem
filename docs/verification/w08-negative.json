@@ -1,0 +1,8 @@
+{
+  "mutation": "paidAmount=target, ignoring prior street commitment",
+  "mutatedExit": 1,
+  "mutatedOutput": "\n> orbit-workspace@0.1.0 test:core\n> vitest run --project core tests/core/betting.test.ts -t moves only target\n\n\n RUN  v5.0.5 D:/User/codex_respository/dezhou_app/poker-four\n\n ❯ |core| tests/core/betting.test.ts (19 tests | 1 failed | 18 skipped) 14ms\n   × moves only target minus prior street investment and preserves chip conservation 12ms\n\n Test Files  1 failed (1)\n      Tests  1 failed | 18 skipped (19)\n   Start at  22:19:21\n   Duration  536ms (transform 60%, import 29%, tests 6%, worker 4%)\n\n\n⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯\n\n FAIL  |core| tests/core/betting.test.ts > moves only target minus prior street investment and preserves chip conservation\nAssertionError: expected 100 to be 80 // Object.is equality\n\n- Expected\n+ Received\n\n- 80\n+ 100\n\n ❯ tests/core/betting.test.ts:100:29\n     98|     before = structuredClone(original),\n     99|     effect = success(applyBettingAmount(original, 1, { type: 'raise', …\n    100|   expect(effect.paidAmount).toBe(80);\n       |                             ^\n    101|   expect(effect.players[1]?.stack).toBe(1900);\n    102|   expect(effect.players[1]?.handCommitted).toBe(100);\n\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯\n\n",
+  "restoredExit": 0,
+  "restoredOutput": "\n> orbit-workspace@0.1.0 test:core\n> vitest run --project core tests/core/betting.test.ts\n\n\n RUN  v5.0.5 D:/User/codex_respository/dezhou_app/poker-four\n\n\n Test Files  1 passed (1)\n      Tests  19 passed (19)\n   Start at  22:19:23\n   Duration  514ms (transform 53%, import 32%, tests 12%, worker 4%)\n\n",
+  "restoredOriginalBytes": true
+}

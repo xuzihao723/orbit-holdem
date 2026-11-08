@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-31",
+  "isolatedActualStartupCheckPassed": true,
+  "originalReadinessBudgetMs": 10000,
+  "readinessBudgetMs": 20000,
+  "testBudgetMs": 30000,
+  "productionWatcherFailureBudgetMs": 15000,
+  "productionStartupBehaviorUnchanged": true,
+  "reason": "test readiness includes root shared build and both nested services; isolated actual startup passed after full-suite timeout",
+  "credentialsIncluded": false
+}

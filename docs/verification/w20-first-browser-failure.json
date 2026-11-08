@@ -1,0 +1,196 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\User\\codex_respository\\dezhou_app\\poker-four\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      "playwright.network.config.ts"
+    ],
+    "configFile": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\playwright.network.config.ts",
+    "rootDir": "D:/User/codex_respository/dezhou_app/poker-four/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/User/codex_respository/dezhou_app/poker-four/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium-network",
+        "name": "chromium-network",
+        "testDir": "D:/User/codex_respository/dezhou_app/poker-four/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "network-sync.spec.ts"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "chromium-network",
+        "testDir": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\tests\\e2e",
+        "snapshotDir": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "network-sync.spec.ts",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5173",
+          "trace": "off",
+          "screenshot": "off",
+          "video": "off",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium-network"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/verification/w20-playwright.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run dev --workspace @orbit/web -- --port 5173 --strictPort",
+      "url": "http://127.0.0.1:5173",
+      "reuseExistingServer": false,
+      "timeout": 30000
+    }
+  },
+  "suites": [
+    {
+      "title": "network-sync.spec.ts",
+      "file": "network-sync.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "two isolated browsers run the real client through duplicate action, showdown and takeover",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-network",
+              "projectName": "chromium-network",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1452,
+                  "error": {
+                    "message": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation.",
+                    "stack": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation.\n    at boot (D:\\User\\codex_respository\\dezhou_app\\poker-four\\tests\\e2e\\network-sync.spec.ts:11:15)\n    at D:\\User\\codex_respository\\dezhou_app\\poker-four\\tests\\e2e\\network-sync.spec.ts:29:12",
+                    "location": {
+                      "file": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\tests\\e2e\\network-sync.spec.ts",
+                      "column": 15,
+                      "line": 11
+                    },
+                    "snippet": "   9 | async function boot(page: Page, name: string) {\n  10 |   await page.goto('/');\n> 11 |   return page.evaluate(async (name) => {\n     |               ^\n  12 |     const path = '/src/network/socket-client.ts',\n  13 |       module = await import(path);\n  14 |     window.w20Client = module.createSocketClient();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\tests\\e2e\\network-sync.spec.ts",
+                        "column": 15,
+                        "line": 11
+                      },
+                      "message": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation.\n\n   9 | async function boot(page: Page, name: string) {\n  10 |   await page.goto('/');\n> 11 |   return page.evaluate(async (name) => {\n     |               ^\n  12 |     const path = '/src/network/socket-client.ts',\n  13 |       module = await import(path);\n  14 |     window.w20Client = module.createSocketClient();\n    at boot (D:\\User\\codex_respository\\dezhou_app\\poker-four\\tests\\e2e\\network-sync.spec.ts:11:15)\n    at D:\\User\\codex_respository\\dezhou_app\\poker-four\\tests\\e2e\\network-sync.spec.ts:29:12"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-31T12:37:15.299Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\test-results\\network-sync-two-isolated--e2041-ction-showdown-and-takeover-chromium-network\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\tests\\e2e\\network-sync.spec.ts",
+                    "column": 15,
+                    "line": 11
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d6c6ee8361095d9ab545-f2b08b35fc12a804283a",
+          "file": "network-sync.spec.ts",
+          "line": 20,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-31T12:37:08.098Z",
+    "duration": 11511.892,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

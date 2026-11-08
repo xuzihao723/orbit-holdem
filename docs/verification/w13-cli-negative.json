@@ -1,0 +1,10 @@
+{
+  "mutation": "force illegal check while facing preflop blind",
+  "mutatedExit": 1,
+  "mutatedOutput": "\n> orbit-workspace@0.1.0 simulate:core\n> tsx --tsconfig tsconfig.tools.json scripts/simulate-core.ts --output docs/verification/w13-cli-negative-run.json\n\n{\"legalCompleted\":0,\"invalidCompleted\":1000,\"failures\":1}\n",
+  "failureReplayExit": 0,
+  "failureReplayOutput": "UNEXPECTED_REJECTION:ILLEGAL_ACTION\n",
+  "restoredExit": 0,
+  "restoredOutput": "\n> orbit-workspace@0.1.0 simulate:core\n> tsx --tsconfig tsconfig.tools.json scripts/simulate-core.ts --output docs/verification/w13-simulation.json\n\n{\"legalCompleted\":1000,\"invalidCompleted\":1000,\"failures\":0}\n",
+  "restoredOriginalBytes": true
+}

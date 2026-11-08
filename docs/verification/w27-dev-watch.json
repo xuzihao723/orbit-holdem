@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-01",
+  "port": 39001,
+  "credentialsIncluded": false,
+  "passed": true,
+  "compiledInitialWorkerExists": true,
+  "workerSourceChangeRecompiledAndRestarted": true,
+  "newEpochObserved": true,
+  "sourceRestored": true,
+  "ownedWatchProcessStopped": true,
+  "log": "Copied server SQL migration assets.\n[compile] \n[compile] 02:39:17 - Starting compilation in watch mode...\n[compile] \n[compile] \n[compile] 02:39:17 - Found 0 errors. Watching for file changes.\n[runtime] (node:8884) ExperimentalWarning: SQLite is an experimental feature and might change at any time\n[runtime] (Use `node --trace-warnings ...` to show where the warning was created)\n[runtime] Restarting 'apps/server/dist/index.js'\n[runtime] (node:29368) ExperimentalWarning: SQLite is an experimental feature and might change at any time\n[runtime] (Use `node --trace-warnings ...` to show where the warning was created)\n[runtime] Orbit server (protocol 1) listening at http://127.0.0.1:39001\n[compile] \n[compile] 02:39:19 - File change detected. Starting incremental compilation...\n[compile] \n[compile] \n[compile] 02:39:21 - Found 0 errors. Watching for file changes.\n[runtime] Restarting 'apps/server/dist/index.js'\n[runtime] (node:26720) ExperimentalWarning: SQLite is an experimental feature and might change at any time\n[runtime] (Use `node --trace-warnings ...` to show where the warning was created)\n[runtime] Orbit server (protocol 1) listening at http://127.0.0.1:39001\n[compile] \n[compile] 02:39:23 - File change detected. Starting incremental compilation...\n[compile] \n"
+}

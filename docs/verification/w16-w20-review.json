@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-31",
+  "mode": "independent read-only code review",
+  "reviewer": "/root/w16_w20_review",
+  "stages": [
+    "w16",
+    "w17",
+    "w18",
+    "w19",
+    "w20"
+  ],
+  "unresolvedP0": 0,
+  "unresolvedP1": 0,
+  "unresolvedP2": 0,
+  "finalReviewConfirmed": true,
+  "reviewerMutatedFiles": false,
+  "reviewerRanTestsOrBuild": false,
+  "primaryValidation": "w20-validation.json",
+  "w19Fixed": "terminal result finalStacks matched individually against committed participant balances at both start and action boundaries",
+  "w20Fixed": [
+    "per-send ack waiter dispatch and changed intent guard",
+    "nickname grapheme compatibility",
+    "private frames gated on ready/current control",
+    "authoritative expired/takenOver ack revokes control",
+    "stale prior-identity ack cannot revoke newly established identity"
+  ],
+  "credentialsIncluded": false
+}

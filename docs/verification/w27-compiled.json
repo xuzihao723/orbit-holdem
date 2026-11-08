@@ -1,0 +1,142 @@
+{
+  "date": "2026-11-01",
+  "compiledApplication": true,
+  "realHumans": 1,
+  "standardBots": 3,
+  "liveCompiledWorker": true,
+  "poolSize": 2,
+  "budgetMs": 150,
+  "decisions": 10,
+  "diagnostics": {
+    "scheduled": 6,
+    "applied": 6,
+    "stale": 0,
+    "cancelled": 6,
+    "safeFallbacks": 0,
+    "standardEngineUnavailable": 0,
+    "workerJobs": 3,
+    "workerDecisions": 3,
+    "workerAcceptedActions": 3,
+    "workerSamples": 2860,
+    "workerPartialJobs": 1,
+    "workerFallbacks": 0,
+    "discardedStale": 0,
+    "fallbackReasons": {},
+    "active": 0
+  },
+  "workerRecords": [
+    {
+      "binding": {
+        "jobId": "89b62923-882e-48f8-a572-aabbdebe84a3",
+        "roomId": "f8530308-ce0d-42fe-a9b7-0e8d93bf16f8",
+        "handId": "1e6d3a3b-75b8-4638-a4f1-09d174926a7b",
+        "turnId": "1e6d3a3b-75b8-4638-a4f1-09d174926a7b:turn:5",
+        "handVersion": 5,
+        "botId": "c8421905-7ee3-4238-98fb-01fbf39373e0",
+        "participantId": "173e116e-8f4d-44a4-a460-90aa9a89e47d"
+      },
+      "seed": 530213712,
+      "requestedSamples": 1000,
+      "outcome": {
+        "kind": "estimate",
+        "estimate": {
+          "requestedSamples": 1000,
+          "completedSamples": 860,
+          "weightedShare": 0.9040697674418601,
+          "expectedReturn": 45.203488372093,
+          "additionalCallCost": 0,
+          "expectedNet": 45.203488372093,
+          "stopReason": "budget"
+        },
+        "threadId": 1,
+        "elapsedMs": 147.07209999999998,
+        "queueMs": 62.27030000000002
+      }
+    },
+    {
+      "binding": {
+        "jobId": "e8330082-15f7-44e9-87cf-fbca9c8942c6",
+        "roomId": "f8530308-ce0d-42fe-a9b7-0e8d93bf16f8",
+        "handId": "1e6d3a3b-75b8-4638-a4f1-09d174926a7b",
+        "turnId": "1e6d3a3b-75b8-4638-a4f1-09d174926a7b:turn:7",
+        "handVersion": 7,
+        "botId": "c8421905-7ee3-4238-98fb-01fbf39373e0",
+        "participantId": "173e116e-8f4d-44a4-a460-90aa9a89e47d"
+      },
+      "seed": 530213712,
+      "requestedSamples": 1000,
+      "outcome": {
+        "kind": "estimate",
+        "estimate": {
+          "requestedSamples": 1000,
+          "completedSamples": 1000,
+          "weightedShare": 0.9460000000000004,
+          "expectedReturn": 47.3,
+          "additionalCallCost": 0,
+          "expectedNet": 47.3,
+          "stopReason": "completed"
+        },
+        "threadId": 1,
+        "elapsedMs": 82.87339999999995,
+        "queueMs": 0.3442000000000007
+      }
+    },
+    {
+      "binding": {
+        "jobId": "cd98e091-a606-467f-8424-5d11e8c1b3cd",
+        "roomId": "f8530308-ce0d-42fe-a9b7-0e8d93bf16f8",
+        "handId": "1e6d3a3b-75b8-4638-a4f1-09d174926a7b",
+        "turnId": "1e6d3a3b-75b8-4638-a4f1-09d174926a7b:turn:9",
+        "handVersion": 9,
+        "botId": "c8421905-7ee3-4238-98fb-01fbf39373e0",
+        "participantId": "173e116e-8f4d-44a4-a460-90aa9a89e47d"
+      },
+      "seed": 530213712,
+      "requestedSamples": 1000,
+      "outcome": {
+        "kind": "estimate",
+        "estimate": {
+          "requestedSamples": 1000,
+          "completedSamples": 1000,
+          "weightedShare": 0.9820000000000004,
+          "expectedReturn": 49.100000000000016,
+          "additionalCallCost": 0,
+          "expectedNet": 49.100000000000016,
+          "stopReason": "completed"
+        },
+        "threadId": 1,
+        "elapsedMs": 78.67409999999995,
+        "queueMs": 0.3669999999999618
+      }
+    }
+  ],
+  "settlementCount": 1,
+  "finalChips": 8000,
+  "noAutomaticNextHand": true,
+  "actualCrashFallback": true,
+  "crashDiagnostics": {
+    "scheduled": 2,
+    "applied": 2,
+    "stale": 0,
+    "cancelled": 2,
+    "safeFallbacks": 0,
+    "standardEngineUnavailable": 0,
+    "workerJobs": 1,
+    "workerDecisions": 0,
+    "workerAcceptedActions": 0,
+    "workerSamples": 0,
+    "workerPartialJobs": 0,
+    "workerFallbacks": 1,
+    "discardedStale": 0,
+    "fallbackReasons": {
+      "workerError": 1
+    },
+    "active": 0
+  },
+  "crashHandChipsWithPot": 4000,
+  "otherRoomCommandSucceeded": true,
+  "health200": true,
+  "workersClosed": true,
+  "closedWithoutTimers": true,
+  "credentialsIncluded": false
+}

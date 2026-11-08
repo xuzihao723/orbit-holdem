@@ -1,0 +1,167 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\pc\\AppData\\Local\\Temp\\orbit-w44-tvns_xkd\\poker-four\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      "playwright.reconnect.config.ts",
+      "--output",
+      "w44-dev-results/reconnect"
+    ],
+    "configFile": "C:\\Users\\pc\\AppData\\Local\\Temp\\orbit-w44-tvns_xkd\\poker-four\\playwright.reconnect.config.ts",
+    "rootDir": "C:/Users/pc/AppData/Local/Temp/orbit-w44-tvns_xkd/poker-four/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/pc/AppData/Local/Temp/orbit-w44-tvns_xkd/poker-four/w44-dev-results/reconnect",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium-reconnect",
+        "name": "chromium-reconnect",
+        "testDir": "C:/Users/pc/AppData/Local/Temp/orbit-w44-tvns_xkd/poker-four/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "reconnect.spec.ts"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\pc\\AppData\\Local\\Temp\\orbit-w44-tvns_xkd\\poker-four\\w44-dev-results\\reconnect",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "chromium-reconnect",
+        "testDir": "C:\\Users\\pc\\AppData\\Local\\Temp\\orbit-w44-tvns_xkd\\poker-four\\tests\\e2e",
+        "snapshotDir": "C:\\Users\\pc\\AppData\\Local\\Temp\\orbit-w44-tvns_xkd\\poker-four\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "reconnect.spec.ts",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5173",
+          "trace": "off",
+          "screenshot": "off",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium-reconnect"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/verification/w44-reconnect.config.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run dev --workspace @orbit/web -- --port 5173 --strictPort",
+      "url": "http://127.0.0.1:5173",
+      "reuseExistingServer": false,
+      "timeout": 30000
+    }
+  },
+  "suites": [
+    {
+      "title": "reconnect.spec.ts",
+      "file": "reconnect.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "refresh, brief offline recovery and takeover keep the real seat, deadline and settled result",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-reconnect",
+              "projectName": "chromium-reconnect",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2563,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T14:45:46.189Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "52d77e2c54626c9984db-739de4810e31b8000bf3",
+          "file": "reconnect.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-06T14:45:42.657Z",
+    "duration": 7321.516,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

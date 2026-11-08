@@ -1,0 +1,27 @@
+[
+  {
+    "check": "auth-browser",
+    "exitCode": 0,
+    "seconds": 33.53
+  },
+  {
+    "check": "app-browser",
+    "exitCode": 0,
+    "seconds": 53.22
+  },
+  {
+    "check": "integration",
+    "exitCode": 0,
+    "seconds": 67.0
+  },
+  {
+    "check": "format",
+    "exitCode": 0,
+    "seconds": 12.66
+  },
+  {
+    "check": "artifact-scan",
+    "exitCode": 0,
+    "seconds": 1.38
+  }
+]

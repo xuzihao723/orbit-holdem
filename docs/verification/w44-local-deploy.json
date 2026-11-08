@@ -1,0 +1,35 @@
+{
+  "origin": "http://127.0.0.1:4183",
+  "http": [
+    {
+      "path": "/health/live",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "/health/ready",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/rules",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/history",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8"
+    }
+  ],
+  "webSocketConnected": true,
+  "mutations": 0,
+  "publicHttps": false,
+  "target": "compiled server entry point, isolated local database",
+  "containerBuilt": false
+}

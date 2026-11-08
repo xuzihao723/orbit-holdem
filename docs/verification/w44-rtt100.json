@@ -1,0 +1,17 @@
+{
+  "profile": "rtt100",
+  "clock": "wall",
+  "roundTripsMs": [
+    126.29230000000098,
+    128.18899999998393,
+    127.50119999999879
+  ],
+  "stats": {
+    "connections": 97,
+    "clientFrames": 1407,
+    "serverFrames": 7247,
+    "droppedAcks": 0,
+    "overflowClosures": 0
+  },
+  "completedUiHand": true
+}

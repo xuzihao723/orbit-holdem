@@ -1,0 +1,14 @@
+{
+  "scope": "source/import and fingerprint audit; not a runtime view-projection test",
+  "corePlatformIndependent": true,
+  "coreNoProtocolDependency": true,
+  "webSourcesUnchanged": true,
+  "protocolDeclarationsUnchanged": true,
+  "serverTransportEntrypointsUnchanged": true,
+  "onlyExistingSourceChanges": [
+    ".github/workflows/check.yml",
+    "packages/poker-core/src/index.ts"
+  ],
+  "historicalEvidenceFilesPreserved": 44,
+  "noNewNetworkRoute": true
+}

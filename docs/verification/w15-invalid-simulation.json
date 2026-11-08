@@ -1,0 +1,21 @@
+{
+  "requested": 1000,
+  "completed": 1000,
+  "failureCount": 0,
+  "actionCount": 1000,
+  "maximumActionsObserved": 1,
+  "seed": 20261031,
+  "failure": null,
+  "traceDigest": "73a2a294fdb292759de7a3a38a9de61ef47afa4253d6b49721a1b764a9e3c24d",
+  "classCoverage": {
+    "wrongActor": 112,
+    "negativeRaise": 111,
+    "fractionalRaise": 111,
+    "belowMinimumNonAllInRaise": 111,
+    "overStackRaise": 111,
+    "checkWhileFacingBet": 111,
+    "raiseWithoutReopening": 111,
+    "unsafeInteger": 111,
+    "nonFiniteNumber": 111
+  }
+}

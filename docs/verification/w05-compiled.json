@@ -1,0 +1,29 @@
+{
+  "command": "Node ESM imports @orbit/poker-core and compiled server random adapter",
+  "status": "passed",
+  "deckSize": 52,
+  "variants": [
+    {
+      "players": 2,
+      "consumed": 12,
+      "remaining": 40,
+      "publicCards": 5,
+      "burns": 3
+    },
+    {
+      "players": 3,
+      "consumed": 14,
+      "remaining": 38,
+      "publicCards": 5,
+      "burns": 3
+    },
+    {
+      "players": 4,
+      "consumed": 16,
+      "remaining": 36,
+      "publicCards": 5,
+      "burns": 3
+    }
+  ],
+  "compiledSecureRandomAdapter": true
+}

@@ -1,0 +1,20 @@
+{
+  "results": [
+    {
+      "mutation": "wrong-card",
+      "exitCode": 1,
+      "stderr": "Error: INVALID_CARD_SVG: Traceback (most recent call last):\n  File \"D:\\User\\codex_respository\\dezhou_app\\poker-four\\scripts\\lib\\inspect-card-svg.py\", line 6, in <module>\n    assert root.get('data-card-id')==expected,'wrong card identity'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: wrong card identity\n\n    at inspectCardSvg (D:\\User\\codex_respository\\dezhou_app\\poker-four\\scripts\\validate-card-samples.ts:15:29)\n    at validateCardSamples (D:\\User\\codex_respository\\dezhou_app\\poker-four\\scripts\\validate-card-samples.ts:58:17)\n    at <anonymous> (D:\\User\\codex_respository\\dezhou_app\\poker-four\\scripts\\validate-card-samples.ts:65:32)\n    at ModuleJob.run (node:internal/modules/esm/module_job:430:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)\n"
+    },
+    {
+      "mutation": "external-href",
+      "exitCode": 1,
+      "stderr": "Error: INVALID_CARD_SVG: l last):\n  File \"D:\\User\\codex_respository\\dezhou_app\\poker-four\\scripts\\lib\\inspect-card-svg.py\", line 9, in <module>\n    assert e.tag.startswith(ns) and e.tag[len(ns):] in allowed,'unknown element'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: unknown element\n\n    at inspectCardSvg (D:\\User\\codex_respository\\dezhou_app\\poker-four\\scripts\\validate-card-samples.ts:15:29)\n    at validateCardSamples (D:\\User\\codex_respository\\dezhou_app\\poker-four\\scripts\\validate-card-samples.ts:58:17)\n    at <anonymous> (D:\\User\\codex_respository\\dezhou_app\\poker-four\\scripts\\validate-card-samples.ts:65:32)\n    at ModuleJob.run (node:internal/modules/esm/module_job:430:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)\n"
+    },
+    {
+      "mutation": "development marker in copied real production chunk",
+      "exitCode": 1,
+      "stderr": "Development fixture leaked into production: C:\\Users\\pc\\AppData\\Local\\Temp\\orbit-w29-bundle-0n3anoi_\\dist\\assets\\index-C8Vlb3QV.js\n"
+    }
+  ],
+  "sourceBytesRestored": true
+}

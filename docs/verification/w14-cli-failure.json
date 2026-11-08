@@ -1,0 +1,8 @@
+{
+  "date": "2026-10-31",
+  "case": "owned file used as database parent directory",
+  "exitCode": 1,
+  "stdout": "\n> orbit-workspace@0.1.0 db:migrate\n> tsx --tsconfig tsconfig.tools.json scripts/migrate-db.ts\n\n",
+  "stderr": "DATABASE_MIGRATION_FAILED\n(node:27736) ExperimentalWarning: SQLite is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+  "noDevelopmentDatabaseUsed": true
+}

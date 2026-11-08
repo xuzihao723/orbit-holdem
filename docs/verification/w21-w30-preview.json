@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-01",
+  "command": "npm.cmd run dev",
+  "ownedSessionId": 65543,
+  "statuses": [
+    {
+      "url": "http://127.0.0.1:5173/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3001/health/live",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/health/live",
+      "status": 200
+    }
+  ],
+  "socketProxyConnected": true,
+  "devReactHomeAndRules": true,
+  "noAutomaticGuest": true,
+  "leftRunning": true
+}

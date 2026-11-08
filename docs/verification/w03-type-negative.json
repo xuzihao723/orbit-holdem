@@ -1,0 +1,7 @@
+{
+  "probe": "real TypeScript compile with one error directive removed",
+  "negativeExitCode": 2,
+  "diagnostic": "tests/contracts/protocol-types.ts(17,7): error TS2322: Type '5' is not assignable to type 'Capacity'.",
+  "restoredExitCode": 0,
+  "originalBytesRestored": true
+}

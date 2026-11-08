@@ -1,0 +1,111 @@
+{
+  "date": "2026-11-01",
+  "status": "passed",
+  "stages": {
+    "w21": {
+      "core": 214,
+      "integration": 202,
+      "sixCommandsPassed": true
+    },
+    "w22": {
+      "core": 214,
+      "integration": 230,
+      "sixCommandsPassed": true
+    },
+    "w23": {
+      "core": 214,
+      "integration": 257,
+      "sixCommandsPassed": true
+    },
+    "w24": {
+      "core": 214,
+      "integration": 280,
+      "sixCommandsPassed": true
+    },
+    "w25": {
+      "core": 214,
+      "integration": 300,
+      "sixCommandsPassed": true
+    },
+    "w26": {
+      "core": 214,
+      "integration": 317,
+      "sixCommandsPassed": true
+    },
+    "w27": {
+      "core": 214,
+      "integration": 341,
+      "sixCommandsPassed": true
+    },
+    "w28": {
+      "core": 214,
+      "integration": 355,
+      "sixCommandsPassed": true
+    },
+    "w29": {
+      "core": 214,
+      "integration": 366,
+      "sixCommandsPassed": true
+    },
+    "w30": {
+      "core": 214,
+      "integration": 383,
+      "sixCommandsPassed": true
+    }
+  },
+  "sourceFingerprintsVerified": 341,
+  "previousAcceptedFingerprintsVerified": 143,
+  "historicalBaselineVerified": true,
+  "productionBrowser": {
+    "startTime": "2026-11-01T05:55:48.565Z",
+    "duration": 48809.418,
+    "expected": 26,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "cardBrowser": {
+    "startTime": "2026-11-01T05:10:23.365Z",
+    "duration": 30644.973,
+    "expected": 11,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "simulation": {
+    "completedHands": 200,
+    "standardAcceptedJobs": 16,
+    "actualSamples": 14426,
+    "illegalActions": 0,
+    "conservationFailures": 0,
+    "stuckHands": 0
+  },
+  "preview": {
+    "date": "2026-11-01",
+    "command": "npm.cmd run dev",
+    "ownedSessionId": 65543,
+    "statuses": [
+      {
+        "url": "http://127.0.0.1:5173/",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:3001/health/live",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:5173/health/live",
+        "status": 200
+      }
+    ],
+    "socketProxyConnected": true,
+    "devReactHomeAndRules": true,
+    "noAutomaticGuest": true,
+    "leftRunning": true
+  },
+  "next": "w31",
+  "remoteCiRun": false,
+  "gitOrDeployment": false,
+  "m3Complete": false,
+  "m4Complete": false
+}

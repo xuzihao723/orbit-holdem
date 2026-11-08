@@ -1,0 +1,335 @@
+[
+  {
+    "check": "node",
+    "command": [
+      "node",
+      "--version"
+    ],
+    "exitCode": 0,
+    "seconds": 0.12,
+    "log": "w44-node.log"
+  },
+  {
+    "check": "npm",
+    "command": [
+      "npm.cmd",
+      "--version"
+    ],
+    "exitCode": 0,
+    "seconds": 0.67,
+    "log": "w44-npm.log"
+  },
+  {
+    "check": "python",
+    "command": [
+      "python",
+      "--version"
+    ],
+    "exitCode": 0,
+    "seconds": 0.06,
+    "log": "w44-python.log"
+  },
+  {
+    "check": "install",
+    "command": [
+      "npm.cmd",
+      "ci"
+    ],
+    "exitCode": 0,
+    "seconds": 17.08,
+    "log": "w44-install.log"
+  },
+  {
+    "check": "chromium",
+    "command": [
+      "npx.cmd",
+      "playwright",
+      "install",
+      "chromium"
+    ],
+    "exitCode": 0,
+    "seconds": 7.92,
+    "log": "w44-chromium.log"
+  },
+  {
+    "check": "fixtures",
+    "command": [
+      "npm.cmd",
+      "run",
+      "test:fixtures"
+    ],
+    "exitCode": 0,
+    "seconds": 1.84,
+    "log": "w44-fixtures.log"
+  },
+  {
+    "check": "format",
+    "command": [
+      "npm.cmd",
+      "run",
+      "format:check"
+    ],
+    "exitCode": 0,
+    "seconds": 11.33,
+    "log": "w44-format.log"
+  },
+  {
+    "check": "typecheck",
+    "command": [
+      "npm.cmd",
+      "run",
+      "typecheck"
+    ],
+    "exitCode": 0,
+    "seconds": 25.81,
+    "log": "w44-typecheck.log"
+  },
+  {
+    "check": "core",
+    "command": [
+      "npm.cmd",
+      "run",
+      "test:core",
+      "--",
+      "--reporter=default",
+      "--reporter=json",
+      "--outputFile=docs/verification/w44-core.json"
+    ],
+    "exitCode": 0,
+    "seconds": 4.53,
+    "log": "w44-core.log"
+  },
+  {
+    "check": "integration",
+    "command": [
+      "npm.cmd",
+      "run",
+      "test:integration",
+      "--",
+      "--reporter=default",
+      "--reporter=json",
+      "--outputFile=docs/verification/w44-integration.json"
+    ],
+    "exitCode": 0,
+    "seconds": 57.45,
+    "log": "w44-integration.log"
+  },
+  {
+    "check": "replay-projection",
+    "command": [
+      "npm.cmd",
+      "run",
+      "verify:replay"
+    ],
+    "exitCode": 0,
+    "seconds": 5.3,
+    "log": "w44-replay-projection.log"
+  },
+  {
+    "check": "cards-generate",
+    "command": [
+      "npm.cmd",
+      "run",
+      "assets:generate"
+    ],
+    "exitCode": 0,
+    "seconds": 3.42,
+    "log": "w44-cards-generate.log"
+  },
+  {
+    "check": "card-components",
+    "command": [
+      "npm.cmd",
+      "run",
+      "assets:components:validate"
+    ],
+    "exitCode": 0,
+    "seconds": 14.19,
+    "log": "w44-card-components.log"
+  },
+  {
+    "check": "cards-validate",
+    "command": [
+      "npm.cmd",
+      "run",
+      "assets:validate"
+    ],
+    "exitCode": 0,
+    "seconds": 1.59,
+    "log": "w44-cards-validate.log"
+  },
+  {
+    "check": "aux",
+    "command": [
+      "npm.cmd",
+      "run",
+      "assets:aux:validate"
+    ],
+    "exitCode": 0,
+    "seconds": 2.97,
+    "log": "w44-aux.log"
+  },
+  {
+    "check": "card-sheet",
+    "command": [
+      "npm.cmd",
+      "run",
+      "assets:contact-sheet"
+    ],
+    "exitCode": 0,
+    "seconds": 4.91,
+    "log": "w44-card-sheet.log"
+  },
+  {
+    "check": "build",
+    "command": [
+      "npm.cmd",
+      "run",
+      "build"
+    ],
+    "exitCode": 0,
+    "seconds": 27.41,
+    "log": "w44-build.log"
+  },
+  {
+    "check": "preview-scan",
+    "command": [
+      "npm.cmd",
+      "run",
+      "verify:preview-bundle"
+    ],
+    "exitCode": 0,
+    "seconds": 1.19,
+    "log": "w44-preview-scan.log"
+  },
+  {
+    "check": "release-artifacts",
+    "command": [
+      "npm.cmd",
+      "run",
+      "verify:release-artifacts"
+    ],
+    "exitCode": 0,
+    "seconds": 1.27,
+    "log": "w44-release-artifacts.log"
+  },
+  {
+    "check": "bots",
+    "command": [
+      "npm.cmd",
+      "run",
+      "simulate:bots",
+      "--",
+      "--seed",
+      "20261031",
+      "--hands",
+      "200",
+      "--output",
+      "docs/verification/w44-bot-sim.json"
+    ],
+    "exitCode": 0,
+    "seconds": 34.24,
+    "log": "w44-bots.log"
+  },
+  {
+    "check": "release",
+    "command": [
+      "npm.cmd",
+      "run",
+      "test:e2e"
+    ],
+    "exitCode": 0,
+    "seconds": 169.69,
+    "log": "w44-release.log"
+  },
+  {
+    "check": "browser-table",
+    "command": [
+      "npx.cmd",
+      "playwright",
+      "test",
+      "--config",
+      "playwright.table.config.ts"
+    ],
+    "exitCode": 0,
+    "seconds": 35.5,
+    "log": "w44-browser-table.log"
+  },
+  {
+    "check": "browser-app",
+    "command": [
+      "npx.cmd",
+      "playwright",
+      "test",
+      "--config",
+      "playwright.app.config.ts"
+    ],
+    "exitCode": 0,
+    "seconds": 44.3,
+    "log": "w44-browser-app.log"
+  },
+  {
+    "check": "browser-ui",
+    "command": [
+      "npx.cmd",
+      "playwright",
+      "test",
+      "--config",
+      "playwright.ui.config.ts"
+    ],
+    "exitCode": 0,
+    "seconds": 12.16,
+    "log": "w44-browser-ui.log"
+  },
+  {
+    "check": "browser-replay",
+    "command": [
+      "npx.cmd",
+      "playwright",
+      "test",
+      "--config",
+      "playwright.replay.config.ts"
+    ],
+    "exitCode": 0,
+    "seconds": 16.98,
+    "log": "w44-browser-replay.log"
+  },
+  {
+    "check": "production",
+    "command": [
+      "npx.cmd",
+      "playwright",
+      "test",
+      "--config",
+      "playwright.production.config.ts",
+      "--reporter=list,json"
+    ],
+    "exitCode": 0,
+    "seconds": 10.83,
+    "log": "w44-production.log"
+  },
+  {
+    "check": "matrix-format",
+    "command": [
+      "npx.cmd",
+      "prettier",
+      "--check",
+      "tests/e2e/component-table-matrix.spec.ts"
+    ],
+    "exitCode": 0,
+    "seconds": 3.42,
+    "log": "w44-matrix-format.log"
+  },
+  {
+    "check": "matrix-types",
+    "command": [
+      "npx.cmd",
+      "tsc",
+      "-p",
+      "tsconfig.tests.json"
+    ],
+    "exitCode": 0,
+    "seconds": 7.58,
+    "log": "w44-matrix-types.log"
+  }
+]

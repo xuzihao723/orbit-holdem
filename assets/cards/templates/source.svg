@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 336" width="240" height="336" data-card-id="{{ID}}" data-rank="{{RANK}}" data-suit="{{SUIT}}" role="img">
+  <title>{{TITLE}}</title>
+  <rect x="1" y="1" width="238" height="334" rx="16" fill="{{FACE}}" stroke="#D6B878" stroke-width="2"/>
+  <rect x="10" y="10" width="220" height="316" rx="11" fill="none" stroke="#D6B878" stroke-opacity="0.5"/>
+  {{CORNERS}}
+  {{ART}}
+</svg>

@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-01",
+  "compiledApplication": true,
+  "realHumanAndBot": true,
+  "independentFrozenObservation": true,
+  "hiddenFieldsAbsent": true,
+  "botTurnApplied": 1,
+  "duplicates": 9,
+  "botPaidAmount": 20,
+  "botReceiptCount": 1,
+  "noFakeGuest": true,
+  "noInternalAck": true,
+  "chipsWithPot": 4000,
+  "credentialsIncluded": false
+}

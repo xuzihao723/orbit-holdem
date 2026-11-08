@@ -1,0 +1,500 @@
+{
+  "scope": "complete 52+2+1",
+  "assets": [
+    {
+      "path": "assets/cards/backs/orbit-simple.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "1428301fd54f00009c7c5060566576081e884f1af1ea0bff15471bde4ff95aed"
+    },
+    {
+      "path": "assets/cards/backs/orbit.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "4c244c853bcae24e3ee148a3b75597a1168f04fdeb9cdc4e5dce6dbe5f2cc816"
+    },
+    {
+      "path": "assets/cards/faces/10C.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "96583bcb1cd435b1535c6432bb6d9fcf9ad6eec21226d1539a81c39914a33c94"
+    },
+    {
+      "path": "assets/cards/faces/10D.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "f9327679848d8edf61dedba2e228a9b32a02519ebefcc8574c60a248ca0b658f"
+    },
+    {
+      "path": "assets/cards/faces/10H.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "11262fd8c30b509d8da696b3d370651431b7550c58e8a1cb9960448e810ca3fd"
+    },
+    {
+      "path": "assets/cards/faces/10S.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "9a7aace3b3609712b8b159e0ab24aa49606fb3393876b2a65a6f0f0beac5f7a8"
+    },
+    {
+      "path": "assets/cards/faces/2C.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "83a47ae3296ac575b6b3cfd4ea33a8557561b99d7c00ddebe856e83225ee7165"
+    },
+    {
+      "path": "assets/cards/faces/2D.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "3695c60a2f42acbcd31f4b6ca53e06a7b11482b471c0268efa197446497dbef4"
+    },
+    {
+      "path": "assets/cards/faces/2H.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "c4781b4b70db5ac551b28bff43f9ff61853a7eec05ab50b5b6f51cbef4b70c4b"
+    },
+    {
+      "path": "assets/cards/faces/2S.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "eac19ffaa8b51f3ef577837f1d04273c86841cbddbc33ba24f9f9054bc534633"
+    },
+    {
+      "path": "assets/cards/faces/3C.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "7dcea881fac892f05345e2abd969a0ea0ab6872fdfe7702e376625f30197c577"
+    },
+    {
+      "path": "assets/cards/faces/3D.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "12554612fc889aaf723c099a4ce38d7d8845a210ec36c1061ffb48c9256dcd60"
+    },
+    {
+      "path": "assets/cards/faces/3H.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "564eb1e94419283d8c77ae3c4c9fa9c7ab73d3a0609786dba0e6295f5e43b55f"
+    },
+    {
+      "path": "assets/cards/faces/3S.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "01d25543767ed1b906ee3a0d29990d4880c62835383e8c63e6d6c62d5b6a80f3"
+    },
+    {
+      "path": "assets/cards/faces/4C.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "036c61ca0855271bba67f2142107b045944fc377054fa9d1c96381126d69fcee"
+    },
+    {
+      "path": "assets/cards/faces/4D.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "d42749a3372085772159b47d538c0310e25f491aafa8b8483bd51ed3b5b84711"
+    },
+    {
+      "path": "assets/cards/faces/4H.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "41e3603f6324d4de5f4da237a19dd5e11d4325b64e38c8bad0fe77db5b850edf"
+    },
+    {
+      "path": "assets/cards/faces/4S.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "d282fcf0cb6030f189fc4e6876fa715cd30decadb6ef43528b366f8e267c7dbf"
+    },
+    {
+      "path": "assets/cards/faces/5C.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "b3dc29641e94afc4809150858221b9ec1b6ff25778c61a63e1ab25ad19362a85"
+    },
+    {
+      "path": "assets/cards/faces/5D.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "849f3f5790e26d83042f16e28ac8ce0b82f1a40ec13449ba0a74bc2042e7af8e"
+    },
+    {
+      "path": "assets/cards/faces/5H.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "56479c984bd2092c4b323e2bacb55d5465913d392e61bec22b8ddd0692df4845"
+    },
+    {
+      "path": "assets/cards/faces/5S.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "3c9e33cec5ca90ee3bde1f9ab723a3ef209ef6cdf7eccdaec8f22450fe0937aa"
+    },
+    {
+      "path": "assets/cards/faces/6C.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "f0e2e064d1292093d314a5f4ad8f33f636b7a1e999024a2588cd484c06c5ed5a"
+    },
+    {
+      "path": "assets/cards/faces/6D.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "bc290e1a7192fc1c9ef4d82333cbf57379b4f8c0a015bd134dc408f84fdaa5e1"
+    },
+    {
+      "path": "assets/cards/faces/6H.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "bf727d1f8211acf0ef2233c64d96823a8b4664f18450ba18221148f3b918bfde"
+    },
+    {
+      "path": "assets/cards/faces/6S.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "d632c4b07892eab90b3eedf8ebc1d43acea149ee33b11002f18949eb0341f801"
+    },
+    {
+      "path": "assets/cards/faces/7C.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "9114744cc7407ca3e3bf99284c2ba0874aa87b49fa2aee93bee469c07b44622a"
+    },
+    {
+      "path": "assets/cards/faces/7D.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "b689f2fd5add1ad35fc9c186c211768c1f0d18d78a2cef4df0bc17cff6627afe"
+    },
+    {
+      "path": "assets/cards/faces/7H.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "b9d555120c9f9ec6bc602684f39bd5cb2995aefb79da9488f192b097f525a53f"
+    },
+    {
+      "path": "assets/cards/faces/7S.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "f7e5607beeeea8ac19fe579d51c03eae393002324e7daab265135817bbfdeee4"
+    },
+    {
+      "path": "assets/cards/faces/8C.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "8a682be9032ed69aa87cfaa8a7012f494f065c46ee67736c3515a013baaa2fc1"
+    },
+    {
+      "path": "assets/cards/faces/8D.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "8e41f19d55a3388c3791fc395eede9e32364e14d905a8ecc2bf7d2efac0d1ae8"
+    },
+    {
+      "path": "assets/cards/faces/8H.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "3916d7b7645e219ebe07623a06ced9d343320ecd1c12d333cfe6171282c49e3d"
+    },
+    {
+      "path": "assets/cards/faces/8S.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "93bc7e431951abbae8e5763a731e3d35ef7332a560aed1671b126c6d607fe686"
+    },
+    {
+      "path": "assets/cards/faces/9C.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "26023c8df4ffd94f2f307e1658cf78e047f14178de443ffc336b221e18c1e3e0"
+    },
+    {
+      "path": "assets/cards/faces/9D.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "70798938b397f949812515bb8fa194613b54ea9b0a60ddfcb1524394dcda308d"
+    },
+    {
+      "path": "assets/cards/faces/9H.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "11edffb03a1274ef5b3a97ab96b40029beb9c85f75ad27429beff7a648e1d118"
+    },
+    {
+      "path": "assets/cards/faces/9S.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "307d4baadc2664ea64a6b52063aedabb9739a6d56191dbdecef1a2302ea7e6b1"
+    },
+    {
+      "path": "assets/cards/faces/AC.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "76d6089c360dc5590042f194710ee04be28b5ead4f81a03f020e6a1b62262f29"
+    },
+    {
+      "path": "assets/cards/faces/AD.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "cb8bf9b0339599c1c4a6139c70b4886f6a4f1cbbf7b08d5589c8c77dc44e6517"
+    },
+    {
+      "path": "assets/cards/faces/AH.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "441f90296d5f20a9aa9128b56b28fef84424f82a51dd792034047be0fcc34f1f"
+    },
+    {
+      "path": "assets/cards/faces/AS.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "10a8b7b887538008f0cdeccda038fbfc12802042705fc3cbdd7379cdd5756a7f"
+    },
+    {
+      "path": "assets/cards/faces/JC.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "c7b0958dd44303ac64b33a49418732d4094c245c5fd259a954502dc648b1b93b"
+    },
+    {
+      "path": "assets/cards/faces/JD.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "6bf9df3bd2b97cec993a692507d81d4e35681b661c067c92a65f47f4bbf761a9"
+    },
+    {
+      "path": "assets/cards/faces/JH.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "55ae6b341aba78fa967e2b5b6ebc48405e6c74e27ad3da7e5fc7a796a51982ea"
+    },
+    {
+      "path": "assets/cards/faces/JS.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "27c25df6faa6ca00a7a8a943406eedbfc8d5db9b566866d8022d1ad38e1c0a62"
+    },
+    {
+      "path": "assets/cards/faces/KC.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "9e802dd66ea140dd18c591d081d3bdc8a59b6a016330741b0c49feb72145dfdc"
+    },
+    {
+      "path": "assets/cards/faces/KD.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "66ac2013322f09df611e059a2725f79b171001281180272b476aaa8c0f500b60"
+    },
+    {
+      "path": "assets/cards/faces/KH.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "3d7fc041b7adc64d6d6f21febde9910ae3fc56872d6c843b3cb5041acaf01403"
+    },
+    {
+      "path": "assets/cards/faces/KS.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "0c943744968dc7c2c099f036aa9e7fc610f594acd257782ef04a8e30d7461d34"
+    },
+    {
+      "path": "assets/cards/faces/QC.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "88f896a885b1b0c5fd686549d226906f54a7b738e4e3cf01558d7cd725104af8"
+    },
+    {
+      "path": "assets/cards/faces/QD.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "569f2942cb0e237ef130d5858b499a9051f7433de554a7c996f60294be797906"
+    },
+    {
+      "path": "assets/cards/faces/QH.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "a4b00850e2e63973154a3c4c0076e879c0da6b5d50790a7dc5707379f7ab8fad"
+    },
+    {
+      "path": "assets/cards/faces/QS.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "ad149f89b47ad1d7dc1391ef7096d013e2698c69bcf6d355541cd015d5082b1f"
+    },
+    {
+      "path": "assets/cards/slot.svg",
+      "author": "Orbit project contributors",
+      "date": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "scripts/generate-cards.ts",
+      "sourceUrl": null,
+      "sha256": "2c390eaf40614165d35ba8133cd71ce213dad4841f532a18becdd5649b454ca5"
+    }
+  ]
+}

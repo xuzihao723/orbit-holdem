@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-31",
+  "command": "npm.cmd run test:network:browser",
+  "exitCode": 0,
+  "report": "w20-playwright.json",
+  "expected": 1,
+  "unexpected": 0,
+  "skipped": 0,
+  "flaky": 0,
+  "twoBrowserContexts": true,
+  "duplicateAction": true,
+  "completeHand": true,
+  "takeover": true,
+  "ownedTemporaryDatabase": true,
+  "productionTestHookAdded": false,
+  "credentialsIncluded": false
+}

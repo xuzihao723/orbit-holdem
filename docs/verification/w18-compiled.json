@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-31",
+  "compiledApplication": true,
+  "upgradedFromVersion": 1,
+  "schemaVersion": 2,
+  "legacySessionPreserved": true,
+  "realGuestBotReadyStart": true,
+  "frozenPlayers": 2,
+  "handVersion": 1,
+  "privateHoleEvents": 2,
+  "publicPotTotal": 30,
+  "publicViewPrivateFieldsAbsent": true,
+  "deadline": null,
+  "botPolicyImplemented": false,
+  "credentialsIncluded": false
+}

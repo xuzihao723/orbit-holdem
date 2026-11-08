@@ -1,0 +1,383 @@
+{
+  "date": "2026-10-30",
+  "status": "passed",
+  "scope": "W04 read-only development graybox and responsive UI; no playable game",
+  "milestone": "M0",
+  "milestoneComplete": true,
+  "runtime": {
+    "node": "24.14.1",
+    "npm": "11.11.0",
+    "os": "Windows"
+  },
+  "pages": [
+    "home",
+    "lobby",
+    "table"
+  ],
+  "fixtures": 12,
+  "integration": {
+    "passed": 27,
+    "failed": 0,
+    "suites": 7,
+    "report": "w04-vitest.json"
+  },
+  "developmentBrowser": {
+    "passed": 42,
+    "failed": 0,
+    "skipped": 0,
+    "flaky": 0,
+    "report": "w04-playwright.json",
+    "includesW03HealthTests": 3
+  },
+  "productionBrowser": {
+    "passed": 3,
+    "failed": 0,
+    "skipped": 0,
+    "flaky": 0,
+    "report": "w04-production-playwright.json"
+  },
+  "layoutMatrix": {
+    "viewports": [
+      [
+        360,
+        640
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        430,
+        932
+      ],
+      [
+        1280,
+        720
+      ],
+      [
+        1440,
+        900
+      ]
+    ],
+    "players": [
+      2,
+      3,
+      4
+    ],
+    "cases": 15
+  },
+  "typescriptCompiled": true,
+  "productionBuildPassed": true,
+  "productionFixtureScanPassed": true,
+  "productionNegativeProbe": "w04-production-negative.json",
+  "commandResults": [
+    {
+      "name": "build",
+      "command": "npm.cmd run build",
+      "exitCode": 0
+    },
+    {
+      "name": "browser",
+      "command": "npm.cmd run test:e2e",
+      "exitCode": 0
+    },
+    {
+      "name": "fixtures",
+      "command": "npm.cmd run test:fixtures",
+      "exitCode": 0
+    },
+    {
+      "name": "format",
+      "command": "npm.cmd run format:check",
+      "exitCode": 0
+    },
+    {
+      "name": "integration",
+      "command": "npm.cmd run test:integration -- --reporter=default --reporter=json --outputFile=docs/verification/w04-vitest.json",
+      "exitCode": 0
+    },
+    {
+      "name": "production",
+      "command": "npm.cmd run test:production:preview",
+      "exitCode": 0
+    }
+  ],
+  "coreCommand": {
+    "exitCode": 1,
+    "reason": "No rule tests yet; expected failure, not counted as passed"
+  },
+  "protectedBaselineInputsUnchanged": {
+    "w01": {
+      "tests/fixtures/scenarios.json": true,
+      "docs/product-rules.md": true,
+      "docs/decisions.md": true,
+      "docs/user-flows.md": true,
+      "tests/fixtures/README.md": true,
+      "scripts/validate-w01.py": true
+    },
+    "w02": {
+      "packages/protocol/src/commands.ts": true,
+      "packages/protocol/src/views.ts": true,
+      "packages/protocol/src/errors.ts": true,
+      "docs/data-model.md": true,
+      "docs/protocol.md": true,
+      "docs/errors.md": true,
+      "docs/examples/protocol.json": true,
+      "scripts/validate-w02.py": true
+    }
+  },
+  "intentionalChangesToW03Inputs": [
+    ".github/workflows/check.yml",
+    "apps/web/package.json",
+    "apps/web/src/App.tsx",
+    "apps/web/src/styles.css",
+    "package.json",
+    "playwright.config.ts",
+    "tests/e2e/startup.spec.ts",
+    "tsconfig.tools.json"
+  ],
+  "review": {
+    "mode": "read-only independent review",
+    "remainingBlockers": 0,
+    "resolved": [
+      "new waiting participant grant timing",
+      "pending all-in pot allocation",
+      "pending preflop pot allocation",
+      "bot preparation label"
+    ]
+  },
+  "screenshots": [
+    {
+      "path": "docs/verification/w04/home-1280x720.png",
+      "width": 1280,
+      "fullPageHeight": 720,
+      "sha256": "85cf29b798cc845ca9e9eafd44f2eed87701d786d507ad1b9deaaa32a4e580f9"
+    },
+    {
+      "path": "docs/verification/w04/home-360x640.png",
+      "width": 360,
+      "fullPageHeight": 640,
+      "sha256": "d186e5d352c6588ec56e63f5c4a9deb2f04e9478c8dbce26920e92d4cba3419f"
+    },
+    {
+      "path": "docs/verification/w04/lobby-1280x720.png",
+      "width": 1280,
+      "fullPageHeight": 720,
+      "sha256": "54dc1d08bb240fcaff3c4e7aa88994b457dfcaf3571b318d53950c0a29d85333"
+    },
+    {
+      "path": "docs/verification/w04/lobby-360x640.png",
+      "width": 360,
+      "fullPageHeight": 691,
+      "sha256": "46117b80ede874cc7aa7b3f7fc75819835793f10bdeac2e745856c0ee2d8162b"
+    },
+    {
+      "path": "docs/verification/w04/production-home.png",
+      "width": 1280,
+      "fullPageHeight": 720,
+      "sha256": "565f0e54cfd621f584c61fe5bde453b719195dc812db8363cec45afee884276d"
+    },
+    {
+      "path": "docs/verification/w04/production-lobby-query.png",
+      "width": 1280,
+      "fullPageHeight": 720,
+      "sha256": "565f0e54cfd621f584c61fe5bde453b719195dc812db8363cec45afee884276d"
+    },
+    {
+      "path": "docs/verification/w04/production-table-query.png",
+      "width": 1280,
+      "fullPageHeight": 720,
+      "sha256": "565f0e54cfd621f584c61fe5bde453b719195dc812db8363cec45afee884276d"
+    },
+    {
+      "path": "docs/verification/w04/startup.png",
+      "width": 1280,
+      "fullPageHeight": 720,
+      "sha256": "7e3a7afbc1a10e7373f14fb3ee30c029a6a71a242284c580386cd3d8cc6ab512"
+    },
+    {
+      "path": "docs/verification/w04/table-2-1280x720.png",
+      "width": 1280,
+      "fullPageHeight": 751,
+      "sha256": "2978cf283eebbf98a2be083e9c350341cc42547af3f8a2002eb6c194efb1485c"
+    },
+    {
+      "path": "docs/verification/w04/table-2-1440x900.png",
+      "width": 1440,
+      "fullPageHeight": 900,
+      "sha256": "e49be0957cdaa7de2b4a7dc7eff4f4667fc8ee0ac8453e6cda6b36cc0590ca30"
+    },
+    {
+      "path": "docs/verification/w04/table-2-360x640.png",
+      "width": 360,
+      "fullPageHeight": 640,
+      "sha256": "24b5a5a4c0c6d4fcf8454093a0fd28f239331d01862a1cb99cbd2d97e9b1f22c"
+    },
+    {
+      "path": "docs/verification/w04/table-2-390x844.png",
+      "width": 390,
+      "fullPageHeight": 844,
+      "sha256": "0a2cadc6f85fb40fb4a18354f1cf7e47210d4fe951e26832a1d5a13380115db4"
+    },
+    {
+      "path": "docs/verification/w04/table-2-430x932.png",
+      "width": 430,
+      "fullPageHeight": 932,
+      "sha256": "32f8755d8ff69bb03bc5eb853d3eb9d0416e89d84d68abe228a35bc50af0cc8e"
+    },
+    {
+      "path": "docs/verification/w04/table-3-1280x720.png",
+      "width": 1280,
+      "fullPageHeight": 751,
+      "sha256": "e14db406580cf27ce786bfe053d04ac9233ea4544209e923fea4523b8c97a503"
+    },
+    {
+      "path": "docs/verification/w04/table-3-1440x900.png",
+      "width": 1440,
+      "fullPageHeight": 900,
+      "sha256": "e397def26f556a8dffe551a96eea05eb23651b7033db8de56f09931d1690e769"
+    },
+    {
+      "path": "docs/verification/w04/table-3-360x640.png",
+      "width": 360,
+      "fullPageHeight": 640,
+      "sha256": "4cfbef0d40f13685891021423bd81906768eb711212f0f951ade6f01dae5d224"
+    },
+    {
+      "path": "docs/verification/w04/table-3-390x844.png",
+      "width": 390,
+      "fullPageHeight": 844,
+      "sha256": "7dc883587654976019d550ceabafbefc3a390801c351ae07dd7818a5b515213d"
+    },
+    {
+      "path": "docs/verification/w04/table-3-430x932.png",
+      "width": 430,
+      "fullPageHeight": 932,
+      "sha256": "13bc4fe46dce4f7c9b5c0dd3c963296d895186d72b919427f21ef943538042cf"
+    },
+    {
+      "path": "docs/verification/w04/table-4-1280x720.png",
+      "width": 1280,
+      "fullPageHeight": 751,
+      "sha256": "cf95901dc37321c5bc163cc74e7fd6944a6dab9b76c5ae5459fde528c06927c5"
+    },
+    {
+      "path": "docs/verification/w04/table-4-1440x900.png",
+      "width": 1440,
+      "fullPageHeight": 900,
+      "sha256": "a6c1cb1ab37a0d7ed6913891652512680b1ff652083ba917dcd934a499a84733"
+    },
+    {
+      "path": "docs/verification/w04/table-4-360x640.png",
+      "width": 360,
+      "fullPageHeight": 640,
+      "sha256": "940c0fdf802e4750e3c0b851b5aab12821a5e60b410f918dc4556f314b38e680"
+    },
+    {
+      "path": "docs/verification/w04/table-4-390x844.png",
+      "width": 390,
+      "fullPageHeight": 844,
+      "sha256": "11eb67f96f5ffba6784738eca2167d802f77380296693d85f01e3ec78a3bad5e"
+    },
+    {
+      "path": "docs/verification/w04/table-4-430x932.png",
+      "width": 430,
+      "fullPageHeight": 932,
+      "sha256": "54797b1830c7e91d4bbbc18983c99c2342724816a5d5c704a10b60a0c1481545"
+    },
+    {
+      "path": "docs/verification/w04/table-long-name-360x640.png",
+      "width": 360,
+      "fullPageHeight": 649,
+      "sha256": "1c2c63fa7d649a4990e45d7266421586c3e0b37b9128d23905ddd9662487c77f"
+    }
+  ],
+  "screenshotsManuallyReviewed": true,
+  "ci": {
+    "configured": true,
+    "remoteExecuted": false
+  },
+  "notImplemented": [
+    "rule engine",
+    "room or game commands",
+    "session or permission validation",
+    "countdown scheduling",
+    "bot decisions",
+    "database",
+    "complete game E2E",
+    "production deployment",
+    "real phone or Safari testing"
+  ],
+  "sha256": {
+    ".env.example": "544be08dc6feccb7ab1156a226b28eca35f996089bc29c209d1e6b9a0d6a5005",
+    ".github/workflows/check.yml": "1f96d4e16cff6d6c57e8bee61dd61ee81a0238038471efe7aba6009b0c7d1a8e",
+    ".gitignore": "708a08b95319198f582722f28c4442d04770e92cc2bc71974af13a669168db47",
+    ".node-version": "51849cee918b92b09b95121b54380f6124c0f578d8c2323221c0d75bbbadb08d",
+    ".npmrc": "cde76ca04e048c3eba070a2c0dfcf5b723cf6014eab177157096b924f24ec4ca",
+    ".prettierignore": "7e1ab812c9d0b59c0a1711e6ef71ed0926b40c0908fc1084a2e439a55371a4ab",
+    ".prettierrc.json": "d7fa1c1dee12b930b45e1f8c465b07da95fa519cfd9e3e503c76dc762617b1fb",
+    "apps/server/package.json": "ab1b96939a188312949ceade1fabb85b2718b6d3ed9b2b7cf05f75f1f1136904",
+    "apps/server/src/create-server.ts": "875efaff9e682df4dee027fd96921f43dd320895ac16bfd6f5e53c4bc789ddd4",
+    "apps/server/src/index.ts": "62cc769ecd673313c89ae99f121139aba3470cea0430635d5865fe09b2320069",
+    "apps/server/tsconfig.json": "bd291defcc2a2c59a251a7ec6a610dd938711a1ffa9f40e32e3aa1395f6a88ac",
+    "apps/web/index.html": "f7d09f42df1793600bc292473389be320bda1d6d28aa39155367283ed8e4485f",
+    "apps/web/package.json": "6910a6fc9f0d659239e49dfc078570e01817ffe42690459aa14f0351ccda1947",
+    "apps/web/src/App.tsx": "1a8bfc3d972396fc24b38eadfbcfdc84086230f6eeeabd888aab10d3ec193d61",
+    "apps/web/src/components/cards/CardBack.tsx": "46836aa7b074183c6fd3052badbf4fca167b1e73cec2bc9811b50b4929d7691a",
+    "apps/web/src/components/cards/CardSlot.tsx": "35c680007d20e18af650e4cef1ecc51918c692b9e937fdf8fceae1b7f4b9e995",
+    "apps/web/src/components/cards/PlayingCard.tsx": "ad237789bcc88a633a6be5e01d7c515a53627508f80bf71b134888121cefcc52",
+    "apps/web/src/components/ConnectionStatus.tsx": "0fe28ff9025c4950d2fcd899ac416b8ea66b2daedc98ea8c494fbb798e2810df",
+    "apps/web/src/dev/DevPreviewApp.tsx": "f5e90433b00f2cee8238e08ad0f3ff5a82dc2f55df99045e121012a96ca44a39",
+    "apps/web/src/dev/graybox-fixtures.ts": "ff6280865253a1e2f02242315df5e345fe1dbebaf4947ff29ada07a561748fce",
+    "apps/web/src/features/table/ActionBar.tsx": "d79d57f729670b6857bca614a4b12015f8b79336d433e7c8006273a2fb4a588f",
+    "apps/web/src/features/table/PlayerSeat.tsx": "f6906d2cd835dcacc9ee8a266e8374863c377a7ed55f6864f6ef869090440254",
+    "apps/web/src/features/table/seat-layout.ts": "49dc2443eb409075cb0d03bfd9e85c19939d1c80c8527a076650f4bd7b66b330",
+    "apps/web/src/features/table/table-preview.types.ts": "ba13ff8199cc55bc50fbe376d2afa7353442b5f40783b55edee237f8b478f84c",
+    "apps/web/src/features/table/TableScene.tsx": "a11f2ba239f1866d4fa5e2231d9f5039a23c30153ef52f7280e4cd8f843bd5f4",
+    "apps/web/src/main.tsx": "a8a2539b8a2fd636eb76add39f4f253817d83a9b3e9975393117d7426def0133",
+    "apps/web/src/pages/HomePage.tsx": "c0ed71b727defafeb77e9c4457fbf96f2d70552b901647835c7084df0e01d82a",
+    "apps/web/src/pages/LobbyPage.tsx": "7890f16f270137510d5d38046b37431b2eb734a242c132799be0efdc58c7e0fe",
+    "apps/web/src/pages/TablePage.tsx": "cd53d627385772d96d7422b3b142e5dffc8871d7f2bfbf3f78603adf366a5ebd",
+    "apps/web/src/styles/layout.css": "6a194728b02a137a28a226f68aa65b9830d34313e2ef938a033121d5d1ec49c6",
+    "apps/web/src/styles/tokens.css": "5b62d759e1baf5256dd4e774fb1b3a9deabb1f144b71f49b6474ddc21ddce578",
+    "apps/web/src/styles.css": "b4aa86a7a32b9adb9359f9924b6fe2b9879fc3d1b7e0dc7bcdef9e70c767cb19",
+    "apps/web/src/vite-env.d.ts": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+    "apps/web/tsconfig.json": "23c440bf60140dc7ada087c09fe07c89b1f5c1402049f551e378e29b1b7f4738",
+    "apps/web/vite.config.ts": "72022f12aa3b237f58d146d103fe50516ab6f6ce73147cbc28d8631288458cff",
+    "package-lock.json": "c667a5a64f78a7a6374e2387f0b914d9d166b77fea4cbf4434a923e34c9c663b",
+    "package.json": "11029e9ba27e5b20ef67ec0695a18cfac2735dbc9c62425f59b0cc3c3b5fb202",
+    "packages/poker-core/package.json": "ef018ca50e65214a3e691686dd51d0c95a68cffdc0c082fe259af003a0284186",
+    "packages/poker-core/src/index.ts": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+    "packages/poker-core/tsconfig.json": "6923a241b0ab9d90bd0f808f3bc29f31debc52d3a27bf66e2ccf69f1969c8936",
+    "packages/protocol/package.json": "255eba6f3142f1faa9421af42f653bfc9d27d5cebceda983027c937ea30c7570",
+    "packages/protocol/src/commands.ts": "7868863ccc83c940f5a8f77e85966fcdfa90a6740ee6da23bba427dc558f19c8",
+    "packages/protocol/src/errors.ts": "e517c8e490cb81d641b6f2ad0a867dacc8e5bfdfd84e069e0ae2f530cc958e0e",
+    "packages/protocol/src/index.ts": "53d37df2c1575795402c06c0eaf1551bea19a06ac9de9b59cf9ef653687e8ef8",
+    "packages/protocol/src/views.ts": "967dc076d727daff1a8f722595c4b6c499991e6eac42b04e2a22bc3f52a205c5",
+    "packages/protocol/tsconfig.json": "6923a241b0ab9d90bd0f808f3bc29f31debc52d3a27bf66e2ccf69f1969c8936",
+    "playwright.config.ts": "1d7ad137d1297cf1b72f788aacc4d2c6f0ea4c163ec792c5427e53b2e969c0fc",
+    "playwright.production.config.ts": "2affddc640c73cb8256d59551a021e5d288d74613f1f67a51141f23e9b820542",
+    "scripts/check-dev-ports.mjs": "638f9c01dc358161a365ef66755bcc9408d9238fe897be1958f88ae04d0c07c5",
+    "scripts/dev-server.mjs": "7be65aa45ed9ebf6e6e5dba6548c92c4ff370be473766db1703be6ae7e89c86b",
+    "scripts/generate-contract-examples.mjs": "0c2b8d9c3f23308a199ea29f211e7f5f6e393732589742fe44558bfe014e4df5",
+    "scripts/validate-w01.py": "215241eedbc8da084922ce65e18cabfb50fb45af27bd1503765a1a6997edbdde",
+    "scripts/validate-w02.py": "367cc6385de87a5b9b1a9dda0a3aafffe4a317a7b925a96207bca43bfbdd6559",
+    "scripts/verify-preview-bundle.mjs": "124e411c0ba5eebdb71352b4f23836a56fb05607a2db30dd882036f5e018569e",
+    "tests/contracts/protocol-types.ts": "beb7c89148668b9a61d05c6e3d55133cef5b7bb3a901f2da43cc7f355d0e49a7",
+    "tests/e2e/graybox.spec.ts": "7203d10abfd1f4942514cb7269ec534391c0a44c3709e86234d5265ec07530e8",
+    "tests/e2e/production-preview.spec.ts": "55c61a2ad652b38d4a675a0e7ba13839b01de669e9671b88795bb9089ec25acb",
+    "tests/e2e/startup.spec.ts": "87c1124ad54b40172916470abece16735b48838f17ac08452ee2aa9cf3457b97",
+    "tests/integration/contract-generator.test.ts": "e937499e918e3a513f85cce9288146f335548c4218d3cb8e663515678458e251",
+    "tests/integration/dev-startup.test.ts": "9d1fb13489f87c8cea1b794b96c54cb47955f114087465286572671985f37663",
+    "tests/integration/graybox-fixtures.test.ts": "afd87af20682cf842c685af587534dcd137749793f31d707da34490cf6ef1e34",
+    "tests/integration/health.test.ts": "891bf25a9fc9deac09004cd70fbecb331055fe18eab02cbeac7821be3745753e",
+    "tests/integration/preview-bundle.test.ts": "b67907e595da14ef432fd31dd6031de8563f460b915f751a2192de9341b896ea",
+    "tests/integration/protocol-contract.test.ts": "f4bb9c051f008338ed864338e29100bac69e68807257bbbf31b4813ececc22d6",
+    "tests/integration/seat-layout.test.ts": "d1ed8424c7fe4d13b16f3f122911eb79524df716e56c44b3867350173c3995c3",
+    "tsconfig.base.json": "b394ebccf659dc69962bb3beb000293a09554918fddede4a729d18d0fba5d7c1",
+    "tsconfig.build.json": "1dc61d7784c709928dd17395edc7d01490b81334d7c84324595bfaa4f7edafb2",
+    "tsconfig.tests.json": "a7d054c3fba38884c8af97fd31b123435c5dd7f434757d0d3a11b3df96d5ec53",
+    "tsconfig.tools.json": "93711c61937a0721c1c48cf986cf512ab83d019ea8960c9edfd597714df18cc0",
+    "vitest.config.ts": "06e0757c9e6f2dee05be08ecbd2b1ca64b8691ab05f69fddeb9c9d04c9b8fc35"
+  }
+}

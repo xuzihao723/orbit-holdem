@@ -1,0 +1,173 @@
+{
+  "date": "2026-11-01",
+  "node": "v24.14.1",
+  "os": "win32 10.0.26200",
+  "cpu": "Intel(R) Core(TM) Ultra 9 285H",
+  "logicalCpus": 16,
+  "successfulCommands": 100,
+  "healthQueries": 100,
+  "baseline": {
+    "p50": 5.697499999999991,
+    "p95": 10.954700000000003,
+    "max": 15.724099999999908
+  },
+  "loaded": {
+    "p50": 5.730799999999817,
+    "p95": 8.888200000000325,
+    "max": 14.921000000000276
+  },
+  "referenceP95Ms": 100,
+  "referencePassed": true,
+  "singleRequestGuardMs": 1000,
+  "workerThreadIds": [
+    1,
+    2
+  ],
+  "poolSize": 2,
+  "budgetMs": 150,
+  "workerOutcomes": [
+    {
+      "kind": "fallback",
+      "reason": "budget",
+      "threadId": 1,
+      "elapsedMs": 149.8801000000003,
+      "queueMs": 1.998600000000124
+    },
+    {
+      "kind": "fallback",
+      "reason": "budget",
+      "threadId": 2,
+      "elapsedMs": 150.29549999999972,
+      "queueMs": 0.5029999999999291
+    },
+    {
+      "kind": "estimate",
+      "estimate": {
+        "requestedSamples": 10000,
+        "completedSamples": 890,
+        "weightedShare": 0.8567415730337083,
+        "expectedReturn": 34.26966292134831,
+        "additionalCallCost": 0,
+        "expectedNet": 34.26966292134831,
+        "stopReason": "budget"
+      },
+      "threadId": 1,
+      "elapsedMs": 147.26980000000003,
+      "queueMs": 0.7561999999998079
+    },
+    {
+      "kind": "estimate",
+      "estimate": {
+        "requestedSamples": 10000,
+        "completedSamples": 867,
+        "weightedShare": 0.8869665513264123,
+        "expectedReturn": 35.478662053056496,
+        "additionalCallCost": 0,
+        "expectedNet": 35.478662053056496,
+        "stopReason": "budget"
+      },
+      "threadId": 2,
+      "elapsedMs": 146.94830000000002,
+      "queueMs": 5.742099999999937
+    },
+    {
+      "kind": "estimate",
+      "estimate": {
+        "requestedSamples": 10000,
+        "completedSamples": 753,
+        "weightedShare": 0.8738379814077022,
+        "expectedReturn": 34.953519256308105,
+        "additionalCallCost": 0,
+        "expectedNet": 34.953519256308105,
+        "stopReason": "budget"
+      },
+      "threadId": 1,
+      "elapsedMs": 147.5978,
+      "queueMs": 0.3431000000000495
+    },
+    {
+      "kind": "estimate",
+      "estimate": {
+        "requestedSamples": 10000,
+        "completedSamples": 669,
+        "weightedShare": 0.8721973094170407,
+        "expectedReturn": 34.887892376681584,
+        "additionalCallCost": 0,
+        "expectedNet": 34.887892376681584,
+        "stopReason": "budget"
+      },
+      "threadId": 2,
+      "elapsedMs": 147.53819999999996,
+      "queueMs": 0.3993000000000393
+    },
+    {
+      "kind": "estimate",
+      "estimate": {
+        "requestedSamples": 10000,
+        "completedSamples": 1014,
+        "weightedShare": 0.8757396449704153,
+        "expectedReturn": 35.02958579881659,
+        "additionalCallCost": 0,
+        "expectedNet": 35.02958579881659,
+        "stopReason": "budget"
+      },
+      "threadId": 1,
+      "elapsedMs": 149.13949999999977,
+      "queueMs": 0.3488999999999578
+    },
+    {
+      "kind": "estimate",
+      "estimate": {
+        "requestedSamples": 10000,
+        "completedSamples": 1054,
+        "weightedShare": 0.8695445920303603,
+        "expectedReturn": 34.781783681214414,
+        "additionalCallCost": 0,
+        "expectedNet": 34.781783681214414,
+        "stopReason": "budget"
+      },
+      "threadId": 2,
+      "elapsedMs": 147.83370000000014,
+      "queueMs": 0.3385000000002947
+    },
+    {
+      "kind": "estimate",
+      "estimate": {
+        "requestedSamples": 10000,
+        "completedSamples": 1069,
+        "weightedShare": 0.8826005612722178,
+        "expectedReturn": 35.30402245088866,
+        "additionalCallCost": 0,
+        "expectedNet": 35.30402245088866,
+        "stopReason": "budget"
+      },
+      "threadId": 1,
+      "elapsedMs": 145.78639999999996,
+      "queueMs": 0.3411999999998443
+    },
+    {
+      "kind": "estimate",
+      "estimate": {
+        "requestedSamples": 10000,
+        "completedSamples": 1074,
+        "weightedShare": 0.881284916201117,
+        "expectedReturn": 35.2513966480447,
+        "additionalCallCost": 0,
+        "expectedNet": 35.2513966480447,
+        "stopReason": "budget"
+      },
+      "threadId": 2,
+      "elapsedMs": 145.59839999999986,
+      "queueMs": 0.24400000000014188
+    }
+  ],
+  "transportTestLimits": {
+    "connection": 1000,
+    "session": 1000,
+    "ip": 10000,
+    "windowMs": 1000
+  },
+  "businessClockAdvancePerCommand": 100,
+  "rateLimitedSamples": 0,
+  "credentialsIncluded": false
+}

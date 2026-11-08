@@ -1,0 +1,60 @@
+[
+  {
+    "check": "format",
+    "command": [
+      "npm.cmd",
+      "run",
+      "format:check"
+    ],
+    "exitCode": 0,
+    "seconds": 13.5
+  },
+  {
+    "check": "build",
+    "command": [
+      "npm.cmd",
+      "run",
+      "build"
+    ],
+    "exitCode": 0,
+    "seconds": 37.76
+  },
+  {
+    "check": "fixtures",
+    "command": [
+      "npm.cmd",
+      "run",
+      "test:fixtures"
+    ],
+    "exitCode": 0,
+    "seconds": 2.5
+  },
+  {
+    "check": "core",
+    "command": [
+      "npm.cmd",
+      "run",
+      "test:core",
+      "--",
+      "--reporter=default",
+      "--reporter=json",
+      "--outputFile=docs/verification/w45-w50-core.json"
+    ],
+    "exitCode": 0,
+    "seconds": 4.19
+  },
+  {
+    "check": "integration",
+    "command": [
+      "npm.cmd",
+      "run",
+      "test:integration",
+      "--",
+      "--reporter=default",
+      "--reporter=json",
+      "--outputFile=docs/verification/w45-w50-integration.json"
+    ],
+    "exitCode": 1,
+    "seconds": 71.73
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-01",
+  "compiledKernel": true,
+  "classes": 169,
+  "combinations": 1326,
+  "ties": [
+    {
+      "players": 2,
+      "completed": 1000,
+      "share": 0.5,
+      "return": 100
+    },
+    {
+      "players": 3,
+      "completed": 1000,
+      "share": 0.3333333333333333,
+      "return": 100
+    },
+    {
+      "players": 4,
+      "completed": 1000,
+      "share": 0.25,
+      "return": 100
+    }
+  ],
+  "mainPotOnlyReturn": 100,
+  "fixedMainAward": 300,
+  "totalPaid": 750,
+  "cancelledSamples": 0,
+  "zeroSampleFallback": true,
+  "uniqueUnknownSampling": true,
+  "elapsedMs": 875.258,
+  "liveWorker": false,
+  "credentialsIncluded": false
+}

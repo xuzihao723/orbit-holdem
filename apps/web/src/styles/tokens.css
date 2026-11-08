@@ -1,0 +1,36 @@
+:root {
+  --bg: #101827;
+  --felt: #183545;
+  --face: #f7f2e8;
+  --ink: #17212b;
+  --muted: #b5c0cc;
+  --accent: #d6b878;
+  --positive: #67c7ad;
+  --error: #f08a7e;
+  --line: #344756;
+  --card-width: 50px;
+  --card-height: 70px;
+}
+
+:root {
+  --surface-page: var(--bg);
+  --surface-table: var(--felt);
+  --text-primary: var(--face);
+  --text-secondary: var(--muted);
+  --action-primary: var(--accent);
+  --focus-ring: var(--accent);
+  --text-disabled: #9eabb9;
+  --suit-red: #b83a48;
+  --suit-club: #17603f;
+  --suit-diamond: #2754a5;
+  --radius-control: 6px;
+  --radius-panel: 12px;
+}
+[data-suit-theme='four'] [data-suit='C'] {
+  --card-suit: var(--suit-club);
+  color: var(--suit-club);
+}
+[data-suit-theme='four'] [data-suit='D'] {
+  --card-suit: var(--suit-diamond);
+  color: var(--suit-diamond);
+}

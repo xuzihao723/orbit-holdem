@@ -1,0 +1,12 @@
+import type { PlayerView, RoomView, CommandAck } from '@orbit/protocol';
+import type { projectPlayerView } from '../../apps/server/src/game/player-view.js';
+import { readPlayer, readRoom, readAck } from '../../apps/web/src/network/wire-validate.js';
+const player: (v: unknown) => PlayerView | null = readPlayer;
+const room: (v: unknown) => RoomView | null = readRoom;
+const ack: (v: unknown) => CommandAck | null = readAck;
+type Projection = ReturnType<typeof projectPlayerView>;
+const projection: Projection = null;
+void player;
+void room;
+void ack;
+void projection;

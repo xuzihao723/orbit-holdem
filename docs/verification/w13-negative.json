@@ -1,0 +1,45 @@
+{
+  "probes": [
+    {
+      "probe": "conservation",
+      "mutatedExit": 1,
+      "stdout": "\n> orbit-workspace@0.1.0 test:core\n> vitest run --project core tests/core/invariants.test.ts -t manufactured chip\n\n\n RUN  v5.0.5 D:/User/codex_respository/dezhou_app/poker-four\n\n ❯ |core| tests/core/invariants.test.ts (8 tests | 1 failed | 7 skipped) 17ms\n   × detects a manufactured chip and every major corrupt state without repairing it 15ms\n\n Test Files  1 failed (1)\n      Tests  1 failed | 7 skipped (8)\n   Start at  23:37:23\n   Duration  669ms (transform 67%, import 27%, tests 5%, worker 2%)\n\n",
+      "stderr": "\n⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯\n\n FAIL  |core| tests/core/invariants.test.ts > detects a manufactured chip and every major corrupt state without repairing it\nAssertionError: expected [Function] to throw an error\n\n- Expected:\nnull\n\n+ Received:\nundefined\n\n ❯ tests/core/invariants.test.ts:58:51\n     56|   for (const row of cases) {\n     57|     const before = structuredClone(row.state);\n     58|     expect(() => assertHandInvariants(row.state)).toThrow(row.code);\n       |                                                   ^\n     59|     expect(row.state).toEqual(before);\n     60|   }\n\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯\n\n",
+      "restoredOriginalBytes": true
+    },
+    {
+      "probe": "cli",
+      "mutatedExit": 1,
+      "stdout": "\n> orbit-workspace@0.1.0 simulate:core\n> tsx --tsconfig tsconfig.tools.json scripts/simulate-core.ts --output docs/verification/w13-cli-negative-run.json\n\n{\"legalCompleted\":0,\"invalidCompleted\":1000,\"failures\":1}\n",
+      "stderr": "",
+      "restoredOriginalBytes": true
+    },
+    {
+      "restoredCommand": [
+        "npm.cmd",
+        "run",
+        "test:core",
+        "--",
+        "tests/core/invariants.test.ts"
+      ],
+      "exit": 0,
+      "stdout": "\n> orbit-workspace@0.1.0 test:core\n> vitest run --project core tests/core/invariants.test.ts\n\n\n RUN  v5.0.5 D:/User/codex_respository/dezhou_app/poker-four\n\n\n Test Files  1 passed (1)\n      Tests  8 passed (8)\n   Start at  23:37:28\n   Duration  2.12s (tests 83%, transform 10%, import 6%)\n\n",
+      "stderr": ""
+    },
+    {
+      "restoredCommand": [
+        "npm.cmd",
+        "run",
+        "simulate:core",
+        "--",
+        "--output",
+        "docs/verification/w13-simulation.json"
+      ],
+      "exit": 0,
+      "stdout": "\n> orbit-workspace@0.1.0 simulate:core\n> tsx --tsconfig tsconfig.tools.json scripts/simulate-core.ts --output docs/verification/w13-simulation.json\n\n{\"legalCompleted\":1000,\"invalidCompleted\":1000,\"failures\":0}\n",
+      "stderr": ""
+    }
+  ],
+  "failureReplayExit": 0,
+  "failureReplayOutput": "UNEXPECTED_REJECTION:ILLEGAL_ACTION\n"
+}

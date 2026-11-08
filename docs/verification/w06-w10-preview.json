@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-30",
+  "devSessionId": 68967,
+  "status": "running",
+  "httpChecks": [
+    {
+      "url": "http://127.0.0.1:5173/",
+      "status": 200,
+      "health": null
+    },
+    {
+      "url": "http://127.0.0.1:3001/health/live",
+      "status": 200,
+      "health": {
+        "status": "ok"
+      }
+    },
+    {
+      "url": "http://127.0.0.1:5173/health/live",
+      "status": 200,
+      "health": {
+        "status": "ok"
+      }
+    }
+  ],
+  "scope": "HTTP startup and proxy only; no new browser or game acceptance"
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "command": "npm.cmd run test:fixtures",
+    "exitCode": 0,
+    "seconds": 2.17
+  },
+  {
+    "command": "npm.cmd run test:core -- --reporter=default --reporter=json --outputFile=docs/verification/w31-core.json",
+    "exitCode": 0,
+    "seconds": 4.94
+  },
+  {
+    "command": "npm.cmd run test:integration -- --reporter=default --reporter=json --outputFile=docs/verification/w31-integration.json",
+    "exitCode": 0,
+    "seconds": 58.78
+  },
+  {
+    "command": "npm.cmd run format:check",
+    "exitCode": 0,
+    "seconds": 9.23
+  },
+  {
+    "command": "npm.cmd run build",
+    "exitCode": 0,
+    "seconds": 33.75
+  },
+  {
+    "command": "npm.cmd run verify:preview-bundle",
+    "exitCode": 0,
+    "seconds": 1.31
+  }
+]

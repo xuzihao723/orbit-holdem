@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-01",
+  "mutation": "unsafe call fallback",
+  "detected": true,
+  "exitCode": 1,
+  "stdout": "\n> orbit-workspace@0.1.0 test:integration\n> vitest run --project integration tests/integration/bot-basic.test.ts\n\n\n RUN  v5.0.5 D:/User/codex_respository/dezhou_app/poker-four\n\n ❯ |integration| tests/integration/bot-basic.test.ts (10 tests | 1 failed) 49ms\n   × folds expensive calls, continues cheap ones and caps short-all-in cost at its actual stack 14ms\n\n Test Files  1 failed (1)\n      Tests  1 failed | 9 passed (10)\n   Start at  01:50:33\n   Duration  1.21s (transform 62%, import 29%, tests 7%, worker 2%)\n\n",
+  "stderr": "\n⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯\n\n FAIL  |integration| tests/integration/bot-basic.test.ts > folds expensive calls, continues cheap ones and caps short-all-in cost at its actual stack\nAssertionError: expected { type: 'call' } to deeply equal { type: 'fold' }\n\n- Expected\n+ Received\n\n  {\n-   \"type\": \"fold\",\n+   \"type\": \"call\",\n  }\n\n ❯ tests/integration/bot-basic.test.ts:66:59\n     64|     legalActions: { ...paid.legalActions, allowed: [...paid.legalActio…\n     65|   };\n     66|   expect(chooseBasicAction(regular, { next: () => 0.9 })).toEqual({ ty…\n       |                                                           ^\n     67|   const short = {\n     68|     ...regular,\n\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯\n\n",
+  "restored": true
+}

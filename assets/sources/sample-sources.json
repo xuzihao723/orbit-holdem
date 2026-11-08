@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-01",
+  "author": "Project original SVG construction with Codex",
+  "externalAssets": [],
+  "fonts": "system Segoe UI / sans-serif; not distributed",
+  "samples": [
+    {
+      "id": "AS",
+      "path": "assets/cards/samples/AS.svg",
+      "source": "assets/cards/templates/source.svg + scripts/lib/card-sample-source.ts",
+      "license": "CC0-1.0"
+    },
+    {
+      "id": "7H",
+      "path": "assets/cards/samples/7H.svg",
+      "source": "assets/cards/templates/source.svg + scripts/lib/card-sample-source.ts",
+      "license": "CC0-1.0"
+    },
+    {
+      "id": "JC",
+      "path": "assets/cards/samples/JC.svg",
+      "source": "assets/cards/templates/source.svg + scripts/lib/card-sample-source.ts",
+      "license": "CC0-1.0"
+    },
+    {
+      "id": "QD",
+      "path": "assets/cards/samples/QD.svg",
+      "source": "assets/cards/templates/source.svg + scripts/lib/card-sample-source.ts",
+      "license": "CC0-1.0"
+    },
+    {
+      "id": "KS",
+      "path": "assets/cards/samples/KS.svg",
+      "source": "assets/cards/templates/source.svg + scripts/lib/card-sample-source.ts",
+      "license": "CC0-1.0"
+    },
+    {
+      "id": "orbit-back",
+      "path": "assets/cards/samples/orbit-back.svg",
+      "source": "assets/cards/templates/source.svg + scripts/lib/card-sample-source.ts",
+      "license": "CC0-1.0"
+    }
+  ]
+}

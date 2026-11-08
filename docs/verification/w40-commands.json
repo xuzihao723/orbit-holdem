@@ -1,0 +1,98 @@
+[
+  {
+    "check": "fixtures",
+    "command": "npm.cmd run test:fixtures",
+    "exitCode": 0,
+    "seconds": 2.08
+  },
+  {
+    "check": "core",
+    "command": "npm.cmd run test:core -- --reporter=default --reporter=json --outputFile=docs/verification/w40-core.json",
+    "exitCode": 0,
+    "seconds": 4.28
+  },
+  {
+    "check": "integration",
+    "command": "npm.cmd run test:integration -- --reporter=default --reporter=json --outputFile=docs/verification/w40-integration.json",
+    "exitCode": 0,
+    "seconds": 61.66
+  },
+  {
+    "check": "format",
+    "command": "npm.cmd run format:check",
+    "exitCode": 0,
+    "seconds": 11.89
+  },
+  {
+    "check": "build",
+    "command": "npm.cmd run build",
+    "exitCode": 0,
+    "seconds": 37.47
+  },
+  {
+    "check": "preview-bundle",
+    "command": "npm.cmd run verify:preview-bundle",
+    "exitCode": 0,
+    "seconds": 1.25
+  },
+  {
+    "check": "release-artifacts",
+    "command": "npm.cmd run verify:release-artifacts",
+    "exitCode": 0,
+    "seconds": 1.33
+  },
+  {
+    "check": "components",
+    "command": "npm.cmd run assets:components:validate",
+    "exitCode": 0,
+    "seconds": 18.77
+  },
+  {
+    "check": "aux",
+    "command": "npm.cmd run assets:aux:validate",
+    "exitCode": 0,
+    "seconds": 6.38
+  },
+  {
+    "check": "simulation",
+    "command": "npx.cmd tsx --tsconfig tsconfig.tools.json scripts/simulate-bots.ts --hands 200 --output docs/verification/w40-final-bot-sim.json",
+    "exitCode": 0,
+    "seconds": 18.72
+  },
+  {
+    "check": "browser-release",
+    "command": "npx.cmd playwright test --config playwright.release.config.ts",
+    "exitCode": 0,
+    "seconds": 134.94
+  },
+  {
+    "check": "browser-table",
+    "command": "npx.cmd playwright test --config playwright.table.config.ts",
+    "exitCode": 0,
+    "seconds": 47.81
+  },
+  {
+    "check": "browser-app",
+    "command": "npx.cmd playwright test --config playwright.app.config.ts",
+    "exitCode": 0,
+    "seconds": 56.5
+  },
+  {
+    "check": "browser-ui",
+    "command": "npx.cmd playwright test --config playwright.ui.config.ts",
+    "exitCode": 0,
+    "seconds": 16.59
+  },
+  {
+    "check": "browser-replay",
+    "command": "npx.cmd playwright test --config playwright.replay.config.ts",
+    "exitCode": 0,
+    "seconds": 22.94
+  },
+  {
+    "check": "browser-assets",
+    "command": "npx.cmd playwright test --config playwright.assets.config.ts",
+    "exitCode": 0,
+    "seconds": 13.52
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-31",
+  "credentialsIncluded": false,
+  "compiledEntrypoint": true,
+  "trace": [
+    {
+      "event": "session:guest",
+      "requestId": "2f35f163-109f-4cd5-badf-650f1b41ee43",
+      "generation": 1
+    },
+    {
+      "event": "session:resume",
+      "requestId": "b27e7837-4b3e-474d-a547-561c24f9465e",
+      "generation": 2
+    },
+    {
+      "event": "session:status",
+      "status": "takenOver",
+      "generation": 2
+    },
+    {
+      "event": "session:resume",
+      "afterRestart": true,
+      "requestId": "6fa4deeb-6987-4062-9846-eb3f913b1a80",
+      "generation": 3,
+      "epochChanged": true
+    }
+  ]
+}

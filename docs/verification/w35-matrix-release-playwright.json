@@ -1,0 +1,198 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\User\\codex_respository\\dezhou_app\\poker-four\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      "playwright.release.config.ts",
+      "--grep",
+      "360px with 2 players"
+    ],
+    "configFile": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\playwright.release.config.ts",
+    "rootDir": "D:/User/codex_respository/dezhou_app/poker-four/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/User/codex_respository/dezhou_app/poker-four/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium-release",
+        "name": "chromium-release",
+        "testDir": "D:/User/codex_respository/dezhou_app/poker-four/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "modes.spec.ts",
+          "network-recovery.spec.ts",
+          "component-table-matrix.spec.ts"
+        ],
+        "timeout": 180000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "chromium-release",
+        "testDir": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\tests\\e2e",
+        "snapshotDir": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "modes.spec.ts",
+          "network-recovery.spec.ts",
+          "component-table-matrix.spec.ts"
+        ],
+        "timeout": 180000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "trace": "off",
+          "actionTimeout": 10000,
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium-release"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/verification/w35-matrix-release-playwright.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "component-table-matrix.spec.ts",
+      "file": "component-table-matrix.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "360px with 2 players completes the active and waiting views",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-release",
+              "projectName": "chromium-release",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6255,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/room\\//\u001b[39m\nReceived string:  \u001b[31m\"http://127.0.0.1:4173/table/AVUHFK\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    - locator resolved to <html lang=\"zh-CN\">…</html>\u001b[22m\n\u001b[2m    - unexpected value \"http://127.0.0.1:4173/play?mode=join&room=AVUHFK\"\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"zh-CN\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://127.0.0.1:4173/table/AVUHFK\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/room\\//\u001b[39m\nReceived string:  \u001b[31m\"http://127.0.0.1:4173/table/AVUHFK\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    - locator resolved to <html lang=\"zh-CN\">…</html>\u001b[22m\n\u001b[2m    - unexpected value \"http://127.0.0.1:4173/play?mode=join&room=AVUHFK\"\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"zh-CN\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://127.0.0.1:4173/table/AVUHFK\"\u001b[22m\n\n    at joinUiRoom (D:\\User\\codex_respository\\dezhou_app\\poker-four\\tests\\helpers\\ui-hand-driver.ts:16:22)\n    at D:\\User\\codex_respository\\dezhou_app\\poker-four\\tests\\e2e\\component-table-matrix.spec.ts:38:11",
+                    "location": {
+                      "file": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\tests\\helpers\\ui-hand-driver.ts",
+                      "column": 22,
+                      "line": 16
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m..\\helpers\\ui-hand-driver.ts:16\n\n  14 |   await page.getByLabel('昵称', { exact: true }).fill('朋友' + index);\n  15 |   await page.getByRole('button', { name: '加入房间', exact: true }).click();\n> 16 |   await expect(page).toHaveURL(/\\/room\\//);\n     |                      ^\n  17 | }\n  18 | export async function startUiHand(pages: Page[]) {\n  19 |   for (const p of pages) {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\tests\\helpers\\ui-hand-driver.ts",
+                        "column": 22,
+                        "line": 16
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/room\\//\u001b[39m\nReceived string:  \u001b[31m\"http://127.0.0.1:4173/table/AVUHFK\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    - locator resolved to <html lang=\"zh-CN\">…</html>\u001b[22m\n\u001b[2m    - unexpected value \"http://127.0.0.1:4173/play?mode=join&room=AVUHFK\"\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"zh-CN\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://127.0.0.1:4173/table/AVUHFK\"\u001b[22m\n\n\n   at ..\\helpers\\ui-hand-driver.ts:16\n\n  14 |   await page.getByLabel('昵称', { exact: true }).fill('朋友' + index);\n  15 |   await page.getByRole('button', { name: '加入房间', exact: true }).click();\n> 16 |   await expect(page).toHaveURL(/\\/room\\//);\n     |                      ^\n  17 | }\n  18 | export async function startUiHand(pages: Page[]) {\n  19 |   for (const p of pages) {\n    at joinUiRoom (D:\\User\\codex_respository\\dezhou_app\\poker-four\\tests\\helpers\\ui-hand-driver.ts:16:22)\n    at D:\\User\\codex_respository\\dezhou_app\\poker-four\\tests\\e2e\\component-table-matrix.spec.ts:38:11"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T14:31:42.155Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\test-results\\component-table-matrix-360-f5312-he-active-and-waiting-views-chromium-release\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\tests\\helpers\\ui-hand-driver.ts",
+                    "column": 22,
+                    "line": 16
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "f00aa2949a46daf5617e-df58041e9d54c3c386ef",
+          "file": "component-table-matrix.spec.ts",
+          "line": 12,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-06T14:31:40.479Z",
+    "duration": 8346.55,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

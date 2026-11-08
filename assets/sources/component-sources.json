@@ -1,0 +1,167 @@
+{
+  "style": "W29 orbit baseline",
+  "suitsSource": "assets/cards/templates/suits.ts",
+  "pipSource": "assets/cards/templates/pip-layouts.ts",
+  "components": [
+    {
+      "id": "AS",
+      "author": "Orbit project contributors",
+      "createdAt": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "assets/cards/templates/aces/index.ts",
+      "sourceUrl": null,
+      "method": "Original code-native geometric SVG; generated with coding assistance",
+      "sha256": "a40837f33799a140b9a656a0cc8c16bade89521560c4cb37eada862c3f6afed5"
+    },
+    {
+      "id": "JS",
+      "author": "Orbit project contributors",
+      "createdAt": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "assets/cards/templates/figures/index.ts",
+      "sourceUrl": null,
+      "method": "Original code-native geometric SVG; generated with coding assistance",
+      "sha256": "67cd2e6f2224597152bcd8565b35d8b0592ca80e49551c5160891d7ae7c78f1b"
+    },
+    {
+      "id": "QS",
+      "author": "Orbit project contributors",
+      "createdAt": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "assets/cards/templates/figures/index.ts",
+      "sourceUrl": null,
+      "method": "Original code-native geometric SVG; generated with coding assistance",
+      "sha256": "67cd2e6f2224597152bcd8565b35d8b0592ca80e49551c5160891d7ae7c78f1b"
+    },
+    {
+      "id": "KS",
+      "author": "Orbit project contributors",
+      "createdAt": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "assets/cards/templates/figures/index.ts",
+      "sourceUrl": null,
+      "method": "Original code-native geometric SVG; generated with coding assistance",
+      "sha256": "67cd2e6f2224597152bcd8565b35d8b0592ca80e49551c5160891d7ae7c78f1b"
+    },
+    {
+      "id": "AH",
+      "author": "Orbit project contributors",
+      "createdAt": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "assets/cards/templates/aces/index.ts",
+      "sourceUrl": null,
+      "method": "Original code-native geometric SVG; generated with coding assistance",
+      "sha256": "a40837f33799a140b9a656a0cc8c16bade89521560c4cb37eada862c3f6afed5"
+    },
+    {
+      "id": "JH",
+      "author": "Orbit project contributors",
+      "createdAt": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "assets/cards/templates/figures/index.ts",
+      "sourceUrl": null,
+      "method": "Original code-native geometric SVG; generated with coding assistance",
+      "sha256": "67cd2e6f2224597152bcd8565b35d8b0592ca80e49551c5160891d7ae7c78f1b"
+    },
+    {
+      "id": "QH",
+      "author": "Orbit project contributors",
+      "createdAt": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "assets/cards/templates/figures/index.ts",
+      "sourceUrl": null,
+      "method": "Original code-native geometric SVG; generated with coding assistance",
+      "sha256": "67cd2e6f2224597152bcd8565b35d8b0592ca80e49551c5160891d7ae7c78f1b"
+    },
+    {
+      "id": "KH",
+      "author": "Orbit project contributors",
+      "createdAt": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "assets/cards/templates/figures/index.ts",
+      "sourceUrl": null,
+      "method": "Original code-native geometric SVG; generated with coding assistance",
+      "sha256": "67cd2e6f2224597152bcd8565b35d8b0592ca80e49551c5160891d7ae7c78f1b"
+    },
+    {
+      "id": "AC",
+      "author": "Orbit project contributors",
+      "createdAt": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "assets/cards/templates/aces/index.ts",
+      "sourceUrl": null,
+      "method": "Original code-native geometric SVG; generated with coding assistance",
+      "sha256": "a40837f33799a140b9a656a0cc8c16bade89521560c4cb37eada862c3f6afed5"
+    },
+    {
+      "id": "JC",
+      "author": "Orbit project contributors",
+      "createdAt": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "assets/cards/templates/figures/index.ts",
+      "sourceUrl": null,
+      "method": "Original code-native geometric SVG; generated with coding assistance",
+      "sha256": "67cd2e6f2224597152bcd8565b35d8b0592ca80e49551c5160891d7ae7c78f1b"
+    },
+    {
+      "id": "QC",
+      "author": "Orbit project contributors",
+      "createdAt": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "assets/cards/templates/figures/index.ts",
+      "sourceUrl": null,
+      "method": "Original code-native geometric SVG; generated with coding assistance",
+      "sha256": "67cd2e6f2224597152bcd8565b35d8b0592ca80e49551c5160891d7ae7c78f1b"
+    },
+    {
+      "id": "KC",
+      "author": "Orbit project contributors",
+      "createdAt": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "assets/cards/templates/figures/index.ts",
+      "sourceUrl": null,
+      "method": "Original code-native geometric SVG; generated with coding assistance",
+      "sha256": "67cd2e6f2224597152bcd8565b35d8b0592ca80e49551c5160891d7ae7c78f1b"
+    },
+    {
+      "id": "AD",
+      "author": "Orbit project contributors",
+      "createdAt": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "assets/cards/templates/aces/index.ts",
+      "sourceUrl": null,
+      "method": "Original code-native geometric SVG; generated with coding assistance",
+      "sha256": "a40837f33799a140b9a656a0cc8c16bade89521560c4cb37eada862c3f6afed5"
+    },
+    {
+      "id": "JD",
+      "author": "Orbit project contributors",
+      "createdAt": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "assets/cards/templates/figures/index.ts",
+      "sourceUrl": null,
+      "method": "Original code-native geometric SVG; generated with coding assistance",
+      "sha256": "67cd2e6f2224597152bcd8565b35d8b0592ca80e49551c5160891d7ae7c78f1b"
+    },
+    {
+      "id": "QD",
+      "author": "Orbit project contributors",
+      "createdAt": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "assets/cards/templates/figures/index.ts",
+      "sourceUrl": null,
+      "method": "Original code-native geometric SVG; generated with coding assistance",
+      "sha256": "67cd2e6f2224597152bcd8565b35d8b0592ca80e49551c5160891d7ae7c78f1b"
+    },
+    {
+      "id": "KD",
+      "author": "Orbit project contributors",
+      "createdAt": "2026-11-01",
+      "license": "CC0-1.0",
+      "source": "assets/cards/templates/figures/index.ts",
+      "sourceUrl": null,
+      "method": "Original code-native geometric SVG; generated with coding assistance",
+      "sha256": "67cd2e6f2224597152bcd8565b35d8b0592ca80e49551c5160891d7ae7c78f1b"
+    }
+  ]
+}

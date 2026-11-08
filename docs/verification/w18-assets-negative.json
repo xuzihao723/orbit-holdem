@@ -1,0 +1,8 @@
+{
+  "date": "2026-10-31",
+  "case": "owned fixture missing 002 migration",
+  "exitCode": 1,
+  "copySuccessReported": false,
+  "sourceAssetsUnchanged": true,
+  "businessDatabaseUsed": false
+}

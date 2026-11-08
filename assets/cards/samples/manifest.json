@@ -1,0 +1,36 @@
+{
+  "scope": "six-samples",
+  "viewBox": "0 0 240 336",
+  "samples": [
+    {
+      "id": "AS",
+      "path": "AS.svg",
+      "source": "../templates/source.svg"
+    },
+    {
+      "id": "7H",
+      "path": "7H.svg",
+      "source": "../templates/source.svg"
+    },
+    {
+      "id": "JC",
+      "path": "JC.svg",
+      "source": "../templates/source.svg"
+    },
+    {
+      "id": "QD",
+      "path": "QD.svg",
+      "source": "../templates/source.svg"
+    },
+    {
+      "id": "KS",
+      "path": "KS.svg",
+      "source": "../templates/source.svg"
+    },
+    {
+      "id": "orbit-back",
+      "path": "orbit-back.svg",
+      "source": "../templates/source.svg"
+    }
+  ]
+}

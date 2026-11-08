@@ -1,0 +1,12 @@
+{
+  "mutation": "default diagnostic faults third hand; CLI has no fault switch",
+  "exitCode": 1,
+  "completedHands": 2,
+  "failure": {
+    "handIndex": 3,
+    "turnId": "4ebce3bf-11f0-4f90-9394-78bfdec6c925:turn:1",
+    "reason": "BOT_ACTION_stale",
+    "tracePath": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\docs\\verification\\w28-negative-fault.json"
+  },
+  "sourceRestored": true
+}

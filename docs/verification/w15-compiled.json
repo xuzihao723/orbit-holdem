@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-31",
+  "compiledEntrypoint": true,
+  "fileDatabase": true,
+  "serverBoots": 2,
+  "generations": [
+    1,
+    2,
+    3
+  ],
+  "epochChanged": true,
+  "privateTakeoverStatus": true,
+  "tokenDigestOnly": true,
+  "identityOnly": true,
+  "tables": 8,
+  "credentialsIncluded": false
+}

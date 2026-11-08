@@ -1,0 +1,69 @@
+{
+  "capturedAt": "2026-11-06T22:31:09.179266+08:00",
+  "fixture": "compiled application via Playwright release fixture",
+  "durationSeconds": 120,
+  "chapters": [
+    {
+      "id": "home",
+      "seconds": 12
+    },
+    {
+      "id": "solo",
+      "seconds": 18
+    },
+    {
+      "id": "two",
+      "seconds": 16
+    },
+    {
+      "id": "three",
+      "seconds": 14
+    },
+    {
+      "id": "mixed",
+      "seconds": 20
+    },
+    {
+      "id": "reconnect",
+      "seconds": 21
+    },
+    {
+      "id": "replay",
+      "seconds": 19
+    }
+  ],
+  "resolution": [
+    1280,
+    880
+  ],
+  "videoCodec": "H.264",
+  "audio": false,
+  "fullVideoDecoded": true,
+  "visualSamplesReviewed": 7,
+  "files": {
+    "demo.mp4": {
+      "sha256": "b74932b8d5e63049750fe99a850801a1b224a4b5e43d0a7601add59ce4efbdbf",
+      "bytes": 2455238
+    },
+    "home.png": {
+      "sha256": "7b40721ba90f4ccce37dde062c6a4231f681f21d1a83028678121020843c6553",
+      "bytes": 27334
+    },
+    "table.png": {
+      "sha256": "4c544e333e9a0c9aa2167bef694ac7caa3415888896b9daed07570b7568636b4",
+      "bytes": 51118
+    },
+    "mobile-360.png": {
+      "sha256": "071f7f43bc7e25a7d79abbd4ae3d2ffad6eaf0714c4b1582990d10b7f1840a36",
+      "bytes": 44298
+    },
+    "sidepots.png": {
+      "sha256": "e10d136c04ab319b35d5f066b815a9066d89d1557c2449a71d6e61d56f018dde",
+      "bytes": 49379
+    },
+    "replay.png": {
+      "sha256": "3e8bc4270f240b00ca945ee485cb16695ccf58cafdeb759b7d05365c30e5a096",
+      "bytes": 57290
+    }
+  }
+}

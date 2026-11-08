@@ -1,0 +1,34 @@
+{
+  "source": "local SQLite online backup",
+  "before": {
+    "version": 2,
+    "integrity": "ok",
+    "foreignKeyViolations": 0,
+    "counts": {
+      "sessions": 1,
+      "rooms": 3,
+      "participants": 9,
+      "hands": 6,
+      "command_receipts": 65
+    },
+    "accountTables": []
+  },
+  "after": {
+    "version": 3,
+    "integrity": "ok",
+    "foreignKeyViolations": 0,
+    "counts": {
+      "sessions": 1,
+      "rooms": 3,
+      "participants": 9,
+      "hands": 6,
+      "command_receipts": 65
+    },
+    "accountTables": [
+      "account_logins",
+      "accounts",
+      "auth_rate",
+      "email_challenges"
+    ]
+  }
+}

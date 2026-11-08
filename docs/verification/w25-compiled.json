@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-01",
+  "compiledApplication": true,
+  "automaticBasicScheduler": true,
+  "realHumans": 1,
+  "bots": 3,
+  "fixedPolicyDraw": 0.99,
+  "fixedDisplayDelay": 500,
+  "decisions": 10,
+  "diagnostics": {
+    "scheduled": 6,
+    "applied": 6,
+    "stale": 0,
+    "cancelled": 6,
+    "safeFallbacks": 0,
+    "standardEngineUnavailable": 0,
+    "active": 0
+  },
+  "botReceipts": 6,
+  "settlementCount": 1,
+  "finalChips": 8000,
+  "noAutomaticNextHand": true,
+  "closedWithoutTimers": true,
+  "standardEngineLive": false,
+  "credentialsIncluded": false
+}

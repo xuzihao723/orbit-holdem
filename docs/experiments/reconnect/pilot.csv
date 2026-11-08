@@ -1,0 +1,7 @@
+condition,pair_index,arm,seed,build_id,run_start_utc,outage_started_ms,network_restored_ms,actual_outage_ms,measured_rtt_ms,pre_hand_version,server_hand_version,client_hand_version,recovered,recovery_ms,extra_debit_count,duplicate_probe_status,could_continue,failure_reason
+offline5,1,snapshot,20261107,46b33799a226a489969d54134cca4f794182aa9de38fbc61781c76ad0db42328,2026-11-06T14:12:28.884Z,228.64,5246.69,5018.05,3.01,4,5,5,true,32.65,0,duplicate,true,
+offline5,1,messages,20261107,46b33799a226a489969d54134cca4f794182aa9de38fbc61781c76ad0db42328,2026-11-06T14:12:34.215Z,171.59,5193.53,5021.94,2.38,4,5,4,false,,,not_sent,false,view_mismatch
+offline30,1,snapshot,20262107,46b33799a226a489969d54134cca4f794182aa9de38fbc61781c76ad0db42328,2026-11-06T14:12:49.439Z,177.03,30194.56,30017.53,4.17,4,5,5,true,25.32,0,duplicate,true,
+offline30,1,messages,20262107,46b33799a226a489969d54134cca4f794182aa9de38fbc61781c76ad0db42328,2026-11-06T14:13:19.704Z,173.47,30180.73,30007.27,2.75,4,5,4,false,,,not_sent,false,view_mismatch
+rtt300_offline5,1,snapshot,20263107,46b33799a226a489969d54134cca4f794182aa9de38fbc61781c76ad0db42328,2026-11-06T14:13:59.918Z,2599.91,7611.87,5011.95,314.6,4,5,5,true,809.22,0,duplicate,true,
+rtt300_offline5,1,messages,20263107,46b33799a226a489969d54134cca4f794182aa9de38fbc61781c76ad0db42328,2026-11-06T14:14:09.026Z,2594.74,7608.58,5013.84,314.99,4,5,4,false,,,not_sent,false,view_mismatch

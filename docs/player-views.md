@@ -1,0 +1,11 @@
+# 逐玩家快照
+
+W20的projectPublicHand与projectPlayerView只从已提交房间投影允许字段；不把内部HandState序列化。公共players仅本手冻结名单，未公开牌只给hiddenCardCount=2；公开摊牌由核心结算的非弃牌集合提供。实时potTotal只累加handCommitted，pots统一空数组；结算后两者为0/[]，历史分配在game:result。
+
+个人投影再次核验当前控制代数和本房未离开成员。本人仍在冻结名单时，即使弃牌也保留本人两张底牌；waitingNextHand为null底牌和空动作。只有active且未弃牌、未全押的当前actor从getHandLegalActions逐字段取得动作，短allIn不冒充普通call或完整raise。期限目前null。
+
+CommandHandler在提交、替换内存、ack之后，分别给当前控制socket发布room:view/game:view；拒绝仅给本人仍有权限的当前快照。接管旧socket停止后续私有发布。pausedFault只发旧提交余额的安全房间视图，不投影可能损坏的手。公开结果同样逐成员核验，弃牌对手不因结束亮牌。发送失败不撤销已提交交易。
+
+joinedPublicSequences在手中加入时记录当前公开水位；public-sequences只筛选公开sequence，不新增网络事件或历史回放API。PRIV01原牌例通过真实固定牌序的可达flop验证；PRIV02仅完成实时弃牌隐藏，PRIV03仅等待快照/水位，PRIV04仅连接接管。完整回放仍为W36，电脑观察为W25，不能把这些复合原案例全标完成。
+
+自有测试注入牌序仅在服务端ApplicationOptions中，无公网设置牌序接口。

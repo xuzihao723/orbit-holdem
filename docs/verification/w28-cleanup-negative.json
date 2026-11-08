@@ -1,0 +1,16 @@
+[
+  {
+    "fault": "setup",
+    "exitCode": 1,
+    "elapsedSeconds": 0.8429999999934807,
+    "closedAndRemovedOwnedDirectory": true,
+    "stderr": "(node:43892) ExperimentalWarning: SQLite is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\nINJECTED_FINGERPRINT_FAILURE\n"
+  },
+  {
+    "fault": "diagnostics",
+    "exitCode": 1,
+    "elapsedSeconds": 0.9839999999385327,
+    "closedAndRemovedOwnedDirectory": true,
+    "stderr": "(node:19300) ExperimentalWarning: SQLite is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\nINJECTED_LEDGER_DIAGNOSTIC_FAILURE\n"
+  }
+]

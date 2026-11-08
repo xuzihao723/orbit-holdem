@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-31",
+  "compiledApplication": true,
+  "realSockets": 2,
+  "persistentRooms": 1,
+  "participants": 2,
+  "grantCount": 2,
+  "grantTotal": 4000,
+  "duplicateCreateJoin": true,
+  "sameIdentityJoinNoChange": true,
+  "reopenedFile": true,
+  "credentialsIncluded": false
+}

@@ -1,0 +1,19 @@
+{
+  "requested": 1000,
+  "completed": 1000,
+  "failureCount": 0,
+  "actionCount": 3711,
+  "maximumActionsObserved": 14,
+  "seed": 20261030,
+  "failure": null,
+  "traceDigest": "264d3b3f08494e31af76dd7e25e285d3987588a554d18091a5c45a8bce6ea5ff",
+  "playerCountCoverage": {
+    "2": 334,
+    "3": 333,
+    "4": 333
+  },
+  "outcomes": {
+    "showdown": 527,
+    "allOthersFolded": 473
+  }
+}

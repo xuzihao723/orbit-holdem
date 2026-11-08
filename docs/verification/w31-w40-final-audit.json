@@ -1,0 +1,50 @@
+{
+  "checkedAt": "2026-11-06T21:57:50.625512+08:00",
+  "unitAndIntegrationPassed": {
+    "core": 214,
+    "integration": 412
+  },
+  "browserPassed": {
+    "release": 18,
+    "table": 15,
+    "app": 26,
+    "ui": 6,
+    "replay": 5,
+    "assets": 1
+  },
+  "browserPassedTotal": 71,
+  "oracleHands": 10000,
+  "botHands": 200,
+  "baselineUnchanged": {
+    "acceptedEvidence": 191,
+    "frozenFiles": 8,
+    "coreProtocolAndSampleSources": 30
+  },
+  "knownOpenChecks": {
+    "audioHumanReview": true,
+    "componentStateMatrix": true,
+    "containerImage": true,
+    "publicDeploymentAndSmoke": true
+  },
+  "evidenceSha256": {
+    "w40-core.json": "ad1fc1b5e2ee5ac8a2bdd74058f17fb8509c558feecd06f851a770307aff0498",
+    "w40-integration.json": "ed1a38b15a47bf884a7660e1b6ce2c56ee5092bc55023a27f7c1682caa20c261",
+    "w40-final-commands.json": "d2580a0d8c33dec36325185290132e909e60b9bfea54d045f16f786220e8e1cb",
+    "w40-oracle.json": "42d6b3187671240d02b4372cd26854bf0242ad858dc84dab66686f776088f63f",
+    "w40-final-bot-sim.json": "79e81cda182d478c5644fbf195336e66baa5b9d8cc2cccd25f6b4a13d528340a",
+    "w40-rtt100.json": "15299ccefc13c4f41308dd1c607ca3411c84e7c3c266eed04828dafe3cea0974",
+    "w40-rtt300.json": "7faddd01a9f9efa3978860623a778b5015db680883786d0b87c65244d265c2ae",
+    "w40-network-loss.json": "6d699feb165ef6e7cf1fb132a883e771f00862a115fbb1b1b358fedc9f717106",
+    "w40-release-artifacts.json": "5bbd01c957e08a61435f69ecc0e08fef90fe25ce1022ad81fc4c4805900742d7",
+    "w39-local-deploy.json": "cc1cad2846f4c3f1e8effb857b246270f0238908c99682ed76c6caf5c0c85df3",
+    "w40-audio.json": "893cb40f94a502bbeb42f527d1a88dba7ed006eb0b29d7ac974125263b647263",
+    "w40-browser-audio.json": "9b9f60817e0699b1f721a36a0c9d55ee9a76de2c3b0a91fc8cf0b387acd4fe71",
+    "w31-w40-preview.json": "d49fcec9559e4b1b5d31eb65225325bdb14f67cc2196b51e47cdcbcc1163f38d",
+    "w40-release-playwright.json": "032cb7baf0b0ecf6f7b5cb5e55b436d27f987fbc7bb4aef12111815d30fc61af",
+    "w40-table-playwright.json": "82856332d6d1c6ffe17a2b5baf29654423a1cd0076a793765487be07536629bc",
+    "w40-app-playwright.json": "bca75367800cbc8e2eb8282ac1986b3b590bd55f195b1f257d3ef0fde1b5544b",
+    "w40-ui-playwright.json": "6e3aadbaeec090d036a07089379189dbc34d243122bd2da128d0ad98fc4fea4b",
+    "w40-replay-playwright.json": "4568953037622b29beeb3d10aa9bf3a4d3204484a4a30c7c5f827031e0fc9e99",
+    "w40-assets-playwright.json": "e62a5e5614485bcf3296e18fb8776a2f070bc05020a0317ac733a377aa591dbf"
+  }
+}

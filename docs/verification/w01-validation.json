@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "baselineDate": "2026-10-30",
+  "scope": "W01 document and fixture audit only",
+  "scenarioCount": 74,
+  "groups": {
+    "core": 41,
+    "supplementalRanks": 4,
+    "room": 13,
+    "lifecycle": 12,
+    "privacy": 4
+  },
+  "userStories": 12,
+  "boundaryDecisions": 10,
+  "checks": [
+    "strict JSON and unique keys",
+    "74 unique IDs and 41 core IDs",
+    "required fields",
+    "provenance paths",
+    "fixed deals for 2/3/4 seats",
+    "shuffle stub fact",
+    "nine hand category facts and kickers",
+    "compatible settlement cards",
+    "seven pot/refund/payout arithmetic facts",
+    "call and raise arithmetic",
+    "B04/B09 responsive opponent premises",
+    "passive hand fixture amounts",
+    "room capacities",
+    "reset and cashout ledger arithmetic",
+    "document links and references"
+  ],
+  "applicationRuleTestsRun": false,
+  "propertySimulationsRun": false,
+  "networkTestsRun": false,
+  "sha256": {
+    "tests/fixtures/scenarios.json": "130d2e91e35e9b5a61818a29524b8d7b5e1c42e792eadf6c019def17be48128c",
+    "docs/product-rules.md": "6b36d0f5cc77eea82c345f544822a95e43f836c677c9d3954ac95cb46f70ff84",
+    "docs/decisions.md": "7ba39edf070c42ae0bae9280a4a7b5b57abe10c8f90a3f9810789d17c3099dad",
+    "docs/user-flows.md": "62ac5cc36c1f6488c9fd0b47a4b58b9412cc046638725cbd9df577ca50ff298c",
+    "tests/fixtures/README.md": "95ef86effdfac5f414e282f1505fd07501913f6a4a293613fcfec8793e5925b0",
+    "scripts/validate-w01.py": "215241eedbc8da084922ce65e18cabfb50fb45af27bd1503765a1a6997edbdde"
+  }
+}

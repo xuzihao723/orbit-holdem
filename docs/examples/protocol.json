@@ -1,0 +1,2157 @@
+[
+  {
+    "id": "W02-01",
+    "event": "session:guest",
+    "audience": "bootstrapPrivate",
+    "description": "首次访客发行，令牌仅在私有响应出现",
+    "request": {
+      "requestId": "00000000-0000-4000-8000-000000000001",
+      "nickname": "阿青"
+    },
+    "response": {
+      "protocolVersion": 1,
+      "serverEpoch": "boot_demo_001",
+      "serverTime": 1793332800000,
+      "requestId": "00000000-0000-4000-8000-000000000001",
+      "ok": true,
+      "sessionId": "s_A",
+      "resumeToken": "example_only_resume_token_000000000000000000000000",
+      "expiresAt": 1795924800000,
+      "connectionGeneration": 1
+    },
+    "emittedEvents": [],
+    "relatedScenarioIds": [
+      "ROOM01"
+    ],
+    "context": {
+      "illustrativeCredentialsOnly": true
+    }
+  },
+  {
+    "id": "W02-02",
+    "event": "room:create",
+    "audience": "authenticatedOwner",
+    "description": "创建四座房，单人不满足开局条件",
+    "request": {
+      "commandId": "00000000-0000-4000-8000-000000000002",
+      "capacity": 4,
+      "nickname": "阿青"
+    },
+    "response": {
+      "protocolVersion": 1,
+      "serverEpoch": "boot_demo_001",
+      "serverTime": 1793332800000,
+      "commandId": "00000000-0000-4000-8000-000000000002",
+      "ok": true,
+      "duplicate": false,
+      "roomId": "r_create",
+      "appliedRoomVersion": 1,
+      "handId": null,
+      "appliedHandVersion": null
+    },
+    "emittedEvents": [
+      {
+        "event": "room:view",
+        "audience": "roomMembers",
+        "payload": {
+          "protocolVersion": 1,
+          "serverEpoch": "boot_demo_001",
+          "serverTime": 1793332800000,
+          "roomId": "r_create",
+          "roomCode": "ABCD23",
+          "roomVersion": 1,
+          "matchId": "m_demo",
+          "currentHandId": null,
+          "capacity": 4,
+          "status": "waiting",
+          "hostParticipantId": "p_A",
+          "seats": [
+            {
+              "seatId": 0,
+              "availability": "occupied",
+              "occupant": {
+                "participantId": "p_A",
+                "nickname": "阿青",
+                "stack": 2000,
+                "admission": "active",
+                "kind": "human",
+                "difficulty": null,
+                "online": true,
+                "ready": false,
+                "isHost": true
+              }
+            },
+            {
+              "seatId": 1,
+              "availability": "open",
+              "occupant": null
+            },
+            {
+              "seatId": 2,
+              "availability": "open",
+              "occupant": null
+            },
+            {
+              "seatId": 3,
+              "availability": "open",
+              "occupant": null
+            }
+          ],
+          "canStart": false,
+          "startBlockReasons": [
+            "NOT_ENOUGH_PLAYERS",
+            "PARTICIPANT_NOT_READY"
+          ],
+          "resetProposal": null
+        }
+      }
+    ],
+    "relatedScenarioIds": [
+      "ROOM10"
+    ],
+    "context": {}
+  },
+  {
+    "id": "W02-03",
+    "event": "room:join",
+    "audience": "authenticatedOwner",
+    "description": "第二个真人入座，不自动补电脑",
+    "request": {
+      "commandId": "00000000-0000-4000-8000-000000000003",
+      "roomCode": "ABCD23",
+      "nickname": "小林"
+    },
+    "response": {
+      "protocolVersion": 1,
+      "serverEpoch": "boot_demo_001",
+      "serverTime": 1793332800000,
+      "commandId": "00000000-0000-4000-8000-000000000003",
+      "ok": true,
+      "duplicate": false,
+      "roomId": "r_join",
+      "appliedRoomVersion": 2,
+      "handId": null,
+      "appliedHandVersion": null
+    },
+    "emittedEvents": [
+      {
+        "event": "room:view",
+        "audience": "roomMembers",
+        "payload": {
+          "protocolVersion": 1,
+          "serverEpoch": "boot_demo_001",
+          "serverTime": 1793332800000,
+          "roomId": "r_join",
+          "roomCode": "ABCD23",
+          "roomVersion": 2,
+          "matchId": "m_demo",
+          "currentHandId": null,
+          "capacity": 4,
+          "status": "waiting",
+          "hostParticipantId": "p_A",
+          "seats": [
+            {
+              "seatId": 0,
+              "availability": "occupied",
+              "occupant": {
+                "participantId": "p_A",
+                "nickname": "阿青",
+                "stack": 2000,
+                "admission": "active",
+                "kind": "human",
+                "difficulty": null,
+                "online": true,
+                "ready": false,
+                "isHost": true
+              }
+            },
+            {
+              "seatId": 1,
+              "availability": "occupied",
+              "occupant": {
+                "participantId": "p_B",
+                "nickname": "小林",
+                "stack": 2000,
+                "admission": "active",
+                "kind": "human",
+                "difficulty": null,
+                "online": true,
+                "ready": false,
+                "isHost": false
+              }
+            },
+            {
+              "seatId": 2,
+              "availability": "open",
+              "occupant": null
+            },
+            {
+              "seatId": 3,
+              "availability": "open",
+              "occupant": null
+            }
+          ],
+          "canStart": false,
+          "startBlockReasons": [
+            "PARTICIPANT_NOT_READY"
+          ],
+          "resetProposal": null
+        }
+      }
+    ],
+    "relatedScenarioIds": [
+      "ROOM04"
+    ],
+    "context": {
+      "viewerParticipantId": "p_B"
+    }
+  },
+  {
+    "id": "W02-04",
+    "event": "room:start",
+    "audience": "authenticatedOwner",
+    "description": "两真人准备完成后按双人盲注开局",
+    "request": {
+      "commandId": "00000000-0000-4000-8000-000000000004",
+      "roomId": "r_start",
+      "expectedRoomVersion": 9
+    },
+    "response": {
+      "protocolVersion": 1,
+      "serverEpoch": "boot_demo_001",
+      "serverTime": 1793332800000,
+      "commandId": "00000000-0000-4000-8000-000000000004",
+      "ok": true,
+      "duplicate": false,
+      "roomId": "r_start",
+      "appliedRoomVersion": 10,
+      "handId": "h_start",
+      "appliedHandVersion": 1
+    },
+    "emittedEvents": [
+      {
+        "event": "room:view",
+        "audience": "roomMembers",
+        "payload": {
+          "protocolVersion": 1,
+          "serverEpoch": "boot_demo_001",
+          "serverTime": 1793332800000,
+          "roomId": "r_start",
+          "roomCode": "ABCD23",
+          "roomVersion": 10,
+          "matchId": "m_demo",
+          "currentHandId": "h_start",
+          "capacity": 4,
+          "status": "playing",
+          "hostParticipantId": "p_A",
+          "seats": [
+            {
+              "seatId": 0,
+              "availability": "occupied",
+              "occupant": {
+                "participantId": "p_A",
+                "nickname": "阿青",
+                "stack": 1990,
+                "admission": "active",
+                "kind": "human",
+                "difficulty": null,
+                "online": true,
+                "ready": false,
+                "isHost": true
+              }
+            },
+            {
+              "seatId": 1,
+              "availability": "occupied",
+              "occupant": {
+                "participantId": "p_B",
+                "nickname": "小林",
+                "stack": 1980,
+                "admission": "active",
+                "kind": "human",
+                "difficulty": null,
+                "online": true,
+                "ready": false,
+                "isHost": false
+              }
+            },
+            {
+              "seatId": 2,
+              "availability": "open",
+              "occupant": null
+            },
+            {
+              "seatId": 3,
+              "availability": "open",
+              "occupant": null
+            }
+          ],
+          "canStart": false,
+          "startBlockReasons": [
+            "ROOM_NOT_WAITING"
+          ],
+          "resetProposal": null
+        }
+      },
+      {
+        "event": "game:view",
+        "audience": "participant:p_A",
+        "payload": {
+          "protocolVersion": 1,
+          "serverEpoch": "boot_demo_001",
+          "serverTime": 1793332800000,
+          "roomId": "r_start",
+          "matchId": "m_demo",
+          "handId": "h_start",
+          "handVersion": 1,
+          "phase": "preflop",
+          "dealerSeatId": 0,
+          "smallBlindSeatId": 0,
+          "bigBlindSeatId": 1,
+          "players": [
+            {
+              "participantId": "p_A",
+              "seatId": 0,
+              "stack": 1990,
+              "streetCommitted": 10,
+              "handCommitted": 10,
+              "folded": false,
+              "allIn": false,
+              "hiddenCardCount": 2
+            },
+            {
+              "participantId": "p_B",
+              "seatId": 1,
+              "stack": 1980,
+              "streetCommitted": 20,
+              "handCommitted": 20,
+              "folded": false,
+              "allIn": false,
+              "hiddenCardCount": 2
+            }
+          ],
+          "board": [],
+          "showdownCards": [],
+          "pots": [],
+          "potTotal": 30,
+          "actorSeatId": 0,
+          "turnId": "t_start",
+          "deadline": 1793332830000,
+          "publicEventSequence": 1,
+          "roomVersion": 10,
+          "self": {
+            "participantId": "p_A",
+            "admission": "active",
+            "holeCards": [
+              "AS",
+              "AH"
+            ],
+            "legalActions": {
+              "allowed": [
+                "fold",
+                "call",
+                "raise",
+                "allIn"
+              ],
+              "callAmount": 10,
+              "minRaiseTo": 40,
+              "maxRaiseTo": 2000,
+              "allIn": {
+                "raiseTo": 2000,
+                "additionalAmount": 1990,
+                "kind": "raise"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "relatedScenarioIds": [
+      "ROOM04",
+      "O02"
+    ],
+    "context": {
+      "viewerParticipantId": "p_A",
+      "readyBeforeStart": true,
+      "occupiedCount": 2,
+      "capacity": 4
+    }
+  },
+  {
+    "id": "W02-05",
+    "event": "game:action",
+    "audience": "authenticatedOwner",
+    "description": "已投20，标线60，最低加至100，本次只投入80",
+    "request": {
+      "commandId": "00000000-0000-4000-8000-000000000005",
+      "roomId": "r_raise",
+      "handId": "h_raise",
+      "turnId": "t_009",
+      "expectedVersion": 12,
+      "action": {
+        "type": "raise",
+        "raiseTo": 100
+      }
+    },
+    "response": {
+      "protocolVersion": 1,
+      "serverEpoch": "boot_demo_001",
+      "serverTime": 1793332800000,
+      "commandId": "00000000-0000-4000-8000-000000000005",
+      "ok": true,
+      "duplicate": false,
+      "roomId": "r_raise",
+      "appliedRoomVersion": 21,
+      "handId": "h_raise",
+      "appliedHandVersion": 13
+    },
+    "emittedEvents": [
+      {
+        "event": "room:view",
+        "audience": "roomMembers",
+        "payload": {
+          "protocolVersion": 1,
+          "serverEpoch": "boot_demo_001",
+          "serverTime": 1793332800000,
+          "roomId": "r_raise",
+          "roomCode": "ABCD23",
+          "roomVersion": 21,
+          "matchId": "m_demo",
+          "currentHandId": "h_raise",
+          "capacity": 4,
+          "status": "playing",
+          "hostParticipantId": "p_A",
+          "seats": [
+            {
+              "seatId": 0,
+              "availability": "occupied",
+              "occupant": {
+                "participantId": "p_A",
+                "nickname": "阿青",
+                "stack": 1900,
+                "admission": "active",
+                "kind": "human",
+                "difficulty": null,
+                "online": true,
+                "ready": false,
+                "isHost": true
+              }
+            },
+            {
+              "seatId": 1,
+              "availability": "occupied",
+              "occupant": {
+                "participantId": "p_B",
+                "nickname": "小林",
+                "stack": 1940,
+                "admission": "active",
+                "kind": "human",
+                "difficulty": null,
+                "online": true,
+                "ready": false,
+                "isHost": false
+              }
+            },
+            {
+              "seatId": 2,
+              "availability": "occupied",
+              "occupant": {
+                "participantId": "p_C",
+                "nickname": "阿宁",
+                "stack": 1990,
+                "admission": "active",
+                "kind": "human",
+                "difficulty": null,
+                "online": true,
+                "ready": false,
+                "isHost": false
+              }
+            },
+            {
+              "seatId": 3,
+              "availability": "open",
+              "occupant": null
+            }
+          ],
+          "canStart": false,
+          "startBlockReasons": [
+            "ROOM_NOT_WAITING"
+          ],
+          "resetProposal": null
+        }
+      },
+      {
+        "event": "game:view",
+        "audience": "participant:p_A",
+        "payload": {
+          "protocolVersion": 1,
+          "serverEpoch": "boot_demo_001",
+          "serverTime": 1793332800000,
+          "roomId": "r_raise",
+          "matchId": "m_demo",
+          "handId": "h_raise",
+          "handVersion": 13,
+          "phase": "preflop",
+          "dealerSeatId": 1,
+          "smallBlindSeatId": 2,
+          "bigBlindSeatId": 0,
+          "players": [
+            {
+              "participantId": "p_A",
+              "seatId": 0,
+              "stack": 1900,
+              "streetCommitted": 100,
+              "handCommitted": 100,
+              "folded": false,
+              "allIn": false,
+              "hiddenCardCount": 2
+            },
+            {
+              "participantId": "p_B",
+              "seatId": 1,
+              "stack": 1940,
+              "streetCommitted": 60,
+              "handCommitted": 60,
+              "folded": false,
+              "allIn": false,
+              "hiddenCardCount": 2
+            },
+            {
+              "participantId": "p_C",
+              "seatId": 2,
+              "stack": 1990,
+              "streetCommitted": 10,
+              "handCommitted": 10,
+              "folded": true,
+              "allIn": false,
+              "hiddenCardCount": 2
+            }
+          ],
+          "board": [],
+          "showdownCards": [],
+          "pots": [],
+          "potTotal": 170,
+          "actorSeatId": 1,
+          "turnId": "t_010",
+          "deadline": 1793332830000,
+          "publicEventSequence": 13,
+          "roomVersion": 21,
+          "self": {
+            "participantId": "p_A",
+            "admission": "active",
+            "holeCards": [
+              "AS",
+              "AH"
+            ],
+            "legalActions": {
+              "allowed": [],
+              "callAmount": 0,
+              "minRaiseTo": null,
+              "maxRaiseTo": null,
+              "allIn": null
+            }
+          }
+        }
+      }
+    ],
+    "relatedScenarioIds": [
+      "B02"
+    ],
+    "context": {
+      "viewerParticipantId": "p_A",
+      "actorBefore": {
+        "participantId": "p_A",
+        "streetCommitted": 20,
+        "stack": 1980
+      },
+      "currentBetBefore": 60,
+      "lastFullRaiseSize": 40,
+      "additionalAmount": 80,
+      "nominalCallAmount": 40
+    }
+  },
+  {
+    "id": "W02-06",
+    "event": "session:resume",
+    "audience": "authenticatedOwner",
+    "description": "认证并恢复有效席位，返回最新本人视图不重复发行令牌",
+    "request": {
+      "requestId": "00000000-0000-4000-8000-000000000006",
+      "resumeToken": "example_only_resume_token_000000000000000000000000",
+      "roomId": "r_raise",
+      "lastSeenHandId": "h_raise",
+      "lastSeenRoomVersion": 20,
+      "lastSeenHandVersion": 12
+    },
+    "response": {
+      "protocolVersion": 1,
+      "serverEpoch": "boot_demo_001",
+      "serverTime": 1793332800000,
+      "requestId": "00000000-0000-4000-8000-000000000006",
+      "ok": true,
+      "sessionId": "s_A",
+      "expiresAt": 1795924800000,
+      "connectionGeneration": 2,
+      "outcome": "seatRestored",
+      "participantId": "p_A",
+      "roomView": {
+        "protocolVersion": 1,
+        "serverEpoch": "boot_demo_001",
+        "serverTime": 1793332800000,
+        "roomId": "r_raise",
+        "roomCode": "ABCD23",
+        "roomVersion": 21,
+        "matchId": "m_demo",
+        "currentHandId": "h_raise",
+        "capacity": 4,
+        "status": "playing",
+        "hostParticipantId": "p_A",
+        "seats": [
+          {
+            "seatId": 0,
+            "availability": "occupied",
+            "occupant": {
+              "participantId": "p_A",
+              "nickname": "阿青",
+              "stack": 1900,
+              "admission": "active",
+              "kind": "human",
+              "difficulty": null,
+              "online": true,
+              "ready": false,
+              "isHost": true
+            }
+          },
+          {
+            "seatId": 1,
+            "availability": "occupied",
+            "occupant": {
+              "participantId": "p_B",
+              "nickname": "小林",
+              "stack": 1940,
+              "admission": "active",
+              "kind": "human",
+              "difficulty": null,
+              "online": true,
+              "ready": false,
+              "isHost": false
+            }
+          },
+          {
+            "seatId": 2,
+            "availability": "occupied",
+            "occupant": {
+              "participantId": "p_C",
+              "nickname": "阿宁",
+              "stack": 1990,
+              "admission": "active",
+              "kind": "human",
+              "difficulty": null,
+              "online": true,
+              "ready": false,
+              "isHost": false
+            }
+          },
+          {
+            "seatId": 3,
+            "availability": "open",
+            "occupant": null
+          }
+        ],
+        "canStart": false,
+        "startBlockReasons": [
+          "ROOM_NOT_WAITING"
+        ],
+        "resetProposal": null
+      },
+      "playerView": {
+        "protocolVersion": 1,
+        "serverEpoch": "boot_demo_001",
+        "serverTime": 1793332800000,
+        "roomId": "r_raise",
+        "matchId": "m_demo",
+        "handId": "h_raise",
+        "handVersion": 13,
+        "phase": "preflop",
+        "dealerSeatId": 1,
+        "smallBlindSeatId": 2,
+        "bigBlindSeatId": 0,
+        "players": [
+          {
+            "participantId": "p_A",
+            "seatId": 0,
+            "stack": 1900,
+            "streetCommitted": 100,
+            "handCommitted": 100,
+            "folded": false,
+            "allIn": false,
+            "hiddenCardCount": 2
+          },
+          {
+            "participantId": "p_B",
+            "seatId": 1,
+            "stack": 1940,
+            "streetCommitted": 60,
+            "handCommitted": 60,
+            "folded": false,
+            "allIn": false,
+            "hiddenCardCount": 2
+          },
+          {
+            "participantId": "p_C",
+            "seatId": 2,
+            "stack": 1990,
+            "streetCommitted": 10,
+            "handCommitted": 10,
+            "folded": true,
+            "allIn": false,
+            "hiddenCardCount": 2
+          }
+        ],
+        "board": [],
+        "showdownCards": [],
+        "pots": [],
+        "potTotal": 170,
+        "actorSeatId": 1,
+        "turnId": "t_010",
+        "deadline": 1793332830000,
+        "publicEventSequence": 13,
+        "roomVersion": 21,
+        "self": {
+          "participantId": "p_A",
+          "admission": "active",
+          "holeCards": [
+            "AS",
+            "AH"
+          ],
+          "legalActions": {
+            "allowed": [],
+            "callAmount": 0,
+            "minRaiseTo": null,
+            "maxRaiseTo": null,
+            "allIn": null
+          }
+        }
+      }
+    },
+    "emittedEvents": [],
+    "relatedScenarioIds": [
+      "LIFE06",
+      "PRIV04"
+    ],
+    "context": {
+      "viewerParticipantId": "p_A",
+      "illustrativeCredentialsOnly": true,
+      "oldConnectionLosesControl": true
+    }
+  },
+  {
+    "id": "W02-07",
+    "event": "session:resume",
+    "audience": "authenticatedOwner",
+    "description": "超过保座期限但身份仍有效，只恢复身份",
+    "request": {
+      "requestId": "00000000-0000-4000-8000-000000000007",
+      "resumeToken": "example_only_resume_token_000000000000000000000000",
+      "roomId": "r_old",
+      "lastSeenHandId": "h_old",
+      "lastSeenRoomVersion": 9,
+      "lastSeenHandVersion": 5
+    },
+    "response": {
+      "protocolVersion": 1,
+      "serverEpoch": "boot_demo_001",
+      "serverTime": 1793332800000,
+      "requestId": "00000000-0000-4000-8000-000000000007",
+      "ok": true,
+      "sessionId": "s_A",
+      "expiresAt": 1795924800000,
+      "connectionGeneration": 3,
+      "outcome": "identityOnly",
+      "reason": "seatExpired",
+      "roomView": null,
+      "playerView": null
+    },
+    "emittedEvents": [],
+    "relatedScenarioIds": [
+      "LIFE07"
+    ],
+    "context": {
+      "illustrativeCredentialsOnly": true,
+      "disconnectedForMs": 120000,
+      "mayReadOwnHistory": true
+    }
+  },
+  {
+    "id": "W02-08",
+    "event": "replay:get",
+    "audience": "authenticatedOwner",
+    "description": "本人完整阶段回放，弃牌对手底牌始终隐藏",
+    "request": {
+      "requestId": "00000000-0000-4000-8000-000000000008",
+      "handId": "h_done"
+    },
+    "response": {
+      "protocolVersion": 1,
+      "serverEpoch": "boot_demo_001",
+      "serverTime": 1793332820000,
+      "requestId": "00000000-0000-4000-8000-000000000008",
+      "ok": true,
+      "handId": "h_done",
+      "viewerParticipantId": "p_A",
+      "frames": [
+        {
+          "sequence": 1,
+          "at": 1793332801000,
+          "actionText": "盲注完成，底牌已发放",
+          "state": {
+            "roomId": "r_history",
+            "matchId": "m_demo",
+            "handId": "h_done",
+            "handVersion": 1,
+            "phase": "preflop",
+            "dealerSeatId": 0,
+            "smallBlindSeatId": 1,
+            "bigBlindSeatId": 2,
+            "players": [
+              {
+                "participantId": "p_A",
+                "seatId": 0,
+                "stack": 2000,
+                "streetCommitted": 0,
+                "handCommitted": 0,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 2
+              },
+              {
+                "participantId": "p_B",
+                "seatId": 1,
+                "stack": 1990,
+                "streetCommitted": 10,
+                "handCommitted": 10,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 2
+              },
+              {
+                "participantId": "p_C",
+                "seatId": 2,
+                "stack": 1980,
+                "streetCommitted": 20,
+                "handCommitted": 20,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 2
+              }
+            ],
+            "board": [],
+            "showdownCards": [],
+            "pots": [],
+            "potTotal": 30,
+            "actorSeatId": 0,
+            "publicEventSequence": 1
+          },
+          "ownerHoleCards": [
+            "AS",
+            "AH"
+          ]
+        },
+        {
+          "sequence": 2,
+          "at": 1793332802000,
+          "actionText": "阿青加注至100",
+          "state": {
+            "roomId": "r_history",
+            "matchId": "m_demo",
+            "handId": "h_done",
+            "handVersion": 2,
+            "phase": "preflop",
+            "dealerSeatId": 0,
+            "smallBlindSeatId": 1,
+            "bigBlindSeatId": 2,
+            "players": [
+              {
+                "participantId": "p_A",
+                "seatId": 0,
+                "stack": 1900,
+                "streetCommitted": 100,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 2
+              },
+              {
+                "participantId": "p_B",
+                "seatId": 1,
+                "stack": 1990,
+                "streetCommitted": 10,
+                "handCommitted": 10,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 2
+              },
+              {
+                "participantId": "p_C",
+                "seatId": 2,
+                "stack": 1980,
+                "streetCommitted": 20,
+                "handCommitted": 20,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 2
+              }
+            ],
+            "board": [],
+            "showdownCards": [],
+            "pots": [],
+            "potTotal": 130,
+            "actorSeatId": 1,
+            "publicEventSequence": 2
+          },
+          "ownerHoleCards": [
+            "AS",
+            "AH"
+          ]
+        },
+        {
+          "sequence": 3,
+          "at": 1793332803000,
+          "actionText": "小林跟注至100",
+          "state": {
+            "roomId": "r_history",
+            "matchId": "m_demo",
+            "handId": "h_done",
+            "handVersion": 3,
+            "phase": "preflop",
+            "dealerSeatId": 0,
+            "smallBlindSeatId": 1,
+            "bigBlindSeatId": 2,
+            "players": [
+              {
+                "participantId": "p_A",
+                "seatId": 0,
+                "stack": 1900,
+                "streetCommitted": 100,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 2
+              },
+              {
+                "participantId": "p_B",
+                "seatId": 1,
+                "stack": 1900,
+                "streetCommitted": 100,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 2
+              },
+              {
+                "participantId": "p_C",
+                "seatId": 2,
+                "stack": 1980,
+                "streetCommitted": 20,
+                "handCommitted": 20,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 2
+              }
+            ],
+            "board": [],
+            "showdownCards": [],
+            "pots": [],
+            "potTotal": 220,
+            "actorSeatId": 2,
+            "publicEventSequence": 3
+          },
+          "ownerHoleCards": [
+            "AS",
+            "AH"
+          ]
+        },
+        {
+          "sequence": 4,
+          "at": 1793332804000,
+          "actionText": "阿宁跟注至100",
+          "state": {
+            "roomId": "r_history",
+            "matchId": "m_demo",
+            "handId": "h_done",
+            "handVersion": 4,
+            "phase": "preflop",
+            "dealerSeatId": 0,
+            "smallBlindSeatId": 1,
+            "bigBlindSeatId": 2,
+            "players": [
+              {
+                "participantId": "p_A",
+                "seatId": 0,
+                "stack": 1900,
+                "streetCommitted": 100,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 2
+              },
+              {
+                "participantId": "p_B",
+                "seatId": 1,
+                "stack": 1900,
+                "streetCommitted": 100,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 2
+              },
+              {
+                "participantId": "p_C",
+                "seatId": 2,
+                "stack": 1900,
+                "streetCommitted": 100,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 2
+              }
+            ],
+            "board": [],
+            "showdownCards": [],
+            "pots": [],
+            "potTotal": 300,
+            "actorSeatId": null,
+            "publicEventSequence": 4
+          },
+          "ownerHoleCards": [
+            "AS",
+            "AH"
+          ]
+        },
+        {
+          "sequence": 5,
+          "at": 1793332805000,
+          "actionText": "翻牌已公开",
+          "state": {
+            "roomId": "r_history",
+            "matchId": "m_demo",
+            "handId": "h_done",
+            "handVersion": 5,
+            "phase": "flop",
+            "dealerSeatId": 0,
+            "smallBlindSeatId": 1,
+            "bigBlindSeatId": 2,
+            "players": [
+              {
+                "participantId": "p_A",
+                "seatId": 0,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 2
+              },
+              {
+                "participantId": "p_B",
+                "seatId": 1,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 2
+              },
+              {
+                "participantId": "p_C",
+                "seatId": 2,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 2
+              }
+            ],
+            "board": [
+              "2H",
+              "3D",
+              "4C"
+            ],
+            "showdownCards": [],
+            "pots": [],
+            "potTotal": 300,
+            "actorSeatId": 1,
+            "publicEventSequence": 5
+          },
+          "ownerHoleCards": [
+            "AS",
+            "AH"
+          ]
+        },
+        {
+          "sequence": 6,
+          "at": 1793332806000,
+          "actionText": "小林弃牌",
+          "state": {
+            "roomId": "r_history",
+            "matchId": "m_demo",
+            "handId": "h_done",
+            "handVersion": 6,
+            "phase": "flop",
+            "dealerSeatId": 0,
+            "smallBlindSeatId": 1,
+            "bigBlindSeatId": 2,
+            "players": [
+              {
+                "participantId": "p_A",
+                "seatId": 0,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 2
+              },
+              {
+                "participantId": "p_B",
+                "seatId": 1,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 100,
+                "folded": true,
+                "allIn": false,
+                "hiddenCardCount": 2
+              },
+              {
+                "participantId": "p_C",
+                "seatId": 2,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 2
+              }
+            ],
+            "board": [
+              "2H",
+              "3D",
+              "4C"
+            ],
+            "showdownCards": [],
+            "pots": [],
+            "potTotal": 300,
+            "actorSeatId": 2,
+            "publicEventSequence": 6
+          },
+          "ownerHoleCards": [
+            "AS",
+            "AH"
+          ]
+        },
+        {
+          "sequence": 7,
+          "at": 1793332807000,
+          "actionText": "阿宁过牌",
+          "state": {
+            "roomId": "r_history",
+            "matchId": "m_demo",
+            "handId": "h_done",
+            "handVersion": 7,
+            "phase": "flop",
+            "dealerSeatId": 0,
+            "smallBlindSeatId": 1,
+            "bigBlindSeatId": 2,
+            "players": [
+              {
+                "participantId": "p_A",
+                "seatId": 0,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 2
+              },
+              {
+                "participantId": "p_B",
+                "seatId": 1,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 100,
+                "folded": true,
+                "allIn": false,
+                "hiddenCardCount": 2
+              },
+              {
+                "participantId": "p_C",
+                "seatId": 2,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 2
+              }
+            ],
+            "board": [
+              "2H",
+              "3D",
+              "4C"
+            ],
+            "showdownCards": [],
+            "pots": [],
+            "potTotal": 300,
+            "actorSeatId": 0,
+            "publicEventSequence": 7
+          },
+          "ownerHoleCards": [
+            "AS",
+            "AH"
+          ]
+        },
+        {
+          "sequence": 8,
+          "at": 1793332808000,
+          "actionText": "阿青过牌",
+          "state": {
+            "roomId": "r_history",
+            "matchId": "m_demo",
+            "handId": "h_done",
+            "handVersion": 8,
+            "phase": "flop",
+            "dealerSeatId": 0,
+            "smallBlindSeatId": 1,
+            "bigBlindSeatId": 2,
+            "players": [
+              {
+                "participantId": "p_A",
+                "seatId": 0,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 2
+              },
+              {
+                "participantId": "p_B",
+                "seatId": 1,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 100,
+                "folded": true,
+                "allIn": false,
+                "hiddenCardCount": 2
+              },
+              {
+                "participantId": "p_C",
+                "seatId": 2,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 2
+              }
+            ],
+            "board": [
+              "2H",
+              "3D",
+              "4C"
+            ],
+            "showdownCards": [],
+            "pots": [],
+            "potTotal": 300,
+            "actorSeatId": null,
+            "publicEventSequence": 8
+          },
+          "ownerHoleCards": [
+            "AS",
+            "AH"
+          ]
+        },
+        {
+          "sequence": 9,
+          "at": 1793332809000,
+          "actionText": "转牌已公开",
+          "state": {
+            "roomId": "r_history",
+            "matchId": "m_demo",
+            "handId": "h_done",
+            "handVersion": 9,
+            "phase": "turn",
+            "dealerSeatId": 0,
+            "smallBlindSeatId": 1,
+            "bigBlindSeatId": 2,
+            "players": [
+              {
+                "participantId": "p_A",
+                "seatId": 0,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 2
+              },
+              {
+                "participantId": "p_B",
+                "seatId": 1,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 100,
+                "folded": true,
+                "allIn": false,
+                "hiddenCardCount": 2
+              },
+              {
+                "participantId": "p_C",
+                "seatId": 2,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 2
+              }
+            ],
+            "board": [
+              "2H",
+              "3D",
+              "4C",
+              "5S"
+            ],
+            "showdownCards": [],
+            "pots": [],
+            "potTotal": 300,
+            "actorSeatId": 2,
+            "publicEventSequence": 9
+          },
+          "ownerHoleCards": [
+            "AS",
+            "AH"
+          ]
+        },
+        {
+          "sequence": 10,
+          "at": 1793332810000,
+          "actionText": "阿宁过牌",
+          "state": {
+            "roomId": "r_history",
+            "matchId": "m_demo",
+            "handId": "h_done",
+            "handVersion": 10,
+            "phase": "turn",
+            "dealerSeatId": 0,
+            "smallBlindSeatId": 1,
+            "bigBlindSeatId": 2,
+            "players": [
+              {
+                "participantId": "p_A",
+                "seatId": 0,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 2
+              },
+              {
+                "participantId": "p_B",
+                "seatId": 1,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 100,
+                "folded": true,
+                "allIn": false,
+                "hiddenCardCount": 2
+              },
+              {
+                "participantId": "p_C",
+                "seatId": 2,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 2
+              }
+            ],
+            "board": [
+              "2H",
+              "3D",
+              "4C",
+              "5S"
+            ],
+            "showdownCards": [],
+            "pots": [],
+            "potTotal": 300,
+            "actorSeatId": 0,
+            "publicEventSequence": 10
+          },
+          "ownerHoleCards": [
+            "AS",
+            "AH"
+          ]
+        },
+        {
+          "sequence": 11,
+          "at": 1793332811000,
+          "actionText": "阿青过牌",
+          "state": {
+            "roomId": "r_history",
+            "matchId": "m_demo",
+            "handId": "h_done",
+            "handVersion": 11,
+            "phase": "turn",
+            "dealerSeatId": 0,
+            "smallBlindSeatId": 1,
+            "bigBlindSeatId": 2,
+            "players": [
+              {
+                "participantId": "p_A",
+                "seatId": 0,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 2
+              },
+              {
+                "participantId": "p_B",
+                "seatId": 1,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 100,
+                "folded": true,
+                "allIn": false,
+                "hiddenCardCount": 2
+              },
+              {
+                "participantId": "p_C",
+                "seatId": 2,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 2
+              }
+            ],
+            "board": [
+              "2H",
+              "3D",
+              "4C",
+              "5S"
+            ],
+            "showdownCards": [],
+            "pots": [],
+            "potTotal": 300,
+            "actorSeatId": null,
+            "publicEventSequence": 11
+          },
+          "ownerHoleCards": [
+            "AS",
+            "AH"
+          ]
+        },
+        {
+          "sequence": 12,
+          "at": 1793332812000,
+          "actionText": "河牌已公开",
+          "state": {
+            "roomId": "r_history",
+            "matchId": "m_demo",
+            "handId": "h_done",
+            "handVersion": 12,
+            "phase": "river",
+            "dealerSeatId": 0,
+            "smallBlindSeatId": 1,
+            "bigBlindSeatId": 2,
+            "players": [
+              {
+                "participantId": "p_A",
+                "seatId": 0,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 2
+              },
+              {
+                "participantId": "p_B",
+                "seatId": 1,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 100,
+                "folded": true,
+                "allIn": false,
+                "hiddenCardCount": 2
+              },
+              {
+                "participantId": "p_C",
+                "seatId": 2,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 2
+              }
+            ],
+            "board": [
+              "2H",
+              "3D",
+              "4C",
+              "5S",
+              "9D"
+            ],
+            "showdownCards": [],
+            "pots": [],
+            "potTotal": 300,
+            "actorSeatId": 2,
+            "publicEventSequence": 12
+          },
+          "ownerHoleCards": [
+            "AS",
+            "AH"
+          ]
+        },
+        {
+          "sequence": 13,
+          "at": 1793332813000,
+          "actionText": "阿宁过牌",
+          "state": {
+            "roomId": "r_history",
+            "matchId": "m_demo",
+            "handId": "h_done",
+            "handVersion": 13,
+            "phase": "river",
+            "dealerSeatId": 0,
+            "smallBlindSeatId": 1,
+            "bigBlindSeatId": 2,
+            "players": [
+              {
+                "participantId": "p_A",
+                "seatId": 0,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 2
+              },
+              {
+                "participantId": "p_B",
+                "seatId": 1,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 100,
+                "folded": true,
+                "allIn": false,
+                "hiddenCardCount": 2
+              },
+              {
+                "participantId": "p_C",
+                "seatId": 2,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 2
+              }
+            ],
+            "board": [
+              "2H",
+              "3D",
+              "4C",
+              "5S",
+              "9D"
+            ],
+            "showdownCards": [],
+            "pots": [],
+            "potTotal": 300,
+            "actorSeatId": 0,
+            "publicEventSequence": 13
+          },
+          "ownerHoleCards": [
+            "AS",
+            "AH"
+          ]
+        },
+        {
+          "sequence": 14,
+          "at": 1793332814000,
+          "actionText": "阿青过牌",
+          "state": {
+            "roomId": "r_history",
+            "matchId": "m_demo",
+            "handId": "h_done",
+            "handVersion": 14,
+            "phase": "river",
+            "dealerSeatId": 0,
+            "smallBlindSeatId": 1,
+            "bigBlindSeatId": 2,
+            "players": [
+              {
+                "participantId": "p_A",
+                "seatId": 0,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 2
+              },
+              {
+                "participantId": "p_B",
+                "seatId": 1,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 100,
+                "folded": true,
+                "allIn": false,
+                "hiddenCardCount": 2
+              },
+              {
+                "participantId": "p_C",
+                "seatId": 2,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 2
+              }
+            ],
+            "board": [
+              "2H",
+              "3D",
+              "4C",
+              "5S",
+              "9D"
+            ],
+            "showdownCards": [],
+            "pots": [],
+            "potTotal": 300,
+            "actorSeatId": null,
+            "publicEventSequence": 14
+          },
+          "ownerHoleCards": [
+            "AS",
+            "AH"
+          ]
+        },
+        {
+          "sequence": 15,
+          "at": 1793332815000,
+          "actionText": "阿青与阿宁公开摊牌",
+          "state": {
+            "roomId": "r_history",
+            "matchId": "m_demo",
+            "handId": "h_done",
+            "handVersion": 15,
+            "phase": "showdown",
+            "dealerSeatId": 0,
+            "smallBlindSeatId": 1,
+            "bigBlindSeatId": 2,
+            "players": [
+              {
+                "participantId": "p_A",
+                "seatId": 0,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 0
+              },
+              {
+                "participantId": "p_B",
+                "seatId": 1,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 100,
+                "folded": true,
+                "allIn": false,
+                "hiddenCardCount": 2
+              },
+              {
+                "participantId": "p_C",
+                "seatId": 2,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 0
+              }
+            ],
+            "board": [
+              "2H",
+              "3D",
+              "4C",
+              "5S",
+              "9D"
+            ],
+            "showdownCards": [
+              {
+                "participantId": "p_A",
+                "cards": [
+                  "AS",
+                  "AH"
+                ]
+              },
+              {
+                "participantId": "p_C",
+                "cards": [
+                  "QS",
+                  "QH"
+                ]
+              }
+            ],
+            "pots": [
+              {
+                "potId": "main",
+                "amount": 300,
+                "eligibleParticipantIds": [
+                  "p_A",
+                  "p_C"
+                ]
+              }
+            ],
+            "potTotal": 300,
+            "actorSeatId": null,
+            "publicEventSequence": 15
+          },
+          "ownerHoleCards": [
+            "AS",
+            "AH"
+          ]
+        },
+        {
+          "sequence": 16,
+          "at": 1793332816000,
+          "actionText": "阿青以五高顺子赢得300，结算完成",
+          "state": {
+            "roomId": "r_history",
+            "matchId": "m_demo",
+            "handId": "h_done",
+            "handVersion": 16,
+            "phase": "settled",
+            "dealerSeatId": 0,
+            "smallBlindSeatId": 1,
+            "bigBlindSeatId": 2,
+            "players": [
+              {
+                "participantId": "p_A",
+                "seatId": 0,
+                "stack": 2200,
+                "streetCommitted": 0,
+                "handCommitted": 0,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 0
+              },
+              {
+                "participantId": "p_B",
+                "seatId": 1,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 0,
+                "folded": true,
+                "allIn": false,
+                "hiddenCardCount": 2
+              },
+              {
+                "participantId": "p_C",
+                "seatId": 2,
+                "stack": 1900,
+                "streetCommitted": 0,
+                "handCommitted": 0,
+                "folded": false,
+                "allIn": false,
+                "hiddenCardCount": 0
+              }
+            ],
+            "board": [
+              "2H",
+              "3D",
+              "4C",
+              "5S",
+              "9D"
+            ],
+            "showdownCards": [
+              {
+                "participantId": "p_A",
+                "cards": [
+                  "AS",
+                  "AH"
+                ]
+              },
+              {
+                "participantId": "p_C",
+                "cards": [
+                  "QS",
+                  "QH"
+                ]
+              }
+            ],
+            "pots": [],
+            "potTotal": 0,
+            "actorSeatId": null,
+            "publicEventSequence": 16
+          },
+          "ownerHoleCards": [
+            "AS",
+            "AH"
+          ]
+        }
+      ],
+      "stageStarts": [
+        {
+          "phase": "preflop",
+          "sequence": 1
+        },
+        {
+          "phase": "flop",
+          "sequence": 5
+        },
+        {
+          "phase": "turn",
+          "sequence": 9
+        },
+        {
+          "phase": "river",
+          "sequence": 12
+        },
+        {
+          "phase": "showdown",
+          "sequence": 15
+        },
+        {
+          "phase": "settled",
+          "sequence": 16
+        }
+      ],
+      "result": {
+        "roomId": "r_history",
+        "matchId": "m_demo",
+        "handId": "h_done",
+        "handVersion": 16,
+        "phase": "settled",
+        "board": [
+          "2H",
+          "3D",
+          "4C",
+          "5S",
+          "9D"
+        ],
+        "showdownCards": [
+          {
+            "participantId": "p_A",
+            "cards": [
+              "AS",
+              "AH"
+            ]
+          },
+          {
+            "participantId": "p_C",
+            "cards": [
+              "QS",
+              "QH"
+            ]
+          }
+        ],
+        "pots": [
+          {
+            "potId": "main",
+            "amount": 300,
+            "eligibleParticipantIds": [
+              "p_A",
+              "p_C"
+            ],
+            "winnerParticipantIds": [
+              "p_A"
+            ],
+            "allocations": [
+              {
+                "participantId": "p_A",
+                "amount": 300
+              }
+            ],
+            "winningCategory": 4
+          }
+        ],
+        "refunds": [],
+        "finalStacks": [
+          {
+            "participantId": "p_A",
+            "seatId": 0,
+            "stack": 2200
+          },
+          {
+            "participantId": "p_B",
+            "seatId": 1,
+            "stack": 1900
+          },
+          {
+            "participantId": "p_C",
+            "seatId": 2,
+            "stack": 1900
+          }
+        ],
+        "reason": "showdown"
+      }
+    },
+    "emittedEvents": [],
+    "relatedScenarioIds": [
+      "PRIV02",
+      "S01"
+    ],
+    "context": {
+      "viewerParticipantId": "p_A",
+      "privateCardIds": [
+        "KS",
+        "KH"
+      ],
+      "initialChipTotal": 6000
+    }
+  },
+  {
+    "id": "W02-09",
+    "event": "room:join",
+    "audience": "authenticatedOwner",
+    "description": "满员拒绝，不泄露非成员的房间内部视图",
+    "request": {
+      "commandId": "00000000-0000-4000-8000-000000000009",
+      "roomCode": "ABCD23",
+      "nickname": "新玩家"
+    },
+    "response": {
+      "protocolVersion": 1,
+      "serverEpoch": "boot_demo_001",
+      "serverTime": 1793332800000,
+      "ok": false,
+      "code": "ROOM_FULL",
+      "retryable": false,
+      "retryAfterMs": null,
+      "fieldIssues": [],
+      "roomId": null,
+      "handId": null,
+      "latestRoomVersion": null,
+      "latestHandVersion": null,
+      "commandId": "00000000-0000-4000-8000-000000000009",
+      "duplicate": false
+    },
+    "emittedEvents": [],
+    "relatedScenarioIds": [
+      "ROOM11"
+    ],
+    "context": {
+      "stateUnchanged": true
+    }
+  },
+  {
+    "id": "W02-10",
+    "event": "room:start",
+    "audience": "authenticatedOwner",
+    "description": "已入座但非房主不能开始",
+    "request": {
+      "commandId": "00000000-0000-4000-8000-00000000000a",
+      "roomId": "r_wait",
+      "expectedRoomVersion": 9
+    },
+    "response": {
+      "protocolVersion": 1,
+      "serverEpoch": "boot_demo_001",
+      "serverTime": 1793332800000,
+      "ok": false,
+      "code": "NOT_HOST",
+      "retryable": false,
+      "retryAfterMs": null,
+      "fieldIssues": [],
+      "roomId": "r_wait",
+      "handId": null,
+      "latestRoomVersion": 9,
+      "latestHandVersion": null,
+      "commandId": "00000000-0000-4000-8000-00000000000a",
+      "duplicate": false
+    },
+    "emittedEvents": [],
+    "relatedScenarioIds": [
+      "ROOM13"
+    ],
+    "context": {
+      "stateUnchanged": true,
+      "requesterParticipantId": "p_B",
+      "hostParticipantId": "p_A"
+    }
+  },
+  {
+    "id": "W02-11",
+    "event": "game:action",
+    "audience": "authenticatedOwner",
+    "description": "版本11已过时，最新为12，不重复扣款",
+    "request": {
+      "commandId": "00000000-0000-4000-8000-00000000000b",
+      "roomId": "r_raise",
+      "handId": "h_raise",
+      "turnId": "t_009",
+      "expectedVersion": 11,
+      "action": {
+        "type": "raise",
+        "raiseTo": 100
+      }
+    },
+    "response": {
+      "protocolVersion": 1,
+      "serverEpoch": "boot_demo_001",
+      "serverTime": 1793332800000,
+      "ok": false,
+      "code": "STALE_STATE",
+      "retryable": false,
+      "retryAfterMs": null,
+      "fieldIssues": [],
+      "roomId": "r_raise",
+      "handId": "h_raise",
+      "latestRoomVersion": 20,
+      "latestHandVersion": 12,
+      "commandId": "00000000-0000-4000-8000-00000000000b",
+      "duplicate": false
+    },
+    "emittedEvents": [],
+    "relatedScenarioIds": [
+      "B02",
+      "I02"
+    ],
+    "context": {
+      "stateUnchanged": true,
+      "latestHandVersion": 12,
+      "latestOwnerSnapshotRequired": true
+    }
+  },
+  {
+    "id": "W02-12",
+    "event": "game:action",
+    "audience": "authenticatedOwner",
+    "description": "拒绝小数金额，不自动改为最低加注",
+    "request": {
+      "commandId": "00000000-0000-4000-8000-00000000000c",
+      "roomId": "r_raise",
+      "handId": "h_raise",
+      "turnId": "t_009",
+      "expectedVersion": 12,
+      "action": {
+        "type": "raise",
+        "raiseTo": 1.5
+      }
+    },
+    "response": {
+      "protocolVersion": 1,
+      "serverEpoch": "boot_demo_001",
+      "serverTime": 1793332800000,
+      "ok": false,
+      "code": "ILLEGAL_AMOUNT",
+      "retryable": false,
+      "retryAfterMs": null,
+      "fieldIssues": [
+        {
+          "field": "action.raiseTo",
+          "reason": "outOfRange"
+        }
+      ],
+      "roomId": "r_raise",
+      "handId": "h_raise",
+      "latestRoomVersion": 20,
+      "latestHandVersion": 12,
+      "commandId": "00000000-0000-4000-8000-00000000000c",
+      "duplicate": false
+    },
+    "emittedEvents": [],
+    "relatedScenarioIds": [
+      "B11"
+    ],
+    "context": {
+      "stateUnchanged": true,
+      "noAutomaticAmountCorrection": true
+    }
+  },
+  {
+    "id": "W02-13",
+    "event": "session:resume",
+    "audience": "authenticatedOwner",
+    "description": "失效凭据不能获取本人或公共房间快照",
+    "request": {
+      "requestId": "00000000-0000-4000-8000-00000000000d",
+      "resumeToken": "example_only_expired_resume_token_00000000000000000",
+      "roomId": "r_old",
+      "lastSeenHandId": "h_old",
+      "lastSeenRoomVersion": 9,
+      "lastSeenHandVersion": 5
+    },
+    "response": {
+      "protocolVersion": 1,
+      "serverEpoch": "boot_demo_001",
+      "serverTime": 1793332800000,
+      "ok": false,
+      "code": "SESSION_EXPIRED",
+      "retryable": false,
+      "retryAfterMs": null,
+      "fieldIssues": [],
+      "roomId": null,
+      "handId": null,
+      "latestRoomVersion": null,
+      "latestHandVersion": null,
+      "requestId": "00000000-0000-4000-8000-00000000000d"
+    },
+    "emittedEvents": [],
+    "relatedScenarioIds": [
+      "LIFE07",
+      "PRIV04"
+    ],
+    "context": {
+      "illustrativeCredentialsOnly": true,
+      "credentialExpired": true
+    }
+  },
+  {
+    "id": "W02-14",
+    "event": "replay:get",
+    "audience": "authenticatedOwner",
+    "description": "非参赛身份即使知道handId也不能回放",
+    "request": {
+      "requestId": "00000000-0000-4000-8000-00000000000e",
+      "handId": "h_done"
+    },
+    "response": {
+      "protocolVersion": 1,
+      "serverEpoch": "boot_demo_001",
+      "serverTime": 1793332800000,
+      "ok": false,
+      "code": "REPLAY_FORBIDDEN",
+      "retryable": false,
+      "retryAfterMs": null,
+      "fieldIssues": [],
+      "roomId": null,
+      "handId": null,
+      "latestRoomVersion": null,
+      "latestHandVersion": null,
+      "requestId": "00000000-0000-4000-8000-00000000000e"
+    },
+    "emittedEvents": [],
+    "relatedScenarioIds": [
+      "PRIV02",
+      "PRIV03"
+    ],
+    "context": {
+      "requesterParticipated": false,
+      "stateUnchanged": true
+    }
+  }
+]

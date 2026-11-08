@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-01",
+  "compiledApplication": true,
+  "actorExitFoldAndCashout": true,
+  "terminalStack": 1990,
+  "cashout": -1990,
+  "waitingGrant": 2000,
+  "boundaryDuplicate": true,
+  "newHandStarted": true,
+  "restartInterrupted": true,
+  "settledBytesPreserved": true,
+  "archiveBalancesAndLedgerPreserved": true,
+  "resumeHandInterrupted": true,
+  "sessionPreserved": true,
+  "roomCodeReusable": true,
+  "credentialsIncluded": false
+}

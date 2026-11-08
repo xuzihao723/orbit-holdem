@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-31",
+  "compiledServer": true,
+  "privateIdentity": true,
+  "forgedInputRejected": true,
+  "admissionLimit": 5,
+  "retryAfterMs": 60000,
+  "credentialsIncluded": false
+}

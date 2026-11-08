@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 336" data-card-id="AD" data-rank="A" data-suit="D">
+<title>AD</title>
+<rect x="1" y="1" width="238" height="334" rx="14" fill="#F7F2E8" stroke="#D6B878" stroke-width="2"/>
+<g data-corner="safe"><text x="34" y="53" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="44" font-weight="600" fill="var(--card-suit,#B83A48)">A</text><g  transform="translate(34 76) rotate(0) scale(0.95)" fill="var(--card-suit,#B83A48)"><path d="M0 -13L10 0L0 13L-10 0Z"/></g></g><g transform="rotate(180 120 168)"><g data-corner="safe"><text x="34" y="53" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="44" font-weight="600" fill="var(--card-suit,#B83A48)">A</text><g  transform="translate(34 76) rotate(0) scale(0.95)" fill="var(--card-suit,#B83A48)"><path d="M0 -13L10 0L0 13L-10 0Z"/></g></g></g>
+<g data-ace="D" data-center-suit="D"><g fill="none" stroke="#D6B878" stroke-width="2"><circle cx="120" cy="168" r="57"/><circle cx="120" cy="168" r="48"/><path transform="rotate(90 120 168)" d="M120 101V121M120 215V235M53 168H73M167 168H187"/></g><g  transform="translate(120 168) rotate(0) scale(2.7)" fill="var(--card-suit,#B83A48)"><path d="M0 -13L10 0L0 13L-10 0Z"/></g></g>
+</svg>

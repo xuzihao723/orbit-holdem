@@ -1,0 +1,10 @@
+{
+  "origin": "http://127.0.0.1:5173",
+  "schemaVersion": 4,
+  "backupRowCountsPreserved": true,
+  "foreignKeys": "ok",
+  "registerShowsGoogle": true,
+  "passwordFields": 0,
+  "guestHome": true,
+  "realGoogleConfigured": false
+}

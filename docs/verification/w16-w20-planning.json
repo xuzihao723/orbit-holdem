@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-31",
+  "status": "planning-verified",
+  "implemented": false,
+  "newPlans": 6,
+  "updatedIndexes": 2,
+  "completedTasksUnchanged": "W01-W15",
+  "plannedTasks": "W16-W20",
+  "M1Complete": true,
+  "M2Complete": false,
+  "sourceFilesUnchanged": 152,
+  "protectedFilesUnchanged": 174,
+  "frozenW01W02Unchanged": true,
+  "originalUserPlansUnchanged": true,
+  "fullBusinessTestsRun": false,
+  "browserTestsRun": false,
+  "plannedSqlSyntaxVerifiedInMemoryOnly": true,
+  "businessDatabaseModified": false,
+  "relativeLinksChecked": 68,
+  "fencesBalanced": true,
+  "uncheckedSteps": {
+    "22-第十六步-W16传输校验错误与限速.md": 27,
+    "23-第十七步-W17建房加入与原子占座.md": 29,
+    "24-第十八步-W18准备管理容量与开局.md": 28,
+    "25-第十九步-W19规则接入与一次应用.md": 30,
+    "26-第二十步-W20逐玩家视图与快照同步.md": 30,
+    "27-W16至W20实施总览.md": 8
+  },
+  "gitOperationsOrDeployment": false,
+  "sha256": {
+    "plan/22-第十六步-W16传输校验错误与限速.md": "d0e44eac7f86324a647a2fbec9a05efc771f353f9afa0d230929379b5cfc77fa",
+    "plan/23-第十七步-W17建房加入与原子占座.md": "6c7cac0090f60fad529de04d0513fe7dbcc5ba0dadd2ce007485572823b60bea",
+    "plan/24-第十八步-W18准备管理容量与开局.md": "14c16ffffd3349a334944d4a73891351f3c8a7fa768727bdff25bb536dbc3cbe",
+    "plan/25-第十九步-W19规则接入与一次应用.md": "709e20d25f3cc75026784d9b2427414c1105a745272f202f576ea0c1221e1028",
+    "plan/26-第二十步-W20逐玩家视图与快照同步.md": "966c1b2504974fbc508a2970f7936c0063228197351c603a2e302f9f41e6ca27",
+    "plan/27-W16至W20实施总览.md": "bcf729918fb646f3129344f55f902f88d5847077d5ae0df9618b25714a4e6aed",
+    "plan/00-执行总规划与里程碑.md": "26e9b991c4c41bfe3dbab92e6ef83d59fb1eca33dc13e443df72fa04791f6475",
+    "plan/04-任务看板与发布验收.md": "480b2c95fd72098803db69292c8cfeb95b76a9785fd19add8b837ac67fff3ac9"
+  }
+}

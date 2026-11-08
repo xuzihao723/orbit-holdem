@@ -1,0 +1,884 @@
+{
+  "date": "2026-10-30",
+  "entry": "compiled @orbit/poker-core ESM",
+  "scope": "B03/B04/B05 component histories; no full hand",
+  "stepCount": 13,
+  "traces": [
+    {
+      "id": "B03",
+      "steps": [
+        {
+          "actor": 0,
+          "action": {
+            "type": "bet",
+            "raiseTo": 100
+          },
+          "paid": 100,
+          "outcome": "continue",
+          "state": {
+            "street": "flop",
+            "bigBlind": 20,
+            "currentBet": 100,
+            "lastFullRaiseSize": 100,
+            "players": [
+              {
+                "seatId": 0,
+                "stack": 900,
+                "streetCommitted": 100,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": 100
+              },
+              {
+                "seatId": 1,
+                "stack": 150,
+                "streetCommitted": 0,
+                "handCommitted": 0,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": null
+              },
+              {
+                "seatId": 2,
+                "stack": 1000,
+                "streetCommitted": 0,
+                "handCommitted": 0,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": null
+              },
+              {
+                "seatId": 3,
+                "stack": 1000,
+                "streetCommitted": 0,
+                "handCommitted": 0,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": null
+              }
+            ],
+            "actionOrder": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "pendingSeatIds": [
+              1,
+              2,
+              3
+            ],
+            "actorSeatId": 1
+          }
+        },
+        {
+          "actor": 1,
+          "action": {
+            "type": "allIn"
+          },
+          "paid": 150,
+          "outcome": "continue",
+          "state": {
+            "street": "flop",
+            "bigBlind": 20,
+            "currentBet": 150,
+            "lastFullRaiseSize": 100,
+            "players": [
+              {
+                "seatId": 0,
+                "stack": 900,
+                "streetCommitted": 100,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": 100
+              },
+              {
+                "seatId": 1,
+                "stack": 0,
+                "streetCommitted": 150,
+                "handCommitted": 150,
+                "folded": false,
+                "allIn": true,
+                "lastActedAtBet": 150
+              },
+              {
+                "seatId": 2,
+                "stack": 1000,
+                "streetCommitted": 0,
+                "handCommitted": 0,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": null
+              },
+              {
+                "seatId": 3,
+                "stack": 1000,
+                "streetCommitted": 0,
+                "handCommitted": 0,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": null
+              }
+            ],
+            "actionOrder": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "pendingSeatIds": [
+              2,
+              3,
+              0
+            ],
+            "actorSeatId": 2
+          }
+        },
+        {
+          "actor": 2,
+          "action": {
+            "type": "call"
+          },
+          "paid": 150,
+          "outcome": "continue",
+          "state": {
+            "street": "flop",
+            "bigBlind": 20,
+            "currentBet": 150,
+            "lastFullRaiseSize": 100,
+            "players": [
+              {
+                "seatId": 0,
+                "stack": 900,
+                "streetCommitted": 100,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": 100
+              },
+              {
+                "seatId": 1,
+                "stack": 0,
+                "streetCommitted": 150,
+                "handCommitted": 150,
+                "folded": false,
+                "allIn": true,
+                "lastActedAtBet": 150
+              },
+              {
+                "seatId": 2,
+                "stack": 850,
+                "streetCommitted": 150,
+                "handCommitted": 150,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": 150
+              },
+              {
+                "seatId": 3,
+                "stack": 1000,
+                "streetCommitted": 0,
+                "handCommitted": 0,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": null
+              }
+            ],
+            "actionOrder": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "pendingSeatIds": [
+              3,
+              0
+            ],
+            "actorSeatId": 3
+          }
+        },
+        {
+          "actor": 3,
+          "action": {
+            "type": "fold"
+          },
+          "paid": 0,
+          "outcome": "continue",
+          "state": {
+            "street": "flop",
+            "bigBlind": 20,
+            "currentBet": 150,
+            "lastFullRaiseSize": 100,
+            "players": [
+              {
+                "seatId": 0,
+                "stack": 900,
+                "streetCommitted": 100,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": 100
+              },
+              {
+                "seatId": 1,
+                "stack": 0,
+                "streetCommitted": 150,
+                "handCommitted": 150,
+                "folded": false,
+                "allIn": true,
+                "lastActedAtBet": 150
+              },
+              {
+                "seatId": 2,
+                "stack": 850,
+                "streetCommitted": 150,
+                "handCommitted": 150,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": 150
+              },
+              {
+                "seatId": 3,
+                "stack": 1000,
+                "streetCommitted": 0,
+                "handCommitted": 0,
+                "folded": true,
+                "allIn": false,
+                "lastActedAtBet": 150
+              }
+            ],
+            "actionOrder": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "pendingSeatIds": [
+              0
+            ],
+            "actorSeatId": 0
+          }
+        }
+      ],
+      "finalLegal": {
+        "allowed": [
+          "fold",
+          "call"
+        ],
+        "callAmount": 50,
+        "minRaiseTo": null,
+        "maxRaiseTo": null,
+        "allIn": null
+      }
+    },
+    {
+      "id": "B04",
+      "steps": [
+        {
+          "actor": 0,
+          "action": {
+            "type": "bet",
+            "raiseTo": 100
+          },
+          "paid": 100,
+          "outcome": "continue",
+          "state": {
+            "street": "flop",
+            "bigBlind": 20,
+            "currentBet": 100,
+            "lastFullRaiseSize": 100,
+            "players": [
+              {
+                "seatId": 0,
+                "stack": 900,
+                "streetCommitted": 100,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": 100
+              },
+              {
+                "seatId": 1,
+                "stack": 150,
+                "streetCommitted": 0,
+                "handCommitted": 0,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": null
+              },
+              {
+                "seatId": 2,
+                "stack": 200,
+                "streetCommitted": 0,
+                "handCommitted": 0,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": null
+              },
+              {
+                "seatId": 3,
+                "stack": 1000,
+                "streetCommitted": 0,
+                "handCommitted": 0,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": null
+              }
+            ],
+            "actionOrder": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "pendingSeatIds": [
+              1,
+              2,
+              3
+            ],
+            "actorSeatId": 1
+          }
+        },
+        {
+          "actor": 1,
+          "action": {
+            "type": "allIn"
+          },
+          "paid": 150,
+          "outcome": "continue",
+          "state": {
+            "street": "flop",
+            "bigBlind": 20,
+            "currentBet": 150,
+            "lastFullRaiseSize": 100,
+            "players": [
+              {
+                "seatId": 0,
+                "stack": 900,
+                "streetCommitted": 100,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": 100
+              },
+              {
+                "seatId": 1,
+                "stack": 0,
+                "streetCommitted": 150,
+                "handCommitted": 150,
+                "folded": false,
+                "allIn": true,
+                "lastActedAtBet": 150
+              },
+              {
+                "seatId": 2,
+                "stack": 200,
+                "streetCommitted": 0,
+                "handCommitted": 0,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": null
+              },
+              {
+                "seatId": 3,
+                "stack": 1000,
+                "streetCommitted": 0,
+                "handCommitted": 0,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": null
+              }
+            ],
+            "actionOrder": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "pendingSeatIds": [
+              2,
+              3,
+              0
+            ],
+            "actorSeatId": 2
+          }
+        },
+        {
+          "actor": 2,
+          "action": {
+            "type": "allIn"
+          },
+          "paid": 200,
+          "outcome": "continue",
+          "state": {
+            "street": "flop",
+            "bigBlind": 20,
+            "currentBet": 200,
+            "lastFullRaiseSize": 100,
+            "players": [
+              {
+                "seatId": 0,
+                "stack": 900,
+                "streetCommitted": 100,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": 100
+              },
+              {
+                "seatId": 1,
+                "stack": 0,
+                "streetCommitted": 150,
+                "handCommitted": 150,
+                "folded": false,
+                "allIn": true,
+                "lastActedAtBet": 150
+              },
+              {
+                "seatId": 2,
+                "stack": 0,
+                "streetCommitted": 200,
+                "handCommitted": 200,
+                "folded": false,
+                "allIn": true,
+                "lastActedAtBet": 200
+              },
+              {
+                "seatId": 3,
+                "stack": 1000,
+                "streetCommitted": 0,
+                "handCommitted": 0,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": null
+              }
+            ],
+            "actionOrder": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "pendingSeatIds": [
+              3,
+              0
+            ],
+            "actorSeatId": 3
+          }
+        },
+        {
+          "actor": 3,
+          "action": {
+            "type": "call"
+          },
+          "paid": 200,
+          "outcome": "continue",
+          "state": {
+            "street": "flop",
+            "bigBlind": 20,
+            "currentBet": 200,
+            "lastFullRaiseSize": 100,
+            "players": [
+              {
+                "seatId": 0,
+                "stack": 900,
+                "streetCommitted": 100,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": 100
+              },
+              {
+                "seatId": 1,
+                "stack": 0,
+                "streetCommitted": 150,
+                "handCommitted": 150,
+                "folded": false,
+                "allIn": true,
+                "lastActedAtBet": 150
+              },
+              {
+                "seatId": 2,
+                "stack": 0,
+                "streetCommitted": 200,
+                "handCommitted": 200,
+                "folded": false,
+                "allIn": true,
+                "lastActedAtBet": 200
+              },
+              {
+                "seatId": 3,
+                "stack": 800,
+                "streetCommitted": 200,
+                "handCommitted": 200,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": 200
+              }
+            ],
+            "actionOrder": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "pendingSeatIds": [
+              0
+            ],
+            "actorSeatId": 0
+          }
+        }
+      ],
+      "finalLegal": {
+        "allowed": [
+          "fold",
+          "call",
+          "raise",
+          "allIn"
+        ],
+        "callAmount": 100,
+        "minRaiseTo": 300,
+        "maxRaiseTo": 1000,
+        "allIn": {
+          "raiseTo": 1000,
+          "additionalAmount": 900,
+          "kind": "raise"
+        }
+      }
+    },
+    {
+      "id": "B05",
+      "steps": [
+        {
+          "actor": 0,
+          "action": {
+            "type": "bet",
+            "raiseTo": 100
+          },
+          "paid": 100,
+          "outcome": "continue",
+          "state": {
+            "street": "flop",
+            "bigBlind": 20,
+            "currentBet": 100,
+            "lastFullRaiseSize": 100,
+            "players": [
+              {
+                "seatId": 0,
+                "stack": 900,
+                "streetCommitted": 100,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": 100
+              },
+              {
+                "seatId": 1,
+                "stack": 150,
+                "streetCommitted": 0,
+                "handCommitted": 0,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": null
+              },
+              {
+                "seatId": 2,
+                "stack": 1000,
+                "streetCommitted": 0,
+                "handCommitted": 0,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": null
+              },
+              {
+                "seatId": 3,
+                "stack": 200,
+                "streetCommitted": 0,
+                "handCommitted": 0,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": null
+              }
+            ],
+            "actionOrder": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "pendingSeatIds": [
+              1,
+              2,
+              3
+            ],
+            "actorSeatId": 1
+          }
+        },
+        {
+          "actor": 1,
+          "action": {
+            "type": "allIn"
+          },
+          "paid": 150,
+          "outcome": "continue",
+          "state": {
+            "street": "flop",
+            "bigBlind": 20,
+            "currentBet": 150,
+            "lastFullRaiseSize": 100,
+            "players": [
+              {
+                "seatId": 0,
+                "stack": 900,
+                "streetCommitted": 100,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": 100
+              },
+              {
+                "seatId": 1,
+                "stack": 0,
+                "streetCommitted": 150,
+                "handCommitted": 150,
+                "folded": false,
+                "allIn": true,
+                "lastActedAtBet": 150
+              },
+              {
+                "seatId": 2,
+                "stack": 1000,
+                "streetCommitted": 0,
+                "handCommitted": 0,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": null
+              },
+              {
+                "seatId": 3,
+                "stack": 200,
+                "streetCommitted": 0,
+                "handCommitted": 0,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": null
+              }
+            ],
+            "actionOrder": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "pendingSeatIds": [
+              2,
+              3,
+              0
+            ],
+            "actorSeatId": 2
+          }
+        },
+        {
+          "actor": 2,
+          "action": {
+            "type": "call"
+          },
+          "paid": 150,
+          "outcome": "continue",
+          "state": {
+            "street": "flop",
+            "bigBlind": 20,
+            "currentBet": 150,
+            "lastFullRaiseSize": 100,
+            "players": [
+              {
+                "seatId": 0,
+                "stack": 900,
+                "streetCommitted": 100,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": 100
+              },
+              {
+                "seatId": 1,
+                "stack": 0,
+                "streetCommitted": 150,
+                "handCommitted": 150,
+                "folded": false,
+                "allIn": true,
+                "lastActedAtBet": 150
+              },
+              {
+                "seatId": 2,
+                "stack": 850,
+                "streetCommitted": 150,
+                "handCommitted": 150,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": 150
+              },
+              {
+                "seatId": 3,
+                "stack": 200,
+                "streetCommitted": 0,
+                "handCommitted": 0,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": null
+              }
+            ],
+            "actionOrder": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "pendingSeatIds": [
+              3,
+              0
+            ],
+            "actorSeatId": 3
+          }
+        },
+        {
+          "actor": 3,
+          "action": {
+            "type": "allIn"
+          },
+          "paid": 200,
+          "outcome": "continue",
+          "state": {
+            "street": "flop",
+            "bigBlind": 20,
+            "currentBet": 200,
+            "lastFullRaiseSize": 100,
+            "players": [
+              {
+                "seatId": 0,
+                "stack": 900,
+                "streetCommitted": 100,
+                "handCommitted": 100,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": 100
+              },
+              {
+                "seatId": 1,
+                "stack": 0,
+                "streetCommitted": 150,
+                "handCommitted": 150,
+                "folded": false,
+                "allIn": true,
+                "lastActedAtBet": 150
+              },
+              {
+                "seatId": 2,
+                "stack": 850,
+                "streetCommitted": 150,
+                "handCommitted": 150,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": 150
+              },
+              {
+                "seatId": 3,
+                "stack": 0,
+                "streetCommitted": 200,
+                "handCommitted": 200,
+                "folded": false,
+                "allIn": true,
+                "lastActedAtBet": 200
+              }
+            ],
+            "actionOrder": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "pendingSeatIds": [
+              0,
+              2
+            ],
+            "actorSeatId": 0
+          }
+        },
+        {
+          "actor": 0,
+          "action": {
+            "type": "call"
+          },
+          "paid": 100,
+          "outcome": "continue",
+          "state": {
+            "street": "flop",
+            "bigBlind": 20,
+            "currentBet": 200,
+            "lastFullRaiseSize": 100,
+            "players": [
+              {
+                "seatId": 0,
+                "stack": 800,
+                "streetCommitted": 200,
+                "handCommitted": 200,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": 200
+              },
+              {
+                "seatId": 1,
+                "stack": 0,
+                "streetCommitted": 150,
+                "handCommitted": 150,
+                "folded": false,
+                "allIn": true,
+                "lastActedAtBet": 150
+              },
+              {
+                "seatId": 2,
+                "stack": 850,
+                "streetCommitted": 150,
+                "handCommitted": 150,
+                "folded": false,
+                "allIn": false,
+                "lastActedAtBet": 150
+              },
+              {
+                "seatId": 3,
+                "stack": 0,
+                "streetCommitted": 200,
+                "handCommitted": 200,
+                "folded": false,
+                "allIn": true,
+                "lastActedAtBet": 200
+              }
+            ],
+            "actionOrder": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "pendingSeatIds": [
+              2
+            ],
+            "actorSeatId": 2
+          }
+        }
+      ],
+      "finalLegal": {
+        "allowed": [
+          "fold",
+          "call"
+        ],
+        "callAmount": 50,
+        "minRaiseTo": null,
+        "maxRaiseTo": null,
+        "allIn": null
+      }
+    }
+  ]
+}

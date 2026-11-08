@@ -1,0 +1,77 @@
+[
+  {
+    "check": "browser-assets",
+    "command": [
+      "npx.cmd",
+      "playwright",
+      "test",
+      "--config",
+      "playwright.assets.config.ts",
+      "--output",
+      "w44-dev-results/assets"
+    ],
+    "exitCode": 0,
+    "seconds": 19.09,
+    "log": "w44-browser-assets.log"
+  },
+  {
+    "check": "browser-network",
+    "command": [
+      "npx.cmd",
+      "playwright",
+      "test",
+      "--config",
+      "playwright.network.config.ts",
+      "--output",
+      "w44-dev-results/network"
+    ],
+    "exitCode": 0,
+    "seconds": 11.16,
+    "log": "w44-browser-network.log"
+  },
+  {
+    "check": "browser-timer",
+    "command": [
+      "npx.cmd",
+      "playwright",
+      "test",
+      "--config",
+      "playwright.timer.config.ts",
+      "--output",
+      "w44-dev-results/timer"
+    ],
+    "exitCode": 0,
+    "seconds": 9.47,
+    "log": "w44-browser-timer.log"
+  },
+  {
+    "check": "browser-reconnect",
+    "command": [
+      "npx.cmd",
+      "playwright",
+      "test",
+      "--config",
+      "playwright.reconnect.config.ts",
+      "--output",
+      "w44-dev-results/reconnect"
+    ],
+    "exitCode": 0,
+    "seconds": 10.42,
+    "log": "w44-browser-reconnect.log"
+  },
+  {
+    "check": "browser-lifecycle",
+    "command": [
+      "npx.cmd",
+      "playwright",
+      "test",
+      "--config",
+      "playwright.lifecycle.config.ts",
+      "--output",
+      "w44-dev-results/lifecycle"
+    ],
+    "exitCode": 0,
+    "seconds": 11.83,
+    "log": "w44-browser-lifecycle.log"
+  }
+]

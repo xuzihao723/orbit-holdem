@@ -1,0 +1,9 @@
+{
+  "firstStartupExitCode": 1,
+  "cause": "nested npm forwarding interpreted Vite port as npm config and startup did not become ready in 30s",
+  "correctedCommand": "npm run dev --workspace @orbit/web -- --port 5173 --strictPort",
+  "firstBrowserFailureReport": "w20-first-browser-failure.json",
+  "browserFailureCause": "first dynamic import triggered Vite dependency optimization reload",
+  "fix": "optimizeDeps.include socket.io-client",
+  "finalBrowserCommandExitCode": 0
+}

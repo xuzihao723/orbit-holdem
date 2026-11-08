@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-01",
+  "probes": [
+    {
+      "path": "apps/server/src/bots/worker-messages.ts",
+      "mutation": "false ||",
+      "detected": true,
+      "exitCode": 1,
+      "stdout": "\n> orbit-workspace@0.1.0 test:integration\n> npm run build:workers && vitest run --project integration tests/integration/bot-cancellation.test.ts -t different turn\n\n\n> orbit-workspace@0.1.0 build:workers\n> tsc -b apps/server && tsc -p tsconfig.worker-tests.json\n\n\n RUN  v5.0.5 D:/User/codex_respository/dezhou_app/poker-four\n\n ❯ |integration| tests/integration/bot-cancellation.test.ts (13 tests | 1 failed | 12 skipped) 109ms\n   × rejects a real worker result bound to a different turn 105ms\n\n Test Files  1 failed (1)\n      Tests  1 failed | 12 skipped (13)\n   Start at  02:42:18\n   Duration  2.42s (transform 52%, import 42%, tests 6%, worker 1%)\n\n",
+      "stderr": "(node:21024) ExperimentalWarning: SQLite is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\n\n⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯\n\n FAIL  |integration| tests/integration/bot-cancellation.test.ts > rejects a real worker result bound to a different turn\nAssertionError: expected { kind: 'estimate', …(4) } to match object { kind: 'fallback', …(1) }\n(11 matching properties omitted from actual)\n\n- Expected\n+ Received\n\n  {\n-   \"kind\": \"fallback\",\n-   \"reason\": \"invalidMessage\",\n+   \"kind\": \"estimate\",\n  }\n\n ❯ tests/integration/bot-cancellation.test.ts:59:52\n     57|   });\n     58|   try {\n     59|     expect(await pool.submit(royalCase()).promise).toMatchObject({\n       |                                                    ^\n     60|       kind: 'fallback',\n     61|       reason: 'invalidMessage',\n\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯\n\n"
+    },
+    {
+      "path": "apps/server/src/bots/worker-pool.ts",
+      "mutation": "job.timer = null;",
+      "detected": true,
+      "exitCode": 1,
+      "stdout": "\n> orbit-workspace@0.1.0 test:integration\n> npm run build:workers && vitest run --project integration tests/integration/bot-cancellation.test.ts -t settles a hung worker\n\n\n> orbit-workspace@0.1.0 build:workers\n> tsc -b apps/server && tsc -p tsconfig.worker-tests.json\n\n\n RUN  v5.0.5 D:/User/codex_respository/dezhou_app/poker-four\n\n ❯ |integration| tests/integration/bot-cancellation.test.ts (13 tests | 1 failed | 12 skipped) 1151ms\n   × settles a hung worker within the main-thread budget and closes without waiting for its loop 1148ms\n\n Test Files  1 failed (1)\n      Tests  1 failed | 12 skipped (13)\n   Start at  02:42:30\n   Duration  3.38s (tests 39%, transform 31%, import 29%, worker 1%)\n\n",
+      "stderr": "(node:21296) ExperimentalWarning: SQLite is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\n\n⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯\n\n FAIL  |integration| tests/integration/bot-cancellation.test.ts > settles a hung worker within the main-thread budget and closes without waiting for its loop\nError: BUDGET_GUARD_MISSING\n ❯ Timeout.<anonymous> tests/integration/bot-cancellation.test.ts:100:59\n     98|         pool.submit(royalCase()).promise,\n     99|         new Promise<never>(\n    100|           (_, reject) => (timer = setTimeout(() => reject(Error('BUDGE…\n       |                                                           ^\n    101|         ),\n    102|       ]);\n\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯\n\n"
+    }
+  ],
+  "restored": true
+}

@@ -1,0 +1,199 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\User\\codex_respository\\dezhou_app\\poker-four\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      "playwright.assets.config.ts",
+      "--grep",
+      "component state board is usable at 360px"
+    ],
+    "configFile": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\playwright.assets.config.ts",
+    "rootDir": "D:/User/codex_respository/dezhou_app/poker-four/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/User/codex_respository/dezhou_app/poker-four/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium-assets",
+        "name": "chromium-assets",
+        "testDir": "D:/User/codex_respository/dezhou_app/poker-four/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "card-catalog.spec.ts",
+          "component-states.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "chromium-assets",
+        "testDir": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\tests\\e2e",
+        "snapshotDir": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "card-catalog.spec.ts",
+          "component-states.spec.ts"
+        ],
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5181",
+          "trace": "off",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium-assets"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/verification/w35-state-red-assets-playwright.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run dev --workspace @orbit/web -- --host 127.0.0.1 --port 5181 --strictPort",
+      "url": "http://127.0.0.1:5181",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "component-states.spec.ts",
+      "file": "component-states.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "component state board is usable at 360px",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-assets",
+              "projectName": "chromium-assets",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5357,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: '组件状态校对' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('heading', { name: '组件状态校对' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: '组件状态校对' })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: '组件状态校对' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('heading', { name: '组件状态校对' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: '组件状态校对' })\u001b[22m\n\n    at D:\\User\\codex_respository\\dezhou_app\\poker-four\\tests\\e2e\\component-states.spec.ts:15:65",
+                    "location": {
+                      "file": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\tests\\e2e\\component-states.spec.ts",
+                      "column": 65,
+                      "line": 15
+                    },
+                    "snippet": "  13 |     await page.setViewportSize({ width, height });\n  14 |     await page.goto('/?preview=states');\n> 15 |     await expect(page.getByRole('heading', { name: '组件状态校对' })).toBeVisible();\n     |                                                                 ^\n  16 |     const seats = page.getByRole('region', { name: '座位' });\n  17 |     for (const text of ['空座', '行动中', '已准备', '已弃牌', '已全押', '离线', '下一手加入', '已出局'])\n  18 |       await expect(seats.getByText(text, { exact: false })).toHaveCount(1);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\tests\\e2e\\component-states.spec.ts",
+                        "column": 65,
+                        "line": 15
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: '组件状态校对' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('heading', { name: '组件状态校对' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: '组件状态校对' })\u001b[22m\n\n\n  13 |     await page.setViewportSize({ width, height });\n  14 |     await page.goto('/?preview=states');\n> 15 |     await expect(page.getByRole('heading', { name: '组件状态校对' })).toBeVisible();\n     |                                                                 ^\n  16 |     const seats = page.getByRole('region', { name: '座位' });\n  17 |     for (const text of ['空座', '行动中', '已准备', '已弃牌', '已全押', '离线', '下一手加入', '已出局'])\n  18 |       await expect(seats.getByText(text, { exact: false })).toHaveCount(1);\n    at D:\\User\\codex_respository\\dezhou_app\\poker-four\\tests\\e2e\\component-states.spec.ts:15:65"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T14:16:27.804Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\test-results\\component-states-component-state-board-is-usable-at-360px-chromium-assets\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\User\\codex_respository\\dezhou_app\\poker-four\\tests\\e2e\\component-states.spec.ts",
+                    "column": 65,
+                    "line": 15
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "99ec2e80188f1a48e221-90d32e7fb7770be70247",
+          "file": "component-states.spec.ts",
+          "line": 12,
+          "column": 3
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-06T14:16:25.168Z",
+    "duration": 9236.882,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

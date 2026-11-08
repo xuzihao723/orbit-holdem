@@ -1,0 +1,11 @@
+{
+  "check": "release",
+  "command": [
+    "npm.cmd",
+    "run",
+    "test:e2e"
+  ],
+  "exitCode": 1,
+  "seconds": 222.33,
+  "log": "w44-release.log"
+}

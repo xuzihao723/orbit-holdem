@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-30",
+  "scope": "test-only seeded full hands and illegal rejections",
+  "legal": {
+    "requested": 1000,
+    "completed": 1000,
+    "failureCount": 0,
+    "actionCount": 3711,
+    "maximumActionsObserved": 14,
+    "seed": 20261030,
+    "failure": null,
+    "traceDigest": "264d3b3f08494e31af76dd7e25e285d3987588a554d18091a5c45a8bce6ea5ff",
+    "playerCountCoverage": {
+      "2": 334,
+      "3": 333,
+      "4": 333
+    },
+    "outcomes": {
+      "showdown": 527,
+      "allOthersFolded": 473
+    }
+  },
+  "invalid": {
+    "requested": 1000,
+    "completed": 1000,
+    "failureCount": 0,
+    "actionCount": 1000,
+    "maximumActionsObserved": 1,
+    "seed": 20261031,
+    "failure": null,
+    "traceDigest": "73a2a294fdb292759de7a3a38a9de61ef47afa4253d6b49721a1b764a9e3c24d",
+    "classCoverage": {
+      "wrongActor": 112,
+      "negativeRaise": 111,
+      "fractionalRaise": 111,
+      "belowMinimumNonAllInRaise": 111,
+      "overStackRaise": 111,
+      "checkWhileFacingBet": 111,
+      "raiseWithoutReopening": 111,
+      "unsafeInteger": 111,
+      "nonFiniteNumber": 111
+    }
+  }
+}

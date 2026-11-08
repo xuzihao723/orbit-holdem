@@ -1,0 +1,68 @@
+{
+  "method": "WCAG sRGB relative luminance",
+  "pairs": [
+    {
+      "role": "body-on-page",
+      "foreground": "#F7F2E8",
+      "background": "#101827",
+      "ratio": 15.923187999012205,
+      "passes4_5": true
+    },
+    {
+      "role": "secondary-on-page",
+      "foreground": "#B5C0CC",
+      "background": "#101827",
+      "ratio": 9.624962280817174,
+      "passes4_5": true
+    },
+    {
+      "role": "body-on-felt",
+      "foreground": "#F7F2E8",
+      "background": "#183545",
+      "ratio": 11.518217715998553,
+      "passes4_5": true
+    },
+    {
+      "role": "focus-on-page",
+      "foreground": "#D6B878",
+      "background": "#101827",
+      "ratio": 9.295096498372612,
+      "passes4_5": true
+    },
+    {
+      "role": "primary-action",
+      "foreground": "#17212B",
+      "background": "#D6B878",
+      "ratio": 8.524320294540766,
+      "passes4_5": true
+    },
+    {
+      "role": "card-ink",
+      "foreground": "#17212B",
+      "background": "#F7F2E8",
+      "ratio": 14.602791336005186,
+      "passes4_5": true
+    },
+    {
+      "role": "card-red",
+      "foreground": "#B83A48",
+      "background": "#F7F2E8",
+      "ratio": 5.036550381561628,
+      "passes4_5": true
+    },
+    {
+      "role": "four-club",
+      "foreground": "#17603F",
+      "background": "#F7F2E8",
+      "ratio": 6.766814502062558,
+      "passes4_5": true
+    },
+    {
+      "role": "four-diamond",
+      "foreground": "#2754A5",
+      "background": "#F7F2E8",
+      "ratio": 6.495082106071408,
+      "passes4_5": true
+    }
+  ]
+}

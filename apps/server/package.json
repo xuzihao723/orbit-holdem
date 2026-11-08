@@ -1,0 +1,12 @@
+{
+  "name": "@orbit/server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@orbit/poker-core": "0.1.0",
+    "@orbit/protocol": "0.1.0",
+    "google-auth-library": "11.3.3",
+    "socket.io": "4.8.4"
+  }
+}

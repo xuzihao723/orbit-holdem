@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-31",
+  "compiledApplication": true,
+  "realHumans": 2,
+  "completeHand": true,
+  "tenPacketsAppliedOnce": true,
+  "duplicates": 9,
+  "actions": 8,
+  "settledVersion": 9,
+  "continuousEvents": 23,
+  "finalChips": 4000,
+  "resultMatchesDatabase": true,
+  "credentialsIncluded": false
+}
