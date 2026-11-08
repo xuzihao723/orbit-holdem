@@ -6,8 +6,9 @@ export function parseRuntimeConfig(env: NodeJS.ProcessEnv = process.env, cwd = p
   if (env.PORT !== undefined && !/^\d+$/.test(env.PORT)) throw Error('INVALID_PORT');
   const port = env.PORT === undefined ? 3001 : Number(env.PORT);
   if (!Number.isInteger(port) || port < 0 || port > 65535) throw Error('INVALID_PORT');
-  if (production && !env.WEB_ORIGIN) throw Error('PRODUCTION_ORIGIN_REQUIRED');
-  const webOrigin = env.WEB_ORIGIN ?? 'http://127.0.0.1:5173';
+  const configuredOrigin = env.WEB_ORIGIN ?? env.RENDER_EXTERNAL_URL;
+  if (production && !configuredOrigin) throw Error('PRODUCTION_ORIGIN_REQUIRED');
+  const webOrigin = configuredOrigin ?? 'http://127.0.0.1:5173';
   const origin = new URL(webOrigin);
   if (
     origin.origin !== webOrigin ||
