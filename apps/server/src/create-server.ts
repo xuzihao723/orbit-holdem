@@ -15,6 +15,7 @@ export interface ServerOptions {
   host?: string;
   port?: number;
   webOrigin?: string;
+  guestWebOrigin?: string;
   sessions?: SessionRuntime;
   application?: ApplicationRuntime;
   executor?: CommandExecutor;
@@ -40,6 +41,9 @@ export function createPokerServer(options: ServerOptions = {}) {
   }
 
   const webOrigin = options.webOrigin ?? 'http://127.0.0.1:5173';
+  const allowedWebOrigins = options.guestWebOrigin
+    ? [webOrigin, options.guestWebOrigin]
+    : [webOrigin];
   const sessions = options.sessions ?? options.application?.sessions;
   const proxyKey = options.google?.proxyKey ?? options.accounts?.proxyKey;
   const auth =
@@ -116,11 +120,11 @@ export function createPokerServer(options: ServerOptions = {}) {
   const io = new Server(http, {
     serveClient: false,
     maxHttpBufferSize: 16 * 1024,
-    cors: { origin: webOrigin, methods: ['GET', 'POST'] },
+    cors: { origin: allowedWebOrigins, methods: ['GET', 'POST'] },
     allowRequest(request, accept) {
       const origin = request.headers.origin;
       // Origin-less native tools remain usable; this is not session authentication.
-      accept(null, origin === undefined || origin === webOrigin);
+      accept(null, origin === undefined || allowedWebOrigins.includes(origin));
     },
   });
 

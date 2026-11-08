@@ -5,8 +5,9 @@ import { browserEntryIntentStore } from '../features/room/entry-intent-store';
 import { RouterStore } from './router';
 import { createAccountState } from '../network/account-client';
 export function createNetworkRuntime() {
-  const account = createAccountState(),
-    client = createSocketClient({ account }),
+  const gameOrigin = import.meta.env.VITE_ORBIT_SOCKET_ORIGIN as string | undefined;
+  const account = createAccountState(Boolean(gameOrigin)),
+    client = createSocketClient({ account, ...(gameOrigin ? { url: gameOrigin } : {}) }),
     recovery = new ResumeCoordinator(client),
     router = new RouterStore(),
     intents = browserEntryIntentStore(localStorage, () => account.snapshot().sessionId);

@@ -17,6 +17,12 @@ export function parseRuntimeConfig(env: NodeJS.ProcessEnv = process.env, cwd = p
     (production && origin.protocol !== 'https:')
   )
     throw Error('INVALID_WEB_ORIGIN');
+  const guestWebOrigin = env.ORBIT_GUEST_WEB_ORIGIN;
+  if (guestWebOrigin) {
+    const guestOrigin = new URL(guestWebOrigin);
+    if (guestOrigin.origin !== guestWebOrigin || guestOrigin.protocol !== 'https:')
+      throw Error('INVALID_GUEST_WEB_ORIGIN');
+  }
   const databasePath = persistenceConfig(env, cwd).path;
   if (production && !env.WEB_DIST) throw Error('PRODUCTION_WEB_DIST_REQUIRED');
   const webDist = env.WEB_DIST ? resolve(cwd, env.WEB_DIST) : undefined;
@@ -32,6 +38,7 @@ export function parseRuntimeConfig(env: NodeJS.ProcessEnv = process.env, cwd = p
     port,
     host: env.HOST ?? (production ? '0.0.0.0' : '127.0.0.1'),
     webOrigin,
+    guestWebOrigin,
     databasePath,
     webDist,
   };

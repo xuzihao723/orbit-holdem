@@ -4,7 +4,7 @@
 
 支持 2–4 人同桌。你可以独自挑战电脑，也可以开一张真人和电脑混坐的牌桌。每手结束后，可以从自己的历史记录回看下注和结算过程。
 
-[快速开始](#快速开始) · [怎么玩](#怎么玩) · [部署到-render](#部署到-render) · [项目结构](#项目结构) · [开发与验证](#开发与验证)
+[在线试玩](https://orbit-holdem-game.onrender.com/) · [快速开始](#快速开始) · [怎么玩](#怎么玩) · [部署到-render](#部署到-render) · [项目结构](#项目结构) · [开发与验证](#开发与验证)
 
 ![轨道牌桌的三人对局。公共牌、本人底牌、对手席位和行动区都在同一桌面。](docs/showcase/orbit-table-desktop.png)
 
@@ -43,6 +43,8 @@ npm run dev
 免费实例空闲约 15 分钟会休眠，首次唤醒可能需要约 1 分钟。免费实例的 SQLite 数据会在休眠、重启或重新部署时丢失。[Render 免费版限制](https://render.com/docs/free)
 
 长期运行可用带持久卷的单实例 Docker Compose 部署。已结算历史保存在持久卷中，重启时进行中的牌局会标记为中止。[常驻部署](docs/deployment.md) · [备份与恢复](docs/backup-restore.md)
+
+如果另外在 Vercel 托管网页，用 [`vercel.json`](vercel.json) 构建前端。在 Vercel 设置 `VITE_ORBIT_SOCKET_ORIGIN` 为 Render 的 HTTPS 地址，并在 Render 设置 `ORBIT_GUEST_WEB_ORIGIN` 为 Vercel 网页的准确 HTTPS 地址。Vercel 入口以访客模式连接同一套房间服务。
 
 ## 项目结构
 

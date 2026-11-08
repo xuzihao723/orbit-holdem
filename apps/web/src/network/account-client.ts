@@ -17,7 +17,7 @@ export async function accountRequest<T>(path: string, body: object): Promise<T> 
     throw Error(typeof result.error === 'string' ? result.error : 'AUTH_UNAVAILABLE');
   return result as T;
 }
-export function createAccountState() {
+export function createAccountState(guestOnly = false) {
   const listeners = new Set<() => void>();
   let state: AccountState = {
     enabled: false,
@@ -37,6 +37,7 @@ export function createAccountState() {
       };
     },
     load() {
+      if (guestOnly) return Promise.resolve();
       return (loading ??= fetch('/api/auth/me')
         .then(async (response) => {
           if (!response.ok) return;

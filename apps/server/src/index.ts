@@ -40,6 +40,7 @@ if (configuredPort !== undefined && !/^\d+$/.test(configuredPort)) {
       host: config.host,
       port: config.port,
       webOrigin: config.webOrigin,
+      ...(config.guestWebOrigin ? { guestWebOrigin: config.guestWebOrigin } : {}),
       ...(config.webDist ? { webDist: config.webDist } : {}),
       application: runtime,
       ...(accounts ? { accounts } : {}),

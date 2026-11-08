@@ -18,3 +18,4 @@ docs/verification/*.log
 tests/.generated-workers/
 
 .tools/
+.vercel/

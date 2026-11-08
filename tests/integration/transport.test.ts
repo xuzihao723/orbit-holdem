@@ -1,6 +1,8 @@
 import examples from '../../docs/examples/protocol.json';
 import { afterEach, expect, it } from 'vitest';
 import { randomUUID } from 'node:crypto';
+import { io } from 'socket.io-client';
+import { createPokerServer } from '../../apps/server/src/create-server.js';
 import { parseMutating } from '../../apps/server/src/transport/command-payloads.js';
 import { parseQuery } from '../../apps/server/src/transport/query-payloads.js';
 import { transportContext, command } from '../helpers/transport-context.js';
@@ -14,6 +16,36 @@ async function context(...args: Parameters<typeof transportContext>) {
 }
 afterEach(async () => {
   for (const c of contexts.splice(0)) await c.close();
+});
+
+it('allows the configured guest web origin without accepting arbitrary origins', async () => {
+  const webOrigin = 'https://cards.example',
+    guestWebOrigin = 'https://cards-guest.example',
+    server = createPokerServer({ port: 0, webOrigin, guestWebOrigin });
+  try {
+    const { origin } = await server.listen();
+    const connects = async (browserOrigin: string) => {
+      const socket = io(origin, {
+        transports: ['websocket'],
+        reconnection: false,
+        forceNew: true,
+        extraHeaders: { Origin: browserOrigin },
+      });
+      try {
+        return await new Promise<boolean>((resolve) => {
+          socket.once('connect', () => resolve(true));
+          socket.once('connect_error', () => resolve(false));
+        });
+      } finally {
+        socket.disconnect();
+      }
+    };
+    expect(await connects(webOrigin)).toBe(true);
+    expect(await connects(guestWebOrigin)).toBe(true);
+    expect(await connects('https://cards-guest.example.invalid')).toBe(false);
+  } finally {
+    await server.close();
+  }
 });
 it('decodes all eleven mutations and both query shapes without keeping input aliases', () => {
   const versioned = { commandId: id(), roomId: 'r1', expectedRoomVersion: 0 };
