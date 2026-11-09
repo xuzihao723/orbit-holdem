@@ -2,6 +2,26 @@ const stage = process.env.ORBIT_VERIFY_STAGE ?? 'scratch';
 import { test, expect } from './app.fixture';
 import type { Page } from '@playwright/test';
 import type { AuthenticatedCommand } from '../../apps/server/dist/transport/types.js';
+test('waits for the game server and submits a cold room entry once', async ({ page, faults }) => {
+  let ready = false;
+  await page.route('**/health/ready', (route) =>
+    ready
+      ? route.continue()
+      : route.fulfill({ status: 200, contentType: 'text/html', body: 'Starting' }),
+  );
+  const firstProbe = page.waitForResponse('**/health/ready', { timeout: 5000 });
+  await page.goto('/play?mode=create');
+  await firstProbe;
+  await page.getByLabel('昵称', { exact: true }).fill('冷启动');
+  faults.commands.length = 0;
+  await page.getByRole('button', { name: '创建房间', exact: true }).click();
+  await expect(page.getByText('Waiting to be connected...', { exact: true })).toBeVisible();
+  expect(faults.commands.filter(({ event }) => event === 'room:create')).toHaveLength(0);
+  ready = true;
+  await expect(page).toHaveURL(/\/room\/[A-Z2-9]{6}$/, { timeout: 10000 });
+  expect(faults.commands.filter(({ event }) => event === 'room:create')).toHaveLength(1);
+});
+
 test('retries a private resume timeout after an acknowledged ready change', async ({
   page,
   network,

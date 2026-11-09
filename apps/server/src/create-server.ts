@@ -86,10 +86,12 @@ export function createPokerServer(options: ServerOptions = {}) {
       response.end(JSON.stringify({ status: 'ok' }));
       return;
     }
-    if (
-      ['GET', 'HEAD'].includes(request.method ?? '') &&
-      request.url?.split('?')[0] === '/health/ready'
-    ) {
+    if (['GET', 'HEAD'].includes(request.method ?? '') && path === '/health/ready') {
+      const origin = request.headers.origin;
+      response.setHeader('Vary', 'Origin');
+      if (origin && allowedWebOrigins.includes(origin)) {
+        response.setHeader('Access-Control-Allow-Origin', origin);
+      }
       let ready = false;
       try {
         if (!draining) {

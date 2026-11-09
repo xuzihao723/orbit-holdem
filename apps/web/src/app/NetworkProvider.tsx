@@ -13,6 +13,7 @@ export function createNetworkRuntime() {
     intents = browserEntryIntentStore(localStorage, () => account.snapshot().sessionId);
   return {
     client,
+    gameOrigin,
     account,
     recovery,
     router,

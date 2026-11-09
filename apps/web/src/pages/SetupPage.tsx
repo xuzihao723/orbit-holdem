@@ -1,10 +1,17 @@
-import { useState, type FormEvent } from 'react';
+import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { useAccount, useNetwork } from '../app/NetworkProvider';
 import type { Capacity, BotDifficulty } from '@orbit/protocol';
-import { beginEntry, provisionRoom, ensureEntryIdentity } from '../features/room/provision-room';
+import {
+  beginEntry,
+  provisionRoom,
+  ensureEntryIdentity,
+  validateEntryConfig,
+} from '../features/room/provision-room';
 import { roomErrorMessage } from '../features/room/room-errors';
 import PlayingCard from '../components/cards/PlayingCard';
 import type { CardId } from '@orbit/protocol';
+import { probeGameServer, waitForGameServer } from '../network/server-readiness';
+import ServerConnectionPage from './ServerConnectionPage';
 
 const entryArt = {
   solo: {
@@ -30,7 +37,7 @@ export default function SetupPage({
   mode: 'solo' | 'create' | 'join';
   code: string;
 }) {
-  const { client, intents, router, snapshot } = useNetwork(),
+  const { client, gameOrigin, intents, router, snapshot } = useNetwork(),
     saved = intents.read();
   const account = useAccount();
   const [nicknameInput, setNickname] = useState<string | null>(null),
@@ -39,7 +46,18 @@ export default function SetupPage({
     [difficulty, setDifficulty] = useState<BotDifficulty>('basic'),
     [roomCode, setCode] = useState(code),
     [pending, setPending] = useState(false),
-    [error, setError] = useState('');
+    [error, setError] = useState(''),
+    [connection, setConnection] = useState<{ timedOut: boolean; continuing: boolean } | null>(null);
+  const entry = useRef<AbortController | null>(null);
+  useEffect(() => {
+    const warmup = new AbortController();
+    void probeGameServer(gameOrigin, warmup.signal);
+    return () => {
+      warmup.abort();
+      entry.current?.abort();
+      entry.current = null;
+    };
+  }, [gameOrigin]);
   const unfinished =
       saved && saved.sessionId === client.identitySessionId && saved.status !== 'complete'
         ? saved
@@ -48,18 +66,18 @@ export default function SetupPage({
     title = titles[mode];
   const nickname = nicknameInput ?? unfinished?.config.nickname ?? account.nickname ?? '';
   const run = async (continuing = false) => {
+    if (entry.current) return;
+    const attempt = new AbortController();
+    entry.current = attempt;
+    let showWaiting: ReturnType<typeof setTimeout> | undefined;
     setPending(true);
     setError('');
+    setConnection(null);
     try {
-      if (continuing && unfinished) {
-        await ensureEntryIdentity(client, unfinished.config.nickname);
-        if (client.store.snapshot.authContext?.sessionId !== unfinished.sessionId)
-          throw Error('ENTRY_IDENTITY_CHANGED');
-      }
-      const intent =
+      const config =
         continuing && unfinished
-          ? unfinished
-          : await beginEntry(client, intents, {
+          ? unfinished.config
+          : validateEntryConfig({
               mode,
               nickname,
               capacity: mode === 'solo' ? ((count + 1) as Capacity) : capacity,
@@ -67,14 +85,55 @@ export default function SetupPage({
               difficulty,
               roomCode,
             });
+      if (!client.connected) {
+        showWaiting = setTimeout(() => {
+          if (!attempt.signal.aborted) setConnection({ timedOut: false, continuing });
+        }, 350);
+        await waitForGameServer(gameOrigin, attempt.signal);
+        clearTimeout(showWaiting);
+        setConnection(null);
+      }
+      if (continuing && unfinished) {
+        await ensureEntryIdentity(client, unfinished.config.nickname);
+        if (client.store.snapshot.authContext?.sessionId !== unfinished.sessionId)
+          throw Error('ENTRY_IDENTITY_CHANGED');
+      }
+      const intent =
+        continuing && unfinished ? unfinished : await beginEntry(client, intents, config);
+      attempt.signal.throwIfAborted();
       const room = await provisionRoom(client, intents, intent);
+      attempt.signal.throwIfAborted();
       router.navigate('/room/' + room.roomCode);
     } catch (e) {
-      setError(roomErrorMessage(e));
+      if (attempt.signal.aborted) return;
+      if (e instanceof Error && e.message === 'SERVER_START_TIMEOUT') {
+        setConnection({ timedOut: true, continuing });
+      } else {
+        setConnection(null);
+        setError(roomErrorMessage(e));
+      }
     } finally {
-      setPending(false);
+      clearTimeout(showWaiting);
+      if (entry.current === attempt) {
+        entry.current = null;
+        setPending(false);
+      }
     }
   };
+  if (connection) {
+    return (
+      <ServerConnectionPage
+        timedOut={connection.timedOut}
+        onBack={() => {
+          entry.current?.abort();
+          entry.current = null;
+          setPending(false);
+          setConnection(null);
+        }}
+        onRetry={() => void run(connection.continuing)}
+      />
+    );
+  }
   const submit = (e: FormEvent) => {
     e.preventDefault();
     void run();

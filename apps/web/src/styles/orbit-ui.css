@@ -406,6 +406,108 @@
   width: 100%;
 }
 
+.app-shell .server-connection-page {
+  display: grid;
+  align-content: center;
+  min-height: calc(100svh - var(--header-height));
+  max-width: 650px;
+  text-align: center;
+}
+
+.server-connection-panel {
+  padding: clamp(24px, 7vw, 54px) 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-panel);
+  background: linear-gradient(155deg, var(--surface-panel), var(--bg));
+}
+
+.server-connection-panel [role='status'] {
+  color: var(--muted);
+}
+
+.server-connection-panel .server-connection-caption {
+  margin: 0 0 8px;
+  color: var(--face);
+  font-weight: 650;
+}
+
+.server-connection-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.server-connection-loader {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  margin: 26px auto 14px;
+}
+
+.server-connection-ball {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--face);
+  transform: translateX(150px) rotate(360deg);
+  animation: server-ball-roll 3s ease-in-out 1s infinite alternate;
+}
+
+.server-connection-ball::after {
+  position: absolute;
+  content: '';
+  top: 25px;
+  right: 5px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--ink);
+}
+
+.server-connection-bar {
+  position: absolute;
+  inset: 65px 0 auto;
+  height: 12.5px;
+  border-radius: 30px;
+  background: #ffdaaf;
+  transform: rotate(-15deg);
+  animation: server-bar-tilt 3s ease-in-out 1s infinite alternate;
+}
+
+@keyframes server-ball-roll {
+  from {
+    transform: translateX(150px) rotate(360deg);
+  }
+  to {
+    transform: translateX(0) rotate(0);
+  }
+}
+
+@keyframes server-bar-tilt {
+  from {
+    transform: rotate(-15deg);
+  }
+  to {
+    transform: rotate(15deg);
+  }
+}
+
+.app-shell[data-reduce-motion='true'] :is(.server-connection-ball, .server-connection-bar) {
+  animation: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .server-connection-ball,
+  .server-connection-bar {
+    animation: none;
+  }
+}
+
 .app-shell .account-page {
   max-width: 665px;
 }
