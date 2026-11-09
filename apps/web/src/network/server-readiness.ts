@@ -10,23 +10,38 @@ export async function probeGameServer(origin: string | undefined, signal: AbortS
       signal: AbortSignal.any([signal, AbortSignal.timeout(probeTimeoutMs)]),
     });
     if (!response.ok || !response.headers.get('content-type')?.includes('application/json')) {
-      return false;
+      return 'pending';
     }
-    return (await response.json())?.status === 'ready';
+    return (await response.json())?.status === 'ready' ? 'ready' : 'pending';
   } catch {
-    return false;
+    return 'unreachable';
   }
 }
 
-export async function waitForGameServer(origin: string | undefined, signal: AbortSignal) {
+export async function waitForGameServer(
+  origin: string | undefined,
+  signal: AbortSignal,
+  connect: () => Promise<void>,
+) {
   const deadline = AbortSignal.timeout(startupTimeoutMs);
   const waiting = AbortSignal.any([signal, deadline]);
   while (!waiting.aborted) {
     if (!navigator.onLine) throw Error('CONNECT_FAILED');
-    if (await probeGameServer(origin, waiting)) {
-      waiting.throwIfAborted();
-      return;
+    let readiness = await probeGameServer(origin, waiting);
+    if (readiness === 'unreachable' && !waiting.aborted) {
+      // The public edge may block the HTTP probe even when the game socket is reachable.
+      try {
+        await connect();
+        readiness = 'ready';
+      } catch (error) {
+        if (!(
+          error instanceof Error && ['CONNECT_FAILED', 'CONNECT_TIMEOUT'].includes(error.message)
+        )) {
+          throw error;
+        }
+      }
     }
+    if (readiness === 'ready' && !waiting.aborted) return;
     if (!waiting.aborted)
       await new Promise<void>((resolve) => setTimeout(resolve, retryIntervalMs));
   }

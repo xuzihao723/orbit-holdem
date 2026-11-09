@@ -89,7 +89,7 @@ export default function SetupPage({
         showWaiting = setTimeout(() => {
           if (!attempt.signal.aborted) setConnection({ timedOut: false, continuing });
         }, 350);
-        await waitForGameServer(gameOrigin, attempt.signal);
+        await waitForGameServer(gameOrigin, attempt.signal, client.connect);
         clearTimeout(showWaiting);
         setConnection(null);
       }

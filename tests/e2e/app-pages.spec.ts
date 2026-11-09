@@ -22,6 +22,16 @@ test('waits for the game server and submits a cold room entry once', async ({ pa
   expect(faults.commands.filter(({ event }) => event === 'room:create')).toHaveLength(1);
 });
 
+test('can enter using the game connection when the readiness request is blocked', async ({
+  page,
+}) => {
+  await page.route('**/health/ready', (route) => route.abort());
+  await page.goto('/play?mode=create');
+  await page.getByLabel('昵称', { exact: true }).fill('连接确认');
+  await page.getByRole('button', { name: '创建房间', exact: true }).click();
+  await expect(page).toHaveURL(/\/room\/[A-Z2-9]{6}$/, { timeout: 5000 });
+});
+
 test('retries a private resume timeout after an acknowledged ready change', async ({
   page,
   network,
